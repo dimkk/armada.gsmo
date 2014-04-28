@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="AgendaAttachmentList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/AgendaAttachmentList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE" DisableAttachments="FALSE">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x010092ABAE93AD2B4247A11A6324718D797F" Name="Вложение вопроса повестки" Group="Типы содержимого градостроительного совета" Description="Тип контента для вложения вопроса повестки заседания" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{F09EFF45-A7AA-4B13-9245-29BF8BB775A1}" DisplayName="Вопрос повестки" Required="TRUE" Name="AgendaQuestionLink" />
+          <FieldRef ID="{462fb273-1c76-4c31-bf98-7f13e9513270}" DisplayName="Описание вложения" Required="FALSE" Name="AttachmentDescription" NumLines="7" />
+          <FieldRef ID="{cce95c96-8ad8-4d27-8054-1eb1d59836e6}" DisplayName="Тип документа" Required="FALSE" Name="AttachmentDocumentTypeLink" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{F09EFF45-A7AA-4B13-9245-29BF8BB775A1}" Name="AgendaQuestionLink" DisplayName="Вопрос повестки" Type="Lookup" List="Lists/AgendaQuestionList" ShowField="AgendaQuestionNumber" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{462fb273-1c76-4c31-bf98-7f13e9513270}" Name="AttachmentDescription" DisplayName="Описание вложения" Type="Note" NumLines="7" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{cce95c96-8ad8-4d27-8054-1eb1d59836e6}" Name="AttachmentDocumentTypeLink" DisplayName="Тип документа" Type="Lookup" List="Lists/DocTypeBookList" ShowField="Title" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="AgendaQuestionLink" />
+          <FieldRef Name="AttachmentDescription" />
+          <FieldRef Name="AttachmentDocumentTypeLink" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="2" Type="HTML" WebPartZoneID="Main" DisplayName="Карточка вопроса" DefaultView="FALSE" MobileView="TRUE" MobileDefaultView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AgendaQuestionView.aspx">
+        <Toolbar Type="None" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="AttachmentDocumentTypeLink" />
+          <FieldRef Name="AttachmentDescription" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

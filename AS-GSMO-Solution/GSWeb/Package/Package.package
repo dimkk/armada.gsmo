@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a04d2ad6-3af5-4c2b-95ee-14d63fb6f5f5" solutionId="a04d2ad6-3af5-4c2b-95ee-14d63fb6f5f5" resetWebServer="false" sharePointProductVersion="15.0" name="GSWeb" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Camlex.NET.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\packages\Camlex.NET.dll.3.5.0.0\lib\net20\Camlex.NET.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="e2744cc2-2162-41c9-926d-3fc6ee0f3bf4" />
+    <featureReference itemId="54f05584-a6d7-4b6f-8c6a-a07c73c04350" />
+  </features>
+</package>

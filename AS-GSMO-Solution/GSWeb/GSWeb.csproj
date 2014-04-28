@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB844155-8370-484A-93FA-45326C94AB53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GSWeb</RootNamespace>
+    <AssemblyName>GSWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Camlex.NET">
+      <HintPath>..\packages\Camlex.NET.dll.3.5.0.0\lib\net20\Camlex.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SharePoint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="erAssignmentFactDate\erAssignmentFactDate.cs" />
+    <Compile Include="erAssignmentReport\erAssignmentReport.cs" />
+    <Compile Include="erLnkedAssignments\erLnkedAssignments.cs" />
+    <Compile Include="erReporters\erReporters.cs" />
+    <Compile Include="erTitle.cs" />
+    <Compile Include="Features\GSWeb EReceivers\GSWeb EReceivers.EventReceiver.cs">
+      <DependentUpon>GSWeb EReceivers.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebParts\AgendaQuestionConsideration\AgendaQuestionConsideration.cs" />
+    <Compile Include="WebParts\AgendaQuestionConsideration\AgendaQuestionConsiderationUserControl.ascx.cs">
+      <DependentUpon>AgendaQuestionConsiderationUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\AgendaQuestionConsideration\AgendaQuestionConsiderationUserControl.ascx.designer.cs">
+      <DependentUpon>AgendaQuestionConsiderationUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasures.cs" />
+    <Compile Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresDisplayMode.ascx.cs">
+      <DependentUpon>AgendaQuestionMeasuresDisplayMode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresDisplayMode.ascx.designer.cs">
+      <DependentUpon>AgendaQuestionMeasuresDisplayMode.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresEditMode.ascx.cs">
+      <DependentUpon>AgendaQuestionMeasuresEditMode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresEditMode.ascx.designer.cs">
+      <DependentUpon>AgendaQuestionMeasuresEditMode.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\AgendaQuestionTitle\AgendaQuestionTitle.cs" />
+    <Compile Include="WebParts\AgendaQuestionTitle\AgendaQuestionTitleUserControl.ascx.cs">
+      <DependentUpon>AgendaQuestionTitleUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\AgendaQuestionTitle\AgendaQuestionTitleUserControl.ascx.designer.cs">
+      <DependentUpon>AgendaQuestionTitleUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\FilterProvider\FilterProvider.cs" />
+    <Compile Include="WebParts\IFilterProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="erAssignmentFactDate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{caa75090-1284-4ceb-971b-8df9b33b55f2}</SharePointProjectItemId>
+    </None>
+    <None Include="erAssignmentReport\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bb01f560-f447-4d4b-8645-16c94fe166a1}</SharePointProjectItemId>
+    </None>
+    <None Include="erLnkedAssignments\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{26f9ad7c-2241-4950-b847-5dd8c22725bf}</SharePointProjectItemId>
+    </None>
+    <None Include="erReporters\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e1f035f2-21cb-4a27-8cd0-972ae85e7226}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\GSWeb WebParts\GSWeb WebParts.feature">
+      <FeatureId>{54f05584-a6d7-4b6f-8c6a-a07c73c04350}</FeatureId>
+    </None>
+    <None Include="Features\GSWeb EReceivers\GSWeb EReceivers.feature">
+      <FeatureId>{e2744cc2-2162-41c9-926d-3fc6ee0f3bf4}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="packages.config" />
+    <None Include="Package\Package.package">
+      <PackageId>{a04d2ad6-3af5-4c2b-95ee-14d63fb6f5f5}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\AgendaQuestionConsideration\AgendaQuestionConsideration.webpart" />
+    <None Include="WebParts\AgendaQuestionConsideration\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{330870c1-53d2-40ac-aa31-d1f72a2522d4}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasures.webpart" />
+    <None Include="WebParts\AgendaQuestionMeasures\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bfc6311e-a787-4d07-8b2f-c46bc87ef7c9}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\AgendaQuestionTitle\AgendaQuestionTitle.webpart" />
+    <None Include="WebParts\AgendaQuestionTitle\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dcd3de61-8da3-4a79-8658-50012252761e}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\FilterProvider\FilterProvider.webpart" />
+    <None Include="WebParts\FilterProvider\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{821a097e-2fda-4292-bbe8-459d307cc521}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="erAssignmentFactDate\Elements.xml" />
+    <Content Include="erAssignmentReport\Elements.xml" />
+    <Content Include="erLnkedAssignments\Elements.xml" />
+    <Content Include="erReporters\Elements.xml" />
+    <Content Include="Features\GSWeb WebParts\GSWeb WebParts.Template.xml">
+      <DependentUpon>GSWeb WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\GSWeb EReceivers\GSWeb EReceivers.Template.xml">
+      <DependentUpon>GSWeb EReceivers.feature</DependentUpon>
+    </Content>
+    <Content Include="WebParts\AgendaQuestionConsideration\AgendaQuestionConsiderationUserControl.ascx" />
+    <Content Include="WebParts\AgendaQuestionConsideration\Elements.xml" />
+    <Content Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresDisplayMode.ascx" />
+    <Content Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresEditMode.ascx" />
+    <Content Include="WebParts\AgendaQuestionMeasures\Elements.xml" />
+    <Content Include="WebParts\AgendaQuestionTitle\AgendaQuestionTitleUserControl.ascx" />
+    <Content Include="WebParts\AgendaQuestionTitle\Elements.xml" />
+    <Content Include="WebParts\FilterProvider\Elements.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

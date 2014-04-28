@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Images">
+    <File Path="Images\AppIcon.png" Url="Images/AppIcon.png" ReplaceContent="TRUE" />
+    <File Path="Images\tiles\appbar.calendar.day.png" Url="Images/tiles/appbar.calendar.day.png" ReplaceContent="TRUE" />
+    <File Path="Images\tiles\appbar.clipboard.variant.edit.png" Url="Images/tiles/appbar.clipboard.variant.edit.png" ReplaceContent="TRUE" />
+    <File Path="Images\tiles\appbar.layer.thick.png" Url="Images/tiles/appbar.layer.thick.png" ReplaceContent="TRUE" />
+    <File Path="Images\tiles\appbar.list.check.png" Url="Images/tiles/appbar.list.check.png" ReplaceContent="TRUE" />
+    <File Path="Images\tiles\appbar.list.png" Url="Images/tiles/appbar.list.png" ReplaceContent="TRUE" />
+    <File Path="Images\tiles\appbar.page.text.png" Url="Images/tiles/appbar.page.text.png" ReplaceContent="TRUE" />
+    <File Path="Images\logo.png" Url="Images/logo.png" ReplaceContent="TRUE" />
+    <File Path="Images\tiles\appbar.list.star.png" Url="Images/tiles/appbar.list.star.png" ReplaceContent="TRUE" />
+    <File Path="Images\tiles\appbar.lamp.desk.variant.png" Url="Images/tiles/appbar.lamp.desk.variant.png" ReplaceContent="TRUE" />
+    <File Path="Images\report.png" Url="Images/report.png" ReplaceContent="TRUE" />
+    <File Path="Images\ministry.png" Url="Images/ministry.png" ReplaceContent="TRUE" />
+    <File Path="Images\ministry-transport.png" Url="Images/ministry-transport.png" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

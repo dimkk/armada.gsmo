@@ -1,0 +1,20 @@
+﻿#s4-titlerow { 
+    display: none !important;
+}
+
+#s4-ribbonrow {
+    display: none !important;
+}
+
+#suiteBar {
+    display: none !important;
+}
+
+.well {
+    background-color: #0072C6;
+}
+
+.media-body {
+    color: white;
+    font-size: 24px;
+}

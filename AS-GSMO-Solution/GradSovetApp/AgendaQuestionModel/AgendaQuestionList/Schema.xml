@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="AgendaQuestionList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/AgendaQuestionList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE" DisableAttachments="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100b0d589b7852640c89fd6a1ad1c960183" Name="ListFieldsContentType">
+        <FieldRefs>
+          <FieldRef ID="{9d0533c2-4a51-4c78-b67e-e9da842ad601}" Name="AgendaQuestionNumber" />
+          <FieldRef ID="{75b9c5bc-475c-4c4e-bb4d-8855d83b9b9e}" Name="AgendaQuestionTheme" />
+          <FieldRef ID="{6dcdcd30-e1fc-4616-b660-7d726bb4de8a}" Name="AgendaQuestionDescription" />
+          <FieldRef ID="{c459c5d9-b61e-4fea-acc0-52a4061ef9c5}" Name="QuestionCategoryLink" />
+          <FieldRef ID="{68d3075f-49f9-40a0-a6ca-fc37336765c1}" Name="AgendaQuestionExtResources" />
+          <FieldRef ID="{237f9689-62e8-441b-9fb3-c0e24f66f4a8}" Name="MeetingLink" />
+          <FieldRef ID="{1ba7a18b-e64f-4a2e-9dfb-94f5653a15eb}" Name="AgendaQuestionSiteName" />
+          <FieldRef ID="{258c5bf9-9660-48c2-96e0-cd86d4085861}" Name="AgendaQuestionReason" />
+          <FieldRef ID="{81c234bb-d8af-4ab0-811f-cd18b3a1d461}" Name="AgendaQuestionDeclarant" />
+          <FieldRef ID="{9b032bd1-f532-4e40-9932-0134b5a76a2d}" Name="AgendaQuestionIncomingDate" />
+          <FieldRef ID="{360BE1D4-2144-4EEA-AC5B-CE057ABB5BB0}" Name="AgendaQuestionProjectType" />
+          <FieldRef ID="{ff4680bb-111d-49d3-ba1e-09f8b8e286ec}" Name="AgendaQuestionAddress" />
+          <FieldRef ID="{ed99fe0b-cb72-40ae-ab4d-cb5049798058}" Name="AgendaQuestionInvestor" />
+          <FieldRef ID="{1ea6346a-a237-46ee-87eb-6d8873a2930d}" Name="AgendaQuestionProtocolDecision" />
+          <FieldRef ID="{d1d4d47a-6741-4dba-89bb-b7257c890b6c}" Name="AgendaQuestionProtocolDecisionType" />
+          <FieldRef ID="{ed078e27-6425-46f3-975b-0dbbdb00f56d}" Name="AgendaQuestionIsConsidered" />
+          <FieldRef ID="{98a697ed-ef07-42f2-9f75-9626c4da0556}" Name="AgendaQuestionReporterFullNameLink" />
+          <FieldRef ID="{8DBEBA66-AA41-4CCD-A952-0C36AE43D7ED}" Name="AgendaQuestionSoreporterFullNameLink" />
+          <FieldRef ID="{5FAC1447-5662-40FB-B6D5-5A2458BC3B11}" Name="AgendaLinkedQuestionLink" />
+        </FieldRefs>
+      </ContentType>
+      <ContentType ID="0x01004682F4FBB1874837BA39C57EED443E7C" Name="Вопрос повестки" Group="Типы содержимого градостроительного совета" Description="Тип контента для вопроса повестки заседания" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{9d0533c2-4a51-4c78-b67e-e9da842ad601}" DisplayName="Номер вопроса" Required="TRUE" Name="AgendaQuestionNumber" />
+          <FieldRef ID="{75b9c5bc-475c-4c4e-bb4d-8855d83b9b9e}" DisplayName="Тема вопроса" Required="TRUE" Name="AgendaQuestionTheme" NumLines="3" />
+          <FieldRef ID="{6dcdcd30-e1fc-4616-b660-7d726bb4de8a}" DisplayName="Описание" Required="FALSE" Name="AgendaQuestionDescription" NumLines="3" />
+          <FieldRef ID="{c459c5d9-b61e-4fea-acc0-52a4061ef9c5}" DisplayName="Категория вопроса" Required="TRUE" Name="QuestionCategoryLink" />
+          <FieldRef ID="{68d3075f-49f9-40a0-a6ca-fc37336765c1}" DisplayName="Внешние источники" Required="FALSE" Name="AgendaQuestionExtResources" NumLines="1" />
+          <FieldRef ID="{237f9689-62e8-441b-9fb3-c0e24f66f4a8}" DisplayName="Заседание" Required="TRUE" Name="MeetingLink" />
+          <FieldRef ID="{1ba7a18b-e64f-4a2e-9dfb-94f5653a15eb}" DisplayName="Наименование объекта" Required="FALSE" Name="AgendaQuestionSiteName" NumLines="1" />
+          <FieldRef ID="{258c5bf9-9660-48c2-96e0-cd86d4085861}" DisplayName="Основание" Required="FALSE" Name="AgendaQuestionReason" NumLines="1" />
+          <FieldRef ID="{81c234bb-d8af-4ab0-811f-cd18b3a1d461}" DisplayName="Заявитель на комиссию" Required="FALSE" Name="AgendaQuestionDeclarant" />
+          <FieldRef ID="{9b032bd1-f532-4e40-9932-0134b5a76a2d}" DisplayName="Дата поступления" Required="FALSE" Name="AgendaQuestionIncomingDate" Format="DateOnly" />
+          <FieldRef ID="{360BE1D4-2144-4EEA-AC5B-CE057ABB5BB0}" DisplayName="Тип проекта" Required="FALSE" Name="AgendaQuestionProjectType" />
+          <FieldRef ID="{ff4680bb-111d-49d3-ba1e-09f8b8e286ec}" DisplayName="Адрес" Required="FALSE" Name="AgendaQuestionAddress" NumLines="1" />
+          <FieldRef ID="{ed99fe0b-cb72-40ae-ab4d-cb5049798058}" DisplayName="Инвестор" Required="FALSE" Name="AgendaQuestionInvestor" NumLines="1" />
+          <FieldRef ID="{1ea6346a-a237-46ee-87eb-6d8873a2930d}" DisplayName="Решение" Required="FALSE" Name="AgendaQuestionProtocolDecision" NumLines="12" />
+          <FieldRef ID="{d1d4d47a-6741-4dba-89bb-b7257c890b6c}" DisplayName="Тип решения" Required="FALSE" Name="AgendaQuestionProtocolDecisionType"></FieldRef>
+          <FieldRef ID="{ed078e27-6425-46f3-975b-0dbbdb00f56d}" DisplayName="Рассмотрен" Required="FALSE" Name="AgendaQuestionIsConsidered" />
+          <FieldRef ID="{98a697ed-ef07-42f2-9f75-9626c4da0556}" DisplayName="Докладчик" Required="FALSE" Name="AgendaQuestionReporterFullNameLink" />
+          <FieldRef ID="{8DBEBA66-AA41-4CCD-A952-0C36AE43D7ED}" DisplayName="Содокладчики" Required="FALSE" Name="AgendaQuestionSoreporterFullNameLink" />
+          <FieldRef ID="{5FAC1447-5662-40FB-B6D5-5A2458BC3B11}" DisplayName="Связанный вопрос" Required="FALSE" Name="AgendaLinkedQuestionLink" />
+        </FieldRefs>
+        <XmlDocuments>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+            <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+              <Display>_layouts/15/gradsovetpages/Pages/AgendaQuestion.aspx?mode=display</Display>
+              <Edit>_layouts/15/gradsovetpages/Pages/AgendaQuestion.aspx?mode=edit</Edit>
+              <New>_layouts/15/gradsovetpages/Pages/AgendaQuestion.aspx?mode=new</New>
+            </FormUrls>
+          </XmlDocument>
+        </XmlDocuments>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{9d0533c2-4a51-4c78-b67e-e9da842ad601}" Name="AgendaQuestionNumber" DisplayName="Номер вопроса" Type="Integer" Commas="FALSE" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{75b9c5bc-475c-4c4e-bb4d-8855d83b9b9e}" Name="AgendaQuestionTheme" DisplayName="Тема вопроса" Type="Note" NumLines="3" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{6dcdcd30-e1fc-4616-b660-7d726bb4de8a}" Name="AgendaQuestionDescription" DisplayName="Описание вопроса повестки" Type="Note" NumLines="3" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{c459c5d9-b61e-4fea-acc0-52a4061ef9c5}" Name="QuestionCategoryLink" DisplayName="Категория вопроса" Type="Lookup" List="Lists/AgendaQuestionCategoryBookList" ShowField="QuestionCategoryName" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{68d3075f-49f9-40a0-a6ca-fc37336765c1}" Name="AgendaQuestionExtResources" DisplayName="Внешние источники" Type="Note" NumLines="1" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{237f9689-62e8-441b-9fb3-c0e24f66f4a8}" Name="MeetingLink" DisplayName="Заседание" Type="Lookup" List="Lists/MeetingList" ShowField="MeetingNumber" Required="TRUE" Group="Атрибуты заседания градостроительного совета" />
+      <Field ID="{1ba7a18b-e64f-4a2e-9dfb-94f5653a15eb}" Name="AgendaQuestionSiteName" DisplayName="Наименование объекта" Type="Note" NumLines="1" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{258c5bf9-9660-48c2-96e0-cd86d4085861}" Name="AgendaQuestionReason" DisplayName="Основание" Type="Note" NumLines="1" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{81c234bb-d8af-4ab0-811f-cd18b3a1d461}" Name="AgendaQuestionDeclarant" DisplayName="Заявитель на комиссию" Type="Text" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{9b032bd1-f532-4e40-9932-0134b5a76a2d}" Name="AgendaQuestionIncomingDate" DisplayName="Дата поступления" Type="DateTime" Format="DateOnly" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{360BE1D4-2144-4EEA-AC5B-CE057ABB5BB0}" Name="AgendaQuestionProjectType" DisplayName="Тип проекта" Type="Text" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{ff4680bb-111d-49d3-ba1e-09f8b8e286ec}" Name="AgendaQuestionAddress" DisplayName="Адрес" Type="Note" NumLines="1" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{ed99fe0b-cb72-40ae-ab4d-cb5049798058}" Name="AgendaQuestionInvestor" DisplayName="Инвестор" Type="Note" NumLines="1" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{1ea6346a-a237-46ee-87eb-6d8873a2930d}" Name="AgendaQuestionProtocolDecision" DisplayName="Решение" Type="Note" NumLines="12" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{d1d4d47a-6741-4dba-89bb-b7257c890b6c}" Name="AgendaQuestionProtocolDecisionType" DisplayName="Тип решения" Type="Boolean" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{ed078e27-6425-46f3-975b-0dbbdb00f56d}" Name="AgendaQuestionIsConsidered" DisplayName="Рассмотрен" Type="Boolean" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{98a697ed-ef07-42f2-9f75-9626c4da0556}" Name="AgendaQuestionReporterFullNameLink" DisplayName="Докладчик" Type="Lookup" List="Lists/ParticipantBookList" ShowField="ParticipantFullName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{8DBEBA66-AA41-4CCD-A952-0C36AE43D7ED}" Name="AgendaQuestionSoreporterFullNameLink" DisplayName="Содокладчики" Type="Lookup" Mult="TRUE" List="Lists/ParticipantBookList" ShowField="ParticipantFullName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{5FAC1447-5662-40FB-B6D5-5A2458BC3B11}" Name="AgendaLinkedQuestionLink" DisplayName="Связанный вопрос" Type="Lookup" List="Self" ShowField="AgendaQuestionNumber" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="AgendaQuestionNumber" />
+          <FieldRef Name="AgendaQuestionTheme" />
+          <FieldRef Name="AgendaQuestionDescription" />
+          <FieldRef Name="QuestionCategoryLink" />
+          <FieldRef Name="MeetingLink" />
+          <FieldRef Name="AgendaQuestionSiteName" />
+          <FieldRef Name="AgendaQuestionReason" />
+          <FieldRef Name="AgendaQuestionDeclarant" />
+          <FieldRef Name="AgendaQuestionIncomingDate" />
+          <FieldRef Name="AgendaQuestionAddress" />
+          <FieldRef Name="AgendaQuestionInvestor" />
+          <FieldRef Name="AgendaQuestionProtocolDecision" />
+          <FieldRef Name="AgendaQuestionProtocolDecisionType" />
+          <FieldRef Name="AgendaQuestionIsConsidered" />
+          <FieldRef Name="AgendaQuestionReporterFullNameLink" />
+          <FieldRef Name="AgendaQuestionSoreporterFullNameLink" />
+        </ViewFields>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Query>
+          <GroupBy Collapse="TRUE" GroupLimit="30">
+            <FieldRef Name="MeetingLink" />
+          </GroupBy>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Camlex.NET.dll</id>
+    <version>3.5.0.0</version>
+    <title>Camlex.NET.dll</title>
+    <authors>Alexey Sadomov, Vladimir Timashkov</authors>
+    <owners>Alexey Sadomov, Vladimir Timashkov</owners>
+    <licenseUrl>http://camlex.codeplex.com/license</licenseUrl>
+    <projectUrl>http://camlex.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Camlex.NET simplifies creating of CAML queries for SharePoint by using C# and lambda expressions</description>
+    <releaseNotes>Support for In CAML operation</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <language />
+    <tags>CAML lambda expressions csharp</tags>
+  </metadata>
+</package>

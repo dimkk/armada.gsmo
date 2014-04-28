@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListTemplate
+		Name="AgendaQuestionAttachDSList"
+		DisplayName="Наборы документов для вложений вопросов повестки"
+		Description="Используется для создания списков вложений в вопросы повестки в виде наборов документов"
+		Type="10100"
+		BaseType="1"
+		Default="FALSE"
+		OnQuickLaunch="FALSE"
+		Category="Libraries"
+		DisableAttachments="TRUE"
+		DisallowContentTypes="FALSE"
+		VersioningEnabled="TRUE"
+		FolderCreation="TRUE"
+		EnableModeration="False"
+		SecurityBits="11"
+		Sequence="1000"
+		Image="/_layouts/15/images/gs_meeting/ListIcon_AgendaQuestionAttachDSList.gif"
+		Hidden="FALSE"
+		HiddenList="FALSE" />
+</Elements>

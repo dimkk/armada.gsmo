@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<!--
+    ************************************************************************
+       Application: gs.meeting
+      Created date: 2014-03-11 14:30:58Z
+        Created by: RKIS\developer
+              Name: NewsWebPart
+       Description: Новости Градостроительного Совета          
+    ************************************************************************
+    -->
+	<Module
+		Name="NewsWebPart"
+		List="113"
+		Url="_catalogs/wp">
+		<File
+			Path="NewsWebPart\NewsWebPart.webpart"
+			Url="NewsWebPart.webpart"
+			Type="GhostableInLibrary">
+			<Property
+				Name="Group"
+				Value="gs.meeting Webparts" />
+			<Property
+				Name="QuickAddGroups"
+				Value="gs.meeting QuickAdd Webparts" />
+		</File>
+	</Module>
+</Elements>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\viewmodel.js" Url="Scripts/viewmodel.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\camljs.js" Url="Scripts/camljs.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-2.0.3.min.map" Url="Scripts/jquery-2.0.3.min.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-2.0.3.min.js" Url="Scripts/jquery-2.0.3.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-2.0.3.js" Url="Scripts/jquery-2.0.3.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-2.0.3.intellisense.js" Url="Scripts/jquery-2.0.3.intellisense.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-ui-1.10.3.min.js" Url="Scripts/jquery-ui-1.10.3.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-ui-1.10.3.js" Url="Scripts/jquery-ui-1.10.3.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\knockout-2.3.0.js" Url="Scripts/knockout-2.3.0.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\participantModel.js" Url="Scripts/participantModel.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.map" Url="Scripts/jquery-1.9.1.min.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.js" Url="Scripts/jquery-1.9.1.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.js" Url="Scripts/jquery-1.9.1.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.intellisense.js" Url="Scripts/jquery-1.9.1.intellisense.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.min.js" Url="Scripts/bootstrap.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\typeahead.min.js" Url="Scripts/typeahead.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\typeahead.js" Url="Scripts/typeahead.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\executorModel.js" Url="Scripts/executorModel.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment-with-langs.min.js" Url="Scripts/moment-with-langs.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment-with-langs.js" Url="Scripts/moment-with-langs.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment.min.js" Url="Scripts/moment.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment.js" Url="Scripts/moment.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment-datepicker-ko.js" Url="Scripts/moment-datepicker-ko.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment-datepicker.min.js" Url="Scripts/moment-datepicker.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment-datepicker.js" Url="Scripts/moment-datepicker.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment-datepicker.d.ts" Url="Scripts/moment-datepicker.d.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment-datepicker.min.js.map" Url="Scripts/moment-datepicker.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\searchQuestionModel.js" Url="Scripts/searchQuestionModel.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery.linq.min.js" Url="Scripts/jquery.linq.min.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="MeetingList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/MeetingList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100EC243C589FF24FEFBF00F3D3FE6ECD36" Name="Заседание" Group="Типы содержимого градостроительного совета" Description="Тип содержимого для заседаний" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{f0776f44-b23d-44e4-a634-97175d3df2a5}" DisplayName="Номер" Required="TRUE" Name="MeetingNumber" />
+          <FieldRef ID="{CBDCE2B4-6B85-4B27-988B-9040A0AF54D7}" DisplayName="Наименование" Required="FALSE" Name="MeetingTitle" />
+          <FieldRef ID="{d18ee2a0-eec7-4fbd-9227-2edc3fe29866}" DisplayName="Место проведения" Required="FALSE" Name="MeetingPlace" NumLines="3" />
+          <FieldRef ID="{509c537a-07d5-43c7-9437-12117cfc7043}" DisplayName="Дата проведения" Required="FALSE" Name="MeetingDate" Format="DateOnly" />
+          <FieldRef ID="{8e9c6338-b120-4339-a12d-b7c16b8706e8}" DisplayName="Статус" Required="FALSE" Name="MeetingStatus" />
+          <FieldRef ID="{3825f4ac-63fb-46e7-affb-338792bf75be}" DisplayName="Председатель" Required="TRUE" Name="ChairManFullNameLink" />
+          <FieldRef ID="{fe0fe46e-58a0-42c6-98cb-1e00e9f66077}" DisplayName="Ответственный секретарь" Required="FALSE" Name="ProtocolResponsibleSecretaryLink" />
+          <FieldRef ID="{5a1bc9bd-5d56-4f6f-ac31-cde07b52af1c}" DisplayName="Секретарь" Required="TRUE" Name="SecretaryFullNameLink" />
+          <FieldRef ID="{4081321D-4143-449F-8AC0-E60BC1B3B37D}" DisplayName="Члены градостроительного совета" Required="FALSE" Name="ProtocolExtParticipants" />
+          <FieldRef ID="{FB77F6F3-440B-4749-B919-195CCD3BBCC8}" DisplayName="Остальные участники заседания" Required="FALSE" Name="OtherParticipantsList" />
+        </FieldRefs>
+        <XmlDocuments>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+            <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+              <Display>_layouts/15/gradsovetpages/Pages/Meeting.aspx?mode=display</Display>
+              <Edit>_layouts/15/gradsovetpages/Pages/Meeting.aspx?mode=edit</Edit>
+              <New>_layouts/15/gradsovetpages/Pages/Meeting.aspx?mode=new</New>
+            </FormUrls>
+          </XmlDocument>
+        </XmlDocuments>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{f0776f44-b23d-44e4-a634-97175d3df2a5}" Name="MeetingNumber" DisplayName="Номер" Type="Text" Required="TRUE" Indexed="TRUE" EnforceUniqueValues="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{CBDCE2B4-6B85-4B27-988B-9040A0AF54D7}" Name="MeetingTitle" DisplayName="Наименование" Type="Text" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{d18ee2a0-eec7-4fbd-9227-2edc3fe29866}" Name="MeetingPlace" DisplayName="Место проведения" Type="Note" NumLines="3" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{509c537a-07d5-43c7-9437-12117cfc7043}" Name="MeetingDate" DisplayName="Дата проведения" Type="DateTime" Format="DateOnly" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{9523d3ea-4ec4-4bf9-941b-7f84ca5b87f1}" Name="MeetingStatus" DisplayName="Статус" Type="Choice" Required="FALSE" Group="Атрибуты заседания градостроительного совета">
+        <CHOICES>
+          <CHOICE>Планируемое</CHOICE>
+          <CHOICE>Завершенное</CHOICE>
+        </CHOICES>
+        <MAPPINGS>
+          <MAPPING Value="1">Планируемое</MAPPING>
+          <MAPPING Value="2">Завершенное</MAPPING>
+        </MAPPINGS>
+        <Default>Планируемое</Default>
+      </Field>
+      <Field ID="{3825f4ac-63fb-46e7-affb-338792bf75be}" Name="ChairManFullNameLink" DisplayName="Председатель" Type="Lookup" List="Lists/ParticipantBookList" ShowField="ParticipantFullName" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{5a1bc9bd-5d56-4f6f-ac31-cde07b52af1c}" Name="SecretaryFullNameLink" DisplayName="Секретарь" Type="Lookup" List="Lists/ParticipantBookList" ShowField="ParticipantFullName" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{4081321D-4143-449F-8AC0-E60BC1B3B37D}" Name="ProtocolExtParticipants" DisplayName="Члены градостроительного совета" Type="Lookup" Mult="TRUE" List="Lists/ParticipantBookList" ShowField="ParticipantFullName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{fe0fe46e-58a0-42c6-98cb-1e00e9f66077}" Name="ProtocolResponsibleSecretaryLink" DisplayName="Ответственный секретарь" Type="Lookup" List="Lists/ParticipantBookList" ShowField="ParticipantFullName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{FB77F6F3-440B-4749-B919-195CCD3BBCC8}" Name="OtherParticipantsList" DisplayName="Остальные участники заседания" Type="Note" NumLines="3" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+    </Fields>
+    <Views>
+
+
+
+
+
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+
+
+
+
+
+
+
+
+          <FieldRef Name="Edit" />
+          <FieldRef Name="MeetingNumber" />
+          <FieldRef Name="MeetingDate" />
+          <FieldRef Name="MeetingPlace" />
+          <FieldRef Name="MeetingStatus" />
+          <FieldRef Name="ChairManFullNameLink" />
+          <FieldRef Name="ProtocolExtParticipants" />
+          <FieldRef Name="ProtocolResponsibleSecretaryLink" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="2" Type="CALENDAR" WebPartZoneID="Main" DisplayName="Календарь" MobileView="TRUE" MobileDefaultView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/events.png?rev=23" TabularView="FALSE" Url="calendar.aspx" RecurrenceRowset="TRUE" DefaultView="FALSE" MobileUrl="_layouts/15/mobile/viewdaily.aspx">
+        <Toolbar Type="Standard" />
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <ViewFields>
+          <FieldRef Name="MeetingDate">
+          </FieldRef>
+          <FieldRef Name="MeetingDate">
+          </FieldRef>
+          <FieldRef Name="Title">
+          </FieldRef>
+        </ViewFields>
+        <ViewData>
+          <FieldRef Name="MeetingPlace" Type="CalendarMonthTitle">
+          </FieldRef>
+          <FieldRef Name="MeetingPlace" Type="CalendarWeekTitle">
+          </FieldRef>
+          <FieldRef Name="MeetingPlace" Type="CalendarWeekLocation">
+          </FieldRef>
+          <FieldRef Name="MeetingPlace" Type="CalendarDayTitle">
+          </FieldRef>
+          <FieldRef Name="MeetingPlace" Type="CalendarDayLocation">
+          </FieldRef>
+        </ViewData>
+        <Query>
+          <Where>
+            <DateRangesOverlap>
+              <FieldRef Name="MeetingDate">
+              </FieldRef>
+              <FieldRef Name="MeetingDate">
+              </FieldRef>
+              <Value Type="DateTime">
+                <Month>
+                </Month>
+              </Value>
+            </DateRangesOverlap>
+          </Where>
+        </Query>
+      </View>
+      <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" DisplayName="Завершенные" MobileView="TRUE" MobileDefaultView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="finished.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+
+
+
+
+
+
+
+
+          <FieldRef Name="Edit" />
+          <FieldRef Name="MeetingNumber" />
+          <FieldRef Name="MeetingDate" />
+          <FieldRef Name="MeetingPlace" />
+          <FieldRef Name="MeetingStatus" />
+          <FieldRef Name="ChairManFullNameLink" />
+          <FieldRef Name="ProtocolExtParticipants" />
+          <FieldRef Name="ProtocolResponsibleSecretaryLink" />
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="MeetingStatus" />
+              <Value Type="Text">Завершенное</Value>
+            </Eq>
+          </Where>
+          <OrderBy>
+
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="4" Type="HTML" WebPartZoneID="Main" DisplayName="Планируемые" MobileView="TRUE" MobileDefaultView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="planning.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+
+
+
+
+
+
+
+
+          <FieldRef Name="Edit" />
+          <FieldRef Name="MeetingNumber" />
+          <FieldRef Name="MeetingDate" />
+          <FieldRef Name="MeetingPlace" />
+          <FieldRef Name="MeetingStatus" />
+          <FieldRef Name="ChairManFullNameLink" />
+          <FieldRef Name="ProtocolExtParticipants" />
+          <FieldRef Name="ProtocolResponsibleSecretaryLink" />
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="MeetingStatus" />
+              <Value Type="Text">Планируемое</Value>
+            </Eq>
+          </Where>
+          <OrderBy>
+
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

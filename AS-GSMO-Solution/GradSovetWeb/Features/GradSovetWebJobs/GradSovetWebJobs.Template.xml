@@ -1,0 +1,1 @@
+﻿<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="GradSovetWebJobs" ActivateOnDefault="FALSE" Id="8A75150C-B0AC-4EC4-B796-8F9118E8A2D4" ReceiverAssembly="GradSovetWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03b962f67b1b385f" ReceiverClass="GradSovetWeb.Features.GradSovetWeb_Jobs.GradSovetWeb_JobsEventReceiver" Scope="WebApplication"></Feature>

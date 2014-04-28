@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Записи журналов поручений" OnQuickLaunch="TRUE" TemplateType="10014" Url="Lists/AssignmentJournalEntryList" Description="">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="AssignmentLink">1</Field>
+          <Field Name="AssignmentJournalEntryDescr">Плановая дата исполнения - 01.01.2013 -> 01.01.2014</Field>
+        </Row>
+        <Row>
+          <Field Name="AssignmentLink">1</Field>
+          <Field Name="AssignmentJournalEntryDescr">Фактическая дата исполнения - 02.01.2013 -></Field>
+        </Row>
+        <Row>
+          <Field Name="AssignmentLink">1</Field>
+          <Field Name="AssignmentJournalEntryDescr">Плановая дата исполнения - 01.01.2013 -> 01.01.2014</Field>
+        </Row>
+        <Row>
+          <Field Name="AssignmentLink">2</Field>
+          <Field Name="AssignmentJournalEntryDescr">Плановая дата исполнения - 01.01.2013 -> 01.01.2014</Field>
+        </Row>
+        <Row>
+          <Field Name="AssignmentLink">3</Field>
+          <Field Name="AssignmentJournalEntryDescr">Плановая дата исполнения - 01.01.2013 -> 01.01.2014</Field>
+        </Row>
+        <Row>
+          <Field Name="AssignmentLink">3</Field>
+          <Field Name="AssignmentJournalEntryDescr">Плановая дата исполнения - 01.01.2013 -> 01.01.2014</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

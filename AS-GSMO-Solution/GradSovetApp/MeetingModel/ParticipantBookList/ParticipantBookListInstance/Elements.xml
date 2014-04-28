@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Справочник участников" OnQuickLaunch="TRUE" TemplateType="10003" Url="Lists/ParticipantBookList" Description="Справочник участников заседаний">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="ParticipantFullName">Григорьев Лев Петрович</Field>
+          <Field Name="ParticipantFullNameGenitive">Григорьева Льва Петровича</Field>
+          <Field Name="ParticipantFullNameDative">Григорьеву Льву Петровичу</Field>
+          <Field Name="ParticipantPositionLink">4</Field>
+          <Field Name="ParticipantOrgLink">4</Field>
+          <Field Name="ParticipantRole">Член ГрадСовета</Field>
+        </Row>
+        <Row>
+          <Field Name="ParticipantFullName">Примаков Илья Геннадьевич</Field>
+          <Field Name="ParticipantFullNameGenitive">Примакова Илью Геннадьевича</Field>
+          <Field Name="ParticipantFullNameDative">Примакову Илье Геннадьевичу</Field>
+          <Field Name="ParticipantPositionLink">5</Field>
+          <Field Name="ParticipantOrgLink">5</Field>
+          <Field Name="ParticipantRole">Член МВК</Field>
+        </Row>
+        <Row>
+          <Field Name="ParticipantFullName">Ильин Федор Егорьевич</Field>
+          <Field Name="ParticipantFullNameGenitive">Ильина Федора Егорьевича</Field>
+          <Field Name="ParticipantFullNameDative">Ильину Федору Егорьевичу</Field>
+          <Field Name="ParticipantPositionLink">6</Field>
+          <Field Name="ParticipantOrgLink">6</Field>
+        </Row>
+        <Row>
+          <Field Name="ParticipantFullName">Степашин Андрей Робинзонович</Field>
+          <Field Name="ParticipantFullNameGenitive">Степашина Андрея Робинзоновича</Field>
+          <Field Name="ParticipantFullNameDative">Степашину Андрею Робинзоновичу</Field>
+          <Field Name="ParticipantPositionLink">7</Field>
+          <Field Name="ParticipantOrgLink">7</Field>
+        </Row>
+        <Row>
+          <Field Name="ParticipantFullName">Курепина Нина Васильевна</Field>
+          <Field Name="ParticipantFullNameGenitive">Курепину Нину Васильевну</Field>
+          <Field Name="ParticipantFullNameDative">Курепиной Нине Васильевне</Field>
+          <Field Name="ParticipantPositionLink">8</Field>
+          <Field Name="ParticipantOrgLink">8</Field>
+        </Row>
+        <Row>
+          <Field Name="ParticipantFullName">Зацепин Родион Михайлович</Field>
+          <Field Name="ParticipantFullNameGenitive">Зацепина Родиона Михайловича</Field>
+          <Field Name="ParticipantFullNameDative">Зацепину Родиону Михайловичу</Field>
+          <Field Name="ParticipantPositionLink">8</Field>
+          <Field Name="ParticipantOrgLink">9</Field>
+        </Row>
+        <Row>
+          <Field Name="ParticipantFullName">Пряников Василий Викторович</Field>
+          <Field Name="ParticipantFullNameGenitive">Пряникова Василия Викторовича</Field>
+          <Field Name="ParticipantFullNameDative">Пряникову Василию Викторовичу</Field>
+          <Field Name="ParticipantPositionLink">9</Field>
+          <Field Name="ParticipantOrgLink">10</Field>
+        </Row>
+        <Row>
+          <Field Name="ParticipantFullName">Липатова Раиса Аркадьевна</Field>
+          <Field Name="ParticipantFullNameGenitive">Липатову Раису Аркадьевну</Field>
+          <Field Name="ParticipantFullNameDative">Липатовой Раисе Аркадьевне</Field>
+          <Field Name="ParticipantPositionLink">10</Field>
+          <Field Name="ParticipantOrgLink">11</Field>
+        </Row>
+        <Row>
+          <Field Name="ParticipantFullName">Бударин Аркадий Семенович</Field>
+          <Field Name="ParticipantFullNameGenitive">Бударина Аркадия Семеновича</Field>
+          <Field Name="ParticipantFullNameDative">Бударину Аркадию Семеновичу</Field>
+          <Field Name="ParticipantPositionLink">8</Field>
+          <Field Name="ParticipantOrgLink">12</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

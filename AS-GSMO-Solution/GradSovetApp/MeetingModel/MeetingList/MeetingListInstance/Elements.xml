@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Заседания" OnQuickLaunch="TRUE" TemplateType="10002" Url="Lists/MeetingList" Description="">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="MeetingNumber">1</Field>
+          <Field Name="MeetingPlace">г. Химки, ул. Весенняя д.21 корп.2</Field>
+          <Field Name="MeetingDate">08/21/2013</Field>
+          <Field Name="MeetingStatus">Планируемое</Field>
+        </Row>
+        <Row>
+          <Field Name="MeetingNumber">2</Field>
+          <Field Name="MeetingPlace">г. Ногинск, ул. Летняя д.22 корп.3</Field>
+          <Field Name="MeetingDate">09/22/2013</Field>
+          <Field Name="MeetingStatus">Планируемое</Field>
+        </Row>
+        <Row>
+          <Field Name="MeetingNumber">3</Field>
+          <Field Name="MeetingPlace">Здание правительства Московской области</Field>
+          <Field Name="MeetingDate">10/27/2013</Field>
+          <Field Name="MeetingStatus">Планируемое</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

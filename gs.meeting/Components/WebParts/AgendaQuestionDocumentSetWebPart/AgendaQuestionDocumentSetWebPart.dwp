@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Assembly>$SharePoint.Project.AssemblyFullName$,Version=1.0.0.0,Culture=Neutral,PublicToken=98b8bbe69daf0ccc</Assembly>
+  <TypeName>gs.meeting.Components.AgendaQuestionDocumentSetWebPart</TypeName>
+  <Title>Вложения вопроса повестки</Title>
+  <Description>Веб часть отображает вложения вопроса повестки в виде набора документов. Размещается на странице вопроса повестки</Description>
+</WebPart>

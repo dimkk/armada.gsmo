@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+************************************************************************
+       Company: Armada
+   Application: gs.meeting
+  Created date: 2014-03-11 14:30:55Z
+    Created by: RKIS\developer
+  Feature Name: News
+ Feature Title: Новости ГрадСовета
+   Description: Веб части и другие элементы для отображения новостей
+       History: Initial Version 1.0.0.0 
+************************************************************************
+-->
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests></ElementManifests>
+</Feature>

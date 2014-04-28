@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4DB462A-5FDC-4FE8-BF60-683403868752}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GradSovetWeb</RootNamespace>
+    <AssemblyName>GradSovetWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="erReporters\erReporters.cs" />
+    <Compile Include="Features\GradSovetWebJobs\GradSovetWebJobs.EventReceiver.cs">
+      <DependentUpon>GradSovetWebJobs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Jobs\AssignmentTimerJob.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasures.cs" />
+    <Compile Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresDisplayMode.ascx.cs">
+      <DependentUpon>AgendaQuestionMeasuresDisplayMode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresDisplayMode.ascx.designer.cs">
+      <DependentUpon>AgendaQuestionMeasuresDisplayMode.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresEditMode.ascx.cs">
+      <DependentUpon>AgendaQuestionMeasuresEditMode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresEditMode.ascx.designer.cs">
+      <DependentUpon>AgendaQuestionMeasuresEditMode.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="erReporters\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{298a1e01-85f2-435b-bb2f-90ea3fe2f039}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\GradSovetWebJobs\GradSovetWebJobs.feature">
+      <FeatureId>{22c4e0bf-af99-46eb-bcee-8e0ed0b10874}</FeatureId>
+    </None>
+    <None Include="Features\GradSovetWeb WebParts\GradSovetWeb WebParts.feature">
+      <FeatureId>{2ebd783e-55f6-4c2a-b7b2-1489bcfe24d7}</FeatureId>
+    </None>
+    <None Include="Features\GradSovetWebEventReceivers\GradSovetWebEventReceivers.feature">
+      <FeatureId>{871e7df8-5f9d-4143-a056-0d05a319bd3e}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{8058b248-4b8f-4002-b6a6-81bfe4239ce1}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasures.webpart" />
+    <None Include="WebParts\AgendaQuestionMeasures\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{97b8c4e7-246d-413e-aeea-548282cb1701}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="erReporters\Elements.xml" />
+    <Content Include="Features\GradSovetWebJobs\GradSovetWebJobs.Template.xml">
+      <DependentUpon>GradSovetWebJobs.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\GradSovetWeb WebParts\GradSovetWeb WebParts.Template.xml">
+      <DependentUpon>GradSovetWeb WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\GradSovetWebEventReceivers\GradSovetWebEventReceivers.Template.xml">
+      <DependentUpon>GradSovetWebEventReceivers.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresDisplayMode.ascx" />
+    <Content Include="WebParts\AgendaQuestionMeasures\AgendaQuestionMeasuresEditMode.ascx" />
+    <Content Include="WebParts\AgendaQuestionMeasures\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

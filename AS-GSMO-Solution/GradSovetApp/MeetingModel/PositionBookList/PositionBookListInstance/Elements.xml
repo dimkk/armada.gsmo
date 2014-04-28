@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Справочник должностей" OnQuickLaunch="TRUE" TemplateType="10010" Url="Lists/PositionBookList" Description="">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Губернатор</Field>
+          <Field Name="PositionNameGenitive">Губернатора</Field>
+          <Field Name="PositionNameDative">Губернатору</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Заместитель губернатора</Field>
+          <Field Name="PositionNameGenitive">Заместителя губернатора</Field>
+          <Field Name="PositionNameDative">Заместителю губернатора</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Главный архитектор</Field>
+          <Field Name="PositionNameGenitive">Главного архитектора</Field>
+          <Field Name="PositionNameDative">Главному архитектору</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">ВРИО мэра г. Ногинск МО</Field>
+          <Field Name="PositionNameGenitive">ВРИО мэра г. Ногинска МО</Field>
+          <Field Name="PositionNameDative">ВРИО мэру г. Ногинска МО</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Министр здравоохранения РФ</Field>
+          <Field Name="PositionNameGenitive">Министра здравоохранения РФ</Field>
+          <Field Name="PositionNameDative">Министру здравоохранения РФ</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Первый заместитель министра энергетики РФ</Field>
+          <Field Name="PositionNameGenitive">Первого заместителя министра энергетики РФ</Field>
+          <Field Name="PositionNameDative">Первому заместителю министра энергетики РФ</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Исполнительный директор</Field>
+          <Field Name="PositionNameGenitive">Исполнительного директора</Field>
+          <Field Name="PositionNameDative">Исполнительному директору</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Генеральный директор</Field>
+          <Field Name="PositionNameGenitive">Генерального директора</Field>
+          <Field Name="PositionNameDative">Генеральному директору</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Первый заместитель министра связи РФ</Field>
+          <Field Name="PositionNameGenitive">Первого заместителя министра связи РФ</Field>
+          <Field Name="PositionNameDative">Первому заместителю министра связи РФ</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">ИТ директор</Field>
+          <Field Name="PositionNameGenitive">ИТ директора</Field>
+          <Field Name="PositionNameDative">ИТ директору</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

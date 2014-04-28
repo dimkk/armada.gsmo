@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Типы документов вложений" OnQuickLaunch="TRUE" 
+                TemplateType="10020" Url="Lists/DocTypeBookList" 
+                Description="">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Протокол</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Приказ</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Распоряжение губернатора</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Материал к Заседанию</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Отчет по поручению</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Материалы по вопросу повестки</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

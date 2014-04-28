@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<!--
+    ************************************************************************
+       Application: gs.meeting
+      Created date: 2014-03-13 17:24:08Z
+        Created by: RKIS\developer
+              Name: MarksListWebPart
+       Description: Веб часть отображает форматированные данные по показателям работы из списка, указанного в качестве источника данных          
+    ************************************************************************
+    -->
+	<Module
+		Name="MarksListWebPart"
+		List="113"
+		Url="_catalogs/wp">
+		<File
+			Path="MarksListWebPart\MarksListWebPart.webpart"
+			Url="MarksListWebPart.webpart"
+			Type="GhostableInLibrary">
+			<Property
+				Name="Group"
+				Value="gs.meeting Webparts" />
+			<Property
+				Name="QuickAddGroups"
+				Value="gs.meeting QuickAdd Webparts" />
+		</File>
+	</Module>
+</Elements>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Default.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Elements.xml" Target="Pages\" Type="ElementManifest" />
+    <ProjectItemFile Source="Meeting.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="ReferenceBooks.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="ParticipantsSelection.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="gs.master" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Report.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="gs-internal.master" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Ministry-Transport-Report.aspx" Target="Pages\" Type="ElementFile" />
+	<ProjectItemFile Source="ExecutorSelection.aspx" Target="Pages\" Type="ElementFile" />
+	<ProjectItemFile Source="SearchQuestion.aspx" Target="Pages\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

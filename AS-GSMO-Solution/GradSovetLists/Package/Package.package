@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="37b5afda-1ff5-4ce1-95a2-9ed26f46dc03" solutionId="37b5afda-1ff5-4ce1-95a2-9ed26f46dc03" resetWebServer="false" sharePointProductVersion="15.0" name="GradSovetLists" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="8c32e3c5-43d8-4b8d-8e88-e31f2df86fb3" />
+  </features>
+</package>

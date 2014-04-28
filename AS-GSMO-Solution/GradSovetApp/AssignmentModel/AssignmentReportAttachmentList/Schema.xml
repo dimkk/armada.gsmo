@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="AssignmentReportAttachmentList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/AssignmentReportAttachmentList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+
+      <ContentType ID="0x010035A17C7D66C84018A0D94C1FDD3A332F" Name="Вложение отчета по поручению" Group="Типы содержимого градостроительного совета" Description="" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{82b6c718-96c2-44cd-8ce9-db725d8fa167}" DisplayName="Отчет по поручению" Required="TRUE" Name="AssignmentReportLink" />
+          <FieldRef ID="{cce95c96-8ad8-4d27-8054-1eb1d59836e6}" DisplayName="Тип документа" Required="FALSE" Name="AttachmentDocumentTypeLink" />
+          <FieldRef ID="{462fb273-1c76-4c31-bf98-7f13e9513270}" DisplayName="Описание вложения" Required="FALSE" Name="AttachmentDescription" NumLines="7" />
+          <FieldRef ID="{C789FBD0-4B5C-4011-9A24-FF8A223A21B8}" DisplayName="Вложение отчета?" Required="FALSE" Name="AttachmentIsForReport" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+
+
+
+      <Field ID="{82b6c718-96c2-44cd-8ce9-db725d8fa167}" Name="AssignmentReportLink" DisplayName="Отчет по поручению" Type="Lookup" List="Lists/AssignmentReportList" ShowField="ID" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{cce95c96-8ad8-4d27-8054-1eb1d59836e6}" Name="AttachmentDocumentTypeLink" DisplayName="Тип документа (ссылка)" Type="Lookup" List="Lists/DocTypeBookList" ShowField="Title" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{462fb273-1c76-4c31-bf98-7f13e9513270}" Name="AttachmentDescription" DisplayName="Описание вложения" Type="Note" NumLines="7" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{C789FBD0-4B5C-4011-9A24-FF8A223A21B8}" Name="AttachmentIsForReport" DisplayName="Вложение отчета?" Type="Boolean" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+    </Fields>
+    <Views>
+
+
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+
+
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+
+
+
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+
+
+
+          <FieldRef Name="AssignmentReportLink" />
+          <FieldRef Name="AttachmentDocumentTypeLink" />
+          <FieldRef Name="AttachmentDescription" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+
+
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

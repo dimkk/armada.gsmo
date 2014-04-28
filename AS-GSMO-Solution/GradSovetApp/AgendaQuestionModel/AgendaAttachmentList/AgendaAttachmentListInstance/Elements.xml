@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Вложения вопроса повестки" OnQuickLaunch="TRUE" TemplateType="10001" Url="Lists/AgendaAttachmentList" Description="">
+        <Data>
+      <Rows>
+        <Row>
+          <Field Name="AgendaQuestionLink">1</Field>
+          <Field Name="AttachmentDescription">Строительство развязок и эстакад на железнодорожных переездах малого московского автомобильного кольца</Field>
+          <Field Name="AttachmentDocumentTypeLink">2</Field>
+        </Row>
+        <Row>
+          <Field Name="AgendaQuestionLink">1</Field>
+          <Field Name="AttachmentDescription">Обсуждение кандидатуры первого заместителя губернатора области</Field>
+          <Field Name="AttachmentDocumentTypeLink">2</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6397b244-daa8-46a3-ba2f-cee3efda4992" solutionId="6397b244-daa8-46a3-ba2f-cee3efda4992" resetWebServer="false" sharePointProductVersion="15.0" name="GradSovetPages" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="4b148fc3-1dac-4dce-b079-ad54532a818b" />
+  </projectItems>
+</package>

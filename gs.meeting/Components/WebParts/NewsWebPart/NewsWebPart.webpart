@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<type name="gs.meeting.Components.NewsWebPart, gs.meeting.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=98b8bbe69daf0ccc" />
+			<importErrorMessage>Cannot import Новости Web Part.</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">Новости</property>
+				<property name="Description" type="string">Новости Градостроительного Совета</property>
+				<property name="CatalogIconImageUrl" type="string">/_layouts/15/images/gs_meeting/radio-icon.png</property>
+				<property name="TitleIconImageUrl" type="string">/_layouts/15/images/gs_meeting/radio-icon.png</property>
+        <property name="LastDayCount" type="uint">30</property>
+			</properties>
+		</data>
+	</webPart>
+</webParts>

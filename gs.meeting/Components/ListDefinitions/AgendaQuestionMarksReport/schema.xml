@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<List xmlns:ows="Microsoft SharePoint" Title="Basic List" FolderCreation="FALSE" Direction="$Resources:Direction;"
+      Url="Lists/Basic List" BaseType="0">
+  <MetaData>
+    <ContentTypes>
+
+
+      <ContentType ID="0x01007dbb3230f0714d0e81864bab3ce88afe" Name="ListFieldsContentType">
+        <FieldRefs>
+
+          <FieldRef ID="{90d93d10-5df9-4413-ac04-a1c2892e1620}" Name="AgendaQuestionCategoryLink" />
+          <FieldRef ID="{8e004b60-d888-4e90-89a6-5172bd7f6bea}" Name="CountValue" />
+          <FieldRef ID="{a75fd156-8198-4ee0-934e-9ef0b7882866}" Name="MarkSumValue" />
+          <FieldRef ID="{55aa2dc4-ba15-48b7-b264-faee45aa765b}" Name="MarkLink" />
+          <FieldRef ID="{5da64dbb-5e58-41d0-8412-4b090ff8a715}" Name="SortIndex" />
+        </FieldRefs>
+      </ContentType>
+      <ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+
+
+      <Field Name="AgendaQuestionCategoryLink" ID="{90d93d10-5df9-4413-ac04-a1c2892e1620}"
+             DisplayName="Ссылка на категорию вопроса" Type="Lookup" Required="TRUE" EnforceUniqueValues="FALSE"
+             List="Lists/AgendaQuestionCategoryBookList" ShowField="QuestionCategoryName"
+             RelationshipDeleteBehavior="None" StaticName="AgendaQuestionCategory" />
+      <Field Name="CountValue" ID="{8e004b60-d888-4e90-89a6-5172bd7f6bea}" DisplayName="Количество" Type="Number" />
+      <Field Name="MarkSumValue" ID="{a75fd156-8198-4ee0-934e-9ef0b7882866}" DisplayName="Значение показателя"
+             Type="Number" />
+      <Field Name="MarkLink" ID="{55aa2dc4-ba15-48b7-b264-faee45aa765b}" DisplayName="Ссылка на показатель"
+             Type="Lookup" Required="FALSE" EnforceUniqueValues="FALSE" List="Lists/List5" ShowField="Title"
+             RelationshipDeleteBehavior="None" StaticName="MarkLink" />
+      <Field Name="SortIndex" ID="{5da64dbb-5e58-41d0-8412-4b090ff8a715}" DisplayName="Индекс сортировки" Type="Number">
+        <Default>0</Default>
+      </Field>
+    </Fields>
+    <Views>
+
+
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then>
+              <HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <URL Cmd="New" />
+              <HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote>
+              <HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML>
+              <HTML>$Resources:core,addnewitem;</HTML>
+              <HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+
+
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+
+
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main"
+            DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE"
+            MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23"
+            Url="AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+
+
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef Name="AgendaQuestionCategoryLink" />
+          <FieldRef Name="CountValue" />
+          <FieldRef Name="MarkLink" />
+          <FieldRef Name="MarkSumValue" />
+          <FieldRef Name="SortIndex" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+
+
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

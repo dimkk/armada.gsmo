@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Receivers
+		ListTemplateId="10002"
+		Scope="Web">
+		<Receiver>
+			<Name>erMeetingItemItemAdded</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>100</SequenceNumber>
+			<Assembly>gs.meeting.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=98b8bbe69daf0ccc</Assembly>
+			<Class>gs.meeting.Components.erMeetingItem</Class>
+			<Data></Data>
+			<Filter></Filter>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>erMeetingItemItemDeleting</Name>
+			<Type>ItemDeleting</Type>
+			<SequenceNumber>100</SequenceNumber>
+			<Assembly>gs.meeting.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=98b8bbe69daf0ccc</Assembly>
+			<Class>gs.meeting.Components.erMeetingItem</Class>
+			<Data></Data>
+			<Filter></Filter>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+    <Receiver>
+      <Name>erMeetingItemItemUpdating</Name>
+      <Type>ItemUpdating</Type>
+      <SequenceNumber>100</SequenceNumber>
+      <Assembly>gs.meeting.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=98b8bbe69daf0ccc</Assembly>
+      <Class>gs.meeting.Components.erMeetingItem</Class>
+      <Data></Data>
+      <Filter></Filter>
+      <Synchronization>Synchronous</Synchronization>
+    </Receiver>
+	</Receivers>
+</Elements>

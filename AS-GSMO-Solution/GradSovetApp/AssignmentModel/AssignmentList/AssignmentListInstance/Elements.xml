@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Поручения" OnQuickLaunch="TRUE" TemplateType="10013" Url="Lists/AssignmentList" Description="">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="AssignmentNumber">1</Field>
+          <Field Name="AssignmentText">Test Assignment</Field>
+          <Field Name="AssignmentTypeLink">1</Field>
+          <Field Name="AgendaQuestionLink">3</Field>
+        </Row>
+        <Row>
+          <Field Name="AssignmentNumber">2</Field>
+          <Field Name="AssignmentText">Test Assignment 2</Field>
+          <Field Name="AssignmentTypeLink">1</Field>
+          <Field Name="AgendaQuestionLink">1</Field>
+        </Row>
+        <Row>
+          <Field Name="AssignmentNumber">3</Field>
+          <Field Name="AssignmentText">Test Assignment 3</Field>
+          <Field Name="AssignmentTypeLink">1</Field>
+          <Field Name="AgendaQuestionLink">1</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+************************************************************************
+       Company: Armada
+   Application: gs.meeting
+  Created date: 2014-02-13 15:50:10Z
+    Created by: RKIS\developer
+  Feature Name: EventReceivers
+ Feature Title: Обработчики событий для списков градсовета
+   Description: Обработчики событий списков, которые участвуют в хранении вложений вопросов повестки заседания
+       History: Initial Version 1.0.0.0 
+************************************************************************
+-->
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests></ElementManifests>
+</Feature>

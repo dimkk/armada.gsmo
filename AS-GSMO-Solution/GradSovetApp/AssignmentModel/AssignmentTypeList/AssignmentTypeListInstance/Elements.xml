@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Типы поручений" OnQuickLaunch="TRUE" TemplateType="10016" Url="Lists/AssignmentTypeList" Description="">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="AssignmentTypeName">Персональное</Field>
+          <Field Name="AssignmentTypeDescr">Ответственность конкретной персоны</Field>
+        </Row>
+        <Row>
+          <Field Name="AssignmentTypeName">Коллективное</Field>
+          <Field Name="AssignmentTypeDescr">Ответственность нескольких персон</Field>
+        </Row>
+        <Row>
+          <Field Name="AssignmentTypeName">Организационное</Field>
+          <Field Name="AssignmentTypeDescr">Ответственность организации</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

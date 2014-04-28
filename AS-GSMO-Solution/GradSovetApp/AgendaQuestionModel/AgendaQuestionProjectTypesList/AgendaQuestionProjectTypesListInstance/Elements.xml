@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Типы проектов вопросов повестки" OnQuickLaunch="FALSE" TemplateType="10009" Url="Lists/AgendaQuestionProjectTypesListInstance" Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Test projetc type 1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 2</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 12</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 13</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 14</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 15</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 16</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 17</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 18</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 19</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 112</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 121</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 121</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 1321</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 112</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Test projetc type 1</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

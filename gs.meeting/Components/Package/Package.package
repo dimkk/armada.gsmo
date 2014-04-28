@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="00adaf60-4447-4936-9882-aa9fe1d44c38" solutionId="00adaf60-4447-4936-9882-aa9fe1d44c38" resetWebServer="false" sharePointProductVersion="15.0" name="gs.meeting.Components" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="85f780e3-e22d-4c39-9195-e7744bf0dce5" />
+    <featureReference itemId="d7506371-0aa0-4592-86ed-c7b5103630fe" />
+    <featureReference itemId="ed9334ad-19b5-4eca-ac7b-c1de885635f2" />
+    <featureReference itemId="dde8e4ff-0152-4695-acc8-206d4c0f6447" />
+    <featureReference itemId="392f1d0d-1b60-485c-a878-c605615dc1ef" />
+    <featureReference itemId="68bc51bf-bce4-41bf-9954-a15f6f1258a7" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="d2514cd0-775d-4c16-8840-92664c0fbcb8" />
+    <projectItemReference itemId="3cb1e140-451a-4f4c-b01f-a9a7cdf7e818" />
+    <projectItemReference itemId="a3e0eb91-a2a8-403b-8070-2dfbeb7b21b1" />
+  </projectItems>
+</package>

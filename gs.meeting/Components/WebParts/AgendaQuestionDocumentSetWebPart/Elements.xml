@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<!--
+    ************************************************************************
+       Application: gs.meeting
+      Created date: 2014-02-18 13:40:14Z
+        Created by: RKIS\developer
+              Name: AgendaQuestionDocumentSetWebPart
+       Description: AgendaQuestionDocumentSetWebPart Description          
+    ************************************************************************
+    -->
+	<Module
+		Name="AgendaQuestionDocumentSetWebPart"
+		List="113"
+		Url="_catalogs/wp">
+    <File
+			Path="AgendaQuestionDocumentSetWebPart\AgendaQuestionDocumentSetWebPart.dwp"
+			Url="AgendaQuestionDocumentSetWebPart.dwp"
+			Type="GhostableInLibrary">
+      <Property
+				Name="Group"
+				Value="gs.meeting Webparts" />
+      <Property
+				Name="QuickAddGroups"
+				Value="gs.meeting QuickAdd Webparts" />
+    </File>
+	</Module>
+</Elements>

@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88C25893-C12B-47F0-AA40-4A7C56E523FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GradSovetApp</RootNamespace>
+    <AssemblyName>GradSovetApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{16ffe41d-0f73-4064-b00a-0873437cddb1}</AppFeaturePartId>
+    <WspPartId>{dcdddb6c-0bf3-4445-9f3e-eb23d5968254}</WspPartId>
+    <WorkflowPartId>{467b6272-6fb1-46f8-b696-1d17a96e530a}</WorkflowPartId>
+    <CspkgPartId>{b775bfb3-238d-4c2a-a660-154d2e6cc453}</CspkgPartId>
+    <SqlPackagePartId>{ad432c04-3a97-4c67-aab6-a493dfee2462}</SqlPackagePartId>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ActivePublishProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="AgendaQuestionModel\AgendaAttachmentList\AgendaAttachmentListInstance\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaAttachmentList\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaAttachmentList\Schema.xml" />
+    <Content Include="AgendaQuestionModel\AgendaLinkedQuestionList\AgendaLinkedQuestionListInstance\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaLinkedQuestionList\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaLinkedQuestionList\Schema.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionList\AgendaQuestionListInstance\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionList\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionList\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AgendaQuestionModel\AgendaQuestionMeasureList\AgendaQuestionMeasureListInstance\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionMeasureList\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionMeasureList\Schema.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionProjectTypesList\AgendaQuestionProjectTypesListInstance\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionProjectTypesList\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionProjectTypesList\Schema.xml" />
+    <Content Include="AgendaQuestionModel\Elements.xml" />
+    <Content Include="AgendaQuestionModel\MeasureList\Elements.xml" />
+    <Content Include="AgendaQuestionModel\MeasureList\MeasureListInstance\Elements.xml" />
+    <Content Include="AgendaQuestionModel\MeasureList\Schema.xml" />
+    <Content Include="AgendaQuestionModel\MeasureTypeBookList\Elements.xml" />
+    <Content Include="AgendaQuestionModel\MeasureTypeBookList\MeasureTypeListInstance\Elements.xml" />
+    <Content Include="AgendaQuestionModel\MeasureTypeBookList\Schema.xml" />
+    <Content Include="AgendaQuestionModel\MeasuringUnitBookList\Elements.xml" />
+    <Content Include="AgendaQuestionModel\MeasuringUnitBookList\MeasuringUnitBookListInstance\Elements.xml" />
+    <Content Include="AgendaQuestionModel\MeasuringUnitBookList\Schema.xml" />
+    <Content Include="AssignmentModel\AssignmentJournalEntryList\AssignmentJournalEntryListInstance\Elements.xml" />
+    <Content Include="AssignmentModel\AssignmentJournalEntryList\Elements.xml" />
+    <Content Include="AssignmentModel\AssignmentJournalEntryList\Schema.xml" />
+    <Content Include="AssignmentModel\AssignmentList\AssignmentListInstance\Elements.xml" />
+    <Content Include="AssignmentModel\AssignmentList\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AssignmentModel\AssignmentList\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AssignmentModel\AssignmentReportAttachmentList\AssignmentReportAttachmentListInstance\Elements.xml" />
+    <Content Include="AssignmentModel\AssignmentReportAttachmentList\Elements.xml" />
+    <Content Include="AssignmentModel\AssignmentReportAttachmentList\Schema.xml" />
+    <Content Include="AssignmentModel\AssignmentReportList\AssignmentReportListInstance\Elements.xml" />
+    <Content Include="AssignmentModel\AssignmentReportList\Elements.xml" />
+    <Content Include="AssignmentModel\AssignmentReportList\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AssignmentModel\AssignmentTypeList\AssignmentTypeListInstance\Elements.xml" />
+    <Content Include="AssignmentModel\AssignmentTypeList\Elements.xml" />
+    <Content Include="AssignmentModel\AssignmentTypeList\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AssignmentModel\Elements.xml" />
+    <Content Include="Content\App.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\default-page.css" />
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\gs-internal.master.css" />
+    <Content Include="Content\gs.master.css" />
+    <Content Include="Content\moment-datepicker\datepicker.css" />
+    <Content Include="Content\participantsDialog.css" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\themes\cupertino\images\animated-overlay.gif" />
+    <Content Include="Content\themes\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Content\themes\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Content\themes\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Content\themes\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Content\themes\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Content\themes\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Content\themes\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Content\themes\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Content\themes\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Content\themes\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Content\themes\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Content\themes\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Content\themes\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\cupertino\jquery-ui.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.all.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.base.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.button.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.core.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.menu.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.slider.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.theme.css" />
+    <Content Include="Content\themes\cupertino\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\cupertino\minified\images\animated-overlay.gif" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Content\themes\cupertino\minified\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\cupertino\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\cupertino\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\typeahead.js-bootstrap.css" />
+    <Content Include="Images\AppIcon.png" />
+    <Content Include="Images\Elements.xml" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\ministry-transport.png" />
+    <Content Include="Images\ministry.png" />
+    <Content Include="Images\report.png" />
+    <Content Include="Images\tiles\appbar.calendar.day.png" />
+    <Content Include="Images\tiles\appbar.clipboard.variant.edit.png" />
+    <Content Include="Images\tiles\appbar.lamp.desk.variant.png" />
+    <Content Include="Images\tiles\appbar.layer.thick.png" />
+    <Content Include="Images\tiles\appbar.list.check.png" />
+    <Content Include="Images\tiles\appbar.list.png" />
+    <Content Include="Images\tiles\appbar.list.star.png" />
+    <Content Include="Images\tiles\appbar.page.text.png" />
+    <Content Include="MeetingModel\ConfigurationList\ConfigurationListInstance\Elements.xml" />
+    <Content Include="MeetingModel\ConfigurationList\Elements.xml" />
+    <Content Include="MeetingModel\ConfigurationList\Schema.xml" />
+    <Content Include="MeetingModel\DocTypeBookList\DocTypeBookListInstance\Elements.xml" />
+    <Content Include="MeetingModel\DocTypeBookList\Elements.xml" />
+    <Content Include="MeetingModel\DocTypeBookList\Schema.xml" />
+    <Content Include="MeetingModel\Elements.xml" />
+    <Content Include="MeetingModel\MainMenuList\Elements.xml" />
+    <Content Include="MeetingModel\MeetingAttachmentList\Elements.xml" />
+    <Content Include="MeetingModel\MeetingAttachmentList\MeetingAttachmentListInstance\Elements.xml" />
+    <Content Include="MeetingModel\MeetingAttachmentList\Schema.xml" />
+    <Content Include="MeetingModel\MeetingList\Elements.xml" />
+    <Content Include="MeetingModel\MeetingList\MeetingListInstance\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MeetingModel\MeetingList\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MeetingModel\OrganizationBookList\Elements.xml" />
+    <Content Include="MeetingModel\OrganizationBookList\OrganizationBookListInstance\Elements.xml" />
+    <Content Include="MeetingModel\OrganizationBookList\Schema.xml" />
+    <Content Include="MeetingModel\ParticipantBookList\Elements.xml" />
+    <Content Include="MeetingModel\ParticipantBookList\ParticipantBookListInstance\Elements.xml" />
+    <Content Include="MeetingModel\ParticipantBookList\Schema.xml" />
+    <Content Include="MeetingModel\PositionBookList\Elements.xml" />
+    <Content Include="MeetingModel\PositionBookList\PositionBookListInstance\Elements.xml" />
+    <Content Include="MeetingModel\PositionBookList\Schema.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionCategoryBookList\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionCategoryBookList\QuestionCategoryListInstance\Elements.xml" />
+    <Content Include="AgendaQuestionModel\AgendaQuestionCategoryBookList\Schema.xml" />
+    <Content Include="MeetingModel\RegulatoryDocumentationLib\EditDlg.htm" />
+    <Content Include="MeetingModel\RegulatoryDocumentationLib\Elements.xml" />
+    <Content Include="MeetingModel\RegulatoryDocumentationLib\FileDlg.htm" />
+    <Content Include="MeetingModel\RegulatoryDocumentationLib\RegulatoryDocumentationLibInstance\Elements.xml" />
+    <Content Include="MeetingModel\RegulatoryDocumentationLib\Repair.aspx" />
+    <Content Include="MeetingModel\RegulatoryDocumentationLib\Schema.xml" />
+    <Content Include="MeetingModel\RegulatoryDocumentationLib\Upload.aspx" />
+    <Content Include="Pages\SearchQuestion.aspx" />
+    <Content Include="Pages\ExecutorSelection.aspx" />
+    <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Meeting.aspx" />
+    <Content Include="Pages\Ministry-Transport-Report.aspx" />
+    <Content Include="Pages\ParticipantsSelection.aspx" />
+    <Content Include="Pages\ReferenceBooks.aspx" />
+    <Content Include="Pages\Report.aspx" />
+    <Content Include="PowerShell\Elements.xml" />
+    <Content Include="Scripts\App.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\camljs.js" />
+    <Content Include="Scripts\jquery.linq.min.js" />
+    <Content Include="Scripts\searchQuestionModel.js" />
+    <Content Include="Scripts\executorModel.js" />
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\init.debug.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
+    <Content Include="Scripts\knockout-2.3.0.debug.js" />
+    <Content Include="Scripts\knockout-2.3.0.js" />
+    <Content Include="Scripts\moment-datepicker-ko.js" />
+    <Content Include="Scripts\moment-datepicker.d.ts" />
+    <Content Include="Scripts\moment-datepicker.js" />
+    <Content Include="Scripts\moment-datepicker.min.js" />
+    <Content Include="Scripts\moment-with-langs.js" />
+    <Content Include="Scripts\moment-with-langs.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\participantModel.js" />
+    <Content Include="Scripts\SP.Core.debug.js" />
+    <Content Include="Scripts\SP.debug.js" />
+    <Content Include="Scripts\SP.RequestExecutor.debug.js" />
+    <Content Include="Scripts\SP.runtime.debug.js" />
+    <Content Include="Scripts\SP.UI.Dialog.debug.js" />
+    <Content Include="Scripts\typeahead.js" />
+    <Content Include="Scripts\typeahead.min.js" />
+    <Content Include="Scripts\viewmodel.js" />
+    <Content Include="Scripts\_references.js" />
+    <None Include="AgendaQuestionModel\AgendaAttachmentList\AgendaAttachmentListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{00adf581-d8ea-4e17-a9ba-45467fead171}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaAttachmentList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{62f167a6-5f3d-4dfe-aa13-39ea2de4ba43}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaLinkedQuestionList\AgendaLinkedQuestionListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7760db14-63e4-4f0c-af89-84bb47cc1a71}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaLinkedQuestionList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b76f9075-e14d-46d4-b72c-3e69e3d4e45e}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaQuestionList\AgendaQuestionListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a0ba3549-7164-4d1c-b4d8-449620e70aec}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaQuestionList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8751e1a0-f029-4440-b134-844b1ff86092}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaQuestionMeasureList\AgendaQuestionMeasureListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e91a6e82-c38e-4ea8-b9f5-f5a9f9ff739c}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaQuestionMeasureList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f7297929-ed1a-4162-87c1-48efdd1be80d}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaQuestionProjectTypesList\AgendaQuestionProjectTypesListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{84ba0ccc-fef8-43ca-9489-f2b9881cc60e}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaQuestionProjectTypesList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f350e0cc-d6ad-459a-a1a8-f652c7f1ba8b}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\MeasureList\MeasureListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6c592152-e64a-481d-a287-54fb8fcbf8cb}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\MeasureList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f7eb51e0-d4a3-46df-afe4-3bd7d2abb0bf}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\MeasureTypeBookList\MeasureTypeListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2ed7b5ac-0234-4c67-816f-bcbe7286c1ce}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\MeasureTypeBookList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d026007a-a831-4f4b-9095-d50800778a0c}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\MeasuringUnitBookList\MeasuringUnitBookListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c801c302-78a8-4657-80e8-12424ef237de}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\MeasuringUnitBookList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{28130974-c892-4a4a-9951-8cd8a27b02d9}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2d09e377-0229-420d-8d64-804b8f48dea6}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\AssignmentJournalEntryList\AssignmentJournalEntryListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e2d80be4-75cb-4a8d-b277-43757e2f9fcf}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\AssignmentJournalEntryList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{19a77d92-da6f-4e86-9fca-1bdfbda04f33}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\AssignmentList\AssignmentListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{17f34103-3d3b-4f50-8b1a-ee35a0199e54}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\AssignmentList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2925d40e-2c33-47a0-a846-b0626568fff5}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\AssignmentReportAttachmentList\AssignmentReportAttachmentListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4182d9cd-b819-422e-a62d-8ec21bdefef7}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\AssignmentReportAttachmentList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5c58aa39-0d41-47cb-9072-0b5ebc39f695}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\AssignmentReportList\AssignmentReportListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d4941a24-dda3-4f80-b495-83fb802febfd}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\AssignmentReportList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{02cc1472-1eaa-40fa-bec6-edf930434ee7}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\AssignmentTypeList\AssignmentTypeListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{74414468-3ec9-4fd1-bf86-5740540857bd}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\AssignmentTypeList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ab7a0f56-fa77-4686-a6a0-26c1b399cb03}</SharePointProjectItemId>
+    </None>
+    <None Include="AssignmentModel\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{725e90fe-5a9e-4e18-92c7-5d62d225d838}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\ConfigurationList\ConfigurationListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5026c645-c72c-4146-81ea-93143c4a7a08}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\ConfigurationList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6bbdce99-9113-4a51-92db-a34d75ad2d1d}</SharePointProjectItemId>
+    </None>
+    <None Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="MeetingModel\DocTypeBookList\DocTypeBookListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f5fb62a8-02ac-43ab-ae85-cc9bc6952a32}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\DocTypeBookList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dc96c585-bb66-4bd7-95f6-e3d8b8ce55fe}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\MainMenuList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4b1d5b6e-6f17-410b-8211-aa322e4f6c32}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\MeetingAttachmentList\MeetingAttachmentListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{abb631b1-2ec0-44b9-94a2-d4a0a8ad4174}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\MeetingAttachmentList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d63e840b-cb76-426e-8a83-2debbaa673e1}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\MeetingList\MeetingListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{010f3300-9f69-4d14-a949-c949f5bb82ba}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\MeetingList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{89222e82-d54a-4546-82e6-48099d6a669b}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\OrganizationBookList\OrganizationBookListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e049c791-dbf9-4210-a0c2-a49046f5225e}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\OrganizationBookList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7078cba7-2171-4622-8b39-407f71867fcd}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\ParticipantBookList\ParticipantBookListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8e863523-4547-436d-9b9d-48e32a532704}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\ParticipantBookList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{45791699-2f84-40f9-a257-c9349596153c}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\PositionBookList\PositionBookListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{70a1d5b0-7c1f-41ac-a1d0-03f39e7c416f}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\PositionBookList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9f0778e1-80af-441d-87da-908bc0740e7e}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaQuestionCategoryBookList\QuestionCategoryListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5f958ac9-43a7-4396-a046-682a0fef2cc0}</SharePointProjectItemId>
+    </None>
+    <None Include="AgendaQuestionModel\AgendaQuestionCategoryBookList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5aa0a92a-e33f-41b2-a52d-fb5502ca14fe}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\RegulatoryDocumentationLib\RegulatoryDocumentationLibInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5324c57d-2893-47dd-99af-6801d8cba6d2}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\RegulatoryDocumentationLib\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6ca12547-2d2a-464f-b785-8abe7d6efedf}</SharePointProjectItemId>
+    </None>
+    <None Include="MeetingModel\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{be889d96-724d-4d7d-82b4-4555adbbff48}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Pages\gs-internal.master" />
+    <None Include="Pages\gs.master" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4da4f9c5-037c-4103-acd3-610f480cc047}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PowerShell\CreateGroups.ps1" />
+    <None Include="PowerShell\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3550c44a-afef-49d4-8305-ef1cf5d25319}</SharePointProjectItemId>
+    </None>
+    <None Include="PowerShell\Update-SPCustomApp.ps1" />
+    <None Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\jquery-2.0.3.min.map" />
+    <None Include="Scripts\moment-datepicker.min.js.map">
+      <DependentUpon>moment-datepicker.js</DependentUpon>
+    </None>
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ad432c04-3a97-4c67-aab6-a493dfee2462}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1f682f41-7995-4d15-a54e-900619641d75}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d928cf59-85c2-4ff9-8f81-624ebeefaa34}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{112b953f-33a8-45f3-be43-10bdefc83eaa}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\GradSovetContentTypes\GradSovetContentTypes.feature">
+      <FeatureId>{c4e51cc1-82cb-4092-b375-bf1f85fde7cb}</FeatureId>
+    </None>
+    <None Include="Features\GradSovetContentTypes\GradSovetContentTypes.Template.xml">
+      <DependentUpon>GradSovetContentTypes.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

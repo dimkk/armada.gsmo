@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="0ad23ded-88b5-4638-99e1-6ff6a0d184ba" solutionId="0ad23ded-88b5-4638-99e1-6ff6a0d184ba" resetWebServer="false" sharePointProductVersion="15.0" name="ExportToExcel" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="DocumentFormat.OpenXml.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="DocumentFormat.OpenXml.dll" />
+    <customAssembly location="ClosedXML.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="ClosedXML.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="a773a03a-a2f8-4bed-8a31-5010ef99af1b" />
+  </features>
+</package>

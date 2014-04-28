@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="AssignmentJournalEntryList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/AssignmentJournalEntryList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+
+      <ContentType ID="0x0100DF1E563FC71C4F9CB4C05C10EC0CE7D9" Name="Запись журнала поручения" Group="Типы содержимого градостроительного совета" Description="Тип содержимого для журналирования событий в поручении" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{b1a54bd9-8840-47b7-87ce-ce7d0c585801}" DisplayName="Дата" Required="TRUE" Name="AssignmentJournalEntryDate" Format="DateTime" />
+          <FieldRef ID="{dc5e82e4-b22d-42b4-9ee0-d80f886a8555}" DisplayName="Исполнитель" Required="FALSE" Name="AssignmentJournalEntryExecutorFullNameLink" />
+          <FieldRef ID="{3916e49c-35a7-47cb-9b48-513dab2554dc}" DisplayName="Описание" Required="TRUE" Name="AssignmentJournalEntryDescr" NumLines="5" />
+          <FieldRef ID="{793f2fb1-c8c8-4ab1-85e3-e4cfa4a683ba}" DisplayName="Описание вложения" Required="FALSE" Name="AssignmentJournalEntryAttachDescr" NumLines="5" />
+          <FieldRef ID="{fd112f1e-946d-481a-a711-010b60160cdc}" DisplayName="Поручение" Required="TRUE" Name="AssignmentLink" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{b1a54bd9-8840-47b7-87ce-ce7d0c585801}" Name="AssignmentJournalEntryDate" DisplayName="Дата" Type="DateTime" Format="DateTime" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{dc5e82e4-b22d-42b4-9ee0-d80f886a8555}" Name="AssignmentJournalEntryExecutorFullNameLink" DisplayName="Исполнитель" Type="Lookup" List="Lists/ParticipantBookList" ShowField="ParticipantFullName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{3916e49c-35a7-47cb-9b48-513dab2554dc}" Name="AssignmentJournalEntryDescr" DisplayName="Описание" Type="Note" NumLines="5" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{793f2fb1-c8c8-4ab1-85e3-e4cfa4a683ba}" Name="AssignmentJournalEntryAttachDescr" DisplayName="Описание вложения" Type="Note" NumLines="5" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{fd112f1e-946d-481a-a711-010b60160cdc}" Name="AssignmentLink" DisplayName="Поручение" Type="Lookup" List="Lists/AssignmentList" ShowField="AssignmentNumber" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="AssignmentJournalEntryDate" />
+          <FieldRef Name="AssignmentJournalEntryExecutorFullNameLink" />
+          <FieldRef Name="AssignmentJournalEntryDescr" />
+          <FieldRef Name="AssignmentLink" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Градостроительные показатели" OnQuickLaunch="TRUE" TemplateType="10011" Url="Lists/MeasureList" Description=""></ListInstance>
+</Elements>

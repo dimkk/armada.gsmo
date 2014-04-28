@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Категории вопросов" OnQuickLaunch="TRUE" TemplateType="10006" Url="Lists/AgendaQuestionCategoryBookList" Description="Справочник категорий вопросов повестки заседания">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="QuestionCategoryName">Градостроительный план ЗУ</Field>
+          <Field Name="QuestionCategoryDescription">Пример категории</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

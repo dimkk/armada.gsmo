@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationConfiguration", "ApplicationConfiguration", "{D3B61A8A-BEC0-4E56-9101-995EE33374D2}"
+	ProjectSection(SolutionItems) = preProject
+		Application.config = Application.config
+		FxCop.targets = FxCop.targets
+		FxCopConsoleOutput.xsl = FxCopConsoleOutput.xsl
+		FxCopDictionary.xml = FxCopDictionary.xml
+		gs.meeting.snk = gs.meeting.snk
+		Settings.FxCop = Settings.FxCop
+		Settings.spruleset = Settings.spruleset
+		Settings.StyleCop = Settings.StyleCop
+		SharePointConfiguration.xml = SharePointConfiguration.xml
+		SPDisposeChecker.targets = SPDisposeChecker.targets
+		SPSF.targets = SPSF.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Components", "Components\Components.csproj", "{6967CC41-43F1-41A0-8598-A8F4852CEDA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deployment", "Deployment\Deployment.csproj", "{C73D55F8-BED3-4ACE-9958-0DB58CC3D20F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6967CC41-43F1-41A0-8598-A8F4852CEDA9} = {6967CC41-43F1-41A0-8598-A8F4852CEDA9}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://sp2013:8080/tfs/gradsovetmo
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Components\\Components.csproj
+		SccProjectName1 = Components
+		SccLocalPath1 = Components
+		SccProjectUniqueName2 = Deployment\\Deployment.csproj
+		SccProjectName2 = Deployment
+		SccLocalPath2 = Deployment
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6967CC41-43F1-41A0-8598-A8F4852CEDA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6967CC41-43F1-41A0-8598-A8F4852CEDA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6967CC41-43F1-41A0-8598-A8F4852CEDA9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6967CC41-43F1-41A0-8598-A8F4852CEDA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6967CC41-43F1-41A0-8598-A8F4852CEDA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6967CC41-43F1-41A0-8598-A8F4852CEDA9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C73D55F8-BED3-4ACE-9958-0DB58CC3D20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73D55F8-BED3-4ACE-9958-0DB58CC3D20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C73D55F8-BED3-4ACE-9958-0DB58CC3D20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C73D55F8-BED3-4ACE-9958-0DB58CC3D20F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal

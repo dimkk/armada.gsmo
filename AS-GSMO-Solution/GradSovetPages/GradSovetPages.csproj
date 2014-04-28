@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A32F7D32-E1D1-4CB6-A03D-EB935F93E49A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GradSovetPages</RootNamespace>
+    <AssemblyName>GradSovetPages</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gs.meeting.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=98b8bbe69daf0ccc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\gs.meeting.Components\v4.0_1.0.0.0__98b8bbe69daf0ccc\gs.meeting.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server.FilterControls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.Office.Server.FilterControls\v4.0_15.0.0.0__71e9bce111e9429c\Microsoft.Office.Server.FilterControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Layouts\GradSovetPages\Pages\AgendaQuestion.aspx.cs">
+      <DependentUpon>AgendaQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\AgendaQuestion.aspx.designer.cs">
+      <DependentUpon>AgendaQuestion.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\AgendaQuestionAttach.aspx.cs">
+      <DependentUpon>AgendaQuestionAttach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\AgendaQuestionAttach.aspx.designer.cs">
+      <DependentUpon>AgendaQuestionAttach.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\ExecutorSelection.aspx.cs">
+      <DependentUpon>ExecutorSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\ExecutorSelection.aspx.designer.cs">
+      <DependentUpon>ExecutorSelection.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\Meeting.aspx.cs">
+      <DependentUpon>Meeting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\Meeting.aspx.designer.cs">
+      <DependentUpon>Meeting.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\ParticipantsSelection.aspx.cs">
+      <DependentUpon>ParticipantsSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\ParticipantsSelection.aspx.designer.cs">
+      <DependentUpon>ParticipantsSelection.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\SearchQuestion.aspx.cs">
+      <DependentUpon>SearchQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\SearchQuestion.aspx.designer.cs">
+      <DependentUpon>SearchQuestion.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Layouts\GradSovetPages\Content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Layouts\GradSovetPages\Content\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Layouts\GradSovetPages\Content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="key.snk" />
+    <None Include="Layouts\GradSovetPages\Scripts\bootstrap.min.js.map">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </None>
+    <None Include="Layouts\GradSovetPages\Scripts\jquery-1.9.1.min.js.map">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </None>
+    <None Include="Layouts\GradSovetPages\Scripts\moment-datepicker.min.js.map">
+      <DependentUpon>moment-datepicker.js</DependentUpon>
+    </None>
+    <None Include="Layouts\GradSovetPages\Scripts\moment-with-langs.min.js.map">
+      <DependentUpon>moment-with-langs.js</DependentUpon>
+    </None>
+    <None Include="Layouts\GradSovetPages\Scripts\moment.min.js.map">
+      <DependentUpon>moment.js</DependentUpon>
+    </None>
+    <None Include="Layouts\GradSovetPages\Scripts\spin.min.js.map">
+      <DependentUpon>spin.js</DependentUpon>
+    </None>
+    <None Include="Layouts\GradSovetPages\Scripts\typeahead.min.js.map">
+      <DependentUpon>typeahead.js</DependentUpon>
+    </None>
+    <None Include="Layouts\GradSovetPages\Scripts\viewmodel.min.js.map">
+      <DependentUpon>viewmodel.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4b148fc3-1dac-4dce-b079-ad54532a818b}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Package\Package.package">
+      <PackageId>{6397b244-daa8-46a3-ba2f-cee3efda4992}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Layouts\GradSovetPages\Scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HandyScripts\filterView.js" />
+    <Content Include="HandyScripts\selectedWebPart.js" />
+    <Content Include="Layouts\GradSovetPages\Pages\AgendaQuestion.aspx" />
+    <Content Include="Layouts\GradSovetPages\Content\App.css" />
+    <Content Include="Layouts\GradSovetPages\Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Layouts\GradSovetPages\Content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Layouts\GradSovetPages\Content\bootstrap\bootstrap.css" />
+    <Content Include="Layouts\GradSovetPages\Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Layouts\GradSovetPages\Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Layouts\GradSovetPages\Content\moment-datepicker\datepicker.css" />
+    <Content Include="Layouts\GradSovetPages\Content\participantsDialog.css" />
+    <Content Include="Layouts\GradSovetPages\Content\typeahead.js-bootstrap.css" />
+    <Content Include="Layouts\GradSovetPages\Pages\AgendaQuestionAttach.aspx" />
+    <Content Include="Layouts\GradSovetPages\Pages\ExecutorSelection.aspx" />
+    <Content Include="Layouts\GradSovetPages\Pages\selectExecutor.html" />
+    <Content Include="Layouts\GradSovetPages\Pages\selectLinkedAssignment.html" />
+    <Content Include="Layouts\GradSovetPages\Pages\Meeting.aspx" />
+    <Content Include="Layouts\GradSovetPages\Pages\ParticipantsSelection.aspx" />
+    <Content Include="Layouts\GradSovetPages\Pages\SearchQuestion.aspx" />
+    <Content Include="Layouts\GradSovetPages\Pages\selectAgendaQuestion.html" />
+    <Content Include="Layouts\GradSovetPages\Pages\selectObject.html" />
+    <Content Include="Layouts\GradSovetPages\Scripts\bootstrap.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\bootstrap.min.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\camljs.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\clienttemplates.debug.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderAgendaQuestion.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderAssignment.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderCore.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderLinkedField.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderObjectCharacteristicList.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderObjectDocumentObjectField.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderObjectForm.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderObjectLinkField.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderParentLink.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderQuestionObjectObjectField.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderQuestionObjectTitleField.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderQuestionSense.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderReport.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderReportAttach.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\executorModel.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\gsUtils.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\init.debug.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\jquery-1.9.1.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\jquery.cookie.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\mainmenuAccessDeny.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\moment-datepicker-ko.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\moment-datepicker.d.ts" />
+    <Content Include="Layouts\GradSovetPages\Scripts\moment-datepicker.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\moment-datepicker.min.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\moment-with-langs.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\moment-with-langs.min.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\moment.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\moment.min.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\participantModel.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\searchQuestionModel.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\selectAgendaQuestionModel.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\selectLinkedAssignmentModel.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\selectObjectModel.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\SolidQ-SPS-JS.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\SP.Core.debug.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\SP.debug.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\SP.RequestExecutor.debug.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\SP.runtime.debug.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\SP.UI.Dialog.debug.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\typeahead.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\typeahead.min.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\knockout-2.3.0.debug.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\knockout-2.3.0.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\viewmodel.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\viewmodel.min.js">
+      <DependentUpon>viewmodel.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\GradSovetPages\Scripts\spin.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\spin.min.js" />
+    <Content Include="Scripts\INIT.JS" />
+    <Content Include="Scripts\SP.Core.js" />
+    <Content Include="Scripts\SP.js" />
+    <Content Include="Scripts\SP.Runtime.js" />
+    <Content Include="Scripts\SP.UI.Dialog.js" />
+    <Content Include="Scripts\_references.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

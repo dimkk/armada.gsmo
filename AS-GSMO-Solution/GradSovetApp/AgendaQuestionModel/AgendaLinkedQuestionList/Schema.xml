@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="AgendaLinkedQuestionList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/AgendaLinkedQuestionList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE" DisableAttachments="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x01005AA20B21B6C24441BBBD27B15466DA20" Name="Связанный вопрос" Group="Типы содержимого градостроительного совета" Description="Описание связи одного вопроса повестки с другим" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{ea680a34-25fe-4104-bdc1-71ac09dd6308}" DisplayName="Вопрос повестки" Required="TRUE" Name="AgendaQuestionLink" />
+          <FieldRef ID="{07543995-9275-49a0-bba0-b1eeeead7828}" DisplayName="Связанный вопрос" Required="TRUE" Name="AgendaLinkedQuestionLink" />
+          <FieldRef ID="{5ca11d3d-57f5-470b-ab72-5cdab8fa8161}" DisplayName="Комментарий к связи" Required="FALSE" Name="AgendaLinkedQuestionComment" NumLines="5" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{ea680a34-25fe-4104-bdc1-71ac09dd6308}" Name="AgendaQuestionLink" DisplayName="Вопрос повестки" Type="Lookup" List="Lists/AgendaQuestionList" ShowField="QuestionNumber" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{07543995-9275-49a0-bba0-b1eeeead7828}" Name="AgendaLinkedQuestionLink" DisplayName="Связанный вопрос" Type="Lookup" List="Lists/AgendaQuestionList" ShowField="QuestionNumber" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{5ca11d3d-57f5-470b-ab72-5cdab8fa8161}" Name="AgendaLinkedQuestionComment" DisplayName="Комментарий к связи" Type="Note" NumLines="5" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="AgendaQuestionLink" />
+          <FieldRef Name="AgendaLinkedQuestionLink" />
+          <FieldRef Name="AgendaLinkedQuestionComment" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

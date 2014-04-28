@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="MainMenuList"
+                OnQuickLaunch="TRUE"
+                TemplateType="170"
+                FeatureId="192efa95-e50c-475e-87ab-361cede5dd7f"
+                Url="Lists/MainMenuList"
+                Description="Мой экземпляр списка">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="ID">1</Field>
+          <Field Name="Title">Заседания</Field>
+          <Field Name="BackgroundImageLocation">/GradSovetApp/Images/tiles/appbar.clipboard.variant.edit.png</Field>
+          <Field Name="Description">Ведение реестра заседаний</Field>
+          <Field Name="LinkLocation">/GradSovetApp/Lists/MeetingList</Field>
+          <Field Name="LaunchBehavior">In page navigation</Field>
+          <Field Name="TileOrder">1</Field>
+        </Row>
+        <Row>
+          <Field Name="ID">2</Field>
+          <Field Name="Title">Поручения</Field>
+          <Field Name="BackgroundImageLocation">/GradSovetApp/Images/tiles/appbar.list.check.png</Field>
+          <Field Name="Description">Контроль поручений, сроков и объемов</Field>
+          <Field Name="LinkLocation">/GradSovetApp/Lists/AssignmentList</Field>
+          <Field Name="LaunchBehavior">In page navigation</Field>
+          <Field Name="TileOrder">2</Field>
+        </Row>
+        <Row>
+          <Field Name="ID">3</Field>
+          <Field Name="Title">Справочники</Field>
+          <Field Name="BackgroundImageLocation">/GradSovetApp/Images/tiles/appbar.list.png</Field>
+          <Field Name="Description">Справочники Градостроительного Совета МО</Field>
+          <Field Name="LinkLocation">/GradSovetApp/Pages/ReferenceBooks.aspx</Field>
+          <Field Name="LaunchBehavior">In page navigation</Field>
+          <Field Name="TileOrder">3</Field>
+        </Row>
+        <Row>
+          <Field Name="ID">4</Field>
+          <Field Name="Title">Документы</Field>
+          <Field Name="BackgroundImageLocation">/GradSovetApp/Images/tiles/appbar.layer.thick.png</Field>
+          <Field Name="Description">Нормативно-справочная документация</Field>
+          <Field Name="LinkLocation">/GradSovetApp/Lists/RegulatoryDocumentationLib</Field>
+          <Field Name="LaunchBehavior">In page navigation</Field>
+          <Field Name="TileOrder">4</Field>
+        </Row>
+        <Row>
+          <Field Name="ID">5</Field>
+          <Field Name="Title">Календарь заседаний</Field>
+          <Field Name="BackgroundImageLocation">/GradSovetApp/Images/tiles/appbar.calendar.day.png</Field>
+          <Field Name="Description">Представление заседаний месяца на календаре</Field>
+          <Field Name="LinkLocation">/GradSovetApp/Lists/MeetingList/calendar.aspx</Field>
+          <Field Name="LaunchBehavior">In page navigation</Field>
+          <Field Name="TileOrder">5</Field>
+        </Row>
+        <Row>
+          <Field Name="ID">6</Field>
+          <Field Name="Title">Статистика</Field>
+          <Field Name="BackgroundImageLocation">/GradSovetApp/Images/tiles/appbar.page.text.png</Field>
+          <Field Name="Description">Формирование отчетов по поручениям</Field>
+          <Field Name="LinkLocation">/GradSovetApp/Pages/Report.aspx</Field>
+          <Field Name="LaunchBehavior">In page navigation</Field>
+          <Field Name="TileOrder">6</Field>
+        </Row>
+        <Row>
+          <Field Name="ID">7</Field>
+          <Field Name="Title">Вопросы</Field>
+          <Field Name="BackgroundImageLocation">/GradSovetApp/Images/tiles/appbar.list.star.png</Field>
+          <Field Name="Description">Список вопросов повестки</Field>
+          <Field Name="LinkLocation">/GradSovetApp/Lists/AgendaQuestionList/AllItems.aspx</Field>
+          <Field Name="LaunchBehavior">In page navigation</Field>
+          <Field Name="TileOrder">7</Field>
+        </Row>
+        <Row>
+          <Field Name="ID">8</Field>
+          <Field Name="Title">Форум</Field>
+          <Field Name="BackgroundImageLocation">/GradSovetApp/Images/tiles/appbar.lamp.desk.variant.png</Field>
+          <Field Name="Description">Социализация, общение</Field>
+          <Field Name="LinkLocation">http://my.rgs1.dev.armd.ru</Field>
+          <Field Name="LaunchBehavior">In page navigation</Field>
+          <Field Name="TileOrder">8</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

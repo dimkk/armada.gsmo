@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="ConfigurationList"
+                OnQuickLaunch="FALSE"
+                TemplateType="10008"
+                Url="Lists/ConfigurationList"
+                Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="CurrentMeetingNumber">1</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

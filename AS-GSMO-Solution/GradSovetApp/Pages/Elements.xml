@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Pages">
+    <File Path="Pages\Meeting.aspx" Url="Pages/Meeting.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE"/>
+    <File Path="Pages\ReferenceBooks.aspx" Url="Pages/ReferenceBooks.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\ParticipantsSelection.aspx" Url="Pages/ParticipantsSelection.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\ExecutorSelection.aspx" Url="Pages/ExecutorSelection.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\SearchQuestion.aspx" Url="Pages/SearchQuestion.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Report.aspx" Url="Pages/Report.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Ministry-Transport-Report.aspx" Url="Pages/Ministry-Transport-Report.aspx" ReplaceContent="TRUE" />
+  </Module>
+  <Module Name="MasterPages">
+    <File Path="Pages\gs.master" Url="_catalogs/masterpage/gs.master" ReplaceContent="TRUE"></File>
+    <File Path="Pages\gs-internal.master" Url="_catalogs/masterpage/gs-internal.master" ReplaceContent="TRUE"></File>
+  </Module>
+</Elements>

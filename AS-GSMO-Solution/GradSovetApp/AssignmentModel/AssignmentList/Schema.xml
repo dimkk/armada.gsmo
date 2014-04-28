@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="AssignmentList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/AssignmentList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE" DisableAttachments="TRUE">
+  <MetaData>
+    <ContentTypes>
+
+      <ContentType ID="0x010000C8B3AED4FC4C3EB5102D01BEB49B13" Name="Поручение" Group="Типы содержимого градостроительного совета" Description="Тип содержимого для использования в поручениях, выдаваемых по итогам заседания" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{0107f9b4-57b5-40c9-aea0-633996dc4a77}" DisplayName="Номер" Required="TRUE" Name="AssignmentNumber" />
+          <FieldRef ID="{4b71ebd3-c3c6-4db9-b696-082a44388360}" DisplayName="Текст поручения" Required="FALSE" Name="AssignmentText" NumLines="30" />
+          <FieldRef ID="{387fc123-760f-4f64-937e-6ee019765e5d}" DisplayName="Дата создания" Required="FALSE" Name="AssignmentCreationDate" Format="DateOnly" />
+          <FieldRef ID="{60cb2e91-9e62-435f-abdc-03b4163a29cb}" DisplayName="Срок исполнения" Required="FALSE" Name="AssignmentPlanDate" Format="DateOnly" />
+          <FieldRef ID="{45219dad-c3f6-4098-bc50-f1127437c2fd}" DisplayName="Фактическая дата исполнения" Required="FALSE" Name="AssignmentFactDate" Format="DateOnly" />
+          <FieldRef ID="{cab8d238-8bc4-4221-9a8a-97bbef8a9779}" DisplayName="Количество дней на решение" Required="FALSE" Name="AssignmentDaysForResolve" />
+          <FieldRef ID="{4dc90b1e-f1b9-4b7e-97ae-0b5e5e198d55}" DisplayName="Тип зависимости от другого поручения" Required="FALSE" Name="AssignmentDependencyType" />
+          <FieldRef ID="{fd112f1e-946d-481a-a711-010b60160cdc}" DisplayName="Зависимое поручение" Required="FALSE" Name="AssignmentLink" />
+          <FieldRef ID="{ff0f8dff-df9e-441b-9b45-7bd7cc77af68}" DisplayName="Тип поручения" Required="FALSE" Name="AssignmentTypeLink" />
+          <FieldRef ID="{38f851be-a8fa-4c58-b8d7-4e322c46a6f0}" DisplayName="Примечание" Required="FALSE" Name="AssignmentNote" NumLines="20" />
+          <FieldRef ID="{375e996a-6c09-4bb5-8ffb-5f404ee09692}" DisplayName="Статус" Required="FALSE" Name="AssignmentStatus" />
+          <FieldRef ID="{4849d0bf-9865-428f-865c-53b8ff3c7b59}" DisplayName="Контролер" Required="FALSE" Name="AssignmentControllerFullNameLink" />
+          <FieldRef ID="{ea680a34-25fe-4104-bdc1-71ac09dd6308}" DisplayName="Вопрос повестки" Required="FALSE" Name="AgendaQuestionLink" />
+          <FieldRef ID="{2a1ae4ea-91e3-4b02-9a8e-d0721cf4e159}" DisplayName="Состояние контроля" Required="FALSE" Name="AssignmentInspectState" />
+          <FieldRef ID="{91909A56-77E7-4479-AAD3-3845CFD35242}" DisplayName="Исполнитель" Required="FALSE" Name="AssignmentExecutorFullNameLink" />
+          <FieldRef ID="{6F83C7A8-A3F6-4101-92F8-46193287DFAF}" DisplayName="Должность исполнителя" Required="FALSE" Name="AssignmentExecutorPositionLink" />
+          <FieldRef ID="{A6FD04FA-D742-4543-AD3B-642EC607B9FA}" DisplayName="Организация исполнителя" Required="FALSE" Name="AssignmentExecutorOrganizationLink" />
+          <FieldRef ID="{19FB447E-411F-495E-BAF4-FFB18E3190EB}" DisplayName="Соисполнители" Required="FALSE" Name="AssignmentSoexecutors" />
+          <FieldRef ID="{31451750-2633-4B30-8C7E-549E3F8187D2}" DisplayName="Тип зависимости планируемой даты" Required="FALSE" Name="AssignmentPlanIsDependent" />
+          <FieldRef ID="{CDE71472-31AE-4998-B313-E43E8BB6EEEA}" DisplayName="Тип дней" Required="FALSE" Name="AssignmentDayType" />
+          <FieldRef ID="{7964689B-1A22-4517-A89C-B7E1F194D4F6}" DisplayName="Текст зависимого поручения" Required="FALSE" Name="AssignmentPredecessorLinkValue" NumLines="30" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{0107f9b4-57b5-40c9-aea0-633996dc4a77}" Name="AssignmentNumber" DisplayName="Номер" Type="Text" Indexed="TRUE" EnforceUniqueValues="TRUE" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{4b71ebd3-c3c6-4db9-b696-082a44388360}" Name="AssignmentText" DisplayName="Текст поручения" Type="Note" NumLines="30" RichText="TRUE" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{387fc123-760f-4f64-937e-6ee019765e5d}" Name="AssignmentCreationDate" DisplayName="Дата создания" Type="DateTime" Format="DateOnly" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{60cb2e91-9e62-435f-abdc-03b4163a29cb}" Name="AssignmentPlanDate" DisplayName="Срок исполнения" Type="DateTime" Format="DateOnly" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{45219dad-c3f6-4098-bc50-f1127437c2fd}" Name="AssignmentFactDate" DisplayName="Фактическая дата исполнения" Type="DateTime" Format="DateOnly" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{cab8d238-8bc4-4221-9a8a-97bbef8a9779}" Name="AssignmentDaysForResolve" DisplayName="Количество дней на решение" Type="Integer" Commas="FALSE" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{fd112f1e-946d-481a-a711-010b60160cdc}" Name="AssignmentLink" DisplayName="Зависимое поручение" Type="Lookup" List="Lists/AssignmentList" ShowField="AssignmentNumber" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{4dc90b1e-f1b9-4b7e-97ae-0b5e5e198d55}" Name="AssignmentDependencyType" DisplayName="Тип зависимости от другого поручения" Type="Choice" Required="FALSE" Group="Атрибуты заседания градостроительного совета">
+        <CHOICES>
+          <CHOICE>Исполнение после</CHOICE>
+        </CHOICES>
+        <MAPPINGS>
+          <MAPPING Value="1">Исполнение после</MAPPING>
+        </MAPPINGS>
+        <Default>Исполнение после</Default>
+      </Field>
+      <Field ID="{ff0f8dff-df9e-441b-9b45-7bd7cc77af68}" Name="AssignmentTypeLink" DisplayName="Тип поручения" Type="Lookup" List="Lists/AssignmentTypeList" ShowField="AssignmentTypeName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{38f851be-a8fa-4c58-b8d7-4e322c46a6f0}" Name="AssignmentNote" DisplayName="Примечание" Type="Note" NumLines="20" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{375e996a-6c09-4bb5-8ffb-5f404ee09692}" Name="AssignmentStatus" DisplayName="Статус" Type="Choice" Required="FALSE" Group="Атрибуты заседания градостроительного совета">
+        <CHOICES>
+          <CHOICE>На исполнении</CHOICE>
+          <CHOICE>На исполнении с нарушением срока</CHOICE>
+          <CHOICE>Выполнено в срок</CHOICE>
+          <CHOICE>Выполнено с нарушением срока</CHOICE>
+          <CHOICE>Продлено</CHOICE>
+        </CHOICES>
+        <MAPPINGS>
+          <MAPPING Value="1">На исполнении</MAPPING>
+          <MAPPING Value="2">На исполнении с нарушением срока</MAPPING>
+          <MAPPING Value="3">Выполнено в срок</MAPPING>
+          <MAPPING Value="4">Выполнено с нарушением срока</MAPPING>
+          <MAPPING Value="5">Продлено</MAPPING>
+        </MAPPINGS>
+      </Field>
+      <Field ID="{4849d0bf-9865-428f-865c-53b8ff3c7b59}" Name="AssignmentControllerFullNameLink" DisplayName="Контролер" Type="Lookup" List="Lists/ParticipantBookList" ShowField="ParticipantFullName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{ea680a34-25fe-4104-bdc1-71ac09dd6308}" Name="AgendaQuestionLink" DisplayName="Вопрос повестки" Type="Lookup" List="Lists/AgendaQuestionList" ShowField="AgendaQuestionNumber" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{2a1ae4ea-91e3-4b02-9a8e-d0721cf4e159}" Name="AssignmentInspectState" DisplayName="Состояние контроля" Type="Choice" Required="FALSE" Group="Атрибуты заседания градостроительного совета">
+        <CHOICES>
+          <CHOICE>На контроле</CHOICE>
+          <CHOICE>Снято с контроля</CHOICE>
+        </CHOICES>
+        <MAPPINGS>
+          <MAPPING Value="1">На контроле</MAPPING>
+          <MAPPING Value="2">Снято с контроля</MAPPING>
+        </MAPPINGS>
+      </Field>
+      <Field ID="{91909A56-77E7-4479-AAD3-3845CFD35242}" Name="AssignmentExecutorFullNameLink" DisplayName="Исполнитель" Type="Lookup" List="Lists/ParticipantBookList" ShowField="ParticipantFullName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{6F83C7A8-A3F6-4101-92F8-46193287DFAF}" Name="AssignmentExecutorPositionLink" DisplayName="Должность исполнителя" Type="Lookup" List="Lists/PositionBookList" ShowField="Title" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{A6FD04FA-D742-4543-AD3B-642EC607B9FA}" Name="AssignmentExecutorOrganizationLink" DisplayName="Организация исполнителя" Type="Lookup" List="Lists/OrganizationBookList" ShowField="OrganizationName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{19FB447E-411F-495E-BAF4-FFB18E3190EB}" Name="AssignmentSoexecutors" DisplayName="Соисполнители" Type="Lookup" Mult="TRUE" List="Lists/ParticipantBookList" ShowField="ParticipantFullName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{31451750-2633-4B30-8C7E-549E3F8187D2}" Name="AssignmentPlanIsDependent" DisplayName="Тип зависимости планируемой даты" Type="Text" Group="Атрибуты заседания градостроительного совета" >
+        <Default>ByDate</Default>
+      </Field>
+      <Field ID="{CDE71472-31AE-4998-B313-E43E8BB6EEEA}" Name="AssignmentDayType" DisplayName="Тип дней" Type="Choice" Required="FALSE" Group="Атрибуты заседания градостроительного совета">
+        <CHOICES>
+          <CHOICE>Календарные</CHOICE>
+          <CHOICE>Рабочие</CHOICE>
+        </CHOICES>
+        <MAPPINGS>
+          <MAPPING Value="1">Календарные</MAPPING>
+          <MAPPING Value="2">Рабочие</MAPPING>
+        </MAPPINGS>
+        <Default>Календарные</Default>
+      </Field>
+      <Field ID="{7964689B-1A22-4517-A89C-B7E1F194D4F6}" Name="AssignmentPredecessorLinkValue" DisplayName="Текст зависимого поручения" Type="Note" NumLines="30" RichText="TRUE"  Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="AssignmentNumber" />
+          <FieldRef Name="AssignmentText" />
+          <FieldRef Name="AssignmentPlanDate" />
+          <FieldRef Name="AssignmentFactDate" />
+          <FieldRef Name="AssignmentStatus" />
+          <FieldRef Name="AssignmentExecutorFullNameLink" />
+          <FieldRef Name="AssignmentSoexecutors" />
+          <FieldRef Name="AssignmentControllerFullNameLink" />
+          <FieldRef Name="AgendaQuestionLink" />
+          <FieldRef Name="AssignmentInspectState" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="2" Type="HTML" WebPartZoneID="Main" DisplayName="По исполнителям" DefaultView="FALSE" MobileView="TRUE" MobileDefaultView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="ByExecutors.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="AssignmentNumber" />
+          <FieldRef Name="AssignmentText" />
+          <FieldRef Name="AssignmentPlanDate" />
+          <FieldRef Name="AssignmentFactDate" />
+          <FieldRef Name="AssignmentStatus" />
+          <FieldRef Name="AssignmentSoexecutors" />
+          <FieldRef Name="AssignmentControllerFullNameLink" />
+          <FieldRef Name="AgendaQuestionLink" />
+          <FieldRef Name="AssignmentInspectState" />
+        </ViewFields>
+        <Query>
+          <GroupBy Collapse="TRUE" GroupLimit="30">
+            <FieldRef Name="AssignmentExecutorFullNameLink" />
+          </GroupBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" DisplayName="Карточка вопроса" DefaultView="FALSE" MobileView="TRUE" MobileDefaultView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AgendaQuestionView.aspx">
+        <Toolbar Type="None" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="AssignmentNumber" />
+          <FieldRef Name="AssignmentExecutorFullNameLink" />
+          <FieldRef Name="AssignmentPlanDate" />
+          <FieldRef Name="AssignmentText" />
+          <FieldRef Name="AssignmentInspectState" />
+          <FieldRef Name="AssignmentTypeLink" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>  
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

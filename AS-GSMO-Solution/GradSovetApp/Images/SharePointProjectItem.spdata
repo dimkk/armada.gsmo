@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="AppIcon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Elements.xml" Target="Images\" Type="ElementManifest" />
+    <ProjectItemFile Source="tiles\appbar.calendar.day.png" Target="Images\tiles\" Type="ElementFile" />
+    <ProjectItemFile Source="tiles\appbar.clipboard.variant.edit.png" Target="Images\tiles\" Type="ElementFile" />
+    <ProjectItemFile Source="tiles\appbar.layer.thick.png" Target="Images\tiles\" Type="ElementFile" />
+    <ProjectItemFile Source="tiles\appbar.list.check.png" Target="Images\tiles\" Type="ElementFile" />
+    <ProjectItemFile Source="tiles\appbar.list.png" Target="Images\tiles\" Type="ElementFile" />
+    <ProjectItemFile Source="tiles\appbar.page.text.png" Target="Images\tiles\" Type="ElementFile" />
+    <ProjectItemFile Source="logo.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="tiles\appbar.list.star.png" Target="Images\tiles\" Type="ElementFile" />
+    <ProjectItemFile Source="tiles\appbar.lamp.desk.variant.png" Target="Images\tiles\" Type="ElementFile" />
+    <ProjectItemFile Source="report.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ministry.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ministry-transport.png" Target="Images\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

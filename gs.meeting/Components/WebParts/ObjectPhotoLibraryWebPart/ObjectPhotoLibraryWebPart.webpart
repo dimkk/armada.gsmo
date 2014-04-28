@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<type name="gs.meeting.Components.ObjectPhotoLibraryWebPart, gs.meeting.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=98b8bbe69daf0ccc" />
+			<importErrorMessage>Cannot import Веб часть фотографий объекта строительства Web Part.</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">Веб часть фотографий объекта строительства</property>
+				<property name="Description" type="string">Отображение в виде слайд шоу фотографий объекта строительства</property>
+				<property name="CatalogIconImageUrl" type="string">/_layouts/15/images/gs_meeting/WebPartIcon_ObjectPhotoLibraryWebPart.gif</property>
+				<property name="TitleIconImageUrl" type="string">/_layouts/15/images/gs_meeting/WebPartIcon_ObjectPhotoLibraryWebPart.gif</property>
+        <property name="LinkFieldName" type="string">ObjectLink</property>
+        <property name="GalleriaConf" type="string">{ "transition": "fade", "imageCrop": "true", "fullscreenDoubleTap": "true", "fullscreenCrop": "true", "showInfo": "false" }</property>
+        <property name="GalleriaTheme" type="string">classic/galleria.classic.min.js</property>
+			</properties>
+		</data>
+	</webPart>
+</webParts>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="106101b8-7647-44f9-b8a5-0f40bae5d5dc" solutionId="106101b8-7647-44f9-b8a5-0f40bae5d5dc" resetWebServer="false" sharePointProductVersion="15.0" name="GSJobs" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="171243e6-09c6-4fac-a79b-954eeea76e6d" />
+  </features>
+</package>

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaQuestionAttachsToLib", "AgendaQuestionAttachsToLib\AgendaQuestionAttachsToLib.csproj", "{905C0FF1-02A2-4652-8D99-952C633F044E}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://sp2013:8080/tfs/gradsovetmo
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AgendaQuestionAttachsToLib\\AgendaQuestionAttachsToLib.csproj
+		SccProjectName1 = AgendaQuestionAttachsToLib
+		SccLocalPath1 = AgendaQuestionAttachsToLib
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{905C0FF1-02A2-4652-8D99-952C633F044E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905C0FF1-02A2-4652-8D99-952C633F044E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905C0FF1-02A2-4652-8D99-952C633F044E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{905C0FF1-02A2-4652-8D99-952C633F044E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

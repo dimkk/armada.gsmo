@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<type name="gs.meeting.Components.AssignmentOverduedExecutors, gs.meeting.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=98b8bbe69daf0ccc" />
+			<importErrorMessage>Cannot import Исполнители просроченных поручений Web Part.</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">Исполнители просроченных поручений</property>
+				<property name="Description" type="string">Список исполнителей, которые просрочили поручения</property>
+				<property name="CatalogIconImageUrl" type="string">/_layouts/15/images/gs_meeting/WebPartIcon_AssignmentOverduedExecutors.gif</property>
+				<property name="TitleIconImageUrl" type="string">/_layouts/15/images/gs_meeting/WebPartIcon_AssignmentOverduedExecutors.gif</property>
+			</properties>
+		</data>
+	</webPart>
+</webParts>

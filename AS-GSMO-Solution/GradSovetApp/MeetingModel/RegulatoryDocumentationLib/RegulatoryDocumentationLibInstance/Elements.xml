@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Нормативная документация" OnQuickLaunch="TRUE" 
+                TemplateType="10019" Url="Lists/RegulatoryDocumentationLib" 
+                Description="Мой экземпляр списка" VersioningEnabled="TRUE">
+  </ListInstance>
+</Elements>

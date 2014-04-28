@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="OrganizationBookList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/OrganizationBookList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE" DisableAttachments="TRUE">
+  <MetaData>
+    <ContentTypes>
+
+      <ContentType ID="0x01004B11A98D41D146078704136BA3607807" Name="Организация" Group="Типы содержимого градостроительного совета" Description="" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{ab4b34da-08c4-4607-98c0-b686c4ced59f}" DisplayName="Наименование" Required="TRUE" Name="OrganizationName" />
+          <FieldRef ID="{f71dc61e-a6ac-4aa1-a311-be683fae7d8b}" DisplayName="Описание" Required="FALSE" Name="OrganizationDescription" NumLines="10" />
+          <FieldRef ID="{2f2e7f13-0fb1-4fde-b808-734d859e61d2}" DisplayName="Полное наименование" Required="FALSE" Name="OrganizationFullName" NumLines="2" />
+          <FieldRef ID="{3a93883e-a0e9-4089-999f-7a8281e72602}" DisplayName="Вышестоящая организация" Required="FALSE" Name="OrganizationParentOrgLink" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+
+
+
+
+      <Field ID="{ab4b34da-08c4-4607-98c0-b686c4ced59f}" Name="OrganizationName" DisplayName="Наименование" Type="Text" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{f71dc61e-a6ac-4aa1-a311-be683fae7d8b}" Name="OrganizationDescription" DisplayName="Описание" Type="Note" NumLines="10" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{2f2e7f13-0fb1-4fde-b808-734d859e61d2}" Name="OrganizationFullName" DisplayName="Полное наименование" Type="Note" NumLines="2" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{3a93883e-a0e9-4089-999f-7a8281e72602}" Name="OrganizationParentOrgLink" DisplayName="Вышестоящая организация" Type="Lookup" List="Lists/OrganizationBookList" ShowField="OrganizationName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+    </Fields>
+    <Views>
+
+
+
+
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+
+
+
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+
+
+
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+
+
+
+
+
+
+
+          <FieldRef Name="OrganizationName" />
+          <FieldRef Name="OrganizationDescription" />
+          <FieldRef Name="OrganizationFullName" />
+          <FieldRef Name="OrganizationParentOrgLink" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+
+
+
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

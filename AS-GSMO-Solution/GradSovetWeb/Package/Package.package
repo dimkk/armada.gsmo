@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8058b248-4b8f-4002-b6a6-81bfe4239ce1" solutionId="8058b248-4b8f-4002-b6a6-81bfe4239ce1" resetWebServer="false" sharePointProductVersion="15.0" name="GradSovetWeb" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="871e7df8-5f9d-4143-a056-0d05a319bd3e" />
+    <featureReference itemId="22c4e0bf-af99-46eb-bcee-8e0ed0b10874" />
+    <featureReference itemId="2ebd783e-55f6-4c2a-b7b2-1489bcfe24d7" />
+  </features>
+</package>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5e5e0e3a-42f7-42dd-be84-638f78e1b119" solutionId="5e5e0e3a-42f7-42dd-be84-638f78e1b119" resetWebServer="false" sharePointProductVersion="15.0" name="GradSovetMeetingCalendar" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="455569ac-ba05-4edd-97d5-189592002dd1" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="ed15e822-dcc3-41ae-bd5d-38b5f498dbe6" />
+  </projectItems>
+</package>

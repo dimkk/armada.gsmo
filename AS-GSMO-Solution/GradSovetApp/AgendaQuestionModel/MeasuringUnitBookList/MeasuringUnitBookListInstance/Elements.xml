@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Единицы измерения показателей" OnQuickLaunch="TRUE" TemplateType="10012" Url="Lists/MeasuringUnitBookList" Description="">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">детей</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">м²</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

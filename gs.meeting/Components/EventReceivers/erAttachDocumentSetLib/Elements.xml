@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Receivers
+		ListTemplateId="10100"
+		ListTemplateOwner="4bd868a5-4a32-45de-aab0-3391c1268e9d"
+		Scope="Web">
+		<Receiver>
+			<Name>erAttachDocumentSetLibItemAdding</Name>
+			<Type>ItemAdding</Type>
+			<SequenceNumber>100</SequenceNumber>
+			<Assembly>gs.meeting.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=98b8bbe69daf0ccc</Assembly>
+			<Class>gs.meeting.Components.erAttachDocumentSetLib</Class>
+			<Data></Data>
+			<Filter></Filter>
+		</Receiver>
+		<Receiver>
+			<Name>erAttachDocumentSetLibItemDeleting</Name>
+			<Type>ItemDeleting</Type>
+			<SequenceNumber>100</SequenceNumber>
+			<Assembly>gs.meeting.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=98b8bbe69daf0ccc</Assembly>
+			<Class>gs.meeting.Components.erAttachDocumentSetLib</Class>
+			<Data></Data>
+			<Filter></Filter>
+		</Receiver>
+		<Receiver>
+			<Name>erAttachDocumentSetLibItemUpdating</Name>
+			<Type>ItemUpdating</Type>
+			<SequenceNumber>100</SequenceNumber>
+			<Assembly>gs.meeting.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=98b8bbe69daf0ccc</Assembly>
+			<Class>gs.meeting.Components.erAttachDocumentSetLib</Class>
+			<Data></Data>
+			<Filter></Filter>
+		</Receiver>
+	</Receivers>
+</Elements>

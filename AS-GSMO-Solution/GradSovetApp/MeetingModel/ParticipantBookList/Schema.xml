@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="ParticipantBookList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/ParticipantBookList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE" DisableAttachments="TRUE">
+  <MetaData>
+    <ContentTypes>
+
+      <ContentType ID="0x01007189C21861844F82A6042823A878616F" Name="Участник" Group="Типы содержимого градостроительного совета" Description="" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{9036fe02-6a70-48ea-b691-5be54fd0e927}" DisplayName="ФИО" Required="TRUE" Name="ParticipantFullName" />
+          <FieldRef ID="{139719ea-5beb-4c48-912c-457565a4c00b}" DisplayName="ФИО (в родительном падеже)" Required="TRUE" Name="ParticipantFullNameGenitive" />
+          <FieldRef ID="{3f514583-7cf0-436f-abf3-c55ea3006621}" DisplayName="ФИО (в дательном падеже)" Required="FALSE" Name="ParticipantFullNameDative" />
+          <FieldRef ID="{988ff03c-7418-4dab-915e-3e486bcb1113}" DisplayName="Должность" Required="FALSE" Name="ParticipantPositionLink" />
+          <FieldRef ID="{e630b215-35a6-41c5-a625-be0d0deafa24}" DisplayName="Организация" Required="FALSE" Name="ParticipantOrgLink" />
+          <FieldRef ID="{58cfea07-c993-42f5-be0d-82aeaa84915f}" DisplayName="Признак участия" Required="FALSE" Name="ParticipantRole" />
+          <FieldRef ID="{aa46094e-a6c8-43a5-b618-0c15cd74c1fb}" DisplayName="Профиль" Required="FALSE" Name="UserProfile"/>
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{9036fe02-6a70-48ea-b691-5be54fd0e927}" Name="ParticipantFullName" DisplayName="ФИО" Type="Text" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{139719ea-5beb-4c48-912c-457565a4c00b}" Name="ParticipantFullNameGenitive" DisplayName="ФИО (в родительном падеже)" Type="Text" Required="TRUE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{3f514583-7cf0-436f-abf3-c55ea3006621}" Name="ParticipantFullNameDative" DisplayName="ФИО (в дательном падеже)" Type="Text" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{988ff03c-7418-4dab-915e-3e486bcb1113}" Name="ParticipantPositionLink" DisplayName="Должность" Type="Lookup" List="Lists/PositionBookList" ShowField="Title" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{e630b215-35a6-41c5-a625-be0d0deafa24}" Name="ParticipantOrgLink" DisplayName="Организация" Type="Lookup" List="Lists/OrganizationBookList" ShowField="OrganizationName" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{58cfea07-c993-42f5-be0d-82aeaa84915f}" Name="ParticipantRole" DisplayName="Признак участия" Type="Choice" Required="FALSE" Group="Атрибуты заседания градостроительного совета">
+        <CHOICES>
+          <CHOICE>Член ГрадСовета</CHOICE>
+          <CHOICE>Член МВК</CHOICE>
+        </CHOICES>
+        <MAPPINGS>
+          <MAPPING Value="1">Член ГрадСовета</MAPPING>
+          <MAPPING Value="2">Член МВК</MAPPING>
+        </MAPPINGS>
+      </Field>
+      <Field Type="User" Name="UserProfile" DisplayName="Профиль" Required="FALSE" EnforceUniqueValues="TRUE" Indexed="TRUE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" ID="{aa46094e-a6c8-43a5-b618-0c15cd74c1fb}" RowOrdinal="0" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="ParticipantFullName" />
+          <FieldRef Name="ParticipantFullNameGenitive" />
+          <FieldRef Name="ParticipantFullNameDative" />
+          <FieldRef Name="ParticipantPositionLink" />
+          <FieldRef Name="ParticipantOrgLink" />
+          <FieldRef Name="ParticipantRole" />
+          <FieldRef Name="UserProfile" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

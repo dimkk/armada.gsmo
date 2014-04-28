@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="_references.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="App.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="camljs.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="Elements.xml" Target="Scripts\" Type="ElementManifest" />
+    <ProjectItemFile Source="jquery-2.0.3.intellisense.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-2.0.3.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-2.0.3.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-2.0.3.min.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-ui-1.10.3.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-ui-1.10.3.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="knockout-2.3.0.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="viewmodel.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="participantModel.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.9.1.min.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.9.1.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.9.1.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.9.1.intellisense.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="bootstrap.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="typeahead.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="typeahead.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="executorModel.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment-with-langs.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment-with-langs.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment-datepicker-ko.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment-datepicker.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment-datepicker.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment-datepicker.d.ts" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment-datepicker.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="searchQuestionModel.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.linq.min.js" Target="Scripts\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

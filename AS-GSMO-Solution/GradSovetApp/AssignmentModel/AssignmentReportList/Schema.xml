@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="AssignmentReportList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/AssignmentReportList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE" DisableAttachments="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x01002CC4F9BA004F4B7FB6B0391200D2A68B" Name="Отчет по поручению" Group="Типы содержимого градостроительного совета" Description="Тип содержимого для хранения данных отчета, создаваемого при исполнении поручения" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{268578a3-e129-49e3-8914-be6018ff374e}" DisplayName="Текст" Required="FALSE" Name="AssignmentReportText" NumLines="30" />
+          <FieldRef ID="{fd112f1e-946d-481a-a711-010b60160cdc}" DisplayName="Поручение" Required="TRUE" Name="AssignmentLink" />
+          <FieldRef ID="{81789db2-cd11-46b3-8bf3-1df732fa553e}" DisplayName="Дата запроса" Required="FALSE" Name="AssignmentReportRequestDate" Format="DateTime" />
+          <FieldRef ID="{2b64e3b1-9122-44b9-8439-40d0ca2eab66}" DisplayName="Ожидаемая дата ответа" Required="FALSE" Name="AssignmentReportRequestPlanAnswerDate" Format="DateTime" />
+          <FieldRef ID="{f839a948-6062-44ec-bb60-ef024b0c25f5}" DisplayName="Решение по отчету" Required="FALSE" Name="AssignmentReportResolutionDecision" />
+          <FieldRef ID="{4c25e61f-29e6-40ad-8318-8cc8722253bd}" DisplayName="Новый срок" Required="FALSE" Name="AssignmentReportResolutionNewDate" Format="DateTime" />
+          <FieldRef ID="{011b05a7-d72f-4a6e-9356-57612b0f17f4}" DisplayName="Комментарий к резолюции" Required="FALSE" Name="AssignmentReportResolutionComment" NumLines="15" />
+          <FieldRef ID="{06302b4f-3e5d-4ed5-89c0-af61c8b2a33e}" DisplayName="Фактическая дата ответа" Required="FALSE" Name="AssignmentReportFactAnswerDate" Format="DateTime" />
+          <FieldRef ID="{58672a51-649b-4f85-a993-a20a72a62132}" DisplayName="Текст запроса" Required="FALSE" Name="AssignmentReportRequestText" NumLines="15" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{268578a3-e129-49e3-8914-be6018ff374e}" Name="AssignmentReportText" DisplayName="Текст" Type="Note" NumLines="30" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{fd112f1e-946d-481a-a711-010b60160cdc}" Name="AssignmentLink" DisplayName="Поручение" Type="Lookup" List="Lists/AssignmentList" ShowField="AssignmentNumber" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{81789db2-cd11-46b3-8bf3-1df732fa553e}" Name="AssignmentReportRequestDate" DisplayName="Дата запроса" Type="DateTime" Format="DateTime" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{2b64e3b1-9122-44b9-8439-40d0ca2eab66}" Name="AssignmentReportRequestPlanAnswerDate" DisplayName="Ожидаемая дата ответа" Type="DateTime" Format="DateTime" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{f839a948-6062-44ec-bb60-ef024b0c25f5}" Name="AssignmentReportResolutionDecision" DisplayName="Решение по отчету" Type="Choice" Required="FALSE" Group="Атрибуты заседания градостроительного совета">
+        <CHOICES>
+          <CHOICE>Снять с контроля</CHOICE>
+          <CHOICE>Перенести срок</CHOICE>
+          <CHOICE>Отправить на доработку</CHOICE>
+        </CHOICES>
+        <MAPPINGS>
+          <MAPPING Value="1">Снять с контроля</MAPPING>
+          <MAPPING Value="2">Перенести срок</MAPPING>
+          <MAPPING Value="3">Отправить на доработку</MAPPING>
+        </MAPPINGS>
+      </Field>
+      <Field ID="{4c25e61f-29e6-40ad-8318-8cc8722253bd}" Name="AssignmentReportResolutionNewDate" DisplayName="Новый срок" Type="DateTime" Format="DateTime" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{011b05a7-d72f-4a6e-9356-57612b0f17f4}" Name="AssignmentReportResolutionComment" DisplayName="Комментарий к резолюции" Type="Note" NumLines="15" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{06302b4f-3e5d-4ed5-89c0-af61c8b2a33e}" Name="AssignmentReportFactAnswerDate" DisplayName="Фактическая дата ответа" Type="DateTime" Format="DateTime" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+      <Field ID="{58672a51-649b-4f85-a993-a20a72a62132}" Name="AssignmentReportRequestText" DisplayName="Текст запроса" Type="Note" NumLines="15" Required="FALSE" Group="Атрибуты заседания градостроительного совета"></Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="AssignmentLink" />
+          <FieldRef Name="AssignmentReportRequestDate" />
+          <FieldRef Name="AssignmentReportRequestPlanAnswerDate" />
+          <FieldRef Name="AssignmentReportResolutionDecision" />
+          <FieldRef Name="AssignmentReportResolutionNewDate" />
+          <FieldRef Name="AssignmentReportResolutionComment" />
+          <FieldRef Name="AssignmentReportFactAnswerDate" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Справочник организаций" OnQuickLaunch="TRUE" TemplateType="10018" Url="Lists/OrganizationBookList" Description="">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="OrganizationName">ЗАО Вымпел</Field>
+          <Field Name="OrganizationDescription">Коммерческая организация</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">ООО Информационные технологии</Field>
+          <Field Name="OrganizationDescription">Коммерческая организация</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">Армада</Field>
+          <Field Name="OrganizationDescription">ИТ Холдинг</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">Администрация мэра г. Ногинска</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">Министерство здравоохранения РФ</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">Министерство энергетики РФ</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">ООО "Вега"</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">ЗАО "Новые технологии"</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">ЗАО "Облачная платформа"</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">Министерство связи РФ</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">ООО "Электронный мир"</Field>
+        </Row>
+        <Row>
+          <Field Name="OrganizationName">ЗАО "Чистая планета"</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

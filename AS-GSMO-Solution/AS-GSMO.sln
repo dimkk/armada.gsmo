@@ -1,0 +1,114 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradSovetApp", "GradSovetApp\GradSovetApp.csproj", "{88C25893-C12B-47F0-AA40-4A7C56E523FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradSovetPages", "GradSovetPages\GradSovetPages.csproj", "{A32F7D32-E1D1-4CB6-A03D-EB935F93E49A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradSovetLists", "GradSovetLists\GradSovetLists.csproj", "{B1B05367-3C95-4014-A8D8-0067C706142C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{88C25893-C12B-47F0-AA40-4A7C56E523FC} = {88C25893-C12B-47F0-AA40-4A7C56E523FC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSWeb", "GSWeb\GSWeb.csproj", "{AB844155-8370-484A-93FA-45326C94AB53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradSovetMeetingCalendar", "GradSovetMeetingCalendar\GradSovetMeetingCalendar.csproj", "{3CA6F89C-DD74-4FAE-8361-B44570153CD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSJobs", "GSJobs\GSJobs.csproj", "{975ED9B5-6268-4804-B3F2-9747A8605935}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackupAutomation", "BackupAutomation", "{46D83709-6A1D-420B-98FE-D20E2040A9DB}"
+	ProjectSection(SolutionItems) = preProject
+		BackupAutomation\difflBackupSPFarm.ps1 = BackupAutomation\difflBackupSPFarm.ps1
+		BackupAutomation\fullBackupSiteCollection.ps1 = BackupAutomation\fullBackupSiteCollection.ps1
+		BackupAutomation\fullBackupSPFarm.ps1 = BackupAutomation\fullBackupSPFarm.ps1
+		BackupAutomation\ZipFolder.ps1 = BackupAutomation\ZipFolder.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PS", "PS", "{0326ABE5-F4EB-4502-9053-73385E1BE238}"
+	ProjectSection(SolutionItems) = preProject
+		PS\RunWorkflow-AllItems.ps1 = PS\RunWorkflow-AllItems.ps1
+		SimpleDeployWSP.ps1 = SimpleDeployWSP.ps1
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportToExcel", "ExportToExcel\ExportToExcel.csproj", "{A07A09FE-1241-4A57-9938-5F12FC2D5297}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://sp2013:8080/tfs/gradsovetmo
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GradSovetApp\\GradSovetApp.csproj
+		SccProjectName1 = GradSovetApp
+		SccLocalPath1 = GradSovetApp
+		SccProjectUniqueName2 = GradSovetPages\\GradSovetPages.csproj
+		SccProjectName2 = GradSovetPages
+		SccLocalPath2 = GradSovetPages
+		SccProjectUniqueName3 = GradSovetLists\\GradSovetLists.csproj
+		SccProjectName3 = GradSovetLists
+		SccLocalPath3 = GradSovetLists
+		SccProjectUniqueName4 = GSWeb\\GSWeb.csproj
+		SccProjectName4 = GSWeb
+		SccLocalPath4 = GSWeb
+		SccProjectUniqueName5 = GradSovetMeetingCalendar\\GradSovetMeetingCalendar.csproj
+		SccProjectName5 = GradSovetMeetingCalendar
+		SccLocalPath5 = GradSovetMeetingCalendar
+		SccProjectUniqueName6 = GSJobs\\GSJobs.csproj
+		SccProjectName6 = GSJobs
+		SccLocalPath6 = GSJobs
+		SccProjectUniqueName7 = ExportToExcel\\ExportToExcel.csproj
+		SccProjectName7 = ExportToExcel
+		SccLocalPath7 = ExportToExcel
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88C25893-C12B-47F0-AA40-4A7C56E523FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C25893-C12B-47F0-AA40-4A7C56E523FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C25893-C12B-47F0-AA40-4A7C56E523FC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{88C25893-C12B-47F0-AA40-4A7C56E523FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C25893-C12B-47F0-AA40-4A7C56E523FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88C25893-C12B-47F0-AA40-4A7C56E523FC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A32F7D32-E1D1-4CB6-A03D-EB935F93E49A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A32F7D32-E1D1-4CB6-A03D-EB935F93E49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A32F7D32-E1D1-4CB6-A03D-EB935F93E49A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A32F7D32-E1D1-4CB6-A03D-EB935F93E49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A32F7D32-E1D1-4CB6-A03D-EB935F93E49A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A32F7D32-E1D1-4CB6-A03D-EB935F93E49A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B1B05367-3C95-4014-A8D8-0067C706142C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B05367-3C95-4014-A8D8-0067C706142C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B05367-3C95-4014-A8D8-0067C706142C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B1B05367-3C95-4014-A8D8-0067C706142C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B05367-3C95-4014-A8D8-0067C706142C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B05367-3C95-4014-A8D8-0067C706142C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AB844155-8370-484A-93FA-45326C94AB53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB844155-8370-484A-93FA-45326C94AB53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB844155-8370-484A-93FA-45326C94AB53}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AB844155-8370-484A-93FA-45326C94AB53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB844155-8370-484A-93FA-45326C94AB53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB844155-8370-484A-93FA-45326C94AB53}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3CA6F89C-DD74-4FAE-8361-B44570153CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA6F89C-DD74-4FAE-8361-B44570153CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA6F89C-DD74-4FAE-8361-B44570153CD3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3CA6F89C-DD74-4FAE-8361-B44570153CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA6F89C-DD74-4FAE-8361-B44570153CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CA6F89C-DD74-4FAE-8361-B44570153CD3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{975ED9B5-6268-4804-B3F2-9747A8605935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{975ED9B5-6268-4804-B3F2-9747A8605935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{975ED9B5-6268-4804-B3F2-9747A8605935}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{975ED9B5-6268-4804-B3F2-9747A8605935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{975ED9B5-6268-4804-B3F2-9747A8605935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{975ED9B5-6268-4804-B3F2-9747A8605935}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A07A09FE-1241-4A57-9938-5F12FC2D5297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07A09FE-1241-4A57-9938-5F12FC2D5297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07A09FE-1241-4A57-9938-5F12FC2D5297}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A07A09FE-1241-4A57-9938-5F12FC2D5297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07A09FE-1241-4A57-9938-5F12FC2D5297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07A09FE-1241-4A57-9938-5F12FC2D5297}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
