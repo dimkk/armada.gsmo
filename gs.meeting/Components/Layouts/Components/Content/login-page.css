@@ -2,14 +2,14 @@
  
 #page-background {position:fixed; top:0; left:0; width:100%; height:100%;}
  
-#content {position:relative; z-index:1; padding:10px; margin-top: 50px;}
+#content {position:relative; z-index:1; padding:10px; margin-top: 25px;}
 
 .header {
     display: table;
     overflow: hidden;
     background-color: #E8E8E8;
     width: 100%;
-    height: 120px;
+    height: 100px;
 }
 
 .subheader {
@@ -26,7 +26,7 @@
 .logo {
     display: table-cell;
     height: inherit;
-    width: 120px;
+    width: 100px;
     padding: 10px;
     text-align: center;
 }
@@ -54,11 +54,11 @@
 }
 
 .logo-footer-img {
-    height: 100px;
+    height: 70px;
 }
 
 footer{
-    height:125px;
+    height:100px;
     position:fixed;
     bottom:0;
     width:100%;

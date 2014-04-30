@@ -14,6 +14,7 @@
 <asp:Content ID="PageHead" ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     <link href="../Content/login-page.css?rev=23" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="/Style Library/ResponsiveServer/Bootstrap3/js/jquery-1.9.1.min.js"></script>
+
     <script>
         $(document).ready(function () {
             $('#s4-simple-card').attr("id", "s4-simple-card2");
