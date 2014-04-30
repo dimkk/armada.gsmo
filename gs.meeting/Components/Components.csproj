@@ -66,11 +66,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationPages\Login\Login.aspx.cs">
+    <Compile Include="Layouts\Components\Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ApplicationPages\Login\Login.aspx.designer.cs">
+    <Compile Include="Layouts\Components\Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx.cs</DependentUpon>
     </Compile>
     <Compile Include="Layouts\Components\Pages\OverduedExecutors.aspx.cs">
@@ -132,7 +132,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApplicationPages\Login\Login.aspx" />
     <Content Include="Features\gs_meeting_AgendaQuestionMarksReport\gs_meeting_AgendaQuestionMarksReport.Template.xml">
       <DependentUpon>gs_meeting_AgendaQuestionMarksReport.feature</DependentUpon>
     </Content>
@@ -142,6 +141,11 @@
     <Content Include="Features\gs_meeting_ObjectPhotoLibraryWebPart\gs_meeting_ObjectPhotoLibraryWebPart.Template.xml">
       <DependentUpon>gs_meeting_ObjectPhotoLibraryWebPart.feature</DependentUpon>
     </Content>
+    <Content Include="Layouts\Components\Content\back-img.jpg" />
+    <Content Include="Layouts\Components\Content\login-page.css" />
+    <Content Include="Layouts\Components\Content\logo.png" />
+    <Content Include="Layouts\Components\Content\tver-logo.png" />
+    <Content Include="Layouts\Components\Pages\Login.aspx" />
     <Content Include="Layouts\Components\Pages\OverduedExecutors.aspx" />
     <Content Include="Layouts\Components\Content\ExecutorModal.css" />
     <Content Include="Layouts\Components\Pages\OverduedExecutorAssignments.aspx" />
@@ -152,7 +156,6 @@
       <DependentUpon>gs_meeting_AssignmentOverduedExecutors.feature</DependentUpon>
     </Content>
     <TypeScriptCompile Include="Layouts\Components\Scripts\objectGalleryModel.ts" />
-    <Content Include="Layouts\Components\Scripts\objectGalleryModel.js" />
     <Content Include="Layouts\Components\Scripts\galleria\galleria-1.3.5.js" />
     <Content Include="Layouts\Components\Scripts\galleria\galleria-1.3.5.min.js" />
     <Content Include="Layouts\Components\Scripts\galleria\jquery-2.1.0.intellisense.js" />
@@ -181,9 +184,6 @@
     <Content Include="WebParts\ObjectPhotoLibraryWebPart\ObjectPhotoLibraryWebPart.webpart" />
     <Content Include="WebParts\ObjectPhotoLibraryWebPart\ObjectPhotoLibraryWebPartUserControl.ascx" />
     <Content Include="WebParts\ObjectPhotoLibraryWebPart\WebPartIcon_ObjectPhotoLibraryWebPart.gif" />
-    <None Include="ApplicationPages\Login\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{a3e0eb91-a2a8-403b-8070-2dfbeb7b21b1}</SharePointProjectItemId>
-    </None>
     <None Include="Layouts\Components\Scripts\spin.min.js.map">
       <DependentUpon>spin.js</DependentUpon>
     </None>
@@ -195,9 +195,6 @@
     <TypeScriptCompile Include="Layouts\Components\Scripts\newsModel.ts" />
     <TypeScriptCompile Include="Layouts\Components\Scripts\marksModel.ts" />
     <TypeScriptCompile Include="Layouts\Components\Scripts\gsCore.ts" />
-    <Content Include="Layouts\Components\Scripts\gsCore.js" />
-    <Content Include="Layouts\Components\Scripts\marksModel.js" />
-    <Content Include="Layouts\Components\Scripts\newsModel.js" />
     <Content Include="ListDefinitions\AgendaQuestionMarksReport\Elements.xml" />
     <Content Include="ListDefinitions\AgendaQuestionMarksReport\schema.xml">
       <SubType>Designer</SubType>
@@ -231,8 +228,6 @@
     </None>
     <TypeScriptCompile Include="Layouts\Components\Scripts\adjustModal.ts" />
     <TypeScriptCompile Include="Layouts\Components\Scripts\overduedExecutorModel.ts" />
-    <Content Include="Layouts\Components\Scripts\adjustModal.js" />
-    <Content Include="Layouts\Components\Scripts\overduedExecutorModel.js" />
     <Content Include="Layouts\Components\Scripts\camljs.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Layouts\Components\Scripts\knockout-2.3.0.debug.js" />

@@ -7,7 +7,7 @@
     }
 </style>
 
-<asp:Label ID="labelMessage" runat="server" Text="Íåîáõîäèìî íàñòðîèòü ñîåäèíåíèå ñ âåá ÷àñòüþ îáúåêòà ñòðîèòåëüñòâà"></asp:Label>
+<asp:Label ID="labelMessage" runat="server" Text="ÐÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¸Ñ‚ÑŒ ÑÐ¾ÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ðµ Ñ Ð²ÐµÐ± Ñ‡Ð°ÑÑ‚ÑŒÑŽ Ð¾Ð±ÑŠÐµÐºÑ‚Ð° ÑÑ‚Ñ€Ð¾Ð¸Ñ‚ÐµÐ»ÑŒÑÑ‚Ð²Ð°"></asp:Label>
 
 <div class="content">
     <div data-bind="foreach: GalleryRecordList" class="galleria">

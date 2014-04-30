@@ -31,17 +31,17 @@ namespace gs.meeting.Components
         private const string ASCXPATH = @"/_CONTROLTEMPLATES/15/gs_meeting/ObjectPhotoLibraryWebPartUserControl.ascx";
         private const string _webpartpropertieshiddenfieldid = "WebPartPropertiesHiddenFieldID";
         private const string _connectionFailed =
-            "Необходимо установить соединение с поставщиком данных об объекте строительства";
+            "РќРµРѕР±С…РѕРґРёРјРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРѕРµРґРёРЅРµРЅРёРµ СЃ РїРѕСЃС‚Р°РІС‰РёРєРѕРј РґР°РЅРЅС‹С… РѕР± РѕР±СЉРµРєС‚Рµ СЃС‚СЂРѕРёС‚РµР»СЊСЃС‚РІР°";
         private const string _connectionNoData =
-            "Веб часть не получила данных от поставщика информации об объекте строительства";
+            "Р’РµР± С‡Р°СЃС‚СЊ РЅРµ РїРѕР»СѓС‡РёР»Р° РґР°РЅРЅС‹С… РѕС‚ РїРѕСЃС‚Р°РІС‰РёРєР° РёРЅС„РѕСЂРјР°С†РёРё РѕР± РѕР±СЉРµРєС‚Рµ СЃС‚СЂРѕРёС‚РµР»СЊСЃС‚РІР°";
         private const string _paramNoList =
-            "Укажите в настройках веб части название списка-источника данных";
+            "РЈРєР°Р¶РёС‚Рµ РІ РЅР°СЃС‚СЂРѕР№РєР°С… РІРµР± С‡Р°СЃС‚Рё РЅР°Р·РІР°РЅРёРµ СЃРїРёСЃРєР°-РёСЃС‚РѕС‡РЅРёРєР° РґР°РЅРЅС‹С…";
         private const string _paramNoGConf =
-            "Укажите в настройках веб части параметры конфигурации для отображения галереи";
+            "РЈРєР°Р¶РёС‚Рµ РІ РЅР°СЃС‚СЂРѕР№РєР°С… РІРµР± С‡Р°СЃС‚Рё РїР°СЂР°РјРµС‚СЂС‹ РєРѕРЅС„РёРіСѓСЂР°С†РёРё РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РіР°Р»РµСЂРµРё";
         private const string _paramNoGTheme =
-            "Укажите в настройках веб части адрес скрипта, содержащего тему для отображения галереи";
+            "РЈРєР°Р¶РёС‚Рµ РІ РЅР°СЃС‚СЂРѕР№РєР°С… РІРµР± С‡Р°СЃС‚Рё Р°РґСЂРµСЃ СЃРєСЂРёРїС‚Р°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ С‚РµРјСѓ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РіР°Р»РµСЂРµРё";
         private const string _paramNoLinkField =
-            "Укажите в настройках веб части название поля-ссылки на объект в списке-источнике данных";
+            "РЈРєР°Р¶РёС‚Рµ РІ РЅР°СЃС‚СЂРѕР№РєР°С… РІРµР± С‡Р°СЃС‚Рё РЅР°Р·РІР°РЅРёРµ РїРѕР»СЏ-СЃСЃС‹Р»РєРё РЅР° РѕР±СЉРµРєС‚ РІ СЃРїРёСЃРєРµ-РёСЃС‚РѕС‡РЅРёРєРµ РґР°РЅРЅС‹С…";
         private const string jsonParamFmt = "\"{0}\": \"{1}\"";
         private const string jsonNestedParamFmt = "\"{0}\": {1}";
 
@@ -69,7 +69,7 @@ namespace gs.meeting.Components
             }
         }
 
-        [ConnectionConsumer("Объект строительства (идентификатор)", "CONNPOINT1", 
+        [ConnectionConsumer("РћР±СЉРµРєС‚ СЃС‚СЂРѕРёС‚РµР»СЊСЃС‚РІР° (РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ)", "CONNPOINT1", 
             typeof(PhotoLibraryConsumerConnectionPoint), AllowsMultipleConnections = true)]
         public void SetConnectionInterface(IWebPartField provider)
         {
@@ -171,26 +171,26 @@ namespace gs.meeting.Components
         }
 
         [WebBrowsable(true)]
-        [WebDisplayName("Название списка-источника данных")]
-        [WebDescription("Укажите название списка, который будет служить источником данных для веб части. Список на основе шаблона Библиотека фотографий объекта строительства")]
+        [WebDisplayName("РќР°Р·РІР°РЅРёРµ СЃРїРёСЃРєР°-РёСЃС‚РѕС‡РЅРёРєР° РґР°РЅРЅС‹С…")]
+        [WebDescription("РЈРєР°Р¶РёС‚Рµ РЅР°Р·РІР°РЅРёРµ СЃРїРёСЃРєР°, РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ СЃР»СѓР¶РёС‚СЊ РёСЃС‚РѕС‡РЅРёРєРѕРј РґР°РЅРЅС‹С… РґР»СЏ РІРµР± С‡Р°СЃС‚Рё. РЎРїРёСЃРѕРє РЅР° РѕСЃРЅРѕРІРµ С€Р°Р±Р»РѕРЅР° Р‘РёР±Р»РёРѕС‚РµРєР° С„РѕС‚РѕРіСЂР°С„РёР№ РѕР±СЉРµРєС‚Р° СЃС‚СЂРѕРёС‚РµР»СЊСЃС‚РІР°")]
         [Personalizable(PersonalizationScope.Shared)]
         public string DataSourceListName { get; set; }
 
         [WebBrowsable(true)]
-        [WebDisplayName("Название поля-ссылки на объект строительства в списке-источнике данных (InternalName)")]
-        [WebDescription("Укажите внутреннее наименование поля, которое содержит ссылку на связанный объект строительства")]
+        [WebDisplayName("РќР°Р·РІР°РЅРёРµ РїРѕР»СЏ-СЃСЃС‹Р»РєРё РЅР° РѕР±СЉРµРєС‚ СЃС‚СЂРѕРёС‚РµР»СЊСЃС‚РІР° РІ СЃРїРёСЃРєРµ-РёСЃС‚РѕС‡РЅРёРєРµ РґР°РЅРЅС‹С… (InternalName)")]
+        [WebDescription("РЈРєР°Р¶РёС‚Рµ РІРЅСѓС‚СЂРµРЅРЅРµРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР»СЏ, РєРѕС‚РѕСЂРѕРµ СЃРѕРґРµСЂР¶РёС‚ СЃСЃС‹Р»РєСѓ РЅР° СЃРІСЏР·Р°РЅРЅС‹Р№ РѕР±СЉРµРєС‚ СЃС‚СЂРѕРёС‚РµР»СЊСЃС‚РІР°")]
         [Personalizable(PersonalizationScope.Shared)]
         public string LinkFieldName { get; set; }
 
         [WebBrowsable(true)]
-        [WebDisplayName("Тема для галереи (относительный адрес скрипта, пример: classic/galleria.classic.min.js)")]
-        [WebDescription("Укажите относительный адрес скрипта, содержащего тему галереи")]
+        [WebDisplayName("РўРµРјР° РґР»СЏ РіР°Р»РµСЂРµРё (РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅС‹Р№ Р°РґСЂРµСЃ СЃРєСЂРёРїС‚Р°, РїСЂРёРјРµСЂ: classic/galleria.classic.min.js)")]
+        [WebDescription("РЈРєР°Р¶РёС‚Рµ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅС‹Р№ Р°РґСЂРµСЃ СЃРєСЂРёРїС‚Р°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ С‚РµРјСѓ РіР°Р»РµСЂРµРё")]
         [Personalizable(PersonalizationScope.Shared)]
         public string GalleriaTheme { get; set; }
 
         [WebBrowsable(true)]
-        [WebDisplayName("Параметры конфигурации для галереи (http://galleria.io/docs/options/)")]
-        [WebDescription("Укажите параметры конфигурирования галереи фотографий")]
+        [WebDisplayName("РџР°СЂР°РјРµС‚СЂС‹ РєРѕРЅС„РёРіСѓСЂР°С†РёРё РґР»СЏ РіР°Р»РµСЂРµРё (http://galleria.io/docs/options/)")]
+        [WebDescription("РЈРєР°Р¶РёС‚Рµ РїР°СЂР°РјРµС‚СЂС‹ РєРѕРЅС„РёРіСѓСЂРёСЂРѕРІР°РЅРёСЏ РіР°Р»РµСЂРµРё С„РѕС‚РѕРіСЂР°С„РёР№")]
         [Personalizable(PersonalizationScope.Shared)]
         public string GalleriaConf { get; set; }
     }

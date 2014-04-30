@@ -24,7 +24,7 @@ namespace gs.meeting.Components
 
 
     /// <summary>
-    /// Веб часть  отображения содержимого набора документов
+    /// Р’РµР± С‡Р°СЃС‚СЊ  РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ РЅР°Р±РѕСЂР° РґРѕРєСѓРјРµРЅС‚РѕРІ
     /// </summary>
     [SharePointPermission(SecurityAction.LinkDemand, ObjectModel = true)]
     [SharePointPermission(SecurityAction.InheritanceDemand, ObjectModel = true)]
@@ -103,7 +103,7 @@ namespace gs.meeting.Components
 			                </span>
 		                </div>
 	                    <div style='display: table-cell;padding-left: 5px;vertical-align: middle;'>
-			                <span unselectable='on'>Открыть материалы в отдельном окне</span>
+			                <span unselectable='on'>РћС‚РєСЂС‹С‚СЊ РјР°С‚РµСЂРёР°Р»С‹ РІ РѕС‚РґРµР»СЊРЅРѕРј РѕРєРЅРµ</span>
 		                </div>
                     </div>
                     </a>"
@@ -140,7 +140,7 @@ namespace gs.meeting.Components
                 {
                     SPListItem dsItem = getCurrentDocumentSetItem(SPContext.Current.Web);
                     if (dsItem == null)
-                        throw new Exception("Для элемента не найден набор документов с вложениями");
+                        throw new Exception("Р”Р»СЏ СЌР»РµРјРµРЅС‚Р° РЅРµ РЅР°Р№РґРµРЅ РЅР°Р±РѕСЂ РґРѕРєСѓРјРµРЅС‚РѕРІ СЃ РІР»РѕР¶РµРЅРёСЏРјРё");
 
                     if (this.ViewState["DocSetID"] == null)
                         this.ViewState["DocSetID"] = dsItem.ID;

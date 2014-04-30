@@ -7,7 +7,6 @@
 'use strict';
 
 module OverduedExecutor{
-
     var spinOptions = {
         lines: 13, // The number of lines to draw
         length: 20, // The length of each line

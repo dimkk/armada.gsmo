@@ -1,4 +1,4 @@
-// <copyright file="MarksListWebPartUserControl.ascx.cs" company="Armada">
+п»ї// <copyright file="MarksListWebPartUserControl.ascx.cs" company="Armada">
 // Copyright Armada. All rights reserved.
 // </copyright>
 // <author>RKIS\developer</author>
@@ -14,7 +14,7 @@ namespace gs.meeting.Components
     /// </summary>
     public partial class MarksListWebPartUserControl : System.Web.UI.UserControl
     {
-        private const string _captionStub = "Рассмотрено на ГрадСовете";
+        private const string _captionStub = "Р Р°СЃСЃРјРѕС‚СЂРµРЅРѕ РЅР° Р“СЂР°РґРЎРѕРІРµС‚Рµ";
 
         // TODO: Add code behind
         protected override void CreateChildControls()

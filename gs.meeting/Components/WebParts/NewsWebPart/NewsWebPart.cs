@@ -61,14 +61,14 @@ namespace gs.meeting.Components
         }
 
         [WebBrowsable(true)]
-        [WebDisplayName("Имя списка")]
-        [WebDescription("Название библиотеки рисунков с новостями. Обязательно должно быть поле Url")]
+        [WebDisplayName("РРјСЏ СЃРїРёСЃРєР°")]
+        [WebDescription("РќР°Р·РІР°РЅРёРµ Р±РёР±Р»РёРѕС‚РµРєРё СЂРёСЃСѓРЅРєРѕРІ СЃ РЅРѕРІРѕСЃС‚СЏРјРё. РћР±СЏР·Р°С‚РµР»СЊРЅРѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР»Рµ Url")]
         [Personalizable(PersonalizationScope.Shared)]
         public string DataSourceListName { get; set; }
 
         [WebBrowsable(true)]
-        [WebDisplayName("Количество дней")]
-        [WebDescription("Новости будут отбираться за последние дни, количество которых здесь указано")]
+        [WebDisplayName("РљРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№")]
+        [WebDescription("РќРѕРІРѕСЃС‚Рё Р±СѓРґСѓС‚ РѕС‚Р±РёСЂР°С‚СЊСЃСЏ Р·Р° РїРѕСЃР»РµРґРЅРёРµ РґРЅРё, РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕС‚РѕСЂС‹С… Р·РґРµСЃСЊ СѓРєР°Р·Р°РЅРѕ")]
         [Personalizable(PersonalizationScope.Shared)]
         public int LastDayCount { get; set; }
     }

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
   <Assembly>$SharePoint.Project.AssemblyFullName$,Version=1.0.0.0,Culture=Neutral,PublicToken=98b8bbe69daf0ccc</Assembly>
   <TypeName>gs.meeting.Components.AgendaQuestionDocumentSetWebPart</TypeName>

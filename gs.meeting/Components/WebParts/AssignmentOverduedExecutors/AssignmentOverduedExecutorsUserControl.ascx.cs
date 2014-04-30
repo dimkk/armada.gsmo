@@ -1,4 +1,4 @@
-// <copyright file="AssignmentOverduedExecutorsUserControl.ascx.cs" company="Armada">
+п»ї// <copyright file="AssignmentOverduedExecutorsUserControl.ascx.cs" company="Armada">
 // Copyright Armada. All rights reserved.
 // </copyright>
 // <author>RKIS\developer</author>
@@ -17,9 +17,9 @@ namespace gs.meeting.Components
         {
             base.CreateChildControls();
 
-            OrgLabel.Text = "Организация";
-            AmountLabel.Text = "Количество";
-            PanelTitleLabel.Text = "Должники по поручениям";
+            OrgLabel.Text = "РћСЂРіР°РЅРёР·Р°С†РёСЏ";
+            AmountLabel.Text = "РљРѕР»-РІРѕ";
+            PanelTitleLabel.Text = "РџСЂРѕСЃСЂРѕС‡РµРЅРЅС‹Рµ РїРѕСЂСѓС‡РµРЅРёСЏ";
         }
     }
 }

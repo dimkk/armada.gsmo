@@ -1,4 +1,4 @@
-// <copyright file="NewsWebPartUserControl.ascx.cs" company="Armada">
+п»ї// <copyright file="NewsWebPartUserControl.ascx.cs" company="Armada">
 // Copyright Armada. All rights reserved.
 // </copyright>
 // <author>RKIS\developer</author>
@@ -19,7 +19,7 @@ namespace gs.meeting.Components
         {
             base.CreateChildControls();
 
-            PanelTitleLabel.Text = "Новости";
+            PanelTitleLabel.Text = "РќРѕРІРѕСЃС‚Рё";
         }
     }
 
