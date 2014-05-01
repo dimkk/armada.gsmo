@@ -5,6 +5,11 @@
     .galleria {
         height:420px
     }
+
+    .galleria-container {
+        background: white !important;
+        border: 1px solid black !important;
+    }
 </style>
 
 <asp:Label ID="labelMessage" runat="server" Text="Необходимо настроить соединение с веб частью объекта строительства"></asp:Label>
