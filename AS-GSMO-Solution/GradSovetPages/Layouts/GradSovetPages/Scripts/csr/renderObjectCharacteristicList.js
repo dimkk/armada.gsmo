@@ -33,11 +33,18 @@
     function calculateColor(row) {
         var bColor = null;
 
+        // deviation field needs to be in the current view
+        // another approach is to use ID value to retrieve item deviation field
         var deviation = row[fieldNames.deviation];
+        if (deviation == undefined) {
+            console.warn("В текущем представлении списка " + ctx.ListTitle +
+                        " нет поля " + fieldNames.deviation +
+                        ". Оно необходимо для оценки отклонения от норматива.");
+        }
         if (!deviation || deviation == deviationValues.noEstimate) return null;
 
-        var value = row[fieldNames.value] || 0;
-        var stValue = row[fieldNames.standardValue] || 0;
+        var value = +row[fieldNames.value].replace(/\s/g, '') || 0;
+        var stValue = +row[fieldNames.standardValue].replace(/\s/g, '') || 0;
 
         switch (deviation) {
             case deviationValues.theBiggerTheBetter:
