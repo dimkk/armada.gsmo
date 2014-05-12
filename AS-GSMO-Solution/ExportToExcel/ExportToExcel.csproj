@@ -45,8 +45,9 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClosedXML">
-      <HintPath>.\ClosedXML.dll</HintPath>
+    <Reference Include="ClosedXML, Version=0.69.1.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\ClosedXML\v4.0_0.69.1.0__fd1eb21b62ae805b\ClosedXML.dll</HintPath>
     </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
