@@ -1,4 +1,4 @@
-// <copyright file="OverduedExecutorAssignments.aspx.cs" company="Armada">
+п»ї// <copyright file="OverduedExecutorAssignments.aspx.cs" company="Armada">
 // Copyright Armada. All rights reserved.
 // </copyright>
 // <author>RKIS\developer</author>
@@ -210,7 +210,7 @@ namespace gs.meeting.Components
                 }
             }
 
-            MainListView.List = site.Lists.TryGetList("Поручения");
+            MainListView.List = site.Lists.TryGetList("РџРѕСЂСѓС‡РµРЅРёСЏ");
             exId = this.Context.Request.QueryString["ExecutorId"] != null
                 ? this.Context.Request.QueryString["ExecutorId"]
                 : this.ViewState["ExecutorId"];
