@@ -1,4 +1,4 @@
-// <copyright file="erAgendaQuestionItem.cs" company="Armada">
+п»ї// <copyright file="erAgendaQuestionItem.cs" company="Armada">
 // Copyright Armada. All rights reserved.
 // </copyright>
 // <author>RKIS\developer</author>
@@ -28,8 +28,8 @@ namespace gs.meeting.Components
     {
         internal static string getTitle(QuestionTitleData data)
         {
-            var number = data.Number == null ? "неизвестно" : data.Number.ToString();
-            return String.Format("Вопрос №{0}", number);
+            var number = data.Number == null ? "РЅРµРёР·РІРµСЃС‚РЅРѕ" : data.Number.ToString();
+            return String.Format("Р’РѕРїСЂРѕСЃ в„–{0}", number);
         }
 
         internal static SPListItem doGetQuestionDocumentSet(int Id, SPWeb web)
@@ -109,7 +109,7 @@ namespace gs.meeting.Components
                             TraceSeverity.Monitorable,
                             EventSeverity.Warning),
                         EventSeverity.Error,
-                        "Создан элемент списка {0} без ссылки на элемент списка {1}",
+                        "РЎРѕР·РґР°РЅ СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР° {0} Р±РµР· СЃСЃС‹Р»РєРё РЅР° СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР° {1}",
                         new object[] {properties.ListTitle, properties.Web.GetList("Lists/MeetingList").Title});
 
                     return;
@@ -130,7 +130,7 @@ namespace gs.meeting.Components
                             TraceSeverity.Monitorable,
                             EventSeverity.Warning),
                         EventSeverity.Error,
-                        "Не существует экземпляра списка по шаблону {0}. Невозможно создать структуру каталогов для хранения вложений",
+                        "РќРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂР° СЃРїРёСЃРєР° РїРѕ С€Р°Р±Р»РѕРЅСѓ {0}. РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ СЃС‚СЂСѓРєС‚СѓСЂСѓ РєР°С‚Р°Р»РѕРіРѕРІ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РІР»РѕР¶РµРЅРёР№",
                         new object[] {Consts.StorageListTemplateId});
 
                     return;
@@ -143,7 +143,7 @@ namespace gs.meeting.Components
 
                 var props = new Hashtable
                 {
-                    {"DocumentSetDescription", "Набор документов для вопроса повестки"},
+                    {"DocumentSetDescription", "РќР°Р±РѕСЂ РґРѕРєСѓРјРµРЅС‚РѕРІ РґР»СЏ РІРѕРїСЂРѕСЃР° РїРѕРІРµСЃС‚РєРё"},
                     {"AgendaQuestionLinkFromDS", properties.ListItem},
                     {"MeetingLinkFromDS", meetingItem}
                 };
@@ -162,7 +162,7 @@ namespace gs.meeting.Components
                                 if (tLib == null) return;
                                 var folder = SPFolderHierarchy.GetSubFolder(tLib.RootFolder, mTitle, true);
 
-                                DocumentSet.Create(folder, qTitle, tLib.ContentTypes["Набор документов"].Id, props,
+                                DocumentSet.Create(folder, qTitle, tLib.ContentTypes["РќР°Р±РѕСЂ РґРѕРєСѓРјРµРЅС‚РѕРІ"].Id, props,
                                     true);
                             }
                         }
@@ -176,7 +176,7 @@ namespace gs.meeting.Components
                             TraceSeverity.Unexpected,
                             EventSeverity.Error),
                         TraceSeverity.Unexpected,
-                        "Не удалось создать набор документов: {0}",
+                        "РќРµ СѓРґР°Р»РѕСЃСЊ СЃРѕР·РґР°С‚СЊ РЅР°Р±РѕСЂ РґРѕРєСѓРјРµРЅС‚РѕРІ: {0}",
                         new object[] {ex});
                     throw;
                 }
@@ -202,7 +202,7 @@ namespace gs.meeting.Components
                         TraceSeverity.Monitorable,
                         EventSeverity.Warning),
                     EventSeverity.Error,
-                    "Не существует экземпляра списка по шаблону {0}. Невозможно изменить структуру каталогов для хранения вложений",
+                    "РќРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂР° СЃРїРёСЃРєР° РїРѕ С€Р°Р±Р»РѕРЅСѓ {0}. РќРµРІРѕР·РјРѕР¶РЅРѕ РёР·РјРµРЅРёС‚СЊ СЃС‚СЂСѓРєС‚СѓСЂСѓ РєР°С‚Р°Р»РѕРіРѕРІ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РІР»РѕР¶РµРЅРёР№",
                     new object[] {Consts.StorageListTemplateId});
 
                 return;
@@ -224,7 +224,7 @@ namespace gs.meeting.Components
                                     TraceSeverity.Monitorable,
                                     EventSeverity.Warning),
                                 EventSeverity.Warning,
-                                "Не удалось определить набор документов в списке {2}, который бы соответствовал элементу списка {0} с Id {1}",
+                                "РќРµ СѓРґР°Р»РѕСЃСЊ РѕРїСЂРµРґРµР»РёС‚СЊ РЅР°Р±РѕСЂ РґРѕРєСѓРјРµРЅС‚РѕРІ РІ СЃРїРёСЃРєРµ {2}, РєРѕС‚РѕСЂС‹Р№ Р±С‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°Р» СЌР»РµРјРµРЅС‚Сѓ СЃРїРёСЃРєР° {0} СЃ Id {1}",
                                 new object[] { properties.ListTitle, properties.ListItemId, targetLib.Title });
 
                             return;
@@ -242,7 +242,7 @@ namespace gs.meeting.Components
                                     TraceSeverity.Unexpected,
                                     EventSeverity.Error),
                                 TraceSeverity.Unexpected,
-                                "Не удалось удалить набор документов с Id {0}: {1}",
+                                "РќРµ СѓРґР°Р»РѕСЃСЊ СѓРґР°Р»РёС‚СЊ РЅР°Р±РѕСЂ РґРѕРєСѓРјРµРЅС‚РѕРІ СЃ Id {0}: {1}",
                                 new object[] { dsItem.ID, ex });
                             throw;
                         }
@@ -285,7 +285,7 @@ namespace gs.meeting.Components
                             TraceSeverity.Monitorable,
                             EventSeverity.Warning),
                         EventSeverity.Error,
-                        "Не существует экземпляра списка по шаблону {0}. Невозможно обновить структуру каталогов для хранения вложений",
+                        "РќРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂР° СЃРїРёСЃРєР° РїРѕ С€Р°Р±Р»РѕРЅСѓ {0}. РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±РЅРѕРІРёС‚СЊ СЃС‚СЂСѓРєС‚СѓСЂСѓ РєР°С‚Р°Р»РѕРіРѕРІ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РІР»РѕР¶РµРЅРёР№",
                         new object[] {Consts.StorageListTemplateId});
 
                     return;
@@ -307,7 +307,7 @@ namespace gs.meeting.Components
                                         TraceSeverity.Monitorable,
                                         EventSeverity.Warning),
                                     EventSeverity.Warning,
-                                    "Не удалось определить набор документов в списке {2}, который бы соответствовал элементу списка {0} с Id {1}",
+                                    "РќРµ СѓРґР°Р»РѕСЃСЊ РѕРїСЂРµРґРµР»РёС‚СЊ РЅР°Р±РѕСЂ РґРѕРєСѓРјРµРЅС‚РѕРІ РІ СЃРїРёСЃРєРµ {2}, РєРѕС‚РѕСЂС‹Р№ Р±С‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°Р» СЌР»РµРјРµРЅС‚Сѓ СЃРїРёСЃРєР° {0} СЃ Id {1}",
                                     new object[] {properties.ListTitle, properties.ListItemId, targetLib.Title});
 
                                 return;
@@ -326,7 +326,7 @@ namespace gs.meeting.Components
                                         TraceSeverity.Unexpected,
                                         EventSeverity.Error),
                                     TraceSeverity.Unexpected,
-                                    "Не удалось переименовать набор документов с Id {0}: {1}",
+                                    "РќРµ СѓРґР°Р»РѕСЃСЊ РїРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ РЅР°Р±РѕСЂ РґРѕРєСѓРјРµРЅС‚РѕРІ СЃ Id {0}: {1}",
                                     new object[] {dsItem.ID, ex});
                                 throw;
                             }

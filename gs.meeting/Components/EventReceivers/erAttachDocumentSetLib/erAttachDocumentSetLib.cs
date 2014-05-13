@@ -1,4 +1,4 @@
-// <copyright file="erAttachDocumentSetLib.cs" company="Armada">
+п»ї// <copyright file="erAttachDocumentSetLib.cs" company="Armada">
 // Copyright Armada. All rights reserved.
 // </copyright>
 // <author>RKIS\developer</author>
@@ -55,7 +55,7 @@ namespace gs.meeting.Components
 
             if (itemType != SPFileSystemObjectType.Folder) return true;
 
-            errorMessage = "Библиотека является служебной. Действия с папками и наборами документов запрещены";
+            errorMessage = "Р‘РёР±Р»РёРѕС‚РµРєР° СЏРІР»СЏРµС‚СЃСЏ СЃР»СѓР¶РµР±РЅРѕР№. Р”РµР№СЃС‚РІРёСЏ СЃ РїР°РїРєР°РјРё Рё РЅР°Р±РѕСЂР°РјРё РґРѕРєСѓРјРµРЅС‚РѕРІ Р·Р°РїСЂРµС‰РµРЅС‹";
             return false;
         }
         /// <summary>

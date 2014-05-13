@@ -1,4 +1,4 @@
-// <copyright file="erMeetingItem.cs" company="Armada">
+п»ї// <copyright file="erMeetingItem.cs" company="Armada">
 // Copyright Armada. All rights reserved.
 // </copyright>
 // <author>RKIS\developer</author>
@@ -28,12 +28,12 @@ namespace gs.meeting.Components
     {
         internal static string getTitle(MeetingTitleData data)
         {
-            var number = data.Number == null ? "неизвестно" : data.Number.ToString();
+            var number = data.Number == null ? "РЅРµРёР·РІРµСЃС‚РЅРѕ" : data.Number.ToString();
             string dateStr;
 
             if (data.Date == null)
             {
-                dateStr = "неизвестно";
+                dateStr = "РЅРµРёР·РІРµСЃС‚РЅРѕ";
             }
             else
             {
@@ -48,11 +48,11 @@ namespace gs.meeting.Components
 
                     dateStr = DateTime.TryParse(dateStr, out parsedDate)
                         ? parsedDate.Date.ToShortDateString()
-                        : "неизвестно";
+                        : "РЅРµРёР·РІРµСЃС‚РЅРѕ";
                 }
             }
 
-            return String.Format("Заседание №{0} от {1}", number, dateStr);
+            return String.Format("Р—Р°СЃРµРґР°РЅРёРµ в„–{0} РѕС‚ {1}", number, dateStr);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace gs.meeting.Components
                         TraceSeverity.Monitorable,
                         EventSeverity.Warning),
                     EventSeverity.Error,
-                    "Не существует экземпляра списка по шаблону {0}. Невозможно обновить структуру каталогов для хранения вложений",
+                    "РќРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂР° СЃРїРёСЃРєР° РїРѕ С€Р°Р±Р»РѕРЅСѓ {0}. РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±РЅРѕРІРёС‚СЊ СЃС‚СЂСѓРєС‚СѓСЂСѓ РєР°С‚Р°Р»РѕРіРѕРІ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РІР»РѕР¶РµРЅРёР№",
                     new object[] {Consts.StorageListTemplateId});
 
                 return;
@@ -124,7 +124,7 @@ namespace gs.meeting.Components
                         TraceSeverity.Monitorable,
                         EventSeverity.Warning),
                     EventSeverity.Error,
-                    "Не существует экземпляра списка по шаблону {0}. Невозможно обновить структуру каталогов для хранения вложений",
+                    "РќРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂР° СЃРїРёСЃРєР° РїРѕ С€Р°Р±Р»РѕРЅСѓ {0}. РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±РЅРѕРІРёС‚СЊ СЃС‚СЂСѓРєС‚СѓСЂСѓ РєР°С‚Р°Р»РѕРіРѕРІ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РІР»РѕР¶РµРЅРёР№",
                     new object[] {Consts.StorageListTemplateId});
 
                 return;
@@ -159,7 +159,7 @@ namespace gs.meeting.Components
                                         TraceSeverity.Unexpected,
                                         EventSeverity.Error),
                                     TraceSeverity.Unexpected,
-                                    "Не удалось удалить папку документов с Id {0}: {1}",
+                                    "РќРµ СѓРґР°Р»РѕСЃСЊ СѓРґР°Р»РёС‚СЊ РїР°РїРєСѓ РґРѕРєСѓРјРµРЅС‚РѕРІ СЃ Id {0}: {1}",
                                     new object[] { folder.Item.ID, ex });
                                 throw;
                             }
@@ -172,7 +172,7 @@ namespace gs.meeting.Components
                                     TraceSeverity.Monitorable,
                                     EventSeverity.Warning),
                                 EventSeverity.Warning,
-                                "Не удалось определить папку документов в списке {2}, которая бы соответствовала элементу списка {0} с Id {1}",
+                                "РќРµ СѓРґР°Р»РѕСЃСЊ РѕРїСЂРµРґРµР»РёС‚СЊ РїР°РїРєСѓ РґРѕРєСѓРјРµРЅС‚РѕРІ РІ СЃРїРёСЃРєРµ {2}, РєРѕС‚РѕСЂР°СЏ Р±С‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°Р»Р° СЌР»РµРјРµРЅС‚Сѓ СЃРїРёСЃРєР° {0} СЃ Id {1}",
                                 new object[] { properties.ListTitle, properties.ListItemId, targetLib.Title });
                         }
                     }
@@ -203,7 +203,7 @@ namespace gs.meeting.Components
                             TraceSeverity.Monitorable,
                             EventSeverity.Warning),
                         EventSeverity.Error,
-                        "Не существует экземпляра списка по шаблону {0}. Невозможно обновить структуру каталогов для хранения вложений",
+                        "РќРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂР° СЃРїРёСЃРєР° РїРѕ С€Р°Р±Р»РѕРЅСѓ {0}. РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±РЅРѕРІРёС‚СЊ СЃС‚СЂСѓРєС‚СѓСЂСѓ РєР°С‚Р°Р»РѕРіРѕРІ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РІР»РѕР¶РµРЅРёР№",
                         new object[] {Consts.StorageListTemplateId});
 
                     return;
@@ -248,7 +248,7 @@ namespace gs.meeting.Components
                                             TraceSeverity.Unexpected,
                                             EventSeverity.Error),
                                         TraceSeverity.Unexpected,
-                                        "Не удалось переименовать папку документов с Id {0}: {1}",
+                                        "РќРµ СѓРґР°Р»РѕСЃСЊ РїРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ РїР°РїРєСѓ РґРѕРєСѓРјРµРЅС‚РѕРІ СЃ Id {0}: {1}",
                                         new object[] { folder.Item.ID, ex });
                                     throw;
                                 }
