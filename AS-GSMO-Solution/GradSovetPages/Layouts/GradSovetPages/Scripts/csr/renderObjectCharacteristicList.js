@@ -30,6 +30,15 @@
         SPClientTemplates.TemplateManager.RegisterTemplateOverrides(viewRenderTemplate);
     }
 
+    function getNumericValue(str) {
+        var retVal = 0;
+        if (str) {
+            retVal = +str.replace(/\s/g, '');
+        }
+
+        return retVal;
+    }
+
     function calculateColor(row) {
         var bColor = null;
 
@@ -43,8 +52,8 @@
         }
         if (!deviation || deviation == deviationValues.noEstimate) return null;
 
-        var value = +row[fieldNames.value].replace(/\s/g, '') || 0;
-        var stValue = +row[fieldNames.standardValue].replace(/\s/g, '') || 0;
+        var value = getNumericValue(row[fieldNames.value]);
+        var stValue = getNumericValue(row[fieldNames.standardValue]);
 
         switch (deviation) {
             case deviationValues.theBiggerTheBetter:

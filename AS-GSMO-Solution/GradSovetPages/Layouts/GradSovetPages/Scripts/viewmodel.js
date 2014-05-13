@@ -236,47 +236,6 @@
         }
     }
 
-    function saveAgendaQuestionsAttachments(questions) {
-        var list = $.appWebContext.get_web().get_lists().getByTitle("Вложения вопроса повестки");
-        var newItems = [];
-        for (var question in questions) {
-            for (var attach in questions[question].agendaQuestionAttachments()) {
-                var current = questions[question].agendaQuestionAttachments()[attach];
-                // Build a request up to send with the CSOM.
-                if (current._destroy) {
-                    // Handle deleted objects
-                    // Deleted items that are marked "new" have never been saved to SharePoint to start with
-                    if (current.Id() != "") {
-                        var listItem = list.getItemById(current.Id());
-                        listItem.deleteObject();
-                    }
-                } else if (current.Id() == "") {
-                    var listItem = list.addItem(new SP.ListItemCreationInformation());
-
-                    listItem.set_item("AttachmentDescription", current.Descr());
-                    listItem.set_item("AgendaQuestionLink", questions[question].Id());
-                    listItem.set_item("AttachmentDocumentTypeLink", current.DType());
-                    listItem.update();
-
-                    // Save a reference to both the SP.ListItem object and the KO Object so we can update
-                    // the latter with the former's ID once the object has been created.
-                    newItems.push({
-                        spItem: listItem,
-                        koItem: current
-                    });
-                    $.appWebContext.load(listItem);
-                } else {
-                    // The item is neither new nor deleted, handle it as an update.
-                    var listItem = list.getItemById(current.Id());
-                    listItem.set_item("AttachmentDescription", current.Descr());
-                    listItem.set_item("AttachmentDocumentTypeLink", current.DType());
-                    listItem.update();
-                }
-            }
-        }
-        return newItems;
-    }
-
     function saveAssignmentsJournal(assignments) {
         var assignmentJournalList = $.appWebContext.get_web().get_lists().getByTitle("Записи журналов поручений");
         for (var assignment in assignments) {
@@ -1569,7 +1528,6 @@
 
         var meetingList = $.appWebContext.get_web().get_lists().getByTitle("Заседания");
         var agendaQuestionList = $.appWebContext.get_web().get_lists().getByTitle("Вопросы повестки заседания");
-        var questionAttachmentsList = $.appWebContext.get_web().get_lists().getByTitle("Вложения вопроса повестки");
         var attachList = $.appWebContext.get_web().get_lists().getByTitle("Вложения заседаний");
         var assignmentList = $.appWebContext.get_web().get_lists().getByTitle("Поручения");
         var attachDocTypeList = $.appWebContext.get_web().get_lists().getByTitle("Типы документов вложений");
@@ -1587,41 +1545,11 @@
         
         self.getPermissions = function () {
             self.editEnabled(false);
-            /*var meetingList = $.appWebContext.get_web().get_lists().getByTitle("Заседания");
-            $.appWebContext.load(meetingList, "EffectiveBasePermissionsForUI");
-            $.appWebContext.executeQueryAsync(function () {
-                var perms = meetingList.get_effectiveBasePermissionsForUI();
-                self.editEnabled(perms.has(SP.PermissionKind.editListItems));
-                // check if user is reporter
-                var groups = $.appWebContext.get_web().get_currentUser().get_groups();
-                $.appWebContext.load(groups);
-                $.appWebContext.executeQueryAsync(function () {
-                    var found = false;
-                    
-                    for (var i = 0; i < groups.get_count(); i++) {
-                        if (groups.get_item(i).get_title() !== "ГрадСовет - Докладчики") continue;
-                        found = true;
-                        break;
-                    }
-                    self.isReporter(found);
-                }, function () {
-                    self.isReporter(true);
-                    alert("Не удалось проверить группы доступа пользователя");
-                });
-
-            }, function () {
-                self.editEnabled(false);
-                alert("Не удалось получить информацию о правах доступа пользователя");
-            });*/
         }
 
         self.loadData = function () {
             self.availableMeetingStatuses(getChoicesFromMetadata(modelMetaData.meeting.fields, "MeetingStatus"));
-            /*self.assignmentInspectStates(getChoicesFromMetadata(modelMetaData.assignment.fields, "AssignmentInspectState"));
-            self.assignmentDayTypes(getChoicesFromMetadata(modelMetaData.assignment.fields, "AssignmentDayType"));
-            self.assignmentStatuses(getChoicesFromMetadata(modelMetaData.assignment.fields, "AssignmentStatus"));
-            self.assignmentReportResolutions(getChoicesFromMetadata(modelMetaData.assignmentReport.fields, "AssignmentReportResolutionDecision"));*/
-
+           
             //load attach document types book
             var dtquery = new SP.CamlQuery();
             var attachDocTypeListInst = attachDocTypeList.getItems(dtquery);
@@ -1734,19 +1662,8 @@
                         /*var assignmentListInst = assignmentList.getItems(spQuery);
                         $.appWebContext.load(assignmentListInst);*/
                     
-                        //load questions attachments
-                        /*var questionAttachmentsListInst = questionAttachmentsList.getItems(spQuery);
-                        $.appWebContext.load(questionAttachmentsListInst);*/
-
                         $.appWebContext.executeQueryAsync(function () {
                             var items = [];
-                            /*var aasignEnumerator = assignmentListInst.getEnumerator();
-                            while (aasignEnumerator.moveNext()) {д
-                                var newAssign = new Assignment(loadSPEntity(modelMetaData.assignment.fields, aasignEnumerator.get_current()));
-                                if (newAssign.AssignmentExecutorFullNameLink() != null) allMeetingBaseParticipants.push(newAssign.AssignmentExecutorFullNameLink());
-                                if (newAssign.AssignmentSoexecutors != null) $.each(newAssign.AssignmentSoexecutors(), function () { allMeetingBaseParticipants.push(this); });
-                                items.push(newAssign);
-                            }*/
                             self.assignments(items);
 
                             //load participants for assignments and questions
@@ -1759,63 +1676,6 @@
                                 this.loadExecutor();
                                 this.loadSoexecutors();
                             });
-
-                            //load questions attachments to model
-                            /*var questAttachEnum = questionAttachmentsListInst.getEnumerator();
-                            while (questAttachEnum.moveNext()) {
-                                var currentEnum = questAttachEnum.get_current();
-                                var questAttachFileInfo = loadListItemAttachmentInfo("Вложения вопроса повестки", currentEnum.get_item("ID"));
-
-                                var newAttach = new meetingAttach({
-                                    AttachmentDescription: currentEnum.get_item("AttachmentDescription"),
-                                    MeetingLink: currentEnum.get_item("AgendaQuestionLink").get_lookupId(),
-                                    Id: currentEnum.get_item("ID"),
-                                    FileUrl: questAttachFileInfo.FileUrl,
-                                    FileName: questAttachFileInfo.FileName,
-                                    FilePath: "",
-                                    AttachmentDocumentTypeLinkValue: currentEnum.get_item("AttachmentDocumentTypeLink") ? currentEnum.get_item("AttachmentDocumentTypeLink").get_lookupId() : "",
-                                    New: false
-                                });
-                                var parentQuestion = ko.utils.arrayFirst(self.agendaQuestions(), function (item) { return newAttach.MeetingLink() === item.Id(); });
-                                parentQuestion.agendaQuestionAttachments.push(newAttach);
-                                parentQuestion.editAgendaQuestionAttachments.push(newAttach);
-                            }*/
-
-                            // load assignment reports and journals
-                            /*var assignmentReportsList = $.appWebContext.get_web().get_lists().getByTitle("Отчеты по поручениям");
-                            var assignmentJournalList = $.appWebContext.get_web().get_lists().getByTitle("Записи журналов поручений");
-                            $.each(self.assignments(), function() {
-                                var logCamlQuery = new CamlBuilder().Where().LookupField("AssignmentLink").Id().EqualTo(this.Id());
-                                var logSpQuery = new SP.CamlQuery();
-                                logSpQuery.set_viewXml("<View><Query>" + logCamlQuery.ToString() + "</Query></View>");
-                                this.assignmentLogListInst = assignmentJournalList.getItems(logSpQuery);
-                                this.assignmentReportsListInst = assignmentReportsList.getItems(logSpQuery);
-                                $.appWebContext.load(this.assignmentReportsListInst);
-                                $.appWebContext.load(this.assignmentLogListInst);
-                            });
-                        
-                            $.appWebContext.executeQueryAsync(function () {
-                                $.each(self.assignments(), function() {
-                                    // load reports to model
-                                    var arItems = [];
-                                    var arEnumerator = this.assignmentReportsListInst.getEnumerator();
-                                    while (arEnumerator.moveNext()) {
-                                        arItems.push(new AssignmentReport(loadSPEntity(modelMetaData.assignmentReport.fields, arEnumerator.get_current())));
-                                    }
-                                    this.assignmentReports(arItems);
-                                    this.editAssignmentReports(arItems);
-                                    delete this.assignmentReportsListInst;
-
-                                    //load logs to model
-                                    var logItems = [];
-                                    var logEnumerator = this.assignmentLogListInst.getEnumerator();
-                                    while (logEnumerator.moveNext()) {
-                                        logItems.push(new AssignmentJournal(loadSPEntity(modelMetaData.assignmentJournal.fields, logEnumerator.get_current())));
-                                    }
-                                    this.assignmentJournal(logItems);
-                                    delete this.assignmentLogListInst;
-                                });
-                            });*/
                         });
                     }
                     finally
@@ -2137,23 +1997,21 @@
                         // scan attach
                         if (self.scanAttach()._destroy) {
                             // todo
-                } else {
-                    if (self.scanAttach().File() != undefined) {
-                        var listItem = self.scanAttach().Id() == "" ? attachList.addItem(new SP.ListItemCreationInformation()) : attachList.getItemById(self.scanAttach().Id());
-                            listItem.set_item("AttachmentDescription", self.scanAttach().Descr());
-                            listItem.set_item("MeetingLink", self.meeting().Id());
-                            listItem.set_item("AttachmentProtocolScanCopy", true);
-                            listItem.update();
-                        if (self.scanAttach().Id() == "") {
-                            // Save a reference to both the SP.ListItem object and the KO Object so we can update
-                            // the latter with the former's ID once the object has been created.
-                            createdScanAttach.push({ spItem: listItem, koItem: self.scanAttach() });
-                            $.appWebContext.load(listItem);
-                        } 
-                    }
+                        } else {
+                            if (self.scanAttach().File() != undefined) {
+                                var listItem = self.scanAttach().Id() == "" ? attachList.addItem(new SP.ListItemCreationInformation()) : attachList.getItemById(self.scanAttach().Id());
+                                    listItem.set_item("AttachmentDescription", self.scanAttach().Descr());
+                                    listItem.set_item("MeetingLink", self.meeting().Id());
+                                    listItem.set_item("AttachmentProtocolScanCopy", true);
+                                    listItem.update();
+                                if (self.scanAttach().Id() == "") {
+                                    // Save a reference to both the SP.ListItem object and the KO Object so we can update
+                                    // the latter with the former's ID once the object has been created.
+                                    createdScanAttach.push({ spItem: listItem, koItem: self.scanAttach() });
+                                    $.appWebContext.load(listItem);
+                                } 
+                            }
                         }
-
-                        var newQuestionAttach = saveAgendaQuestionsAttachments(self.agendaQuestions());
 
                         // Now we have built our request, send it to the server for processing.
                         $.appWebContext.executeQueryAsync(function () {
@@ -2161,7 +2019,6 @@
                     for (var i = self.agendaQuestions().length - 1; i >= 0; i--) if (self.agendaQuestions()[i]._destroy) self.agendaQuestions.splice(i, 1);
 
                     //upload attachments
-                            uploadAttachments(newQuestionAttach, "Вложения вопроса повестки");
                             uploadAttachments(createdScanAttach, "Вложения заседаний");
                             uploadAttachments(createdAttachments, "Вложения заседаний");
 
