@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:MeetingCommentMVKDisplayName"
+		ID="{C4D0C05F-133E-4192-A545-6DEF1140B01E}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="MeetingCommentMVK"
+		Name="MeetingCommentMVK"
+		Type="Note"
+		Sortable="FALSE"
+		NumLines="6"
+		Required="FALSE"
+		AppendOnly="TRUE"
+		UnlimitedLengthInDocumentLibrary="FALSE"
+		RichText="FALSE"
+		Description="$Resources:MeetingCommentMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

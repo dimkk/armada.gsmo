@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:SecretaryMVKLinkDisplayName"
+		ID="{502AFD12-AD7A-4416-97C5-145DC137485F}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="SecretaryMVKLink"
+		Name="SecretaryMVKLink"
+		Type="Lookup"
+		List="Lists/ParticipantBookList"
+		ShowField="ParticipantFullName"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:SecretaryMVKLinkDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

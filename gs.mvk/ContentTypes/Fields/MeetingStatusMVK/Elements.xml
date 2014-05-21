@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:MeetingStatusMVKDisplayName"
+		ID="{DF0A58BB-3A4E-45BA-BCC0-BC1FCDF09BEA}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="MeetingStatusMVK"
+		Name="MeetingStatusMVK"
+		Type="Choice"
+		Format="Dropdown"
+		Required="FALSE"
+		FillInChoice="FALSE"
+		Description="$Resources:MeetingStatusMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE">
+		<CHOICES>
+			<CHOICE>$Resources:MeetingStatusPlanningChoice;</CHOICE>
+			<CHOICE>$Resources:MeetingStatusCompletedChoice;</CHOICE>
+		</CHOICES>
+	</Field>
+</Elements>

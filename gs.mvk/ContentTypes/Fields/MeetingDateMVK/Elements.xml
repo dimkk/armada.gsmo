@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:MeetingDateMVKDisplayName"
+		ID="{34BD4599-3E8C-4963-82F8-21CDDCA1018D}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="MeetingDateMVK"
+		Name="MeetingDateMVK"
+		Type="DateTime"
+		Required="TRUE"
+		Format="DateTime"
+		Description="$Resources:MeetingDateMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:OtherParticipantListMVKDisplayName"
+		ID="{870447B8-9E9E-42C7-A8B7-2089E124E309}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="OtherParticipantListMVK"
+		Name="OtherParticipantListMVK"
+		Type="Note"
+		Sortable="FALSE"
+		NumLines="6"
+		Required="FALSE"
+		AppendOnly="TRUE"
+		UnlimitedLengthInDocumentLibrary="FALSE"
+		RichText="FALSE"
+		Description="$Resources:OtherParticipantListMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gs.mvk.ContentTypes</RootNamespace>
+    <AssemblyName>gs.mvk.ContentTypes</AssemblyName>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(SolutionDir)\gs.mvk.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
+    <ProjectGuid>{18BD52FD-BBF9-4730-A35A-B13FE70716A6}</ProjectGuid>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ContentTypes\MeetingMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fa00ff3e-0652-448b-8ad2-5a0cc3fb765f}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\gs_mvk_Lists\gs_mvk_Lists.feature">
+      <FeatureId>{62b0d559-f7d4-43a6-842e-8d49e75a2cbb}</FeatureId>
+    </None>
+    <None Include="Features\gs_mvk_SiteColumns\gs_mvk_SiteColumns.feature">
+      <FeatureId>{b6d9461e-c11a-47ff-918f-35df1c3be1de}</FeatureId>
+    </None>
+    <None Include="Fields\ChairManMVKLink\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bb2885a4-57c3-4f9c-b4a5-11963ac0f8fe}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\ExtMVKParticipants\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b8294157-b560-4e6e-b6a8-c1a707ef5f7c}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\MeetingCommentMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e09372b4-5d3e-4973-b2f1-1888a251a247}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\MeetingDateMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{eaec56ff-14e1-415b-aeaa-9c853278c754}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\MeetingNumberMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b76c7333-6600-4200-ac91-a9e5d8c9691e}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\MeetingPlaceMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{60d7211f-2d85-4864-a9aa-f5270c4ff71a}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\MeetingResponsibleSecretaryMVKLink\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fcb4c0ce-d8f9-4185-beeb-b513b2965d7f}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\MeetingStatusMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{198b193d-3f85-498c-9c7e-9a4060adb966}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\OtherParticipantListMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fc1531b6-bf31-4d48-a85b-ec25795ae5f9}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\SecretaryMVKLink\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a2ceeb50-dfd9-4d11-a185-1c5a439adc6d}</SharePointProjectItemId>
+    </None>
+    <None Include="ListDefinitions\MeetingMVKListDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{68214deb-897b-433d-a6bb-171a69ee52ef}</SharePointProjectItemId>
+    </None>
+    <None Include="ListInstances\MeetingMVKList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{230b33cb-242d-4a39-aca0-fbb44ab9e1a8}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{8785C575-ED43-4954-8293-9EF4A283A25F}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Template\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c107a01f-111d-4ea6-82c1-c4d1e62bc707}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\gs_mvk_SiteColumns\Resources.resx" />
+    <Content Include="ListInstances\MeetingMVKList\Elements.xml" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_MeetingMVKListDefinition.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContentTypes\MeetingMVK\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\gs_mvk_Lists\gs_mvk_Lists.Template.xml">
+      <DependentUpon>gs_mvk_Lists.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\gs_mvk_SiteColumns\gs_mvk_SiteColumns.Template.xml">
+      <DependentUpon>gs_mvk_SiteColumns.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\ChairManMVKLink\Elements.xml" />
+    <Content Include="Fields\ExtMVKParticipants\Elements.xml" />
+    <Content Include="Fields\MeetingCommentMVK\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\MeetingDateMVK\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\MeetingNumberMVK\Elements.xml" />
+    <Content Include="Fields\MeetingPlaceMVK\Elements.xml" />
+    <Content Include="Fields\MeetingResponsibleSecretaryMVKLink\Elements.xml" />
+    <Content Include="Fields\MeetingStatusMVK\Elements.xml" />
+    <Content Include="Fields\OtherParticipantListMVK\Elements.xml" />
+    <Content Include="Fields\SecretaryMVKLink\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ListDefinitions\MeetingMVKListDefinition\Elements.xml" />
+    <Content Include="ListDefinitions\MeetingMVKListDefinition\schema.xml" />
+    <Content Include="Template\Images\gs_mvk\FeatureIcon_gs_mvk_Lists.gif" />
+    <Content Include="Template\Images\gs_mvk\FeatureIcon_SiteColumns.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinition1.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinition2.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinition3.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinition4.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinition5.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinition6.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinition7.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinitionTest.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinitionTest2.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_MeetingMVKList.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\gs_mvk_SiteColumns\Resources.ru-RU.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\gs_mvk_Lists\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\gs_mvk_Lists\Resources.ru-RU.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Condition="!Exists('$(MSBuildProjectDirectory)\..\SPSF.targets')" Project="$(SolutionDir)\SPSF.targets" />
+  <Import Condition=" Exists('$(MSBuildProjectDirectory)\..\SPSF.targets')" Project="$(MSBuildProjectDirectory)\..\SPSF.targets" />
+  <Target Name="BeforeBuild" DependsOnTargets="$(BeforeBuildDependsOn)" />
+  <Target Name="AfterBuild" DependsOnTargets="$(AfterBuildDependsOn)" />
+</Project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:ExtMVKParticipantsDisplayName"
+		ID="{3E418EFE-CD13-459F-8C37-7F079EC43DC5}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="ExtMVKParticipants"
+		Name="ExtMVKParticipants"
+		Type="Lookup"
+		List="Lists/ParticipantBookList"
+		ShowField="ParticipantFullName"
+		Mult="True"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:ExtMVKParticipantsDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>
