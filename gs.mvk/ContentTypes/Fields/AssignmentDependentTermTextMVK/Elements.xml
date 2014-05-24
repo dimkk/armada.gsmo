@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentDependentTermTextMVKDispName"
+		ID="{DDCA2779-46B2-4CE2-B5FD-4E28C5935D2C}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentDependentTermTextMVK"
+		Name="AssignmentDependentTermTextMVK"
+		Type="Text"
+		Required="FALSE"
+		MaxLength="255"
+		Description="$Resources:AssignmentDependentTermTextMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

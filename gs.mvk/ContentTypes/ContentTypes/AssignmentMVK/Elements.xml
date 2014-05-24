@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<!--
+    ************************************************************************
+       Application: gs.mvk
+      Created date: 2014-05-23 18:38:07Z
+        Created by: SPDEV\developer
+              Name: AssignmentMVK
+       Description: AssignmentMVK Description
+           History: Initial Version 0
+    ************************************************************************
+    -->
+	<!-- Parent ContentType Item -->
+	<ContentType
+		ID="0x01009E8BDC3C1146476781B2724822295453"
+		Name="AssignmentMVK"
+		Description="$Resources:AssignmentMVKContentTypeDescr"
+		Group="$Resources:MVKContentTypesGroupName"
+		Version="0"
+		Inherits="TRUE"
+    Overwrite="TRUE">
+		<FieldRefs>
+			<FieldRef
+				ID="{AC2E6091-A9D4-46E2-A374-DAA8DD21BA92}"
+				Name="AsignmentNumberMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{4FDFA957-BD32-494E-9E7A-3C020A8418B2}"
+				Name="AssignmentCoExecutorsMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{A217FBD6-B215-4C2F-A9BC-8E938ACC04BE}"
+				Name="AssignmentControllerMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{FD426331-13D3-4E16-8677-7D940CC37A61}"
+				Name="AssignmentControlStateMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{D579AA57-F4D4-4D89-9E8C-9D61115F936A}"
+				Name="AssignmentDaysForResolveMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{1D3AB39E-1C6E-44CB-87AC-9B1155124CEF}"
+				Name="AssignmentDayTypeMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{4D2A9A7F-4305-4CBD-996C-CBD6BF99A1D7}"
+				Name="AssignmentDependentAssignment"
+				Required="FALSE" />
+			<FieldRef
+				ID="{9D5B6F96-5257-4E66-911F-34329964A8C7}"
+				Name="AssignmentDependentAssignmentText"
+				Required="FALSE" />
+			<FieldRef
+				ID="{DDCA2779-46B2-4CE2-B5FD-4E28C5935D2C}"
+				Name="AssignmentDependentTermTextMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{4442C307-B53E-414D-AC4D-404A72749239}"
+				Name="AssignmentExecutorMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{53B04E98-622D-480D-8543-A7A26C9A9F01}"
+				Name="AssignmentExecutorOrgMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{5492D1C0-6117-4445-A562-AB8F5BBD68CA}"
+				Name="AssignmentExecutorPositionMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{622447D4-BB58-4F83-857A-8FED1293F866}"
+				Name="AssignmentFactDateMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{F6B3B348-FCFA-4B7C-A1DE-AD3355789C35}"
+				Name="AssignmentIssueMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{0EC1DABE-3F49-4FBA-BA0C-6C11779C758B}"
+				Name="AssignmentLastReportMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{031B32CF-1D92-42B4-AE28-7F121D33A29A}"
+				Name="AssignmentNoteMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{0CF73186-9584-4BD4-B1A2-F37A2F9C6B48}"
+				Name="AssignmentPlanDateMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{81EBB2C2-D159-4C96-A6DE-14AE37ED90F1}"
+				Name="AssignmentPlanIsDependentMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{1666BAF2-BD75-491B-A344-F68D1350A5A8}"
+				Name="AssignmentProlongationCountMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{B3565C70-DF25-4918-9F99-8250899487F9}"
+				Name="AssignmentResponsibleExecutorMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{18BAE93D-AAA4-4B27-A3B8-DEA5F1E0242A}"
+				Name="AssignmentStatusMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{70284DB9-FE35-4B37-AE05-EE4E48CF68E6}"
+				Name="AssignmentTextMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{FBCC80DA-7936-4B88-A918-320CBFAEBC31}"
+				Name="AssignmentTypeMVK"
+				Required="FALSE" />
+		</FieldRefs>
+	</ContentType>
+</Elements>

@@ -117,18 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ChairManMVKLinkDescr" xml:space="preserve">
-    <value>ChairMan  for MVK meeting</value>
-  </data>
-  <data name="ChairManMVKLinkDisplayName" xml:space="preserve">
-    <value>ChairMan</value>
-  </data>
-  <data name="ExtMVKParticipantsDescr" xml:space="preserve">
-    <value>MVK Participants</value>
-  </data>
-  <data name="ExtMVKParticipantsDisplayName" xml:space="preserve">
-    <value>MVK Participants</value>
-  </data>
   <data name="FeatureDescription" xml:space="preserve">
     <value>Site columns, content types and list definitions for MVK</value>
   </data>
@@ -162,12 +150,6 @@
   <data name="MeetingPlaceMVKDisplayName" xml:space="preserve">
     <value>Meeting place</value>
   </data>
-  <data name="MeetingResponsibleSecretaryMVKLinkDescr" xml:space="preserve">
-    <value>Responsible secretary</value>
-  </data>
-  <data name="MeetingResponsibleSecretaryMVKLinkDisplayName" xml:space="preserve">
-    <value>Responsible secretary</value>
-  </data>
   <data name="MeetingStatusCompletedChoice" xml:space="preserve">
     <value>Completed</value>
   </data>
@@ -175,22 +157,10 @@
     <value>Stratus for MVK meeting</value>
   </data>
   <data name="MeetingStatusMVKDisplayName" xml:space="preserve">
-    <value>Status</value>
+    <value>Meeting Status</value>
   </data>
   <data name="MeetingStatusPlanningChoice" xml:space="preserve">
     <value>Planning</value>
-  </data>
-  <data name="OtherParticipantListMVKDescr" xml:space="preserve">
-    <value>The list of other participants</value>
-  </data>
-  <data name="OtherParticipantListMVKDisplayName" xml:space="preserve">
-    <value>Other participant list</value>
-  </data>
-  <data name="SecretaryMVKLinkDescr" xml:space="preserve">
-    <value>Secretary</value>
-  </data>
-  <data name="SecretaryMVKLinkDisplayName" xml:space="preserve">
-    <value>Secretary</value>
   </data>
   <data name="MeetingMVKContentTypeDescr" xml:space="preserve">
     <value>MVK Meeting</value>
@@ -209,5 +179,278 @@
   </data>
   <data name="MVKContentTypesGroupName" xml:space="preserve">
     <value>MVK Content types group</value>
+  </data>
+  <data name="IssueAddressMVKDescr" xml:space="preserve">
+    <value>MVK meeting issue address</value>
+  </data>
+  <data name="IssueAddressMVKDisplayName" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="IssueCadastreIdMVKDescr" xml:space="preserve">
+    <value>MVK issue cadastre ID</value>
+  </data>
+  <data name="IssueCadastreIdMVKDisplayName" xml:space="preserve">
+    <value>Issue Cadastre ID</value>
+  </data>
+  <data name="IssueCategoryMVKLinkDescr" xml:space="preserve">
+    <value>MVK meeting issue category</value>
+  </data>
+  <data name="IssueCategoryMVKLinkDisplayName" xml:space="preserve">
+    <value>Issue Category</value>
+  </data>
+  <data name="IssueCoReportesMVKDescr" xml:space="preserve">
+    <value>MVK issue coreporters</value>
+  </data>
+  <data name="IssueCoReportesMVKDisplayName" xml:space="preserve">
+    <value>Issue Coreporters</value>
+  </data>
+  <data name="IssueDecisionMVKDescr" xml:space="preserve">
+    <value>MVK issue decision</value>
+  </data>
+  <data name="IssueDecisionMVKDisplayName" xml:space="preserve">
+    <value>Issue Decision</value>
+  </data>
+  <data name="IssueDecisionTypeMVKDescr" xml:space="preserve">
+    <value>MVK issue decision type</value>
+  </data>
+  <data name="IssueDecisionTypeMVKDisplayName" xml:space="preserve">
+    <value>Issue Decision Type</value>
+  </data>
+  <data name="IssueDescriptionMVKDescr" xml:space="preserve">
+    <value>MVK meeting issue description</value>
+  </data>
+  <data name="IssueDescriptionMVKDisplayName" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="IssueInfoMVKDescr" xml:space="preserve">
+    <value>MVK issue additional info</value>
+  </data>
+  <data name="IssueInfoMVKDisplayName" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="IssueInvestorMVKDescr" xml:space="preserve">
+    <value>MVK issue investor</value>
+  </data>
+  <data name="IssueInvestorMVKDisplayName" xml:space="preserve">
+    <value>Issue Investor</value>
+  </data>
+  <data name="IssueMeetingMVKLinkDescr" xml:space="preserve">
+    <value>MVK meeting link</value>
+  </data>
+  <data name="IssueMeetingMVKLinkDisplayName" xml:space="preserve">
+    <value>Meeting</value>
+  </data>
+  <data name="IssueMunicipalDistrictMVKDescr" xml:space="preserve">
+    <value>MVK issue municipal district</value>
+  </data>
+  <data name="IssueMunicipalDistrictMVKDisplayName" xml:space="preserve">
+    <value>Issue Municipal District</value>
+  </data>
+  <data name="IssueMVKContentTypeDescr" xml:space="preserve">
+    <value>MVK issue content type</value>
+  </data>
+  <data name="IssueMVKListDefDescr" xml:space="preserve">
+    <value>MVK issue list</value>
+  </data>
+  <data name="IssueMVKListDefDisplayName" xml:space="preserve">
+    <value>MVK issue list</value>
+  </data>
+  <data name="IssueNumberDescr" xml:space="preserve">
+    <value>MVK meeting issue number (main part of number)</value>
+  </data>
+  <data name="IssueNumberDisplayName" xml:space="preserve">
+    <value>Issue Number</value>
+  </data>
+  <data name="IssueReporterMVKDescr" xml:space="preserve">
+    <value>MVK issue reporter</value>
+  </data>
+  <data name="IssueReporterMVKDisplayName" xml:space="preserve">
+    <value>Reporter</value>
+  </data>
+  <data name="IssueSettlementMVKDescr" xml:space="preserve">
+    <value>MVK issue settlement</value>
+  </data>
+  <data name="IssueSettlementMVKDisplayName" xml:space="preserve">
+    <value>Settlement</value>
+  </data>
+  <data name="IssueSubNumberDescr" xml:space="preserve">
+    <value>MVK meeting issue subnumber (additional part of number)</value>
+  </data>
+  <data name="IssueSubNumberDisplayName" xml:space="preserve">
+    <value>Issue Subnumber</value>
+  </data>
+  <data name="IssueThemeMVKDescr" xml:space="preserve">
+    <value>MVK meeting issue theme</value>
+  </data>
+  <data name="IssueThemeMVKDisplayName" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="AsignmentNumberMVKDescr" xml:space="preserve">
+    <value>MVK assignment number</value>
+  </data>
+  <data name="AsignmentNumberMVKDisplayName" xml:space="preserve">
+    <value>Assignment Number</value>
+  </data>
+  <data name="AssignmentCoExecutorsMVKDescr" xml:space="preserve">
+    <value>MVK assignment coexecutors</value>
+  </data>
+  <data name="AssignmentCoExecutorsMVKDisplayName" xml:space="preserve">
+    <value>CoExecutors</value>
+  </data>
+  <data name="AssignmentControllerMVKDescr" xml:space="preserve">
+    <value>MVK assignment controller</value>
+  </data>
+  <data name="AssignmentControllerMVKDisplayName" xml:space="preserve">
+    <value>Assignment Controller</value>
+  </data>
+  <data name="AssignmentControlStateMVKDescr" xml:space="preserve">
+    <value>MVK assignment control state</value>
+  </data>
+  <data name="AssignmentControlStateMVKDisplayName" xml:space="preserve">
+    <value>Assignment Control State</value>
+  </data>
+  <data name="AssignmentControlStateMVKInControlChoice" xml:space="preserve">
+    <value>In control</value>
+  </data>
+  <data name="AssignmentControlStateMVKOffControlChoice" xml:space="preserve">
+    <value>Off control</value>
+  </data>
+  <data name="AssignmentDaysForResolveMVKDescr" xml:space="preserve">
+    <value>MVK assignment days for resolve</value>
+  </data>
+  <data name="AssignmentDaysForResolveMVKDisplayName" xml:space="preserve">
+    <value>Assignment Days For Resolve</value>
+  </data>
+  <data name="AssignmentDayTypeMVKCalendarChoice" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="AssignmentDayTypeMVKDescr" xml:space="preserve">
+    <value>MVK assignment dependency day type</value>
+  </data>
+  <data name="AssignmentDayTypeMVKDisplayName" xml:space="preserve">
+    <value>Days Type</value>
+  </data>
+  <data name="AssignmentDayTypeMVKWorkingChoice" xml:space="preserve">
+    <value>Working</value>
+  </data>
+  <data name="AssignmentDependentAssignmentDescr" xml:space="preserve">
+    <value>MVK assignment dependent assignment</value>
+  </data>
+  <data name="AssignmentDependentAssignmentDispName" xml:space="preserve">
+    <value>Dependent Assignment</value>
+  </data>
+  <data name="AssignmentDependentAssignmentTextDescr" xml:space="preserve">
+    <value>Dependent MVK assignment text</value>
+  </data>
+  <data name="AssignmentDependentAssignmentTextDispName" xml:space="preserve">
+    <value>Dependent assignment text</value>
+  </data>
+  <data name="AssignmentDependentTermTextMVKDescr" xml:space="preserve">
+    <value>The textual representation of MVK assignment dependent term</value>
+  </data>
+  <data name="AssignmentDependentTermTextMVKDispName" xml:space="preserve">
+    <value>Dependent Term</value>
+  </data>
+  <data name="AssignmentExecutorMVKDescr" xml:space="preserve">
+    <value>MVK assignment executor</value>
+  </data>
+  <data name="AssignmentExecutorMVKDisplayName" xml:space="preserve">
+    <value>Executor</value>
+  </data>
+  <data name="AssignmentExecutorOrgMVKDescr" xml:space="preserve">
+    <value>MVK assignment executor organization</value>
+  </data>
+  <data name="AssignmentExecutorOrgMVKDisplayName" xml:space="preserve">
+    <value>Executor Organization</value>
+  </data>
+  <data name="AssignmentExecutorPositionMVKDescr" xml:space="preserve">
+    <value>MVK assignment executor position</value>
+  </data>
+  <data name="AssignmentExecutorPositionMVKDisplayName" xml:space="preserve">
+    <value>Executor Position</value>
+  </data>
+  <data name="AssignmentFactDateMVKDescr" xml:space="preserve">
+    <value>MVK assignment fact date</value>
+  </data>
+  <data name="AssignmentFactDateMVKDisplayName" xml:space="preserve">
+    <value>Assignment Fact Date</value>
+  </data>
+  <data name="AssignmentIssueMVKDescr" xml:space="preserve">
+    <value>MVK assignment issue link</value>
+  </data>
+  <data name="AssignmentIssueMVKDisplayName" xml:space="preserve">
+    <value>Issue</value>
+  </data>
+  <data name="AssignmentLastReportMVKDescr" xml:space="preserve">
+    <value>MVK Assignment Latest Report</value>
+  </data>
+  <data name="AssignmentLastReportMVKDisplayName" xml:space="preserve">
+    <value>Assignment Latest Report</value>
+  </data>
+  <data name="AssignmentMVKContentTypeDescr" xml:space="preserve">
+    <value>MVK Assignment content type</value>
+  </data>
+  <data name="AssignmentMVKListDefDescr" xml:space="preserve">
+    <value>MVK assignment list</value>
+  </data>
+  <data name="AssignmentMVKListDefDisplayName" xml:space="preserve">
+    <value>MVK assignment list</value>
+  </data>
+  <data name="AssignmentNoteMVKDescr" xml:space="preserve">
+    <value>MVK assignment note</value>
+  </data>
+  <data name="AssignmentNoteMVKDisplayName" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="AssignmentPlanDateMVKDescr" xml:space="preserve">
+    <value>MVK assignment plan date</value>
+  </data>
+  <data name="AssignmentPlanDateMVKDisplayName" xml:space="preserve">
+    <value>Assignment Plan Date</value>
+  </data>
+  <data name="AssignmentPlanIsDependentMVKDescr" xml:space="preserve">
+    <value>MVK assignment date dependency type</value>
+  </data>
+  <data name="AssignmentPlanIsDependentMVKDisplayName" xml:space="preserve">
+    <value>Date Dependency Type</value>
+  </data>
+  <data name="AssignmentProlongationCountMVKDescr" xml:space="preserve">
+    <value>MVK assignment prolongation count</value>
+  </data>
+  <data name="AssignmentProlongationCountMVKDispName" xml:space="preserve">
+    <value>Prolongation Count</value>
+  </data>
+  <data name="AssignmentResponsibleExecutorMVKDescr" xml:space="preserve">
+    <value>MVK Assignment responsible executor</value>
+  </data>
+  <data name="AssignmentResponsibleExecutorMVKDisplayName" xml:space="preserve">
+    <value>Assignment responsible executor</value>
+  </data>
+  <data name="AssignmentStatusMVKDescr" xml:space="preserve">
+    <value>MVK assignment status</value>
+  </data>
+  <data name="AssignmentStatusMVKDisplayName" xml:space="preserve">
+    <value>Assignment Status</value>
+  </data>
+  <data name="AssignmentStatusMVKExecutedChoice" xml:space="preserve">
+    <value>Executed</value>
+  </data>
+  <data name="AssignmentStatusMVKOnExecutionChoice" xml:space="preserve">
+    <value>Executing</value>
+  </data>
+  <data name="AssignmentStatusMVKTimeIsUpChoice" xml:space="preserve">
+    <value>Time is up</value>
+  </data>
+  <data name="AssignmentTextMVKDescr" xml:space="preserve">
+    <value>MVK assignment text</value>
+  </data>
+  <data name="AssignmentTextMVKDisplayName" xml:space="preserve">
+    <value>Assignment Text</value>
+  </data>
+  <data name="AssignmentTypeMVKDescr" xml:space="preserve">
+    <value>MVK assignment type</value>
+  </data>
+  <data name="AssignmentTypeMVKDisplayName" xml:space="preserve">
+    <value>Assignment Type</value>
   </data>
 </root>

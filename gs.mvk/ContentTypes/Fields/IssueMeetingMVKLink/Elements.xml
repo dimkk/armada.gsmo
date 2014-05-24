@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:IssueMeetingMVKLinkDisplayName"
+		ID="{C3228089-51FE-4EDF-93A1-E219AE6362D7}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="IssueMeetingMVKLink"
+		Name="IssueMeetingMVKLink"
+		Type="Lookup"
+		List="Lists/MeetingMVKList"
+		ShowField="LinkTitle"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:IssueMeetingMVKLinkDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

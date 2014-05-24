@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentDayTypeMVKDisplayName"
+		ID="{1D3AB39E-1C6E-44CB-87AC-9B1155124CEF}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentDayTypeMVK"
+		Name="AssignmentDayTypeMVK"
+		Type="Choice"
+		Format="Dropdown"
+		Required="FALSE"
+		FillInChoice="FALSE"
+		Description="$Resources:AssignmentDayTypeMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE">
+		<CHOICES>
+			<CHOICE>$Resources:AssignmentDayTypeMVKCalendarChoice</CHOICE>
+			<CHOICE>$Resources:AssignmentDayTypeMVKWorkingChoice</CHOICE>
+		</CHOICES>
+	</Field>
+</Elements>

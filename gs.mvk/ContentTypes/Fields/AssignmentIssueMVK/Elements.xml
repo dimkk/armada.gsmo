@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentIssueMVKDisplayName"
+		ID="{F6B3B348-FCFA-4B7C-A1DE-AD3355789C35}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentIssueMVK"
+		Name="AssignmentIssueMVK"
+		Type="Lookup"
+		List="Lists/IssueMVKList"
+		ShowField="Title"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:AssignmentIssueMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

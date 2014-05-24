@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentProlongationCountMVKDispName"
+		ID="{1666BAF2-BD75-491B-A344-F68D1350A5A8}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentProlongationCountMVK"
+		Name="AssignmentProlongationCountMVK"
+		Type="Number"
+		Required="FALSE"
+		Percentage="FALSE"
+		Min="0"
+		Decimals="0"
+		Description="$Resources:AssignmentProlongationCountMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE">
+    <Default>0</Default>
+  </Field>
+</Elements>

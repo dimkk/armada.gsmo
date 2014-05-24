@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentFactDateMVKDisplayName"
+		ID="{622447D4-BB58-4F83-857A-8FED1293F866}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentFactDateMVK"
+		Name="AssignmentFactDateMVK"
+		Type="DateTime"
+		Required="FALSE"
+		Format="DateOnly"
+		Description="$Resources:AssignmentFactDateMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

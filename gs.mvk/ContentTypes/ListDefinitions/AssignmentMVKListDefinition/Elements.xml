@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListTemplate
+		Name="AssignmentMVKListDefinition"
+		DisplayName="$Resources:AssignmentMVKListDefDisplayName"
+		Description="$Resources:AssignmentMVKListDefDescr"
+		Type="10052"
+		BaseType="0"
+		Default="FALSE"
+		OnQuickLaunch="FALSE"
+		Category="Custom Lists"
+		DisableAttachments="FALSE"
+		DisallowContentTypes="FALSE"
+		VersioningEnabled="FALSE"
+		FolderCreation="FALSE"
+		EnableModeration="False"
+		SecurityBits="11"
+		Sequence="1000"
+		Image="/_layouts/15/images/gs_mvk/ListIcon_AssignmentMVKListDefinition.gif"
+		Hidden="FALSE"
+		HiddenList="FALSE" />
+</Elements>

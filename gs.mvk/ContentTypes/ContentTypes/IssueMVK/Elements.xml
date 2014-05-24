@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<!--
+    ************************************************************************
+       Application: gs.mvk
+      Created date: 2014-05-22 14:24:43Z
+        Created by: SPDEV\developer
+              Name: IssueMVK
+       Description: IssueMVK Description
+           History: Initial Version 0
+    ************************************************************************
+    -->
+	<!-- Parent ContentType Item -->
+	<ContentType
+		ID="0x01009435E8C0C3E94107BD6F56DE758815D6"
+		Name="IssueMVK"
+		Description="$Resources:IssueMVKContentTypeDescr"
+		Group="$Resources:MVKContentTypesGroupName"
+		Version="0"
+		Inherits="TRUE"
+    Overwrite="TRUE">
+		<FieldRefs>
+			<FieldRef
+				ID="{02510FF7-9CE6-42C3-9CFF-86B449D08465}"
+				Name="IssueAddressMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{3285B86E-4CDB-431E-8085-30BBE9A535DE}"
+				Name="IssueCadastreIdMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{5E56D322-EB29-4049-BC62-BC6EA29C5B2C}"
+				Name="IssueCategoryMVKLink"
+				Required="FALSE" />
+			<FieldRef
+				ID="{925F3325-7542-4302-8987-EE8803917280}"
+				Name="IssueCoReportesMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{68AAAE79-C099-4967-8514-B261F3F445A5}"
+				Name="IssueDecisionMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{25461277-AFBB-405D-92BC-9A858E48B797}"
+				Name="IssueDecisionTypeMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{657EC613-EF52-405C-AFC3-CADD26BDA2E0}"
+				Name="IssueDescriptionMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{C68C7C4A-C33C-4B23-B459-120E73258E02}"
+				Name="IssueInfoMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{66E82A4D-E2E5-47B1-B405-565A00A1FA1B}"
+				Name="IssueInvestorMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{C3228089-51FE-4EDF-93A1-E219AE6362D7}"
+				Name="IssueMeetingMVKLink"
+				Required="FALSE" />
+			<FieldRef
+				ID="{1F90A7A6-EBBA-4688-988C-9E7EAC01678C}"
+				Name="IssueMunicipalDistrictMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{CEDAC935-D93F-4F28-84B8-BCC96512B257}"
+				Name="IssueNumber"
+				Required="FALSE" />
+			<FieldRef
+				ID="{647DFE05-1565-4727-8D73-0C08CF69A4D2}"
+				Name="IssueReporterMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{582E668D-1070-4473-A388-C8418EA27E5F}"
+				Name="IssueSettlementMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{4BEC2AD8-9E51-483C-9386-CE5EDFBE23A7}"
+				Name="IssueSubnumber"
+				Required="FALSE" />
+			<FieldRef
+				ID="{6909EA80-0A1E-442B-9D4B-5F0AA176EB86}"
+				Name="IssueThemeMVK"
+				Required="FALSE" />
+		</FieldRefs>
+	</ContentType>
+</Elements>

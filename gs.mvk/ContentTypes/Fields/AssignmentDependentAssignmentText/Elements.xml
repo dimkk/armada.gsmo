@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentDependentAssignmentTextDispName"
+		ID="{9D5B6F96-5257-4E66-911F-34329964A8C7}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentDependentAssignmentText"
+		Name="AssignmentDependentAssignmentText"
+		Type="Note"
+		Sortable="FALSE"
+		NumLines="6"
+		Required="FALSE"
+		AppendOnly="FALSE"
+		UnlimitedLengthInDocumentLibrary="FALSE"
+		RichText="FALSE"
+		Description="$Resources:AssignmentDependentAssignmentTextDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

@@ -22,14 +22,6 @@
     Overwrite="TRUE">
 		<FieldRefs>
 			<FieldRef
-				ID="{51FA8856-4723-438E-AF82-1E42211D5A15}"
-				Name="ChairManMVKLink"
-				Required="FALSE" />
-			<FieldRef
-				ID="{3E418EFE-CD13-459F-8C37-7F079EC43DC5}"
-				Name="ExtMVKParticipants"
-				Required="FALSE" />
-			<FieldRef
 				ID="{C4D0C05F-133E-4192-A545-6DEF1140B01E}"
 				Name="MeetingCommentMVK"
 				Required="FALSE" />
@@ -46,20 +38,8 @@
 				Name="MeetingPlaceMVK"
 				Required="FALSE" />
 			<FieldRef
-				ID="{6DC4F0F9-22B5-4CE5-B208-43038912BDA1}"
-				Name="MeetingResponsibleSecretaryMVKLink"
-				Required="FALSE" />
-			<FieldRef
 				ID="{DF0A58BB-3A4E-45BA-BCC0-BC1FCDF09BEA}"
 				Name="MeetingStatusMVK"
-				Required="FALSE" />
-			<FieldRef
-				ID="{870447B8-9E9E-42C7-A8B7-2089E124E309}"
-				Name="OtherParticipantListMVK"
-				Required="FALSE" />
-			<FieldRef
-				ID="{502AFD12-AD7A-4416-97C5-145DC137485F}"
-				Name="SecretaryMVKLink"
 				Required="FALSE" />
 		</FieldRefs>
 	</ContentType>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:IssueDescriptionMVKDisplayName"
+		ID="{657EC613-EF52-405C-AFC3-CADD26BDA2E0}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="IssueDescriptionMVK"
+		Name="IssueDescriptionMVK"
+		Type="Note"
+		Sortable="FALSE"
+		NumLines="6"
+		Required="FALSE"
+		AppendOnly="FALSE"
+		UnlimitedLengthInDocumentLibrary="FALSE"
+		RichText="FALSE"
+		Description="$Resources:IssueDescriptionMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

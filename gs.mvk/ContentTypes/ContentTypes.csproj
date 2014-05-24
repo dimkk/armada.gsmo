@@ -59,6 +59,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ContentTypes\AssignmentMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{57a0a1f3-d926-4a1a-920c-76e68b6e4381}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\IssueMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{aedcb119-db95-4c96-9d92-d96f65cb3897}</SharePointProjectItemId>
+    </None>
     <None Include="ContentTypes\MeetingMVK\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{fa00ff3e-0652-448b-8ad2-5a0cc3fb765f}</SharePointProjectItemId>
     </None>
@@ -68,11 +74,122 @@
     <None Include="Features\gs_mvk_SiteColumns\gs_mvk_SiteColumns.feature">
       <FeatureId>{b6d9461e-c11a-47ff-918f-35df1c3be1de}</FeatureId>
     </None>
-    <None Include="Fields\ChairManMVKLink\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{bb2885a4-57c3-4f9c-b4a5-11963ac0f8fe}</SharePointProjectItemId>
+    <None Include="Fields\AsignmentNumberMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a6616f03-0a55-446d-b4e9-584e420ce200}</SharePointProjectItemId>
     </None>
-    <None Include="Fields\ExtMVKParticipants\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{b8294157-b560-4e6e-b6a8-c1a707ef5f7c}</SharePointProjectItemId>
+    <None Include="Fields\AssignmentCoExecutorsMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e6e391cf-f240-4d74-84a5-9e4d67ee0262}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentControllerMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cbacd925-72fb-4228-b841-8739a58adb67}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentControlStateMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a303a0d1-7974-4b35-a7cf-10d5b315c988}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentDaysForResolveMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e92a7b9d-4dd2-46bf-9532-0e5d3d71c47a}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentDayTypeMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2662f205-8675-4e9c-8360-6eb686b9a094}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentDependentAssignmentText\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0d539620-7503-49af-81b1-436171db0e4d}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentDependentAssignment\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a37a5e3b-b235-4c01-8200-0c861c1295b3}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentDependentTermTextMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6b96d514-af66-4900-84ae-976efcdc748e}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentExecutorMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b3bb1b6b-4298-44b7-8dc0-d3105691f320}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentExecutorOrgMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5361552a-d6c1-4146-960d-b29ccc2eecf1}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentExecutorPositionMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b92faa64-0bf9-4043-837e-05729ec3cc2d}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentFactDateMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f447a29d-1c6a-4666-8b3c-6b2c6589485e}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentIssueMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a188e9fc-632d-4c4e-b415-fcf046fe0793}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentLastReportMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ea8ed26a-b17c-4813-9e43-0725eab06963}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentNoteMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e2f917a7-4b96-4ff5-b348-f56040017567}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentPlanDateMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ca517ea5-443d-4a32-894d-98674fdbdfdc}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentPlanIsDependentMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{73f8ce74-2ce4-4f90-898a-3a2028811972}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentProlongationCountMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7f3f60e9-28e9-4e01-94a1-74c2860b0a41}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentResponsibleExecutorMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fc59cf37-8df1-410e-8c77-87d8decc9a19}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentStatusMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{001384f9-6496-4cca-bcfe-886f882d6bd5}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentTextMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cdf9249d-bf49-4267-93c7-31fbb8d67f1e}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\AssignmentTypeMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{29dbedd5-a2e8-441d-98df-e5e54634d0fc}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueAddressMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8557793a-e024-4a2e-b8fa-a5ccb1331380}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueCadastreIdMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0ae9a537-2363-46bf-a214-7de583a65524}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueCategoryMVKLink\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3455252d-22f8-43fe-9484-50bba021c401}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueCoReportesMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5fa332e3-059b-4fc8-9669-ce5750a58bbe}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueDecisionMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{03ef96da-b74d-4e03-98cb-0b6f691e41cb}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueDecisionTypeMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7ee98414-c7be-4725-b112-f87f6bf6fb84}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueDescriptionMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5f5b17ae-0dff-4569-a3ae-584452184223}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueInfoMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a141b3f2-54fd-4f96-8f00-502e3d028247}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueInvestorMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b32c0aeb-653d-4890-8647-ecda6c8a0fd8}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueMeetingMVKLink\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{208389e9-f590-4d46-b63b-5099e8488069}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueMunicipalDistrictMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{30007b07-e2c1-4673-8fee-98fae212b654}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueNumber\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f2806140-944f-4bd6-8e42-e9ca592f6d50}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueReporterMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6ba8715f-0be5-4f5d-b3c7-cf799d580d2c}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueSettlementMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5ffcbd59-2c64-465c-bbdf-021352840daf}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueSubnumber\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{75e62412-f0cf-44c5-90bd-b47bd14de933}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\IssueThemeMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7f189653-fe38-4312-a018-36ab5471bd3d}</SharePointProjectItemId>
     </None>
     <None Include="Fields\MeetingCommentMVK\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e09372b4-5d3e-4973-b2f1-1888a251a247}</SharePointProjectItemId>
@@ -86,20 +203,23 @@
     <None Include="Fields\MeetingPlaceMVK\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{60d7211f-2d85-4864-a9aa-f5270c4ff71a}</SharePointProjectItemId>
     </None>
-    <None Include="Fields\MeetingResponsibleSecretaryMVKLink\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{fcb4c0ce-d8f9-4185-beeb-b513b2965d7f}</SharePointProjectItemId>
-    </None>
     <None Include="Fields\MeetingStatusMVK\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{198b193d-3f85-498c-9c7e-9a4060adb966}</SharePointProjectItemId>
     </None>
-    <None Include="Fields\OtherParticipantListMVK\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{fc1531b6-bf31-4d48-a85b-ec25795ae5f9}</SharePointProjectItemId>
+    <None Include="ListDefinitions\AssignmentMVKListDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a51cbf6c-78eb-4db2-bd1d-629f4c96056d}</SharePointProjectItemId>
     </None>
-    <None Include="Fields\SecretaryMVKLink\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{a2ceeb50-dfd9-4d11-a185-1c5a439adc6d}</SharePointProjectItemId>
+    <None Include="ListDefinitions\IssueMVKListDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c33d3572-8b9a-45ed-83ac-10e0e97b1a81}</SharePointProjectItemId>
     </None>
     <None Include="ListDefinitions\MeetingMVKListDefinition\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{68214deb-897b-433d-a6bb-171a69ee52ef}</SharePointProjectItemId>
+    </None>
+    <None Include="ListInstances\AssignmentMVKList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{076c60f3-a3c8-4d5e-af69-acf0b0ad17e9}</SharePointProjectItemId>
+    </None>
+    <None Include="ListInstances\IssueMVKList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{add616d0-c9fa-4ed3-8def-50f8dc746958}</SharePointProjectItemId>
     </None>
     <None Include="ListInstances\MeetingMVKList\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{230b33cb-242d-4a39-aca0-fbb44ab9e1a8}</SharePointProjectItemId>
@@ -115,8 +235,57 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ContentTypes\AssignmentMVK\Elements.xml" />
+    <Content Include="ContentTypes\IssueMVK\Elements.xml" />
     <Content Include="Features\gs_mvk_SiteColumns\Resources.resx" />
+    <Content Include="Fields\AsignmentNumberMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentCoExecutorsMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentControllerMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentControlStateMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentDaysForResolveMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentDayTypeMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentDependentAssignmentText\Elements.xml" />
+    <Content Include="Fields\AssignmentDependentAssignment\Elements.xml" />
+    <Content Include="Fields\AssignmentDependentTermTextMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentExecutorMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentExecutorOrgMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentExecutorPositionMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentFactDateMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentIssueMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentLastReportMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentNoteMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentPlanDateMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentPlanIsDependentMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentProlongationCountMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentResponsibleExecutorMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentStatusMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentTextMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentTypeMVK\Elements.xml" />
+    <Content Include="Fields\IssueAddressMVK\Elements.xml" />
+    <Content Include="Fields\IssueCadastreIdMVK\Elements.xml" />
+    <Content Include="Fields\IssueCategoryMVKLink\Elements.xml" />
+    <Content Include="Fields\IssueCoReportesMVK\Elements.xml" />
+    <Content Include="Fields\IssueDecisionMVK\Elements.xml" />
+    <Content Include="Fields\IssueDecisionTypeMVK\Elements.xml" />
+    <Content Include="Fields\IssueDescriptionMVK\Elements.xml" />
+    <Content Include="Fields\IssueInfoMVK\Elements.xml" />
+    <Content Include="Fields\IssueInvestorMVK\Elements.xml" />
+    <Content Include="Fields\IssueMeetingMVKLink\Elements.xml" />
+    <Content Include="Fields\IssueMunicipalDistrictMVK\Elements.xml" />
+    <Content Include="Fields\IssueNumber\Elements.xml" />
+    <Content Include="Fields\IssueReporterMVK\Elements.xml" />
+    <Content Include="Fields\IssueSettlementMVK\Elements.xml" />
+    <Content Include="Fields\IssueSubnumber\Elements.xml" />
+    <Content Include="Fields\IssueThemeMVK\Elements.xml" />
+    <Content Include="ListDefinitions\AssignmentMVKListDefinition\Elements.xml" />
+    <Content Include="ListDefinitions\AssignmentMVKListDefinition\schema.xml" />
+    <Content Include="ListDefinitions\IssueMVKListDefinition\Elements.xml" />
+    <Content Include="ListDefinitions\IssueMVKListDefinition\schema.xml" />
+    <Content Include="ListInstances\AssignmentMVKList\Elements.xml" />
+    <Content Include="ListInstances\IssueMVKList\Elements.xml" />
     <Content Include="ListInstances\MeetingMVKList\Elements.xml" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_AssignmentMVKListDefinition.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_IssueMVKListDefinition.gif" />
     <Content Include="Template\Images\gs_mvk\ListIcon_MeetingMVKListDefinition.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -131,8 +300,6 @@
       <DependentUpon>gs_mvk_SiteColumns.feature</DependentUpon>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Fields\ChairManMVKLink\Elements.xml" />
-    <Content Include="Fields\ExtMVKParticipants\Elements.xml" />
     <Content Include="Fields\MeetingCommentMVK\Elements.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -141,12 +308,7 @@
     </Content>
     <Content Include="Fields\MeetingNumberMVK\Elements.xml" />
     <Content Include="Fields\MeetingPlaceMVK\Elements.xml" />
-    <Content Include="Fields\MeetingResponsibleSecretaryMVKLink\Elements.xml" />
     <Content Include="Fields\MeetingStatusMVK\Elements.xml" />
-    <Content Include="Fields\OtherParticipantListMVK\Elements.xml" />
-    <Content Include="Fields\SecretaryMVKLink\Elements.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="ListDefinitions\MeetingMVKListDefinition\Elements.xml" />
     <Content Include="ListDefinitions\MeetingMVKListDefinition\schema.xml" />
     <Content Include="Template\Images\gs_mvk\FeatureIcon_gs_mvk_Lists.gif" />
@@ -166,7 +328,9 @@
     <Content Include="Features\gs_mvk_SiteColumns\Resources.ru-RU.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Features\gs_mvk_Lists\Resources.resx" />
+    <Content Include="Features\gs_mvk_Lists\Resources.resx">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Features\gs_mvk_Lists\Resources.ru-RU.resx" />

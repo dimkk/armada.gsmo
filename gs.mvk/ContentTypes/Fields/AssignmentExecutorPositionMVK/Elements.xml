@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentExecutorPositionMVKDisplayName"
+		ID="{5492D1C0-6117-4445-A562-AB8F5BBD68CA}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentExecutorPositionMVK"
+		Name="AssignmentExecutorPositionMVK"
+		Type="Lookup"
+		List="Lists/PositionBookList"
+		ShowField="Title"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:AssignmentExecutorPositionMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

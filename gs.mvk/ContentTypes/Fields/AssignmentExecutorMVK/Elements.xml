@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentExecutorMVKDisplayName"
+		ID="{4442C307-B53E-414D-AC4D-404A72749239}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentExecutorMVK"
+		Name="AssignmentExecutorMVK"
+		Type="Lookup"
+		List="Lists/ParticipantBookList"
+		ShowField="ParticipantFullName"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:AssignmentExecutorMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:IssueSettlementMVKDisplayName"
+		ID="{582E668D-1070-4473-A388-C8418EA27E5F}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="IssueSettlementMVK"
+		Name="IssueSettlementMVK"
+		Type="Lookup"
+		List="Lists/List"
+		ShowField="LinkTitle"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:IssueSettlementMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

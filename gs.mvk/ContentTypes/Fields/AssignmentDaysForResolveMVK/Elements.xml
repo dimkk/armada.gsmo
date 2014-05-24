@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentDaysForResolveMVKDisplayName"
+		ID="{D579AA57-F4D4-4D89-9E8C-9D61115F936A}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentDaysForResolveMVK"
+		Name="AssignmentDaysForResolveMVK"
+		Type="Integer"
+    Commas="FALSE"
+		Required="FALSE"
+		Percentage="FALSE"
+		Min="0"
+		Description="$Resources:AssignmentDaysForResolveMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

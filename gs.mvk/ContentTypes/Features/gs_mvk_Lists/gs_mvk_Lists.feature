@@ -5,5 +5,7 @@
   </activationDependencies>
   <projectItems>
     <projectItemReference itemId="230b33cb-242d-4a39-aca0-fbb44ab9e1a8" />
+    <projectItemReference itemId="add616d0-c9fa-4ed3-8def-50f8dc746958" />
+    <projectItemReference itemId="076c60f3-a3c8-4d5e-af69-acf0b0ad17e9" />
   </projectItems>
 </feature>

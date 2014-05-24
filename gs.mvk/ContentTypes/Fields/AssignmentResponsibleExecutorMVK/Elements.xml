@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentResponsibleExecutorMVKDisplayName"
+		ID="{B3565C70-DF25-4918-9F99-8250899487F9}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentResponsibleExecutorMVK"
+		Name="AssignmentResponsibleExecutorMVK"
+		Type="Text"
+		Required="FALSE"
+		MaxLength="255"
+		Description="$Resources:AssignmentResponsibleExecutorMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

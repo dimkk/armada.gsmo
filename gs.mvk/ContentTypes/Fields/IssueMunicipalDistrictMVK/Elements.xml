@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:IssueMunicipalDistrictMVKDisplayName"
+		ID="{1F90A7A6-EBBA-4688-988C-9E7EAC01678C}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="IssueMunicipalDistrictMVK"
+		Name="IssueMunicipalDistrictMVK"
+		Type="Lookup"
+		List="Lists/List1"
+		ShowField="LinkTitle"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:IssueMunicipalDistrictMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

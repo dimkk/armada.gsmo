@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:IssueSubNumberDisplayName"
+		ID="{4BEC2AD8-9E51-483C-9386-CE5EDFBE23A7}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="IssueSubnumber"
+		Name="IssueSubnumber"
+		Type="Integer"
+		Required="TRUE"
+		Percentage="FALSE"
+		Min="0"
+		Commas="FALSE"
+		Description="$Resources:IssueSubNumberDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE">
+		<Default>0</Default>
+	</Field>
+</Elements>

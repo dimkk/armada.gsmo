@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentPlanIsDependentMVKDisplayName"
+		ID="{81EBB2C2-D159-4C96-A6DE-14AE37ED90F1}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentPlanIsDependentMVK"
+		Name="AssignmentPlanIsDependentMVK"
+		Type="Text"
+		Required="FALSE"
+		MaxLength="255"
+		Description="$Resources:AssignmentPlanIsDependentMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE">
+		<Default>ByDate</Default>
+	</Field>
+</Elements>

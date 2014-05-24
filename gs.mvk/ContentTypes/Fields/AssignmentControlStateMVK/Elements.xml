@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentControlStateMVKDisplayName"
+		ID="{FD426331-13D3-4E16-8677-7D940CC37A61}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentControlStateMVK"
+		Name="AssignmentControlStateMVK"
+		Type="Choice"
+		Format="Dropdown"
+		Required="FALSE"
+		FillInChoice="FALSE"
+		Description="$Resources:AssignmentControlStateMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE">
+		<CHOICES>
+			<CHOICE>$Resources:AssignmentControlStateMVKInControlChoice</CHOICE>
+			<CHOICE>$Resources:AssignmentControlStateMVKOffControlChoice</CHOICE>
+		</CHOICES>
+	</Field>
+</Elements>

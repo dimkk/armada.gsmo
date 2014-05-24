@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:IssueReporterMVKDisplayName"
+		ID="{647DFE05-1565-4727-8D73-0C08CF69A4D2}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="IssueReporterMVK"
+		Name="IssueReporterMVK"
+		Type="Lookup"
+		List="Lists/ParticipantBookList"
+		ShowField="ParticipantFullName"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:IssueReporterMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

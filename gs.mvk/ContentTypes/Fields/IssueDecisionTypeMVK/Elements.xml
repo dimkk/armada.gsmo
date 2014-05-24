@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:IssueDecisionTypeMVKDisplayName"
+		ID="{25461277-AFBB-405D-92BC-9A858E48B797}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="IssueDecisionTypeMVK"
+		Name="IssueDecisionTypeMVK"
+		Type="Lookup"
+		List="Lists/DecisionTypeBookList"
+		ShowField="LinkTitle"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:IssueDecisionTypeMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

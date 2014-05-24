@@ -117,18 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ChairManMVKLinkDescr" xml:space="preserve">
-    <value>Председатель заседания МВК</value>
-  </data>
-  <data name="ChairManMVKLinkDisplayName" xml:space="preserve">
-    <value>Председатель</value>
-  </data>
-  <data name="ExtMVKParticipantsDescr" xml:space="preserve">
-    <value>Члены МВК</value>
-  </data>
-  <data name="ExtMVKParticipantsDisplayName" xml:space="preserve">
-    <value>Члены МВК</value>
-  </data>
   <data name="FeatureDescription" xml:space="preserve">
     <value>Столбцы сайта, типы содержимого и определения списков МВК</value>
   </data>
@@ -151,7 +139,7 @@
     <value>Номер заседания МВК</value>
   </data>
   <data name="MeetingNumberMVKDisplayName" xml:space="preserve">
-    <value>Номер</value>
+    <value>Номер заседания</value>
   </data>
   <data name="MVKColumnsGroup" xml:space="preserve">
     <value>Группа столбцов МВК</value>
@@ -160,13 +148,7 @@
     <value>Место проведения заседания МВК</value>
   </data>
   <data name="MeetingPlaceMVKDisplayName" xml:space="preserve">
-    <value>Место проведения</value>
-  </data>
-  <data name="MeetingResponsibleSecretaryMVKLinkDescr" xml:space="preserve">
-    <value>Ответственный секретарь заседания МВК</value>
-  </data>
-  <data name="MeetingResponsibleSecretaryMVKLinkDisplayName" xml:space="preserve">
-    <value>Ответственный секретарь</value>
+    <value>Место проведения заседания</value>
   </data>
   <data name="MeetingStatusCompletedChoice" xml:space="preserve">
     <value>Завершенное</value>
@@ -179,18 +161,6 @@
   </data>
   <data name="MeetingStatusPlanningChoice" xml:space="preserve">
     <value>Планируемое</value>
-  </data>
-  <data name="OtherParticipantListMVKDescr" xml:space="preserve">
-    <value>Остальные участники заседания МВК</value>
-  </data>
-  <data name="OtherParticipantListMVKDisplayName" xml:space="preserve">
-    <value>Остальные участники</value>
-  </data>
-  <data name="SecretaryMVKLinkDescr" xml:space="preserve">
-    <value>Секретарь заседания МВК</value>
-  </data>
-  <data name="SecretaryMVKLinkDisplayName" xml:space="preserve">
-    <value>Секретарь</value>
   </data>
   <data name="MeetingMVKContentTypeDescr" xml:space="preserve">
     <value>Заседание МВК</value>
@@ -209,5 +179,278 @@
   </data>
   <data name="MVKContentTypesGroupName" xml:space="preserve">
     <value>Типы содержимого МВК ГС</value>
+  </data>
+  <data name="IssueAddressMVKDescr" xml:space="preserve">
+    <value>Адрес рассмотрения вопроса повестки заседания МВК</value>
+  </data>
+  <data name="IssueAddressMVKDisplayName" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="IssueCadastreIdMVKDescr" xml:space="preserve">
+    <value>Кадастровый номер вопроса МВК</value>
+  </data>
+  <data name="IssueCadastreIdMVKDisplayName" xml:space="preserve">
+    <value>Кадастровый номер</value>
+  </data>
+  <data name="IssueCategoryMVKLinkDescr" xml:space="preserve">
+    <value>Ссылка на категорию вопроса повестки заседания МВК</value>
+  </data>
+  <data name="IssueCategoryMVKLinkDisplayName" xml:space="preserve">
+    <value>Категория вопроса</value>
+  </data>
+  <data name="IssueCoReportesMVKDescr" xml:space="preserve">
+    <value>Ссылки на содокладчиков по вопросу заседания МВК</value>
+  </data>
+  <data name="IssueCoReportesMVKDisplayName" xml:space="preserve">
+    <value>Содокладчики</value>
+  </data>
+  <data name="IssueDecisionMVKDescr" xml:space="preserve">
+    <value>Решение по вопросу заседания МВК</value>
+  </data>
+  <data name="IssueDecisionMVKDisplayName" xml:space="preserve">
+    <value>Решение по вопросу</value>
+  </data>
+  <data name="IssueDecisionTypeMVKDescr" xml:space="preserve">
+    <value>Вид решения по вопросу МВК</value>
+  </data>
+  <data name="IssueDecisionTypeMVKDisplayName" xml:space="preserve">
+    <value>Вид решения</value>
+  </data>
+  <data name="IssueDescriptionMVKDescr" xml:space="preserve">
+    <value>Описание вопроса повестки заседания МВК</value>
+  </data>
+  <data name="IssueDescriptionMVKDisplayName" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="IssueInfoMVKDescr" xml:space="preserve">
+    <value>Дополнительная информация по вопросу МВК</value>
+  </data>
+  <data name="IssueInfoMVKDisplayName" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="IssueInvestorMVKDescr" xml:space="preserve">
+    <value>Инвестор по вопросу заседания МВК</value>
+  </data>
+  <data name="IssueInvestorMVKDisplayName" xml:space="preserve">
+    <value>Инвестор</value>
+  </data>
+  <data name="IssueMeetingMVKLinkDescr" xml:space="preserve">
+    <value>Ссылка на заседание МВК</value>
+  </data>
+  <data name="IssueMeetingMVKLinkDisplayName" xml:space="preserve">
+    <value>Заседание</value>
+  </data>
+  <data name="IssueMunicipalDistrictMVKDescr" xml:space="preserve">
+    <value>Ссылка на муниципальный район вопроса МВК</value>
+  </data>
+  <data name="IssueMunicipalDistrictMVKDisplayName" xml:space="preserve">
+    <value>Муниципальный район</value>
+  </data>
+  <data name="IssueMVKContentTypeDescr" xml:space="preserve">
+    <value>Тип содержимого для вопроса повестки заседания МВК</value>
+  </data>
+  <data name="IssueMVKListDefDescr" xml:space="preserve">
+    <value>Вопросы повести заседания МВК</value>
+  </data>
+  <data name="IssueMVKListDefDisplayName" xml:space="preserve">
+    <value>Вопросы повести заседания МВК</value>
+  </data>
+  <data name="IssueNumberDescr" xml:space="preserve">
+    <value>Номер вопроса заседания МВК (основная часть номера)</value>
+  </data>
+  <data name="IssueNumberDisplayName" xml:space="preserve">
+    <value>Номер вопроса</value>
+  </data>
+  <data name="IssueReporterMVKDescr" xml:space="preserve">
+    <value>Ссылка на докладчика по вопросу заседания МВК</value>
+  </data>
+  <data name="IssueReporterMVKDisplayName" xml:space="preserve">
+    <value>Докладчик</value>
+  </data>
+  <data name="IssueSettlementMVKDescr" xml:space="preserve">
+    <value>Ссылка на справочник поселений</value>
+  </data>
+  <data name="IssueSettlementMVKDisplayName" xml:space="preserve">
+    <value>Поселение</value>
+  </data>
+  <data name="IssueSubNumberDescr" xml:space="preserve">
+    <value>Подномер вопроса заседания МВК (дополнительная часть номера)</value>
+  </data>
+  <data name="IssueSubNumberDisplayName" xml:space="preserve">
+    <value>Подномер вопроса</value>
+  </data>
+  <data name="IssueThemeMVKDescr" xml:space="preserve">
+    <value>Тема вопроса заседания МВК</value>
+  </data>
+  <data name="IssueThemeMVKDisplayName" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="AsignmentNumberMVKDescr" xml:space="preserve">
+    <value>Номер поручения МВК</value>
+  </data>
+  <data name="AsignmentNumberMVKDisplayName" xml:space="preserve">
+    <value>Номер поручения</value>
+  </data>
+  <data name="AssignmentCoExecutorsMVKDescr" xml:space="preserve">
+    <value>Соисполнители по поручению МВК</value>
+  </data>
+  <data name="AssignmentCoExecutorsMVKDisplayName" xml:space="preserve">
+    <value>Соисполнители</value>
+  </data>
+  <data name="AssignmentControllerMVKDescr" xml:space="preserve">
+    <value>Контролер по исполнению поручения МВК</value>
+  </data>
+  <data name="AssignmentControllerMVKDisplayName" xml:space="preserve">
+    <value>Контролер поручения</value>
+  </data>
+  <data name="AssignmentControlStateMVKDescr" xml:space="preserve">
+    <value>Состояние контроля поручения МВК</value>
+  </data>
+  <data name="AssignmentControlStateMVKDisplayName" xml:space="preserve">
+    <value>Состояние контроля поручения</value>
+  </data>
+  <data name="AssignmentControlStateMVKInControlChoice" xml:space="preserve">
+    <value>На контроле</value>
+  </data>
+  <data name="AssignmentControlStateMVKOffControlChoice" xml:space="preserve">
+    <value>Снято с контроля</value>
+  </data>
+  <data name="AssignmentDaysForResolveMVKDescr" xml:space="preserve">
+    <value>Количество дней на решение (поручение МВК)</value>
+  </data>
+  <data name="AssignmentDaysForResolveMVKDisplayName" xml:space="preserve">
+    <value>Количество дней на решение</value>
+  </data>
+  <data name="AssignmentDayTypeMVKCalendarChoice" xml:space="preserve">
+    <value>Календарные</value>
+  </data>
+  <data name="AssignmentDayTypeMVKDescr" xml:space="preserve">
+    <value>Тип дней (зависимость от другого поручения МВК)</value>
+  </data>
+  <data name="AssignmentDayTypeMVKDisplayName" xml:space="preserve">
+    <value>Тип дней</value>
+  </data>
+  <data name="AssignmentDayTypeMVKWorkingChoice" xml:space="preserve">
+    <value>Рабочие</value>
+  </data>
+  <data name="AssignmentDependentAssignmentDescr" xml:space="preserve">
+    <value>Ссылка на зависимое поручение МВК</value>
+  </data>
+  <data name="AssignmentDependentAssignmentDispName" xml:space="preserve">
+    <value>Зависимое поручение</value>
+  </data>
+  <data name="AssignmentDependentAssignmentTextDescr" xml:space="preserve">
+    <value>Текст зависимого поручения</value>
+  </data>
+  <data name="AssignmentDependentAssignmentTextDispName" xml:space="preserve">
+    <value>Текст зависимого поручения</value>
+  </data>
+  <data name="AssignmentDependentTermTextMVKDescr" xml:space="preserve">
+    <value>Зависимый срок (текстовое представление зависимости от другого поручения МВК)</value>
+  </data>
+  <data name="AssignmentDependentTermTextMVKDispName" xml:space="preserve">
+    <value>Зависимый срок</value>
+  </data>
+  <data name="AssignmentExecutorMVKDescr" xml:space="preserve">
+    <value>Исполнитель по поручению МВК</value>
+  </data>
+  <data name="AssignmentExecutorMVKDisplayName" xml:space="preserve">
+    <value>Исполнитель</value>
+  </data>
+  <data name="AssignmentExecutorOrgMVKDescr" xml:space="preserve">
+    <value>Организация исполнителя по поручению МВК</value>
+  </data>
+  <data name="AssignmentExecutorOrgMVKDisplayName" xml:space="preserve">
+    <value>Организация исполнителя</value>
+  </data>
+  <data name="AssignmentExecutorPositionMVKDescr" xml:space="preserve">
+    <value>Должность исполнителя по поручению МВК</value>
+  </data>
+  <data name="AssignmentExecutorPositionMVKDisplayName" xml:space="preserve">
+    <value>Должность исполнителя</value>
+  </data>
+  <data name="AssignmentFactDateMVKDescr" xml:space="preserve">
+    <value>Фактический срок исполнения поручения МВК</value>
+  </data>
+  <data name="AssignmentFactDateMVKDisplayName" xml:space="preserve">
+    <value>Фактический срок исполнения поручения</value>
+  </data>
+  <data name="AssignmentIssueMVKDescr" xml:space="preserve">
+    <value>Ссылка на вопрос повестки заседания МВК</value>
+  </data>
+  <data name="AssignmentIssueMVKDisplayName" xml:space="preserve">
+    <value>Вопрос повестки</value>
+  </data>
+  <data name="AssignmentLastReportMVKDescr" xml:space="preserve">
+    <value>Последний отчет по поручению МВК</value>
+  </data>
+  <data name="AssignmentLastReportMVKDisplayName" xml:space="preserve">
+    <value>Последний отчет</value>
+  </data>
+  <data name="AssignmentMVKContentTypeDescr" xml:space="preserve">
+    <value>Тип содержимого для поручения МВК</value>
+  </data>
+  <data name="AssignmentMVKListDefDescr" xml:space="preserve">
+    <value>Поручения МВК</value>
+  </data>
+  <data name="AssignmentMVKListDefDisplayName" xml:space="preserve">
+    <value>Поручения МВК</value>
+  </data>
+  <data name="AssignmentNoteMVKDescr" xml:space="preserve">
+    <value>Примечание к поручению МВК</value>
+  </data>
+  <data name="AssignmentNoteMVKDisplayName" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="AssignmentPlanDateMVKDescr" xml:space="preserve">
+    <value>Планируемый срок исполнения поручения МВК</value>
+  </data>
+  <data name="AssignmentPlanDateMVKDisplayName" xml:space="preserve">
+    <value>Срок исполнения поручения</value>
+  </data>
+  <data name="AssignmentPlanIsDependentMVKDescr" xml:space="preserve">
+    <value>Тип зависимости планируемой даты поручения МВК</value>
+  </data>
+  <data name="AssignmentPlanIsDependentMVKDisplayName" xml:space="preserve">
+    <value>Тип зависимости планируемой даты</value>
+  </data>
+  <data name="AssignmentProlongationCountMVKDescr" xml:space="preserve">
+    <value>Количество продлений поручения МВК</value>
+  </data>
+  <data name="AssignmentProlongationCountMVKDispName" xml:space="preserve">
+    <value>Количество продлений</value>
+  </data>
+  <data name="AssignmentResponsibleExecutorMVKDescr" xml:space="preserve">
+    <value>Ответственный исполнитель по поручению МВК</value>
+  </data>
+  <data name="AssignmentResponsibleExecutorMVKDisplayName" xml:space="preserve">
+    <value>Ответственный исполнитель</value>
+  </data>
+  <data name="AssignmentStatusMVKDescr" xml:space="preserve">
+    <value>Статус поручения МВК</value>
+  </data>
+  <data name="AssignmentStatusMVKDisplayName" xml:space="preserve">
+    <value>Статус поручения</value>
+  </data>
+  <data name="AssignmentStatusMVKExecutedChoice" xml:space="preserve">
+    <value>Исполнено</value>
+  </data>
+  <data name="AssignmentStatusMVKOnExecutionChoice" xml:space="preserve">
+    <value>На исполнении</value>
+  </data>
+  <data name="AssignmentStatusMVKTimeIsUpChoice" xml:space="preserve">
+    <value>Срок истек</value>
+  </data>
+  <data name="AssignmentTextMVKDescr" xml:space="preserve">
+    <value>Текст поручения МВК</value>
+  </data>
+  <data name="AssignmentTextMVKDisplayName" xml:space="preserve">
+    <value>Текст поручения</value>
+  </data>
+  <data name="AssignmentTypeMVKDescr" xml:space="preserve">
+    <value>Тип поручения МВК</value>
+  </data>
+  <data name="AssignmentTypeMVKDisplayName" xml:space="preserve">
+    <value>Тип поручения</value>
   </data>
 </root>
