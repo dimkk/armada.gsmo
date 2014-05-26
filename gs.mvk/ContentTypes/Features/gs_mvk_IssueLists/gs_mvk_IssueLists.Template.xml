@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+************************************************************************
+       Company: Armada
+   Application: gs.mvk
+  Created date: 2014-05-26 15:48:30Z
+    Created by: SPDEV\developer
+  Feature Name: IssueLists
+ Feature Title: IssueLists Title
+   Description: IssueLists Description
+       History: Initial Version 1.0.0.0 
+************************************************************************
+-->
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests></ElementManifests>
+</Feature>

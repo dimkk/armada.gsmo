@@ -46,12 +46,8 @@
 				Name="AssignmentDayTypeMVK"
 				Required="FALSE" />
 			<FieldRef
-				ID="{4D2A9A7F-4305-4CBD-996C-CBD6BF99A1D7}"
-				Name="AssignmentDependentAssignment"
-				Required="FALSE" />
-			<FieldRef
-				ID="{9D5B6F96-5257-4E66-911F-34329964A8C7}"
-				Name="AssignmentDependentAssignmentText"
+				ID="{291BEAE9-11A3-49A4-AF9F-3B2F051421AE}"
+				Name="AssignmentDependentAssignText"
 				Required="FALSE" />
 			<FieldRef
 				ID="{DDCA2779-46B2-4CE2-B5FD-4E28C5935D2C}"
@@ -76,10 +72,6 @@
 			<FieldRef
 				ID="{F6B3B348-FCFA-4B7C-A1DE-AD3355789C35}"
 				Name="AssignmentIssueMVK"
-				Required="FALSE" />
-			<FieldRef
-				ID="{0EC1DABE-3F49-4FBA-BA0C-6C11779C758B}"
-				Name="AssignmentLastReportMVK"
 				Required="FALSE" />
 			<FieldRef
 				ID="{031B32CF-1D92-42B4-AE28-7F121D33A29A}"

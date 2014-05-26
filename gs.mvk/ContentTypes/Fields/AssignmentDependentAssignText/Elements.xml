@@ -4,10 +4,10 @@
 	<Field
 		Group="$Resources:MVKColumnsGroup"
 		DisplayName="$Resources:AssignmentDependentAssignmentTextDispName"
-		ID="{9D5B6F96-5257-4E66-911F-34329964A8C7}"
+		ID="{291BEAE9-11A3-49A4-AF9F-3B2F051421AE}"
 		SourceID="http://schemas.microsoft.com/sharepoint/v3"
-		StaticName="AssignmentDependentAssignmentText"
-		Name="AssignmentDependentAssignmentText"
+		StaticName="AssignmentDependentAssignText"
+		Name="AssignmentDependentAssignText"
 		Type="Note"
 		Sortable="FALSE"
 		NumLines="6"

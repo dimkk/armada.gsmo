@@ -18,17 +18,36 @@ namespace ConsoleApp
             }
         }
 
+        static void deleteListsFromContentType(SPWeb web, string CTGuid)
+        {
+            SPContentType ct = web.AvailableContentTypes[new SPContentTypeId(CTGuid)];
+            if (ct != null)
+            {
+                IList<SPContentTypeUsage> usages = SPContentTypeUsage.GetUsages(ct);
+                foreach (SPContentTypeUsage item in usages)
+                {
+                    if (item.IsUrlToList)
+                    {
+                        SPList list = web.GetList(item.Url);
+                        if (list != null)
+                        {
+                            web.Lists.Delete(list.ID);
+                        }
+                    }
+                }
+            }
+        }
+
         static void Main(string[] args)
         {
             using (SPSite site = new SPSite("http://sp2013dev"))
             {
                 using (SPWeb web = site.OpenWeb())
                 {
-                    deleteList(web, "MVK issue");
-                    deleteList(web, "MVK meeting");
-                    deleteList(web, "MVK assignment");
-
-
+                    deleteListsFromContentType(web, "0x0100C274D4A47E4742EEABF2D5FDF35DFBC9");
+                    deleteListsFromContentType(web, "0x01009435E8C0C3E94107BD6F56DE758815D6");
+                    deleteListsFromContentType(web, "0x01009E8BDC3C1146476781B2724822295453");
+                    
                     /*SPContentType ct = web.ContentTypes[new SPContentTypeId("0x0100C274D4A47E4742EEABF2D5FDF35DFBC9")];
                     IEnumerable<SPContentTypeUsage> u = SPContentTypeUsage.GetUsages(ct);
 

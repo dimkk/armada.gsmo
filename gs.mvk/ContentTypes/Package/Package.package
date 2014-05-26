@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8785c575-ed43-4954-8293-9ef4a283a25f" solutionId="8785c575-ed43-4954-8293-9ef4a283a25f" resetWebServer="false" sharePointProductVersion="15.0" name="gs.mvk.ContentTypes" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8785c575-ed43-4954-8293-9ef4a283a25f" solutionId="8785c575-ed43-4954-8293-9ef4a283a25f" resetWebServer="true" sharePointProductVersion="15.0" name="gs.mvk.ContentTypes" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <features>
-    <featureReference itemId="b6d9461e-c11a-47ff-918f-35df1c3be1de" />
+    <featureReference itemId="d9e7ef9d-136c-4c82-9c95-19b2f75f37f4" />
+    <featureReference itemId="53b2cb73-3532-4ea5-9cc8-5343faea632c" />
+    <featureReference itemId="d93bb6b5-e3b2-4be7-a205-b83b77d1445c" />
+    <featureReference itemId="c470a36e-168f-4914-9d83-4a1acbda8a5d" />
+    <featureReference itemId="a1d14472-8a8a-40ed-b2e8-50067aba80be" />
+    <featureReference itemId="495f3186-e66c-4851-819d-80d299771b9a" />
   </features>
   <projectItems>
     <projectItemReference itemId="c107a01f-111d-4ea6-82c1-c4d1e62bc707" />

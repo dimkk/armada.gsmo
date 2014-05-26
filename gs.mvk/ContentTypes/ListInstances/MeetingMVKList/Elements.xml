@@ -4,7 +4,7 @@
 	<ListInstance
 		Title="$Resources:MeetingMVKListTitle"
 		Description="$Resources:MeetingMVKListTitleDescr"
-		FeatureId="636c5f7e-d8b5-4971-aed0-3cf430309467"
+		FeatureId="d2d9757b-f6a8-445c-a2a7-31b7d9b6fe4c"
 		Id="80A527D4-4E5C-4C1D-923C-C391BD977227"
 		Url="Lists/MeetingMVKList"
 		OnQuickLaunch="TRUE"

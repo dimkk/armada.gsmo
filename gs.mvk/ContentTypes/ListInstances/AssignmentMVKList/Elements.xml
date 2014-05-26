@@ -4,7 +4,7 @@
 	<ListInstance
 		Title="$Resources:AssignmentMVKListTitle"
 		Description="$Resources:AssignmentMVKListDescr"
-		FeatureId="636c5f7e-d8b5-4971-aed0-3cf430309467"
+		FeatureId="10ced598-c9fa-4bfe-bf35-120844f63239"
 		Id="2497F143-7471-4DA0-8887-A20F77D0862E"
 		Url="Lists/AssignmentMVKList"
 		OnQuickLaunch="TRUE"

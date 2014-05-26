@@ -19,13 +19,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationConfiguration", 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentTypes", "ContentTypes\ContentTypes.csproj", "{18BD52FD-BBF9-4730-A35A-B13FE70716A6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8DDABF67-B493-4F04-980C-15A61220B38C} = {8DDABF67-B493-4F04-980C-15A61220B38C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deployment", "Deployment\Deployment.csproj", "{68FB0CCA-A98D-4E24-8E6E-547F090A4702}"
 	ProjectSection(ProjectDependencies) = postProject
 		{18BD52FD-BBF9-4730-A35A-B13FE70716A6} = {18BD52FD-BBF9-4730-A35A-B13FE70716A6}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{8DDABF67-B493-4F04-980C-15A61220B38C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleanup", "ConsoleApp\Cleanup.csproj", "{8DDABF67-B493-4F04-980C-15A61220B38C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
