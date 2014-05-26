@@ -40,7 +40,7 @@ namespace ConsoleApp
 
         static void Main(string[] args)
         {
-            using (SPSite site = new SPSite("http://sp2013dev"))
+            using (SPSite site = new SPSite("http://win-3efppqrbp9t"))
             {
                 using (SPWeb web = site.OpenWeb())
                 {

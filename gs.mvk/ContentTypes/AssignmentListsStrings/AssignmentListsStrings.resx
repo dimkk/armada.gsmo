@@ -117,16 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AssignmentMVKListDescr" xml:space="preserve">
-    <value>MVK assignment list</value>
+  <data name="AssignmentDependentAssignmentDescr" xml:space="preserve">
+    <value>MVK assignment dependent assignment</value>
   </data>
-  <data name="AssignmentMVKListTitle" xml:space="preserve">
-    <value>MVK assignment</value>
+  <data name="AssignmentDependentAssignmentDispName" xml:space="preserve">
+    <value>Dependent Assignment</value>
   </data>
-  <data name="FeatureDescription" xml:space="preserve">
-    <value>Lists for  MVK Assignment</value>
-  </data>
-  <data name="FeatureTitle" xml:space="preserve">
-    <value>Lists for  MVK Assignment</value>
+  <data name="MVKColumnsGroup" xml:space="preserve">
+    <value>gs.mvk Columns</value>
   </data>
 </root>

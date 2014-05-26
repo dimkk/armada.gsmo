@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8785c575-ed43-4954-8293-9ef4a283a25f" solutionId="8785c575-ed43-4954-8293-9ef4a283a25f" resetWebServer="true" sharePointProductVersion="15.0" name="gs.mvk.ContentTypes" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="ru-RU\gs.mvk.ContentTypes.resources.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Debug\ru-RU\gs.mvk.ContentTypes.resources.dll" />
+  </assemblies>
   <features>
     <featureReference itemId="d9e7ef9d-136c-4c82-9c95-19b2f75f37f4" />
     <featureReference itemId="53b2cb73-3532-4ea5-9cc8-5343faea632c" />

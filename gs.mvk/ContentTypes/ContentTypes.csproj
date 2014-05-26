@@ -64,6 +64,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AssignmentListsStrings\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b37428b9-acb6-4d4e-9227-621ce74cfffa}</SharePointProjectItemId>
+    </None>
     <None Include="ContentTypes\AssignmentMVK\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{57a0a1f3-d926-4a1a-920c-76e68b6e4381}</SharePointProjectItemId>
     </None>
@@ -252,6 +255,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AssignmentListsStrings\Elements.xml" />
     <Content Include="ContentTypes\AssignmentMVK\Elements.xml" />
     <Content Include="ContentTypes\IssueMVK\Elements.xml" />
     <Content Include="Features\gs_mvk_AssignmentLists\gs_mvk_AssignmentLists.Template.xml">
@@ -399,6 +403,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Features\gs_mvk_AssignmentLists\Resources.ru-RU.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AssignmentListsStrings\AssignmentListsStrings.resx" />
+    <EmbeddedResource Include="AssignmentListsStrings\AssignmentListsStrings.ru-RU.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

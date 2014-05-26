@@ -1,7 +1,9 @@
 using System;
+using System.Web;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using Microsoft.SharePoint;
+using Microsoft.SharePoint.Utilities;
 
 namespace gs.mvk.ContentTypes.Features.gs_mvk_AssignmentLists
 {
@@ -15,12 +17,13 @@ namespace gs.mvk.ContentTypes.Features.gs_mvk_AssignmentLists
     [Guid("1f0bb1f9-129c-4d48-bae6-75c11bfa103e")]
     public class gs_mvk_AssignmentListsEventReceiver : SPFeatureReceiver
     {
+        private const string FN_AssignmentDependentAssignment = "AssignmentDependentAssignment";
         // Uncomment the method below to handle the event raised after a feature has been activated.
         public static SPField EnsureSiteColumnXml(SPWeb web, string fieldName, string fieldXml)
         {
             SPField addField = null;
             SPField existField = null;
-
+            
             if (web.Fields.ContainsField(fieldName))
                 existField = web.Fields[fieldName];
 
@@ -46,11 +49,13 @@ namespace gs.mvk.ContentTypes.Features.gs_mvk_AssignmentLists
                 SPWeb web = site.RootWeb;
                 if (web != null)
                 {
-                    
-                    string fieldName = "AssignmentDependentAssignment";
+                    var groupName = HttpContext.GetGlobalResourceObject("AssignmentListsStrings", "MVKColumnsGroup");
+                    var dispName = HttpContext.GetGlobalResourceObject("AssignmentListsStrings", "AssignmentDependentAssignmentDispName");
+                    var descr = HttpContext.GetGlobalResourceObject("AssignmentListsStrings", "AssignmentDependentAssignmentDescr");
+
                     string fieldXml = "<Field " +
-                                            "Group=\"$Resources:MVKColumnsGroup\" " +
-                                            "DisplayName=\"$Resources:AssignmentDependentAssignmentDispName\" " +
+                                            "Group=" + "\"" + groupName + "\" " +
+                                            "DisplayName=" + "\"" + dispName + "\" " +
                                             "ID=\"{4D2A9A7F-4305-4CBD-996C-CBD6BF99A1D7}\" " +
                                             "SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" " +
                                             "StaticName=\"AssignmentDependentAssignment\" " +
@@ -60,12 +65,12 @@ namespace gs.mvk.ContentTypes.Features.gs_mvk_AssignmentLists
                                             "ShowField=\"AsignmentNumberMVK\" " +
                                             "Mult=\"False\" " +
                                             "UnlimitedLengthInDocumentLibrary=\"False\" " +
-                                            "Description=\"$Resources:AssignmentDependentAssignmentDescr\" " +
+                                            "Description=" + "\"" + descr + "\" " +
                                             "Overwrite=\"TRUE\" " +
                                             "AllowDeletion=\"FALSE\"></Field>";
-                    SPField DepAssignmentField = EnsureSiteColumnXml(web, fieldName, fieldXml);
+                    SPField DepAssignmentField = EnsureSiteColumnXml(web, FN_AssignmentDependentAssignment, fieldXml);
                     if (DepAssignmentField == null)
-                        throw new Exception(String.Format("Unable to add site column {0}", fieldName));
+                        throw new Exception(String.Format("Unable to add site column {0}", FN_AssignmentDependentAssignment));
                 }
             }
         }
