@@ -17,8 +17,9 @@
     <SandboxedSolution>False</SandboxedSolution>
     <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
     <ProjectGuid>{18BD52FD-BBF9-4730-A35A-B13FE70716A6}</ProjectGuid>
-    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <IncludeAssemblyInPackage>True</IncludeAssemblyInPackage>
     <PreDeploymentCommand>%24%28SolutionDir%29ConsoleApp\bin\%24%28Configuration%29\Cleanup.exe</PreDeploymentCommand>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,6 +58,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\gs_mvk_AssignmentLists\gs_mvk_AssignmentLists.EventReceiver.cs">
+      <DependentUpon>gs_mvk_AssignmentLists.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,17 +85,11 @@
     <None Include="Features\gs_mvk_Issue\gs_mvk_Issue.feature">
       <FeatureId>{d93bb6b5-e3b2-4be7-a205-b83b77d1445c}</FeatureId>
     </None>
-    <None Include="Features\gs_mvk_Lists\gs_mvk_Lists.feature">
-      <FeatureId>{62b0d559-f7d4-43a6-842e-8d49e75a2cbb}</FeatureId>
-    </None>
     <None Include="Features\gs_mvk_MeetingLists\gs_mvk_MeetingLists.feature">
       <FeatureId>{53b2cb73-3532-4ea5-9cc8-5343faea632c}</FeatureId>
     </None>
     <None Include="Features\gs_mvk_Meeting\gs_mvk_Meeting.feature">
       <FeatureId>{d9e7ef9d-136c-4c82-9c95-19b2f75f37f4}</FeatureId>
-    </None>
-    <None Include="Features\gs_mvk_SiteColumns\gs_mvk_SiteColumns.feature">
-      <FeatureId>{b6d9461e-c11a-47ff-918f-35df1c3be1de}</FeatureId>
     </None>
     <None Include="Fields\AsignmentNumberMVK\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a6616f03-0a55-446d-b4e9-584e420ce200}</SharePointProjectItemId>
@@ -274,7 +272,6 @@
     <Content Include="Features\gs_mvk_Meeting\gs_mvk_Meeting.Template.xml">
       <DependentUpon>gs_mvk_Meeting.feature</DependentUpon>
     </Content>
-    <Content Include="Features\gs_mvk_SiteColumns\Resources.resx" />
     <Content Include="Fields\AsignmentNumberMVK\Elements.xml" />
     <Content Include="Fields\AssignmentCoExecutorsMVK\Elements.xml" />
     <Content Include="Fields\AssignmentControllerMVK\Elements.xml" />
@@ -341,14 +338,6 @@
     <Content Include="ContentTypes\MeetingMVK\Elements.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Features\gs_mvk_Lists\gs_mvk_Lists.Template.xml">
-      <DependentUpon>gs_mvk_Lists.feature</DependentUpon>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Features\gs_mvk_SiteColumns\gs_mvk_SiteColumns.Template.xml">
-      <DependentUpon>gs_mvk_SiteColumns.feature</DependentUpon>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Fields\MeetingCommentMVK\Elements.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -374,17 +363,6 @@
     <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinitionTest.gif" />
     <Content Include="Template\Images\gs_mvk\ListIcon_ListDefinitionTest2.gif" />
     <Content Include="Template\Images\gs_mvk\ListIcon_MeetingMVKList.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Features\gs_mvk_SiteColumns\Resources.ru-RU.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Features\gs_mvk_Lists\Resources.resx">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Features\gs_mvk_Lists\Resources.ru-RU.resx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Features\gs_mvk_Meeting\Resources.resx" />
