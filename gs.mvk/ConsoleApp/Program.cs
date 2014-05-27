@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.SharePoint;
+using System.Configuration;
 
 namespace ConsoleApp
 {
@@ -38,9 +39,33 @@ namespace ConsoleApp
             }
         }
 
+        private static string WebUrl
+        {
+            get
+            {
+                string url;
+                try
+                {
+                    url = ConfigurationManager.AppSettings["WebUrl"] ?? "Not Found";
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Error reading application settings file");
+                    throw;
+                }
+
+                if (url.Equals("Not Found"))
+                {
+                    throw new Exception("Application setting [WebSiteUrl] could not be found");
+                }
+
+                return url;
+            }
+        }
+
         static void Main(string[] args)
         {
-            using (SPSite site = new SPSite("http://win-3efppqrbp9t"))
+            using (SPSite site = new SPSite(WebUrl))
             {
                 using (SPWeb web = site.OpenWeb())
                 {
