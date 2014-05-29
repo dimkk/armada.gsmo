@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:ReportDateMVKDispName"
+		ID="{8D95F830-6544-4168-8B2C-589922B11624}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="ReportDateMVK"
+		Name="ReportDateMVK"
+		Type="DateTime"
+		Required="FALSE"
+		Format="DateTime"
+		Description="$Resources:ReportDateMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

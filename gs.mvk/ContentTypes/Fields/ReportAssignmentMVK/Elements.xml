@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:ReportAssignmentMVKDispName"
+		ID="{42C23003-D896-47FD-AB6E-54795A74E0D9}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="ReportAssignmentMVK"
+		Name="ReportAssignmentMVK"
+		Type="Lookup"
+		List="Lists/AssignmentMVKList"
+		ShowField="AsignmentNumberMVK"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:ReportAssignmentMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

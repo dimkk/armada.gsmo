@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<!--
+    ************************************************************************
+       Application: gs.mvk
+      Created date: 2014-05-29 12:53:58Z
+        Created by: SPDEV\developer
+              Name: ReportMVK
+       Description: ReportMVK Description
+           History: Initial Version 0
+    ************************************************************************
+    -->
+	<!-- Parent ContentType Item -->
+	<ContentType
+		ID="0x0100A3A87A1CEE124BB98A5563B3F2D5486C"
+		Name="ReportMVK"
+		Description="$Resources:ReportMVKDescr"
+		Group="$Resources:MVKContentTypesGroupName"
+		Version="0"
+		Inherits="TRUE"
+    Overwrite="TRUE">
+		<FieldRefs>
+			<FieldRef
+				ID="{42C23003-D896-47FD-AB6E-54795A74E0D9}"
+				Name="ReportAssignmentMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{8D95F830-6544-4168-8B2C-589922B11624}"
+				Name="ReportDateMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{33AC6063-3387-485B-B0F2-4C08A4CAD8D4}"
+				Name="ReportDecisionMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{EF2A1333-C2E3-40BA-A204-DECD83EA0FCA}"
+				Name="ReportExpectedDateMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{70979696-6571-4A4B-AC1A-5A46958F16EF}"
+				Name="ReportInfoMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{F268EF4C-EDA7-4E1C-BAF2-4FAA788EDBF8}"
+				Name="ReportNewDeadlineMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{F3A137E9-5B1E-498B-BF07-2809FCA85DDD}"
+				Name="ReportRequestDateTime"
+				Required="FALSE" />
+			<FieldRef
+				ID="{9F38AC8C-B2CF-4103-A835-5122C8C52CEF}"
+				Name="ReportResolutionCommentMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{74586606-6418-4E46-B204-6377159558F8}"
+				Name="ReportTextMVK"
+				Required="FALSE" />
+		</FieldRefs>
+	</ContentType>
+</Elements>

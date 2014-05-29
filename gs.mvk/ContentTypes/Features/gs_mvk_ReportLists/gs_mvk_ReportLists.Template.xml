@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+************************************************************************
+       Company: Armada
+   Application: gs.mvk
+  Created date: 2014-05-29 13:09:31Z
+    Created by: SPDEV\developer
+  Feature Name: ReportLists
+ Feature Title: ReportLists Title
+   Description: ReportLists Description
+       History: Initial Version 1.0.0.0 
+************************************************************************
+-->
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests></ElementManifests>
+</Feature>

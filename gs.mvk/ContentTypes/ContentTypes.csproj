@@ -76,6 +76,9 @@
     <None Include="ContentTypes\MeetingMVK\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{fa00ff3e-0652-448b-8ad2-5a0cc3fb765f}</SharePointProjectItemId>
     </None>
+    <None Include="ContentTypes\ReportMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b7de2f3b-5654-4281-b895-ee60a78f540b}</SharePointProjectItemId>
+    </None>
     <None Include="Features\gs_mvk_AssignmentLists\gs_mvk_AssignmentLists.feature">
       <FeatureId>{495f3186-e66c-4851-819d-80d299771b9a}</FeatureId>
     </None>
@@ -96,6 +99,12 @@
     </None>
     <None Include="Features\gs_mvk_Meeting\gs_mvk_Meeting.feature">
       <FeatureId>{d9e7ef9d-136c-4c82-9c95-19b2f75f37f4}</FeatureId>
+    </None>
+    <None Include="Features\gs_mvk_ReportLists\gs_mvk_ReportLists.feature">
+      <FeatureId>{8464f722-d478-43b6-89fd-c801bf7d0eac}</FeatureId>
+    </None>
+    <None Include="Features\gs_mvk_Report\gs_mvk_Report.feature">
+      <FeatureId>{813f73eb-1f2a-48f2-b29b-fb553b4a8a3d}</FeatureId>
     </None>
     <None Include="Fields\AsignmentNumberMVK\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a6616f03-0a55-446d-b4e9-584e420ce200}</SharePointProjectItemId>
@@ -229,6 +238,33 @@
     <None Include="Fields\MeetingStatusMVK\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{198b193d-3f85-498c-9c7e-9a4060adb966}</SharePointProjectItemId>
     </None>
+    <None Include="Fields\ReportAssignmentMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4179b057-1936-4217-8015-f20dbe247d10}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\ReportDateMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4b608b90-b876-4d76-86e4-8e41b32ef454}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\ReportDecisionMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6827287f-ff79-47ea-98c9-cbbfd97887f3}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\ReportExpectedDateMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d088a56d-b0e2-4f74-a314-93fad21e911b}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\ReportInfoMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e4201663-9efb-45b7-a28a-46479f37b1dc}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\ReportNewDeadlineMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b4756087-dd6f-494b-9710-93105a950d41}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\ReportRequestDateTime\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{97841bea-525d-4f7d-a481-a7298d1cc95d}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\ReportResolutionCommentMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e5321e27-6f82-43a4-9716-d62343d7009d}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\ReportTextMVK\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f885cd72-5823-43c7-99eb-eb7ea44ceec4}</SharePointProjectItemId>
+    </None>
     <None Include="ListDefinitions\AssignmentMVKListDefinition\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a51cbf6c-78eb-4db2-bd1d-629f4c96056d}</SharePointProjectItemId>
     </None>
@@ -238,6 +274,9 @@
     <None Include="ListDefinitions\MeetingMVKListDefinition\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{68214deb-897b-433d-a6bb-171a69ee52ef}</SharePointProjectItemId>
     </None>
+    <None Include="ListDefinitions\ReportMVKListDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cdddbf35-1307-48b0-9ccc-1344c177dd1b}</SharePointProjectItemId>
+    </None>
     <None Include="ListInstances\AssignmentMVKList\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{076c60f3-a3c8-4d5e-af69-acf0b0ad17e9}</SharePointProjectItemId>
     </None>
@@ -246,6 +285,9 @@
     </None>
     <None Include="ListInstances\MeetingMVKList\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{230b33cb-242d-4a39-aca0-fbb44ab9e1a8}</SharePointProjectItemId>
+    </None>
+    <None Include="ListInstances\ReportMVKList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{608ad5ea-7b8d-4c44-a77d-0a082072aa8d}</SharePointProjectItemId>
     </None>
     <None Include="Package\Package.package">
       <PackageId>{8785C575-ED43-4954-8293-9EF4A283A25F}</PackageId>
@@ -261,6 +303,7 @@
     <Content Include="AssignmentListsStrings\Elements.xml" />
     <Content Include="ContentTypes\AssignmentMVK\Elements.xml" />
     <Content Include="ContentTypes\IssueMVK\Elements.xml" />
+    <Content Include="ContentTypes\ReportMVK\Elements.xml" />
     <Content Include="Features\gs_mvk_AssignmentLists\gs_mvk_AssignmentLists.Template.xml">
       <DependentUpon>gs_mvk_AssignmentLists.feature</DependentUpon>
     </Content>
@@ -282,6 +325,12 @@
     <Content Include="Features\gs_mvk_Meeting\gs_mvk_Meeting.Template.xml">
       <DependentUpon>gs_mvk_Meeting.feature</DependentUpon>
     </Content>
+    <Content Include="Features\gs_mvk_ReportLists\gs_mvk_ReportLists.Template.xml">
+      <DependentUpon>gs_mvk_ReportLists.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\gs_mvk_Report\gs_mvk_Report.Template.xml">
+      <DependentUpon>gs_mvk_Report.feature</DependentUpon>
+    </Content>
     <Content Include="Fields\AsignmentNumberMVK\Elements.xml" />
     <Content Include="Fields\AssignmentCoExecutorsMVK\Elements.xml" />
     <Content Include="Fields\AssignmentControllerMVK\Elements.xml" />
@@ -298,7 +347,9 @@
     <Content Include="Fields\AssignmentIssueMVK\Elements.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Fields\AssignmentLastReportMVK\Elements.xml" />
+    <Content Include="Fields\AssignmentLastReportMVK\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Fields\AssignmentNoteMVK\Elements.xml" />
     <Content Include="Fields\AssignmentPlanDateMVK\Elements.xml" />
     <Content Include="Fields\AssignmentPlanIsDependentMVK\Elements.xml" />
@@ -327,13 +378,29 @@
     </Content>
     <Content Include="Fields\IssueSubnumber\Elements.xml" />
     <Content Include="Fields\IssueThemeMVK\Elements.xml" />
+    <Content Include="Fields\ReportAssignmentMVK\Elements.xml" />
+    <Content Include="Fields\ReportDateMVK\Elements.xml" />
+    <Content Include="Fields\ReportDecisionMVK\Elements.xml" />
+    <Content Include="Fields\ReportExpectedDateMVK\Elements.xml" />
+    <Content Include="Fields\ReportInfoMVK\Elements.xml" />
+    <Content Include="Fields\ReportNewDeadlineMVK\Elements.xml" />
+    <Content Include="Fields\ReportRequestDateTime\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\ReportResolutionCommentMVK\Elements.xml" />
+    <Content Include="Fields\ReportTextMVK\Elements.xml" />
     <Content Include="ListDefinitions\AssignmentMVKListDefinition\Elements.xml" />
     <Content Include="ListDefinitions\AssignmentMVKListDefinition\schema.xml" />
     <Content Include="ListDefinitions\IssueMVKListDefinition\Elements.xml" />
     <Content Include="ListDefinitions\IssueMVKListDefinition\schema.xml" />
+    <Content Include="ListDefinitions\ReportMVKListDefinition\Elements.xml" />
+    <Content Include="ListDefinitions\ReportMVKListDefinition\schema.xml" />
     <Content Include="ListInstances\AssignmentMVKList\Elements.xml" />
     <Content Include="ListInstances\IssueMVKList\Elements.xml" />
     <Content Include="ListInstances\MeetingMVKList\Elements.xml" />
+    <Content Include="ListInstances\ReportMVKList\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Template\Images\gs_mvk\FeatureIcon_Assignment.gif" />
     <Content Include="Template\Images\gs_mvk\FeatureIcon_AssignmentLists.gif" />
     <Content Include="Template\Images\gs_mvk\FeatureIcon_Common.gif" />
@@ -341,9 +408,12 @@
     <Content Include="Template\Images\gs_mvk\FeatureIcon_IssueLists.gif" />
     <Content Include="Template\Images\gs_mvk\FeatureIcon_Meeting.gif" />
     <Content Include="Template\Images\gs_mvk\FeatureIcon_MeetingLists.gif" />
+    <Content Include="Template\Images\gs_mvk\FeatureIcon_Report.gif" />
+    <Content Include="Template\Images\gs_mvk\FeatureIcon_ReportLists.gif" />
     <Content Include="Template\Images\gs_mvk\ListIcon_AssignmentMVKListDefinition.gif" />
     <Content Include="Template\Images\gs_mvk\ListIcon_IssueMVKListDefinition.gif" />
     <Content Include="Template\Images\gs_mvk\ListIcon_MeetingMVKListDefinition.gif" />
+    <Content Include="Template\Images\gs_mvk\ListIcon_ReportMVKListDefinition.gif" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ContentTypes\MeetingMVK\Elements.xml">
@@ -426,6 +496,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Features\gs_mvk_Common\Resources.ru-RU.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\gs_mvk_Report\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\gs_mvk_Report\Resources.ru-RU.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\gs_mvk_ReportLists\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\gs_mvk_ReportLists\Resources.ru-RU.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

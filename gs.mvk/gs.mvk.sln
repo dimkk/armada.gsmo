@@ -31,8 +31,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deployment", "Deployment\De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleanup", "ConsoleApp\Cleanup.csproj", "{8DDABF67-B493-4F04-980C-15A61220B38C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeleteColumnApp", "DeleteColumnApp\DeleteColumnApp.csproj", "{C06E638D-087B-4873-9FD9-17992A58E538}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{E0922397-59A0-468C-A22E-6E69448CC35C}"
 EndProject
 Global
@@ -55,10 +53,6 @@ Global
 		{8DDABF67-B493-4F04-980C-15A61220B38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DDABF67-B493-4F04-980C-15A61220B38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DDABF67-B493-4F04-980C-15A61220B38C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C06E638D-087B-4873-9FD9-17992A58E538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C06E638D-087B-4873-9FD9-17992A58E538}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C06E638D-087B-4873-9FD9-17992A58E538}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C06E638D-087B-4873-9FD9-17992A58E538}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0922397-59A0-468C-A22E-6E69448CC35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0922397-59A0-468C-A22E-6E69448CC35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0922397-59A0-468C-A22E-6E69448CC35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
