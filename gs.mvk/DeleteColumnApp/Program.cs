@@ -135,8 +135,7 @@ namespace DeleteColumnApp
             {
                 using (SPWeb web = site.OpenWeb())
                 {
-                    //RemoveSiteColum(web, "AssignmentDependentAssignment");
-                    RemoveSiteColum(web, "$Resources:AssignmentDependentAssignmentDispName;");
+                    RemoveSiteColum(web, "Dependent Assignment");
                 }
             }
         }

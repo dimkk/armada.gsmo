@@ -2,7 +2,7 @@
 <ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
   <Files>
     <ProjectItemFile Source="Elements.xml" Target="AssignmentListsStrings\" Type="ElementManifest" />
-    <ProjectItemFile Source="AssignmentListsStrings.resx" Target="ContentTypes\AssignmentListsStrings\" Type="AppGlobalResource" />
-    <ProjectItemFile Source="AssignmentListsStrings.ru-RU.resx" Target="ContentTypes\AssignmentListsStrings\" Type="AppGlobalResource" />
+    <ProjectItemFile Source="AssignmentListsStrings.resx" Target="Resources\gs.mvk\" Type="RootFile" />
+    <ProjectItemFile Source="AssignmentListsStrings.ru-RU.resx" Target="Resources\gs.mvk\" Type="RootFile" />
   </Files>
 </ProjectItem>

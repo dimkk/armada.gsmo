@@ -19,7 +19,7 @@
     <ProjectGuid>{18BD52FD-BBF9-4730-A35A-B13FE70716A6}</ProjectGuid>
     <IncludeAssemblyInPackage>True</IncludeAssemblyInPackage>
     <PreDeploymentCommand>%24%28SolutionDir%29ConsoleApp\bin\%24%28Configuration%29\Cleanup.exe</PreDeploymentCommand>
-    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+    <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -81,6 +81,9 @@
     </None>
     <None Include="Features\gs_mvk_Assignment\gs_mvk_Assignment.feature">
       <FeatureId>{a1d14472-8a8a-40ed-b2e8-50067aba80be}</FeatureId>
+    </None>
+    <None Include="Features\gs_mvk_Common\gs_mvk_Common.feature">
+      <FeatureId>{df9cffbb-0808-45f3-b201-1493de161498}</FeatureId>
     </None>
     <None Include="Features\gs_mvk_IssueLists\gs_mvk_IssueLists.feature">
       <FeatureId>{c470a36e-168f-4914-9d83-4a1acbda8a5d}</FeatureId>
@@ -264,6 +267,9 @@
     <Content Include="Features\gs_mvk_Assignment\gs_mvk_Assignment.Template.xml">
       <DependentUpon>gs_mvk_Assignment.feature</DependentUpon>
     </Content>
+    <Content Include="Features\gs_mvk_Common\gs_mvk_Common.Template.xml">
+      <DependentUpon>gs_mvk_Common.feature</DependentUpon>
+    </Content>
     <Content Include="Features\gs_mvk_IssueLists\gs_mvk_IssueLists.Template.xml">
       <DependentUpon>gs_mvk_IssueLists.feature</DependentUpon>
     </Content>
@@ -330,6 +336,7 @@
     <Content Include="ListInstances\MeetingMVKList\Elements.xml" />
     <Content Include="Template\Images\gs_mvk\FeatureIcon_Assignment.gif" />
     <Content Include="Template\Images\gs_mvk\FeatureIcon_AssignmentLists.gif" />
+    <Content Include="Template\Images\gs_mvk\FeatureIcon_Common.gif" />
     <Content Include="Template\Images\gs_mvk\FeatureIcon_Issue.gif" />
     <Content Include="Template\Images\gs_mvk\FeatureIcon_IssueLists.gif" />
     <Content Include="Template\Images\gs_mvk\FeatureIcon_Meeting.gif" />
@@ -405,8 +412,20 @@
     <Content Include="Features\gs_mvk_AssignmentLists\Resources.ru-RU.resx" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AssignmentListsStrings\AssignmentListsStrings.resx" />
-    <EmbeddedResource Include="AssignmentListsStrings\AssignmentListsStrings.ru-RU.resx" />
+    <Content Include="AssignmentListsStrings\AssignmentListsStrings.resx" />
+    <Content Include="AssignmentListsStrings\AssignmentListsStrings.ru-RU.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{e0922397-59a0-468c-a22e-6e69448cc35c}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\gs_mvk_Common\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\gs_mvk_Common\Resources.ru-RU.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

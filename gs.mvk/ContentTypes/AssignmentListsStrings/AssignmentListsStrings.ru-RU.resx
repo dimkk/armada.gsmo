@@ -123,7 +123,16 @@
   <data name="AssignmentDependentAssignmentDispName" xml:space="preserve">
     <value>Зависимое поручение</value>
   </data>
+  <data name="ContentTypeNotFoundFmtErr" xml:space="preserve">
+    <value>Не удается найти тип содержимого {0}</value>
+  </data>
+  <data name="ListNotFoundFmtErr" xml:space="preserve">
+    <value>Список {0} не найден. Развернуть lookup поле невозможно. Веб: {1}</value>
+  </data>
   <data name="MVKColumnsGroup" xml:space="preserve">
     <value>Группа столбцов МВК</value>
+  </data>
+  <data name="SiteColumnAddFmtErr" xml:space="preserve">
+    <value>Не удалось добавить столбец {0}</value>
   </data>
 </root>
