@@ -123,6 +123,12 @@
   <data name="AssignmentDependentAssignmentDispName" xml:space="preserve">
     <value>Dependent Assignment</value>
   </data>
+  <data name="AssignmentLastReportMVKDescr" xml:space="preserve">
+    <value>MVK Assignment latest report</value>
+  </data>
+  <data name="AssignmentLastReportMVKDispName" xml:space="preserve">
+    <value>Latest Report</value>
+  </data>
   <data name="ContentTypeNotFoundFmtErr" xml:space="preserve">
     <value>Content type {0} could not be found</value>
   </data>

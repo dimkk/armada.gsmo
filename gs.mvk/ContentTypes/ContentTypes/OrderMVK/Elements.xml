@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<!--
+    ************************************************************************
+       Application: gs.mvk
+      Created date: 2014-05-29 14:56:08Z
+        Created by: SPDEV\developer
+              Name: OrderMVK
+       Description: OrderMVK Description
+           History: Initial Version 0
+    ************************************************************************
+    -->
+	<!-- Parent ContentType Item -->
+	<ContentType
+		ID="0x0100ED5F7CB6A1DD4E8D9D5163520BDDD6D0"
+		Name="OrderMVK"
+		Description="$Resources:OrderMVKContentTypeDescr"
+		Group="$Resources:MVKContentTypesGroupName"
+		Version="0"
+		Inherits="TRUE"
+    Overwrite="TRUE">
+		<FieldRefs>
+			<FieldRef
+				ID="{C688C8D7-A882-46B2-B1EC-F4FEF09B6050}"
+				Name="OrderBuilderMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{60EDC85E-4536-41E0-B0B8-BE7CB0527311}"
+				Name="OrderObjectMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{83922187-9A56-44DA-B023-EEBE47EA0C30}"
+				Name="OrderOrgAuthorMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{00BEAF01-F97E-402F-9338-4AE1DA752289}"
+				Name="OrderTextMVK"
+				Required="FALSE" />
+		</FieldRefs>
+	</ContentType>
+</Elements>

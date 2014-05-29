@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:OrderBuilderMVKDispName"
+		ID="{C688C8D7-A882-46B2-B1EC-F4FEF09B6050}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="OrderBuilderMVK"
+		Name="OrderBuilderMVK"
+		Type="Lookup"
+		List="Lists/builder"
+		ShowField="LinkTitle"
+		Mult="False"
+		UnlimitedLengthInDocumentLibrary="False"
+		Description="$Resources:OrderBuilderMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

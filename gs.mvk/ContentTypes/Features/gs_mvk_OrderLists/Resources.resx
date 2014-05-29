@@ -117,28 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AssignmentDependentAssignmentDescr" xml:space="preserve">
-    <value>Ссылка на зависимое поручение МВК</value>
+  <data name="FeatureDescription" xml:space="preserve">
+    <value>Lists for MVK order</value>
   </data>
-  <data name="AssignmentDependentAssignmentDispName" xml:space="preserve">
-    <value>Зависимое поручение</value>
+  <data name="FeatureTitle" xml:space="preserve">
+    <value>Lists for MVK order</value>
   </data>
-  <data name="AssignmentLastReportMVKDescr" xml:space="preserve">
-    <value>Ссылка на последний отчет для поручения МВК</value>
+  <data name="OrderMVKListDescr" xml:space="preserve">
+    <value>MVK order list</value>
   </data>
-  <data name="AssignmentLastReportMVKDispName" xml:space="preserve">
-    <value>Последний отчет</value>
-  </data>
-  <data name="ContentTypeNotFoundFmtErr" xml:space="preserve">
-    <value>Не удается найти тип содержимого {0}</value>
-  </data>
-  <data name="ListNotFoundFmtErr" xml:space="preserve">
-    <value>Список {0} не найден. Развернуть lookup поле невозможно. Веб: {1}</value>
-  </data>
-  <data name="MVKColumnsGroup" xml:space="preserve">
-    <value>Группа столбцов МВК</value>
-  </data>
-  <data name="SiteColumnAddFmtErr" xml:space="preserve">
-    <value>Не удалось добавить столбец {0}</value>
+  <data name="OrderMVKListTitle" xml:space="preserve">
+    <value>MVK order</value>
   </data>
 </root>
