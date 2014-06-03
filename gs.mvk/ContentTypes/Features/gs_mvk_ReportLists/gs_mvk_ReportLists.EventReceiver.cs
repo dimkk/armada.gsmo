@@ -108,6 +108,8 @@ namespace gs.mvk.ContentTypes.Features.gs_mvk_ReportLists
                         }
                     }
                 }
+
+                web.Dispose();
             }
         }
 
@@ -124,6 +126,7 @@ namespace gs.mvk.ContentTypes.Features.gs_mvk_ReportLists
             {
                 var cName = SPUtility.GetLocalizedString(resReportDispNameToken, resFileRelative, web.Language);
                 Utility.RemoveSiteColumn(web, cName);
+                web.Dispose();
             }
         }
 
