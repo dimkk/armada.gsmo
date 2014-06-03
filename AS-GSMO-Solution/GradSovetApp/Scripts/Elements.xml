@@ -31,5 +31,12 @@
     <File Path="Scripts\moment-datepicker.min.js.map" Url="Scripts/moment-datepicker.min.js.map" ReplaceContent="TRUE" />
     <File Path="Scripts\searchQuestionModel.js" Url="Scripts/searchQuestionModel.js" ReplaceContent="TRUE" />
     <File Path="Scripts\jquery.linq.min.js" Url="Scripts/jquery.linq.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment-with-langs.min.js.map" Url="Scripts/moment-with-langs.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\moment.min.js.map" Url="Scripts/moment.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\typeahead.min.js.map" Url="Scripts/typeahead.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-ui-1.10.3.min.js.map" Url="Scripts/jquery-ui-1.10.3.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.js.map" Url="Scripts/jquery-1.9.1.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.min.js.map" Url="Scripts/bootstrap.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-2.0.3.min.js.map" Url="Scripts/jquery-2.0.3.min.js.map" ReplaceContent="TRUE" />
   </Module>
 </Elements>

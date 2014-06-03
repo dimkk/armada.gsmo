@@ -33,5 +33,12 @@
     <ProjectItemFile Source="moment-datepicker.min.js.map" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="searchQuestionModel.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="jquery.linq.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment-with-langs.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="typeahead.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-ui-1.10.3.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.9.1.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="bootstrap.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-2.0.3.min.js.map" Target="Scripts\" Type="ElementFile" />
   </Files>
 </ProjectItem>
