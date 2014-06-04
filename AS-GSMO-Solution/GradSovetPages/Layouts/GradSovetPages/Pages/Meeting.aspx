@@ -53,6 +53,11 @@
         };
 
     </script>
+    <style>
+        input:disabled, select:disabled {
+            color: #000;
+        }
+    </style>
 </asp:Content>
 
 <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -71,40 +76,30 @@
             <div id="tab-common" class="tab-pane fade active in">
                 <div class="form-horizontal" role="form">
                     <div class="form-group topspace">
-                        <label for="inputNumber" class="col-lg-1 control-label">Номер</label>
-                        <div class="col-lg-3">
-                            <input data-bind="value: meeting().MeetingNumber, enable: editEnabled" type="text" class="form-control" id="inputNumber" placeholder="Номер заседания">
-                        </div>
-                        <label for="inputDate" class="col-lg-2 control-label">Дата проведения</label>
                         <div class="col-lg-2">
-                            <input data-bind="datepicker: meeting().MeetingDate, datepickerOptions: { dataType: 'format', format: 'DD/MM/YYYY', autoHide: true, weekStart: 1 }, enable: editEnabled" type='text' class="form-control" placeholder="Дата заседания" id="inputDate" />
+                            <label style="font-weight: normal">Дата проведения:</label>
+                            <label data-bind="text: meeting().MeetingDate"></label>
+<%--                            <label data-bind="text: meeting().MeetingDate" id="inputDate" class="col-lg-2 control-label">Дата проведения</label>
+                            <input data-bind="datepicker: meeting().MeetingDate, datepickerOptions: { dataType: 'format', format: 'DD/MM/YYYY HH:mm', autoHide: true, weekStart: 1 }, enable: editEnabled" type='text' class="form-control" placeholder="Дата заседания" id="inputDate" />--%>
                         </div>
-                        <label for="inputStatus" class="col-lg-1 control-label">Статус</label>
-                        <div class="col-lg-3">
-                            <select id="inputStatus" class="form-control" placeholder="Выберите значение" data-bind="
-    options: $root.availableMeetingStatuses,
-    optionsText: 'name',
-    optionsValue: 'name',
-    value: meeting().MeetingStatus,
-    enable: editEnabled">
-                            </select>
+                        <div class="col-lg-5">
+                            <label style="font-weight: normal">Место проведения:</label>
+                            <label data-bind="text: meeting().MeetingPlace"></label>
+<%--                            <label for="inputPlace" class="col-lg-2 control-label">Место проведения</label>
+                            <input data-bind="value: meeting().MeetingPlace, enable: editEnabled" type="text" class="form-control" id="inputPlace" placeholder="Укажите место проведения заседания">--%>
                         </div>
+<%--                        <div class="col-lg-2">
+                            <button data-bind="click: showPlaceOnMap" class="btn btn-default">Показать на карте</button>
+                        </div>--%>
                     </div>
                     <div class="form-group">
-                        <label for="inputPlace" class="col-lg-2 control-label">Место проведения</label>
-                        <div class="col-lg-8">
-                            <input data-bind="value: meeting().MeetingPlace, enable: editEnabled" type="text" class="form-control" id="inputPlace" placeholder="Укажите место проведения заседания">
-                        </div>
-                        <div class="col-lg-2">
-                            <button data-bind="click: showPlaceOnMap" class="btn btn-default">Показать на карте</button>
-                        </div>
                     </div>
-                    <div class="form-group" data-bind="style: { display: scanAttach().FileUrl() == '' ? 'block' : 'none' }">
+<%--                    <div class="form-group" data-bind="style: { display: scanAttach().FileUrl() == '' ? 'block' : 'none' }">
                         <label for="meetingScanAttach" class="col-lg-2 control-label">Электронная версия протокола</label>
                         <div class="col-lg-10">
                             <input data-bind="text: scanAttach().FilePath, event: { change: function (data, event) { scanAttach().selectedFile($element, data, event) } }, enable: editEnabled" id="meetingScanAttach" class="form-control" type='file' placeholder="Укажите файл протокола" />
                         </div>
-                    </div>
+                    </div>--%>
                     <div class="form-group" data-bind="style: { display: scanAttach().FileUrl() != '' ? 'block' : 'none' }">
                         <label class="col-lg-2 control-label">Электронная версия протокола</label>
                         <div class="col-lg-10">
@@ -260,6 +255,22 @@
             </div>-->
             <div id="tab-additional" class="tab-pane fade">
                 <div class="form-horizontal" role="form">
+                    <div class="form-group topspace">
+                        <label for="inputNumber" class="col-lg-2 control-label">Номер</label>
+                        <div class="col-lg-3">
+                            <input data-bind="value: meeting().MeetingNumber, enable: editEnabled" type="text" class="form-control" id="inputNumber" placeholder="Номер заседания">
+                        </div>
+                        <label for="inputStatus" class="col-lg-2 control-label">Статус</label>
+                        <div class="col-lg-3">
+                            <select id="inputStatus" class="form-control" placeholder="Выберите значение" data-bind="
+    options: $root.availableMeetingStatuses,
+    optionsText: 'name',
+    optionsValue: 'name',
+    value: meeting().MeetingStatus,
+    enable: editEnabled">
+                            </select>
+                        </div>
+                    </div>
                     <div class="form-group topspace">
                         <label for="ChairManFullNameLinkValue" class="col-lg-2 control-label">Председатель</label>
                         <div class="col-lg-8">
@@ -951,5 +962,4 @@
 </asp:Content>
 
 <asp:Content ID="PageTitleInTitleArea" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server" >
-Градостроительный Совет Московской области
 </asp:Content>
