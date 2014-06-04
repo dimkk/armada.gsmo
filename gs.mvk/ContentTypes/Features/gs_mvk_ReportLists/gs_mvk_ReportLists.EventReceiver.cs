@@ -84,7 +84,8 @@ namespace gs.mvk.ContentTypes.Features.gs_mvk_ReportLists
             if (site == null)
                 throw new Exception("Feature must be activated at site collection level");
 
-            foreach (SPWeb web in site.AllWebs)
+            SPWeb web = site.RootWeb;
+            if (web != null)
             {
                 var gName = SPUtility.GetLocalizedString(resColGroupToken, resFileRelative, web.Language);
                 var cName = SPUtility.GetLocalizedString(resReportDispNameToken, resFileRelative, web.Language);
@@ -122,7 +123,8 @@ namespace gs.mvk.ContentTypes.Features.gs_mvk_ReportLists
             if (site == null)
                 throw new Exception("Feature must be activated at site collection level");
 
-            foreach (SPWeb web in site.AllWebs)
+            SPWeb web = site.RootWeb;
+            if (web != null)
             {
                 var cName = SPUtility.GetLocalizedString(resReportDispNameToken, resFileRelative, web.Language);
                 Utility.RemoveSiteColumn(web, cName);
