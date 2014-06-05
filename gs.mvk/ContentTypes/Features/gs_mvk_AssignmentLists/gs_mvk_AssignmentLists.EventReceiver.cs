@@ -32,7 +32,16 @@ namespace gs.mvk.ContentTypes.Features.gs_mvk_AssignmentLists
 
         public override void FeatureActivated(SPFeatureReceiverProperties properties)
         {
+<<<<<<< HEAD
             using (SPSite site = (SPSite)properties.Feature.Parent)
+=======
+            SPSite site = (SPSite)properties.Feature.Parent;
+            if (site == null)
+                throw new Exception("Feature must be activated at site collection level");
+
+            SPWeb web = site.RootWeb;
+            if (web != null)
+>>>>>>> 6734b84e4faa4a6e1cddc9e4e0ff25a57c05869f
             {
                 if (site == null)
                     throw new Exception("Feature must be activated at site collection level");
@@ -43,7 +52,16 @@ namespace gs.mvk.ContentTypes.Features.gs_mvk_AssignmentLists
 
         public override void FeatureDeactivating(SPFeatureReceiverProperties properties)
         {
+<<<<<<< HEAD
             using (SPSite site = (SPSite)properties.Feature.Parent)
+=======
+            SPSite site = (SPSite)properties.Feature.Parent;
+            if (site == null)
+                throw new Exception("Feature must be activated at site collection level");
+
+            SPWeb web = site.RootWeb;
+            if (web != null)
+>>>>>>> 6734b84e4faa4a6e1cddc9e4e0ff25a57c05869f
             {
                 if (site == null)
                     throw new Exception("Feature must be activated at site collection level");
