@@ -234,4 +234,10 @@
   <data name="MVKContentTypesGroupName" xml:space="preserve">
     <value>MVK Content types group</value>
   </data>
+  <data name="IssueOrderMVKLinkDescr" xml:space="preserve">
+    <value>MVK order link</value>
+  </data>
+  <data name="IssueOrderMVKLinkDisplayName" xml:space="preserve">
+    <value>Order</value>
+  </data>
 </root>

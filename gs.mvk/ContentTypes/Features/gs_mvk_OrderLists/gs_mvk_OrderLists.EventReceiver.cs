@@ -3,7 +3,7 @@ using Microsoft.SharePoint;
 using System;
 using System.Runtime.InteropServices;
 
-namespace gs.mvk.ContentTypes.Features.gs_mvk_ReportLists
+namespace gs.mvk.ContentTypes.Features.gs_mvk_OrderLists
 {
     /// <summary>
     /// This class handles events raised during feature activation, deactivation, installation, uninstallation, and upgrade.
@@ -12,24 +12,24 @@ namespace gs.mvk.ContentTypes.Features.gs_mvk_ReportLists
     /// The GUID attached to this class may be used during packaging and should not be modified.
     /// </remarks>
 
-    [Guid("d04a7f88-10cd-4b5a-81f4-312c59c08b90")]
-    public class gs_mvk_ReportListsEventReceiver : SPFeatureReceiver
+    [Guid("62809e42-2eb4-43cf-9d18-420e6b99abce")]
+    public class gs_mvk_OrderListsEventReceiver : SPFeatureReceiver
     {
         #region Constants
 
-        private readonly string fieldContentTypeName        = "AssignmentMVK";
-        private readonly string fieldGuid                   = "{0EC1DABE-3F49-4FBA-BA0C-6C11779C758B}";
-        private readonly string fieldName                   = "AssignmentLastReportMVK";
+        private readonly string fieldContentTypeName        = "IssueMVK";
+        private readonly string fieldGuid                   = "{A507DB3A-FEDE-43DB-A276-FC636F612316}";
+        private readonly string fieldName                   = "IssueOrderMVKLink";
 
         private readonly string fieldGroupNameRes           = "$Resources:MVKColumnsGroup";
-        private readonly string fieldDisplayNameRes         = "$Resources:AssignmentLastReportMVKDispName";
-        private readonly string fieldDescriptionRes         = "$Resources:AssignmentLastReportMVKDescr";
-
-        private readonly string targetShowFieldName         = "ID";
-        private readonly string targetLookupListRelativeUrl = "/Lists/ReportMVKList";
+        private readonly string fieldDisplayNameRes         = "$Resources:IssueOrderMVKLinkDisplayName";
+        private readonly string fieldDescriptionRes         = "$Resources:IssueOrderMVKLinkDescr";
+        
+        private readonly string targetShowFieldName         = "Title";
+        private readonly string targetLookupListRelativeUrl = "/Lists/OrderMVKList";
 
         #endregion
-
+        
         public override void FeatureActivated(SPFeatureReceiverProperties properties)
         {
             using (SPSite site = (SPSite)properties.Feature.Parent)

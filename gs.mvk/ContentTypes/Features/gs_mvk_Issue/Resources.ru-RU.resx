@@ -234,4 +234,10 @@
   <data name="MVKContentTypesGroupName" xml:space="preserve">
     <value>Типы содержимого МВК ГС</value>
   </data>
+  <data name="IssueOrderMVKLinkDescr" xml:space="preserve">
+    <value>Ссылка на заявку МВК</value>
+  </data>
+  <data name="IssueOrderMVKLinkDisplayName" xml:space="preserve">
+    <value>Заявка</value>
+  </data>
 </root>

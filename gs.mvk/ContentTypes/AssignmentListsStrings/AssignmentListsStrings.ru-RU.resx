@@ -130,15 +130,24 @@
     <value>Последний отчет</value>
   </data>
   <data name="ContentTypeNotFoundFmtErr" xml:space="preserve">
-    <value>Не удается найти тип содержимого {0}</value>
+    <value>Не удается найти тип содержимого '{0}'</value>
+  </data>
+  <data name="IssueOrderMVKLinkDescr" xml:space="preserve">
+    <value>Ссылка на заявку МВК</value>
+  </data>
+  <data name="IssueOrderMVKLinkDisplayName" xml:space="preserve">
+    <value>Заявка</value>
   </data>
   <data name="ListNotFoundFmtErr" xml:space="preserve">
-    <value>Список {0} не найден. Развернуть lookup поле невозможно. Веб: {1}</value>
+    <value>Список '{0}' не найден. Развернуть lookup поле невозможно. Веб: '{1}'</value>
   </data>
   <data name="MVKColumnsGroup" xml:space="preserve">
     <value>Группа столбцов МВК</value>
   </data>
+  <data name="RemovedSiteColumnNotFoundFmtErr" xml:space="preserve">
+    <value>Столбец '{0}' не найден и поэтому не может быть удален</value>
+  </data>
   <data name="SiteColumnAddFmtErr" xml:space="preserve">
-    <value>Не удалось добавить столбец {0}</value>
+    <value>Не удалось добавить столбец '{0}'</value>
   </data>
 </root>

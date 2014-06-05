@@ -130,15 +130,24 @@
     <value>Latest Report</value>
   </data>
   <data name="ContentTypeNotFoundFmtErr" xml:space="preserve">
-    <value>Content type {0} could not be found</value>
+    <value>Content type '{0}' could not be found</value>
+  </data>
+  <data name="IssueOrderMVKLinkDescr" xml:space="preserve">
+    <value>MVK Issue Order</value>
+  </data>
+  <data name="IssueOrderMVKLinkDisplayName" xml:space="preserve">
+    <value>Issue Order</value>
   </data>
   <data name="ListNotFoundFmtErr" xml:space="preserve">
-    <value>List {0} not found for lookup field to be deployed. Web: {1}</value>
+    <value>List '{0}' not found for lookup field to be deployed. Web: '{1}'</value>
   </data>
   <data name="MVKColumnsGroup" xml:space="preserve">
     <value>gs.mvk Columns</value>
   </data>
+  <data name="RemovedSiteColumnNotFoundFmtErr" xml:space="preserve">
+    <value>Site column '{0}' not found and thus cannot be removed</value>
+  </data>
   <data name="SiteColumnAddFmtErr" xml:space="preserve">
-    <value>Unable to add site column {0}</value>
+    <value>Unable to add site column '{0}'</value>
   </data>
 </root>
