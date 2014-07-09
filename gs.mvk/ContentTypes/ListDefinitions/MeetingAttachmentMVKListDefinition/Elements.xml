@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListTemplate
+		Name="MeetingAttachmentMVKListDefinition"
+		DisplayName="$Resources:ListDefinitionDisplayName"
+		Description="$Resources:ListDefinitionDescription"
+		Type="10055"
+		BaseType="0"
+		Default="FALSE"
+		OnQuickLaunch="FALSE"
+		Category="Custom Lists"
+		DisableAttachments="FALSE"
+		DisallowContentTypes="FALSE"
+		VersioningEnabled="FALSE"
+		FolderCreation="FALSE"
+		EnableModeration="False"
+		SecurityBits="11"
+		Sequence="1000"
+		Image="/_layouts/15/images/itgen.png"
+		Hidden="FALSE"
+		HiddenList="FALSE"/>
+</Elements>

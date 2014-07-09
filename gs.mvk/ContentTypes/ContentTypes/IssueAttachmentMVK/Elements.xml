@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<!--
+    ************************************************************************
+       Application: gs.mvk
+      Created date: 2014-07-01 14:45:48Z
+        Created by: SPDEV\achernikov
+              Name: IssueAttachmentMVK
+       Description: $Resources:IssueAttachmentMVKContentTypeDescription
+           History: Initial Version 0
+    ************************************************************************
+    -->
+	<!-- Parent ContentType Item -->
+	<ContentType
+		Name       ="IssueAttachmentMVK"
+		Group      ="$Resources:ContentTypeGroup"
+		Description="$Resources:ContentTypeDescription"
+		ID         ="0x0120D520002E09C03AA458425D969069CD2946780D"
+		Version    ="0"
+		Inherits   ="TRUE"
+    Overwrite  ="TRUE">
+		<FieldRefs>
+			<FieldRef
+				ID="{38C8DE07-2FE7-424D-9EE7-5FB887AEECF1}"
+				Name="IssueAttachmentIssueMVK"
+				Required="FALSE" />
+		</FieldRefs>
+	</ContentType>
+</Elements>

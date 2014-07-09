@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Name                            ="MeetingAttachmentDescriptionMVK"
+		StaticName                      ="MeetingAttachmentDescriptionMVK"
+		Group                           ="$Resources:ColumnsGroup"
+		DisplayName                     ="$Resources:MeetingAttachmentDescriptionMVKDisplayName"
+		Description                     ="$Resources:MeetingAttachmentDescriptionMVKDescription"
+		ID                              ="{6105AB61-5E4C-4561-A323-D31440C1EF2F}"
+		SourceID                        ="http://schemas.microsoft.com/sharepoint/v3"
+		Type                            ="Note"
+		Sortable                        ="FALSE"
+		NumLines                        ="7"
+		Required                        ="FALSE"
+		AppendOnly                      ="FALSE"
+		UnlimitedLengthInDocumentLibrary="FALSE"
+		RichText                        ="FALSE"
+    Overwrite                       ="TRUE"
+    AllowDeletion                   ="FALSE"/>
+</Elements>

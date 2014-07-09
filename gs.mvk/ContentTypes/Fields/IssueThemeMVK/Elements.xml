@@ -10,7 +10,7 @@
 		Name="IssueThemeMVK"
 		Type="Note"
 		Sortable="FALSE"
-		NumLines="6"
+		NumLines="3"
 		Required="TRUE"
     AppendOnly="FALSE"
 		UnlimitedLengthInDocumentLibrary="FALSE"

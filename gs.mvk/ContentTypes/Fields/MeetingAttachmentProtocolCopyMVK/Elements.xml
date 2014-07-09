@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Name       ="MeetingAttachmentProtocolCopyMVK"
+		StaticName ="MeetingAttachmentProtocolCopyMVK"
+		Group      ="$Resources:ColumnsGroup"
+		DisplayName="$Resources:MeetingAttachmentProtocolCopyMVKDisplayName"
+		Description="$Resources:MeetingAttachmentProtocolCopyMVKDescription"
+		ID         ="{154F8D91-1D78-406F-A013-B569B7BBC728}"
+		SourceID   ="http://schemas.microsoft.com/sharepoint/v3"
+		Type       ="Boolean">
+		<Default>1</Default>
+	</Field>
+</Elements>

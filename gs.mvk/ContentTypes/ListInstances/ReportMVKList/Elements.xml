@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<ListInstance
+  <ListInstance
 		Title="$Resources:ReportMVKListTitle"
 		Description="$Resources:ReportMVKListDescr"
 		FeatureId="7f02c13e-0e25-4567-b949-bf234bac5fbb"
@@ -10,5 +10,22 @@
 		OnQuickLaunch="TRUE"
 		QuickLaunchUrl="Lists/ReportMVKList/AllItems.aspx"
 		RootWebOnly="FALSE"
-		TemplateType="10053" />
+		TemplateType="10053">
+      <Data>
+        <Rows>
+          <Row>
+            <Field Name="Title">Отчет по поручению МВК 1</Field>
+            <Field Name="ReportAssignmentMVK">1</Field>
+            <Field Name="ReportDateMVK">2014-07-15 15:30:00</Field>
+            <Field Name="ReportDecisionMVK">1</Field>
+            <Field Name="ReportExpectedDateMVK">2014-07-16 16:30:00</Field>
+            <Field Name="ReportInfoMVK">Информация "Отчет по поручению МВК 1"</Field>
+            <Field Name="ReportNewDeadlineMVK">2014-07-17 17:30:00</Field>
+            <Field Name="ReportRequestDateMVK">2014-07-14 14:30:00</Field>
+            <Field Name="ReportResolutionCommentMVK">Комментарий к резолюции "Отчет по поручению МВК 1"</Field>
+            <Field Name="ReportTextMVK">Текст "Отчет по поручению МВК 1"</Field>
+          </Row>
+        </Rows>
+      </Data>
+  </ListInstance>
 </Elements>

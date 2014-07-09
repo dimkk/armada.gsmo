@@ -17,7 +17,7 @@
 		EnableModeration="False"
 		SecurityBits="11"
 		Sequence="1000"
-		Image="/_layouts/15/images/gs_mvk/ListIcon_OrderMVKListDefinition.gif"
+		Image="/_layouts/15/images/itgen.png"
 		Hidden="FALSE"
 		HiddenList="FALSE" />
 </Elements>

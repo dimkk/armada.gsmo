@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<ListInstance
+  <ListInstance
 		Title="$Resources:OrderMVKListTitle"
 		Description="$Resources:OrderMVKListDescr"
 		FeatureId="94766263-2791-44e8-8da4-992a88ea78b5"
@@ -10,5 +10,17 @@
 		OnQuickLaunch="TRUE"
 		QuickLaunchUrl="Lists/OrderMVKList/AllItems.aspx"
 		RootWebOnly="FALSE"
-		TemplateType="10054" />
+		TemplateType="10054">
+      <Data>
+        <Rows>
+          <Row>
+            <Field Name="Title">Заявка МВК 1</Field>
+            <Field Name="OrderBuilderMVK">1</Field>
+            <Field Name="OrderObjectMVK">1</Field>
+            <Field Name="OrderOrgAuthorMVK">1</Field>
+            <Field Name="OrderTextMVK">Текст "Заявка МВК 1"</Field>
+          </Row>
+        </Rows>
+      </Data>
+  </ListInstance>
 </Elements>

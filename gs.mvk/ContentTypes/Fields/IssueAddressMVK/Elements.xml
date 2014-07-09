@@ -10,7 +10,7 @@
 		Name="IssueAddressMVK"
 		Type="Note"
 		Sortable="FALSE"
-		NumLines="6"
+		NumLines="2"
 		Required="FALSE"
 		AppendOnly="FALSE"
 		UnlimitedLengthInDocumentLibrary="FALSE"

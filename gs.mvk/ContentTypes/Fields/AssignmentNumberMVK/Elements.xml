@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Group="$Resources:MVKColumnsGroup"
+		DisplayName="$Resources:AssignmentNumberMVKDisplayName"
+		ID="{AC2E6091-A9D4-46E2-A374-DAA8DD21BA92}"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="AssignmentNumberMVK"
+		Name="AssignmentNumberMVK"
+		Type="Text"
+		Required="TRUE"
+		MaxLength="255"
+		Description="$Resources:AssignmentNumberMVKDescr"
+    Overwrite="TRUE"
+    AllowDeletion="FALSE"></Field>
+</Elements>

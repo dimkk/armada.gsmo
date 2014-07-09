@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field  Name          ="MeetingDateNumberMVK"
+          StaticName    ="MeetingDateNumberMVK"
+          Group         ="$Resources:MVKColumnsGroup"
+          DisplayName   ="$Resources:MeetingDateNumberMVKDisplayName"
+          Description   ="$Resources:MeetingDateNumberMVKDescription"
+          ID            ="{E26DBF4A-4FE0-4657-8045-1E5DCB3A5F07}"
+          SourceID      ="http://schemas.microsoft.com/sharepoint/v3"
+          Type          ="Calculated"
+          ResultType    ="Text"
+          ReadOnly      ="TRUE"
+          Overwrite     ="TRUE"
+          AllowDeletion ="FALSE">
+    <Formula>=CONCATENATE(TEXT([MeetingDateMVK],"dd.mm.yyyy")," №",[MeetingNumberMVK])</Formula>
+    <FieldRefs>
+      <FieldRef Name="MeetingDateMVK" />
+      <FieldRef Name="MeetingNumberMVK" />
+    </FieldRefs>
+  </Field>
+</Elements>

@@ -18,7 +18,7 @@
 		Description="$Resources:MeetingMVKContentTypeDescr"
 		Group="$Resources:MVKContentTypesGroupName"
 		Version="0"
-		Inherits="TRUE"
+		Inherits="False"
     Overwrite="TRUE">
 		<FieldRefs>
 			<FieldRef
@@ -42,5 +42,19 @@
 				Name="MeetingStatusMVK"
 				Required="FALSE" />
 		</FieldRefs>
+    <XmlDocuments>
+      <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+        <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+          <Display>ListForm</Display>
+          <Edit>ListForm</Edit>
+          <New>ListForm</New>
+        </FormTemplates>
+      </XmlDocument>
+      <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+        <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+          <Display>_layouts/15/gradsovetpages/Pages/MeetingMVK.aspx</Display>
+        </FormUrls>
+      </XmlDocument>
+    </XmlDocuments>
 	</ContentType>
 </Elements>

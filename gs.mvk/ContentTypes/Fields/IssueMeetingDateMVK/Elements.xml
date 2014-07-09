@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Name                            ="IssueMeetingDateMVK"
+		StaticName                      ="IssueMeetingDateMVK"
+		Group                           ="$Resources:MVKColumnsGroup"
+		DisplayName                     ="$Resources:IssueMeetingDateMVKDisplayName"
+		Description                     ="$Resources:IssueMeetingDateMVKDescription"
+    FieldRef                        ="C3228089-51FE-4EDF-93A1-E219AE6362D7"
+		ID                              ="{B12522CB-D16E-4CAB-A8A2-54487A29973B}"
+		SourceID                        ="http://schemas.microsoft.com/sharepoint/v3"
+		Type                            ="Lookup"
+		List                            ="Lists/MeetingMVKList"
+		ShowField                       ="MeetingDateMVK"
+		UnlimitedLengthInDocumentLibrary="False"
+    ReadOnly                        ="TRUE"
+    Overwrite                       ="TRUE"
+    AllowDeletion                   ="FALSE"/>
+</Elements>

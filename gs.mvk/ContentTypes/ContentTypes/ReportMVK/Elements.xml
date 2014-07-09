@@ -47,7 +47,7 @@
 				Required="FALSE" />
 			<FieldRef
 				ID="{F3A137E9-5B1E-498B-BF07-2809FCA85DDD}"
-				Name="ReportRequestDateTime"
+				Name="ReportRequestDateMVK"
 				Required="FALSE" />
 			<FieldRef
 				ID="{9F38AC8C-B2CF-4103-A835-5122C8C52CEF}"

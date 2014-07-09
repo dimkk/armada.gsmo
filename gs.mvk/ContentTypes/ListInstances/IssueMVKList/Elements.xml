@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<ListInstance
+  <ListInstance
 		Title="$Resources:IssueMVKListTitle"
 		Description="$Resources:IssueMVKListDescr"
 		FeatureId="37b069fa-ffde-4e70-ad38-54f0f78b807e"
@@ -10,5 +10,30 @@
 		OnQuickLaunch="TRUE"
 		QuickLaunchUrl="Lists/IssueMVKList/AllItems.aspx"
 		RootWebOnly="FALSE"
-		TemplateType="10051" />
+		TemplateType="10051">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Вопрос повестки заседания МВК 1</Field>
+          <Field Name="IssueDescriptionMVK">Описание "Вопрос повестки заседания МВК 1"</Field>
+          <Field Name="IssueInvestorMVK">Инвестор "Вопрос повестки заседания МВК 1"</Field>
+          <Field Name="IssueCadastreIdMVK">Кадастровый номер "Вопрос повестки заседания МВК 1"</Field>
+          <Field Name="IssueDecisionMVK">Решение "Вопрос повестки заседания МВК 1"</Field>
+          <Field Name="IssueAddressMVK">Адрес "Вопрос повестки заседания МВК 1"</Field>
+          <Field Name="IssueThemeMVK">Тема "Вопрос повестки заседания МВК 1"</Field>
+          <Field Name="IssueNumberMVK">1</Field>
+          <Field Name="IssueSubnumberMVK">2</Field>
+          <Field Name="IssueInfoMVK">Информация "Вопрос повестки заседания МВК 1"</Field>
+          <Field Name="IssueCategoryMVK">1</Field>
+          <Field Name="IssueCoReportersMVK">1</Field>
+          <Field Name="IssueDecisionTypeMVK">1</Field>
+          <Field Name="IssueMeetingMVK">1</Field>
+          <Field Name="IssueMunicipalDistrictMVK">1</Field>
+          <Field Name="IssueReporterMVK">1</Field>
+          <Field Name="IssueSettlementMVK">1</Field>
+          <Field Name="IssueOrderMVK">1</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
 </Elements>

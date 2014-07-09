@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		Name                            ="MeetingAttachmentDocTypeMVK"
+		StaticName                      ="MeetingAttachmentDocTypeMVK"
+		Group                           ="$Resources:ColumnsGroup"
+		DisplayName                     ="$Resources:MeetingAttachmentDocTypeMVKDisplayName"
+		Description                     ="$Resources:MeetingAttachmentDocTypeMVKDescription"
+		ID                              ="{181C78E7-4770-4683-AAA2-7F490EED7FFE}"
+		SourceID                        ="http://schemas.microsoft.com/sharepoint/v3"
+		Type                            ="Lookup"
+		List                            ="Lists/DocTypeBookList"
+		ShowField                       ="Title"
+		Mult                            ="False"
+		UnlimitedLengthInDocumentLibrary="False"
+    Overwrite                       ="TRUE"
+    AllowDeletion                   ="FALSE"/>
+</Elements>

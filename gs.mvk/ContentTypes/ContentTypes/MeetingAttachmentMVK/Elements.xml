@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<!--
+    ************************************************************************
+       Application: gs.mvk
+      Created date: 2014-06-30 12:47:27Z
+        Created by: SPDEV\achernikov
+              Name: MeetingAttachmentMVK
+       Description: MeetingAttachmentMVK Description
+           History: Initial Version 0
+    ************************************************************************
+    -->
+	<!-- Parent ContentType Item -->
+	<ContentType
+		Name       ="MeetingAttachmentMVK"
+		Group      ="$Resources:ContentTypeGroup"
+		Description="$Resources:ContentTypeDescription"
+		ID         ="0x01000B0FC5BE72384B6E95B4FF3C32334D41"
+		Version    ="0"
+		Inherits   ="TRUE"
+    Overwrite  ="TRUE">
+		<FieldRefs>
+			<FieldRef
+				ID="{6105AB61-5E4C-4561-A323-D31440C1EF2F}"
+				Name="MeetingAttachmentDescriptionMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{181C78E7-4770-4683-AAA2-7F490EED7FFE}"
+				Name="MeetingAttachmentDocTypeMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{9F034BE1-66BF-4B79-8A80-8AD13A96E475}"
+				Name="MeetingAttachmentMeetingMVK"
+				Required="FALSE" />
+			<FieldRef
+				ID="{154F8D91-1D78-406F-A013-B569B7BBC728}"
+				Name="MeetingAttachmentProtocolCopyMVK"
+				Required="FALSE" />
+		</FieldRefs>
+	</ContentType>
+</Elements>

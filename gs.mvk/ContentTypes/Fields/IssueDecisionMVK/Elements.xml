@@ -10,7 +10,7 @@
 		Name="IssueDecisionMVK"
 		Type="Note"
 		Sortable="FALSE"
-		NumLines="6"
+		NumLines="15"
 		Required="FALSE"
 		AppendOnly="FALSE"
 		UnlimitedLengthInDocumentLibrary="FALSE"

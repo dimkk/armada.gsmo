@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+************************************************************************
+       Company: Armada
+   Application: gs.mvk
+  Created date: 2014-06-30 11:41:08Z
+    Created by: SPDEV\achernikov
+  Feature Name: gs_mvk_MeetingAttachment
+ Feature Title: gs_mvk_MeetingAttachment Title
+   Description: gs_mvk_MeetingAttachment Description
+       History: Initial Version 1.0.0.0 
+************************************************************************
+-->
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests></ElementManifests>
+</Feature>

@@ -31,11 +31,11 @@
 				Required="FALSE" />
 			<FieldRef
 				ID="{5E56D322-EB29-4049-BC62-BC6EA29C5B2C}"
-				Name="IssueCategoryMVKLink"
+				Name="IssueCategoryMVK"
 				Required="FALSE" />
 			<FieldRef
 				ID="{925F3325-7542-4302-8987-EE8803917280}"
-				Name="IssueCoReportesMVK"
+				Name="IssueCoReportersMVK"
 				Required="FALSE" />
 			<FieldRef
 				ID="{68AAAE79-C099-4967-8514-B261F3F445A5}"
@@ -59,15 +59,27 @@
 				Required="FALSE" />
 			<FieldRef
 				ID="{C3228089-51FE-4EDF-93A1-E219AE6362D7}"
-				Name="IssueMeetingMVKLink"
+				Name="IssueMeetingMVK"
 				Required="FALSE" />
 			<FieldRef
+				ID="{2570CBA8-99A7-471D-A6ED-D7C2312469D6}"
+				Name="IssueMeetingNumberMVK"
+				Required="FALSE" />
+      <FieldRef
+				ID="{B12522CB-D16E-4CAB-A8A2-54487A29973B}"
+				Name="IssueMeetingDateMVK"
+				Required="FALSE" />
+      <FieldRef
+				ID="{C1C7B2A2-7F67-4E92-805B-E5D6272F7713}"
+				Name="IssueMeetingDateNumberMVK"
+				Required="FALSE" />
+      <FieldRef
 				ID="{1F90A7A6-EBBA-4688-988C-9E7EAC01678C}"
 				Name="IssueMunicipalDistrictMVK"
 				Required="FALSE" />
 			<FieldRef
 				ID="{CEDAC935-D93F-4F28-84B8-BCC96512B257}"
-				Name="IssueNumber"
+				Name="IssueNumberMVK"
 				Required="FALSE" />
 			<FieldRef
 				ID="{647DFE05-1565-4727-8D73-0C08CF69A4D2}"
@@ -79,12 +91,12 @@
 				Required="FALSE" />
 			<FieldRef
 				ID="{4BEC2AD8-9E51-483C-9386-CE5EDFBE23A7}"
-				Name="IssueSubnumber"
+				Name="IssueSubnumberMVK"
 				Required="FALSE" />
 			<FieldRef
 				ID="{6909EA80-0A1E-442B-9D4B-5F0AA176EB86}"
 				Name="IssueThemeMVK"
 				Required="FALSE" />
-		</FieldRefs>
+    </FieldRefs>
 	</ContentType>
 </Elements>

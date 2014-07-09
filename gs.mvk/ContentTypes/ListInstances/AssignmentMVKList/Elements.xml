@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<ListInstance
+  <ListInstance
 		Title="$Resources:AssignmentMVKListTitle"
 		Description="$Resources:AssignmentMVKListDescr"
 		FeatureId="10ced598-c9fa-4bfe-bf35-120844f63239"
@@ -10,5 +10,33 @@
 		OnQuickLaunch="TRUE"
 		QuickLaunchUrl="Lists/AssignmentMVKList/AllItems.aspx"
 		RootWebOnly="FALSE"
-		TemplateType="10052" />
+		TemplateType="10052">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Поручение МВК 1</Field>
+          <Field Name="AssignmentNumberMVK">Номер "Поручение МВК 1"</Field>
+          <Field Name="AssignmentCoExecutorsMVK">1</Field>
+          <Field Name="AssignmentControllerMVK">1</Field>
+          <Field Name="AssignmentControlStateMVK">1</Field>
+          <Field Name="AssignmentDaysForResolveMVK">1</Field>
+          <Field Name="AssignmentDayTypeMVK">1</Field>
+          <Field Name="AssignmentDependentTermTextMVK">Зависимый срок "Поручение МВК 1"</Field>
+          <Field Name="AssignmentExecutorMVK">1</Field>
+          <Field Name="AssignmentExecutorOrgMVK">1</Field>
+          <Field Name="AssignmentExecutorPositionMVK">1</Field>
+          <Field Name="AssignmentFactDateMVK">2014-07-18 12:30:00</Field>
+          <Field Name="AssignmentIssueMVK">1</Field>
+          <Field Name="AssignmentNoteMVK">Комментарий "Поручение МВК 1"</Field>
+          <Field Name="AssignmentPlanDateMVK">2014-07-13 12:30:00</Field>
+          <Field Name="AssignmentPlanIsDependentMVK">Тип зависимости планируемой даты "Поручение МВК 1"</Field>
+          <Field Name="AssignmentProlongationCountMVK">1</Field>
+          <Field Name="AssignmentResponsibleExecutorMVK">Ответственный исполнитель "Поручение МВК 1"</Field>
+          <Field Name="AssignmentStatusMVK">1</Field>
+          <Field Name="AssignmentTextMVK">Текст "Поручение МВК 1"</Field>
+          <Field Name="AssignmentTypeMVK">1</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
 </Elements>

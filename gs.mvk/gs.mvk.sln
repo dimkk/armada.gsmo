@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationConfiguration", "ApplicationConfiguration", "{8CFEC4DC-9A8A-42EE-860D-8B4D908E43DA}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationConfiguration", 
 		SPSF.targets = SPSF.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentTypes", "ContentTypes\ContentTypes.csproj", "{18BD52FD-BBF9-4730-A35A-B13FE70716A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.MVK.ContentTypes", "ContentTypes\GS.MVK.ContentTypes.csproj", "{18BD52FD-BBF9-4730-A35A-B13FE70716A6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{8DDABF67-B493-4F04-980C-15A61220B38C} = {8DDABF67-B493-4F04-980C-15A61220B38C}
 		{E0922397-59A0-468C-A22E-6E69448CC35C} = {E0922397-59A0-468C-A22E-6E69448CC35C}
@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deployment", "Deployment\De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleanup", "ConsoleApp\Cleanup.csproj", "{8DDABF67-B493-4F04-980C-15A61220B38C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{E0922397-59A0-468C-A22E-6E69448CC35C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.MVK.Utils", "Utils\GS.MVK.Utils.csproj", "{E0922397-59A0-468C-A22E-6E69448CC35C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,11 +46,9 @@ Global
 		{18BD52FD-BBF9-4730-A35A-B13FE70716A6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18BD52FD-BBF9-4730-A35A-B13FE70716A6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{68FB0CCA-A98D-4E24-8E6E-547F090A4702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68FB0CCA-A98D-4E24-8E6E-547F090A4702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68FB0CCA-A98D-4E24-8E6E-547F090A4702}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68FB0CCA-A98D-4E24-8E6E-547F090A4702}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8DDABF67-B493-4F04-980C-15A61220B38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8DDABF67-B493-4F04-980C-15A61220B38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DDABF67-B493-4F04-980C-15A61220B38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DDABF67-B493-4F04-980C-15A61220B38C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0922397-59A0-468C-A22E-6E69448CC35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

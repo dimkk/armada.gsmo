@@ -10,5 +10,18 @@
 		OnQuickLaunch="TRUE"
 		QuickLaunchUrl="Lists/MeetingMVKList/AllItems.aspx"
 		RootWebOnly="FALSE"
-		TemplateType="10050" />
+		TemplateType="10050">
+      <Data>
+        <Rows>
+          <Row>
+            <Field Name="Title">Заседание МВК 1</Field>
+            <Field Name="MeetingCommentMVK">Комментарий "Заседание МВК 1"</Field>
+            <Field Name="MeetingDateMVK">2014-07-13 13:30:00</Field>
+            <Field Name="MeetingNumberMVK">07-2014</Field>
+            <Field Name="MeetingPlaceMVK">Место проведения "Заседание МВК 1"</Field>
+            <Field Name="MeetingStatusMVK">1</Field>
+          </Row>
+        </Rows>
+      </Data>
+  </ListInstance>
 </Elements>

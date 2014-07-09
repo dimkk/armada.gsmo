@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<ListTemplate
+  <ListTemplate
 		Name="MeetingMVKListDefinition"
 		DisplayName="$Resources:MeetingMVKListDefDisplayName"
 		Description="$Resources:MeetingMVKListDefDescr"
@@ -17,7 +17,7 @@
 		EnableModeration="False"
 		SecurityBits="11"
 		Sequence="1000"
-		Image="/_layouts/15/images/gs_mvk/ListIcon_MeetingMVKListDefinition.gif"
+		Image="/_layouts/15/images/itgen.png"
 		Hidden="FALSE"
 		HiddenList="FALSE"/>
 </Elements>

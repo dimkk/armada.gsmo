@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8785c575-ed43-4954-8293-9ef4a283a25f" solutionId="8785c575-ed43-4954-8293-9ef4a283a25f" resetWebServer="true" sharePointProductVersion="15.0" name="gs.mvk.ContentTypes" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8785c575-ed43-4954-8293-9ef4a283a25f" solutionId="8785c575-ed43-4954-8293-9ef4a283a25f" resetWebServer="true" sharePointProductVersion="15.0" name="GS.MVK.ContentTypes" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <assemblies>
-    <projectOutputAssembly location="gs.mvk.BusinessLogic.Utils.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\Utils\Utils.csproj" />
+    <projectOutputAssembly location="GS.MVK.Utils.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\Utils\GS.MVK.Utils.csproj" />
   </assemblies>
   <features>
     <featureReference itemId="df9cffbb-0808-45f3-b201-1493de161498" />
@@ -15,6 +15,10 @@
     <featureReference itemId="8464f722-d478-43b6-89fd-c801bf7d0eac" />
     <featureReference itemId="a467510c-1a0c-4051-9753-8a3ae2ff94cc" />
     <featureReference itemId="000c3fcf-84b5-4d03-af3a-7a5c9edead5a" />
+    <featureReference itemId="d8afa348-ea9f-45f6-9d03-9c7e497724db" />
+    <featureReference itemId="2a806102-2179-45d8-beb2-a29b87ed188c" />
+    <featureReference itemId="12f120ff-a633-41af-89f5-2bc5eb35f46c" />
+    <featureReference itemId="c2ff0f2c-fc1e-478e-81e8-25cc023047d1" />
   </features>
   <projectItems>
     <projectItemReference itemId="c107a01f-111d-4ea6-82c1-c4d1e62bc707" />

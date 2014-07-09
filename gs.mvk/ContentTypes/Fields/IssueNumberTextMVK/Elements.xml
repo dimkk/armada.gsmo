@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field  Name          ="IssueNumberTextMVK"
+          StaticName    ="IssueNumberTextMVK"
+          Group         ="$Resources:MVKColumnsGroup"
+          DisplayName   ="$Resources:IssueNumberTextMVKDisplayName"
+          Description   ="$Resources:IssueNumberTextMVKDescription"
+          ID            ="{5A8ADC33-C86F-41DF-945D-4544D4FB61C3}"
+          SourceID      ="http://schemas.microsoft.com/sharepoint/v3"
+          Type          ="Calculated"
+          ResultType    ="Text"
+          ReadOnly      ="TRUE"
+          Overwrite     ="TRUE"
+          AllowDeletion ="FALSE">
+    <Formula>=[IssueNumberMVK]&amp;IF([IssueSubnumberMVK]>0,"."&amp;[IssueSubnumberMVK],"")</Formula>
+    <FieldRefs>
+      <FieldRef Name="IssueNumberMVK" />
+      <FieldRef Name="IssueSubnumberMVK" />
+    </FieldRefs>
+  </Field>
+</Elements>

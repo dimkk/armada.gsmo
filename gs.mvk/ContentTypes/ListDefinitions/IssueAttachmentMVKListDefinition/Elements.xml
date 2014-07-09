@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListTemplate
+		Name                ="IssueAttachmentMVKListDefinition"
+		DisplayName         ="$Resources:ListDefinitionDisplayName"
+		Description         ="$Resources:ListDefinitionDescription"
+		Type                ="10056"
+		BaseType            ="1"
+		Default             ="FALSE"
+		OnQuickLaunch       ="FALSE"
+		Category            ="Libraries"
+		DisableAttachments  ="TRUE"
+		DisallowContentTypes="FALSE"
+		VersioningEnabled   ="TRUE"
+		FolderCreation      ="TRUE"
+		EnableModeration    ="False"
+		SecurityBits        ="11"
+		Sequence            ="1000"
+		Image               ="/_layouts/15/images/ltdl.png"
+		Hidden              ="FALSE"
+		HiddenList          ="FALSE" />
+</Elements>

@@ -23,7 +23,7 @@
 		<FieldRefs>
 			<FieldRef
 				ID="{AC2E6091-A9D4-46E2-A374-DAA8DD21BA92}"
-				Name="AsignmentNumberMVK"
+				Name="AssignmentNumberMVK"
 				Required="FALSE" />
 			<FieldRef
 				ID="{4FDFA957-BD32-494E-9E7A-3C020A8418B2}"
@@ -47,7 +47,7 @@
 				Required="FALSE" />
 			<FieldRef
 				ID="{291BEAE9-11A3-49A4-AF9F-3B2F051421AE}"
-				Name="AssignmentDependentAssignText"
+				Name="AssignmentDependentAssignTextMVK"
 				Required="FALSE" />
 			<FieldRef
 				ID="{DDCA2779-46B2-4CE2-B5FD-4E28C5935D2C}"

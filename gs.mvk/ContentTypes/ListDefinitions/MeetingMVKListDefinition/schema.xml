@@ -54,19 +54,23 @@
         <RowLimit Paged="TRUE">30</RowLimit>
         <Toolbar Type="Standard" />
         <ViewFields>
-          <FieldRef Name="LinkTitle">
-          </FieldRef>
+          <FieldRef Name="Edit" />
+          <FieldRef Name="LinkTitleNoMenu" />
+          <FieldRef Name="MeetingDateMVK" />
+          <FieldRef Name="Modified" />
+          <FieldRef Name="MeetingCommentMVK" />
         </ViewFields>
         <Query>
           <OrderBy>
-            <FieldRef Name="ID">
-            </FieldRef>
+            <FieldRef Name="MeetingDateMVK" Ascending="FALSE" />
           </OrderBy>
         </Query>
         <ParameterBindings>
           <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
           <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
         </ParameterBindings>
+        <Aggregations Value="Off" />
+        <ViewStyle ID="0" />
       </View>
     </Views>
     <Forms>
