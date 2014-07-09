@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListInstance
+		Title         ="$Resources:IssueAttachmentMVKListTitle"
+		Description   ="$Resources:IssueAttachmentMVKListDescription"
+		FeatureId     ="bddb93c2-3114-4f11-a032-9a449642d816"
+		Id            ="45D2B179-F373-465E-8722-0FCF30AD10AE"
+		Url           ="Lists/IssueAttachmentMVKList"
+		OnQuickLaunch ="TRUE"
+		QuickLaunchUrl="Lists/IssueAttachmentMVKList/AllItems.aspx"
+		RootWebOnly   ="FALSE"
+		TemplateType  ="10056" />
+</Elements>

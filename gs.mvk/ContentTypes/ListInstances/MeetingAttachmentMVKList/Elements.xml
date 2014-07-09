@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListInstance
+		Title         ="$Resources:MeetingAttachmentMVKListTitle"
+		Description   ="$Resources:MeetingAttachmentMVKListDescription"
+		FeatureId     ="e351a947-a041-4f16-8d52-57ffcd577a37"
+		Id            ="B7407EC2-CCC1-4793-840A-B8E8ED344A74"
+		Url           ="Lists/MeetingAttachmentMVKList"
+		OnQuickLaunch ="TRUE"
+		QuickLaunchUrl="Lists/MeetingAttachmentMVKList/AllItems.aspx"
+		RootWebOnly   ="FALSE"
+		TemplateType  ="10055" />
+</Elements>

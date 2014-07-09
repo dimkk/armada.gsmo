@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint"
+      Title="Basic List"
+      FolderCreation="TRUE"
+      Direction="$Resources:Direction;"
+      Url="Lists/Basic List"
+      BaseType="1"
+      EnableContentTypes="TRUE"
+      VersioningEnabled="TRUE"
+      DisableAttachments="TRUE"
+      MultipleDataList="FALSE" 
+      BrowserFileHandling="permissive" 
+      NavigateForFormsPages="TRUE"
+      ImageUrl="/_layouts/15/images/itdl.png">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0101" />
+      <ContentTypeRef ID="0x0120" />
+      <ContentTypeRef ID="0x0120D520002E09C03AA458425D969069CD2946780D">
+        <Folder TargetName="IssueAttachmentMVK" />
+      </ContentTypeRef>
+    </ContentTypes>
+    <Fields>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then>
+              <HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <URL Cmd="New" />
+              <HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote>
+              <HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML>
+              <HTML>$Resources:core,addnewitem;</HTML>
+              <HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" XslLink="main.xsl" WebPartZoneID="Main" WebPartOrder="1" Url="Forms/AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+				<ViewFields>
+					<FieldRef Name="DocIcon" />
+					<FieldRef Name="LinkFilename" />
+					<FieldRef Name="Modified" />
+					<FieldRef Name="Editor" />
+				</ViewFields>
+        <Query>
+					<OrderBy>
+						<FieldRef Name="FileLeafRef" />
+					</OrderBy>
+				</Query>
+        <Aggregations Value="Off" />
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>
