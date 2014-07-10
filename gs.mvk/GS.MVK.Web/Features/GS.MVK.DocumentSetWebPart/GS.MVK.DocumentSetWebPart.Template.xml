@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+************************************************************************
+       Company: Armada
+   Application: gs.mvk
+  Created date: 2014-07-09 16:24:26Z
+    Created by: SPDEV\achernikov
+  Feature Name: DocumentSetWebPart
+ Feature Title: DocumentSetWebPart Feature
+   Description: DocumentSetWebPart Feature Description
+       History: Initial Version 1.0.0.0 
+************************************************************************
+-->
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests></ElementManifests>
+</Feature>

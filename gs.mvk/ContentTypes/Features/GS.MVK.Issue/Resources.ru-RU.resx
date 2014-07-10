@@ -121,7 +121,7 @@
     <value>Столбцы сайта, типы содержимого и определения списка вопросов повестки заседания МВК</value>
   </data>
   <data name="FeatureTitle" xml:space="preserve">
-    <value>МВК: 04. Столбцы для списка вопросов повестки заседания</value>
+    <value>ГС.МВК: 04. Столбцы для списка вопросов повестки заседания</value>
   </data>
   <data name="IssueAddressMVKDescr" xml:space="preserve">
     <value>Адрес рассмотрения вопроса повестки заседания МВК</value>

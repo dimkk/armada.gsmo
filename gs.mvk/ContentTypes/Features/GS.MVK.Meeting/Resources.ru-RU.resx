@@ -121,7 +121,7 @@
     <value>Столбцы сайта, типы содержимого и определения списка заседаний МВК</value>
   </data>
   <data name="FeatureTitle" xml:space="preserve">
-    <value>МВК: 02. Столбцы для списка заседаний</value>
+    <value>ГС.МВК: 02. Столбцы для списка заседаний</value>
   </data>
   <data name="MeetingCommentMVKDescr" xml:space="preserve">
     <value>Комментарий к заседанию МВК</value>

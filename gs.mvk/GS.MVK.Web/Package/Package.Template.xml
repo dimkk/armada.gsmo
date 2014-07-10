@@ -1,0 +1,17 @@
+﻿<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="f94daf85-7f59-4b35-996d-b10c1437dd14" ResetWebServer="TRUE" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="GS.MVK.Web.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="GS.MVK.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e6d7b98455b283b9" Namespace="GS.MVK.Web" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="Images\GS.MVK\WebPartIcon_DocumentSetWebPart.gif" />
+    <TemplateFile Location="CONTROLTEMPLATES\GS.MVK\DocumentSetUserControl.ascx" />
+    <TemplateFile Location="Images\GS.MVK\FeatureIcon_DocumentSetWebPart.gif" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="GS.MVK.DocumentSetWebPart\Feature.xml" />
+  </FeatureManifests>
+</Solution>

@@ -26,12 +26,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.MVK.ContentTypes", "Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deployment", "Deployment\Deployment.csproj", "{68FB0CCA-A98D-4E24-8E6E-547F090A4702}"
 	ProjectSection(ProjectDependencies) = postProject
+		{EC3352C4-A264-44B2-8416-01F4C9919C85} = {EC3352C4-A264-44B2-8416-01F4C9919C85}
 		{18BD52FD-BBF9-4730-A35A-B13FE70716A6} = {18BD52FD-BBF9-4730-A35A-B13FE70716A6}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleanup", "ConsoleApp\Cleanup.csproj", "{8DDABF67-B493-4F04-980C-15A61220B38C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.MVK.Utils", "Utils\GS.MVK.Utils.csproj", "{E0922397-59A0-468C-A22E-6E69448CC35C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.MVK.Web", "GS.MVK.Web\GS.MVK.Web.csproj", "{EC3352C4-A264-44B2-8416-01F4C9919C85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +58,12 @@ Global
 		{E0922397-59A0-468C-A22E-6E69448CC35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0922397-59A0-468C-A22E-6E69448CC35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0922397-59A0-468C-A22E-6E69448CC35C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3352C4-A264-44B2-8416-01F4C9919C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3352C4-A264-44B2-8416-01F4C9919C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3352C4-A264-44B2-8416-01F4C9919C85}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EC3352C4-A264-44B2-8416-01F4C9919C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3352C4-A264-44B2-8416-01F4C9919C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3352C4-A264-44B2-8416-01F4C9919C85}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

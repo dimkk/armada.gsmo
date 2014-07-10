@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<type name="GS.MVK.Web.DocumentSet, GS.MVK.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e6d7b98455b283b9" />
+			<importErrorMessage>Cannot import DocumentSetWebPart Title Web Part.</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">$Resources:_FeatureIdbf77e759-2777-4886-ba95-bfe6aa205d75,Title</property>
+				<property name="Description" type="string">$Resources_FeatureIdbf77e759-2777-4886-ba95-bfe6aa205d75,Description</property>
+				<property name="CatalogIconImageUrl" type="string">/_layouts/15/images/GS.MVK/WebPartIcon_DocumentSetWebPart.gif</property>
+				<property name="TitleIconImageUrl" type="string">/_layouts/15/images/GS.MVK/WebPartIcon_DocumentSetWebPart.gif</property>
+			</properties>
+		</data>
+	</webPart>
+</webParts>

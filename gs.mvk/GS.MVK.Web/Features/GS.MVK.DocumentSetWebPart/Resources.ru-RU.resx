@@ -117,16 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Description" xml:space="preserve">
+    <value>Веб-часть для работы с наборами документов</value>
+  </data>
   <data name="FeatureDescription" xml:space="preserve">
-    <value>Набор списков для вложений заседания МВК</value>
+    <value>Веб-часть для работы с наборами документов</value>
   </data>
   <data name="FeatureTitle" xml:space="preserve">
-    <value>ГС.МВК: 13. Списки для вложений заседания</value>
+    <value>ГС.МВК: 16. Веб-часть набора документов</value>
   </data>
-  <data name="MeetingAttachmentMVKListDescription" xml:space="preserve">
-    <value>Список вложений заседания МВК</value>
+  <data name="Group" xml:space="preserve">
+    <value>ГС.МВК</value>
   </data>
-  <data name="MeetingAttachmentMVKListTitle" xml:space="preserve">
-    <value>МВК: Вложения заседания</value>
+  <data name="Title" xml:space="preserve">
+    <value>Набор документов</value>
   </data>
 </root>

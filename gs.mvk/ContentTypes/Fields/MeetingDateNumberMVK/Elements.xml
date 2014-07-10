@@ -13,7 +13,7 @@
           ReadOnly      ="TRUE"
           Overwrite     ="TRUE"
           AllowDeletion ="FALSE">
-    <Formula>=CONCATENATE(TEXT([MeetingDateMVK],"dd.mm.yyyy")," №",[MeetingNumberMVK])</Formula>
+    <Formula>=CONCATENATE(TEXT([MeetingDateMVK],"yyyy.mm.dd"),", №",[MeetingNumberMVK])</Formula>
     <FieldRefs>
       <FieldRef Name="MeetingDateMVK" />
       <FieldRef Name="MeetingNumberMVK" />
