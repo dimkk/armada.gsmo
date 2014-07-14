@@ -51,15 +51,13 @@
     <table class="mainTable">
         <tr>
             <td class="td-head">
-                <font color="white">Объявления</font>
+                <font color="white"><%= Title %></font>
             </td>
         </tr>
         <tr>
             <td class="td-content">
-                
                 <table class="content-table">
                     <tbody>
-                        
                         <% = MeetingLoad() %>
                     </tbody>
                 </table>
