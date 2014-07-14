@@ -163,7 +163,7 @@ namespace GS.MVK.Web
                         this.ViewState["DocSetListID"] = dsItem.ParentList.ID;
                     base.m_docSetList = dsItem.ParentList;
                     base.m_docSetFolder = dsItem.Folder;
-
+                    
                     base.CreateChildControls();
 
                     DocumentSetUserControl control = Page.LoadControl(_ascxPath) as DocumentSetUserControl;

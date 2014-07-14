@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Receivers
+		ListTemplateId="10050"
+		Scope="Web">
+		<Receiver>
+			<Name>MeetingItemAdded</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>100</SequenceNumber>
+			<Assembly>GS.MVK.Receivers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e6d7b98455b283b9</Assembly>
+			<Class>GS.MVK.Receivers.MeetingItem</Class>
+			<Data></Data>
+			<Filter></Filter>
+		</Receiver>
+		<Receiver>
+			<Name>MeetingItemDeleting</Name>
+			<Type>ItemDeleting</Type>
+			<SequenceNumber>100</SequenceNumber>
+			<Assembly>GS.MVK.Receivers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e6d7b98455b283b9</Assembly>
+			<Class>GS.MVK.Receivers.MeetingItem</Class>
+			<Data></Data>
+			<Filter></Filter>
+		</Receiver>
+		<Receiver>
+			<Name>MeetingItemUpdating</Name>
+			<Type>ItemUpdating</Type>
+			<SequenceNumber>100</SequenceNumber>
+			<Assembly>GS.MVK.Receivers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e6d7b98455b283b9</Assembly>
+			<Class>GS.MVK.Receivers.MeetingItem</Class>
+			<Data></Data>
+			<Filter></Filter>
+		</Receiver>
+	</Receivers>
+</Elements>

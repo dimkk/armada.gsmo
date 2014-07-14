@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d5f3e9c4-de87-4c15-bf6a-aec114eaf4b2" solutionId="d5f3e9c4-de87-4c15-bf6a-aec114eaf4b2" resetWebServer="true" sharePointProductVersion="15.0" name="GS.MVK.Receivers" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="58987d04-d225-4bc6-abaf-a6a88b35ab80" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="ca3a001d-2ab7-46f7-8666-964586ebe34f" />
+  </projectItems>
+</package>

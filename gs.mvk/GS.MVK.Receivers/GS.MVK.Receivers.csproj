@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GS.MVK.Web</RootNamespace>
-    <AssemblyName>GS.MVK.Web</AssemblyName>
+    <RootNamespace>GS.MVK.Receivers</RootNamespace>
+    <AssemblyName>GS.MVK.Receivers</AssemblyName>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>$(SolutionDir)\gs.mvk.snk</AssemblyOriginatorKeyFile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -16,7 +16,7 @@
     <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SandboxedSolution>False</SandboxedSolution>
     <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
-    <ProjectGuid>{EC3352C4-A264-44B2-8416-01F4C9919C85}</ProjectGuid>
+    <ProjectGuid>{E1C77164-3EC4-44C4-9956-DC564FC5557E}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,48 +57,48 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventReceivers\IssueAttachmentItem\IssueAttachmentItem.cs" />
+    <Compile Include="EventReceivers\IssueItem\IssueItem.cs" />
+    <Compile Include="EventReceivers\MeetingItem\MeetingItem.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Features\GS.MVK.IssueAttachments\GS.MVK.EventReceiver.cs">
+      <DependentUpon>GS.MVK.IssueAttachments.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebParts\DocumentSet\DocumentSet.cs" />
-    <Compile Include="WebParts\DocumentSet\DocumentSetUserControl.ascx.cs">
-      <DependentUpon>DocumentSetUserControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebParts\DocumentSet\DocumentSetUserControl.ascx.designer.cs">
-      <DependentUpon>DocumentSetUserControl.ascx.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="WebParts\DocumentSet\DocumentSetUserControl.ascx" />
-    <Content Include="WebParts\DocumentSet\WebPartIcon_DocumentSetWebPart.gif" />
-    <None Include="Features\GS.MVK.DocumentSetWebPart\GS.MVK.DocumentSetWebPart.feature">
-      <FeatureId>{92ba3824-e847-478c-b8b1-6f91a2c34a9d}</FeatureId>
+    <None Include="EventReceivers\IssueAttachmentItem\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e7ab1ddb-c697-484a-99b8-8eb1ef853906}</SharePointProjectItemId>
+    </None>
+    <None Include="EventReceivers\IssueItem\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9bf9a2f6-f85c-4009-8c02-ff9ee1007afe}</SharePointProjectItemId>
+    </None>
+    <None Include="EventReceivers\MeetingItem\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{184e8d20-a723-4c1f-929d-d134d0df8b59}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\GS.MVK.IssueAttachments\GS.MVK.IssueAttachments.feature">
+      <FeatureId>{58987d04-d225-4bc6-abaf-a6a88b35ab80}</FeatureId>
     </None>
     <None Include="Package\Package.package">
-      <PackageId>{F94DAF85-7F59-4B35-996D-B10C1437DD14}</PackageId>
+      <PackageId>{D5F3E9C4-DE87-4C15-BF6A-AEC114EAF4B2}</PackageId>
     </None>
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
     <None Include="Template\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{cdf43f3c-960e-4597-95d7-d793de7018e6}</SharePointProjectItemId>
-    </None>
-    <Content Include="WebParts\DocumentSet\DocumentSet.webpart" />
-    <None Include="WebParts\DocumentSet\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{4a8ed401-2543-4bf8-8b02-25e0eb663f9f}</SharePointProjectItemId>
+      <SharePointProjectItemId>{ca3a001d-2ab7-46f7-8666-964586ebe34f}</SharePointProjectItemId>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="Features\GS.MVK.DocumentSetWebPart\Resources.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Features\GS.MVK.DocumentSetWebPart\GS.MVK.DocumentSetWebPart.Template.xml">
-      <DependentUpon>GS.MVK.DocumentSetWebPart.feature</DependentUpon>
+    <Content Include="EventReceivers\IssueAttachmentItem\Elements.xml" />
+    <Content Include="EventReceivers\IssueItem\Elements.xml" />
+    <Content Include="EventReceivers\MeetingItem\Elements.xml" />
+    <Content Include="Features\GS.MVK.IssueAttachments\GS.MVK.IssueAttachments.Template.xml">
+      <DependentUpon>GS.MVK.IssueAttachments.feature</DependentUpon>
     </Content>
-    <Content Include="Template\Images\GS.MVK\FeatureIcon_DocumentSetWebPart.gif" />
-    <Content Include="WebParts\DocumentSet\Elements.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Features\GS.MVK.DocumentSetWebPart\Resources.ru-RU.resx" />
+    <Content Include="Template\Images\GS.MVK\ReceiverFeature.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
