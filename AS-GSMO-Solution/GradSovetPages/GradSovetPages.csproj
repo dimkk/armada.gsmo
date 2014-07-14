@@ -54,11 +54,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.Office.Server.FilterControls\v4.0_15.0.0.0__71e9bce111e9429c\Microsoft.Office.Server.FilterControls.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
@@ -85,6 +87,20 @@
     </Compile>
     <Compile Include="Layouts\GradSovetPages\Pages\ExecutorSelection.aspx.designer.cs">
       <DependentUpon>ExecutorSelection.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\IssueAttachmentMVK.aspx.cs">
+      <DependentUpon>IssueAttachmentMVK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\IssueAttachmentMVK.aspx.designer.cs">
+      <DependentUpon>IssueAttachmentMVK.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\MeetingMVK.aspx.cs">
+      <DependentUpon>MeetingMVK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GradSovetPages\Pages\MeetingMVK.aspx.designer.cs">
+      <DependentUpon>MeetingMVK.aspx.cs</DependentUpon>
     </Compile>
     <Compile Include="Layouts\GradSovetPages\Pages\Meeting.aspx.cs">
       <DependentUpon>Meeting.aspx</DependentUpon>
@@ -119,6 +135,9 @@
     </None>
     <None Include="Layouts\GradSovetPages\Scripts\jquery-1.9.1.min.js.map">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </None>
+    <None Include="Layouts\GradSovetPages\Scripts\Meeting\viewmodel.min.js.map">
+      <DependentUpon>viewmodel.js</DependentUpon>
     </None>
     <None Include="Layouts\GradSovetPages\Scripts\moment-datepicker.min.js.map">
       <DependentUpon>moment-datepicker.js</DependentUpon>
@@ -168,6 +187,8 @@
     <Content Include="Layouts\GradSovetPages\Content\typeahead.js-bootstrap.css" />
     <Content Include="Layouts\GradSovetPages\Pages\AgendaQuestionAttach.aspx" />
     <Content Include="Layouts\GradSovetPages\Pages\ExecutorSelection.aspx" />
+    <None Include="Layouts\GradSovetPages\Pages\MeetingMVK.aspx" />
+    <Content Include="Layouts\GradSovetPages\Pages\IssueAttachmentMVK.aspx" />
     <Content Include="Layouts\GradSovetPages\Pages\selectExecutor.html" />
     <Content Include="Layouts\GradSovetPages\Pages\selectLinkedAssignment.html" />
     <Content Include="Layouts\GradSovetPages\Pages\Meeting.aspx" />
@@ -179,6 +200,7 @@
     <Content Include="Layouts\GradSovetPages\Scripts\bootstrap.min.js" />
     <Content Include="Layouts\GradSovetPages\Scripts\camljs.js" />
     <Content Include="Layouts\GradSovetPages\Scripts\clienttemplates.debug.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\csr\renderIssueMVK.js" />
     <Content Include="Layouts\GradSovetPages\Scripts\csr\renderAgendaQuestion.js" />
     <Content Include="Layouts\GradSovetPages\Scripts\csr\renderAssignment.js" />
     <Content Include="Layouts\GradSovetPages\Scripts\csr\renderCore.js" />
@@ -201,6 +223,10 @@
     <Content Include="Layouts\GradSovetPages\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Layouts\GradSovetPages\Scripts\jquery.cookie.js" />
     <Content Include="Layouts\GradSovetPages\Scripts\mainmenuAccessDeny.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\Meeting\viewmodel.js" />
+    <Content Include="Layouts\GradSovetPages\Scripts\Meeting\viewmodel.min.js">
+      <DependentUpon>viewmodel.js</DependentUpon>
+    </Content>
     <Content Include="Layouts\GradSovetPages\Scripts\moment-datepicker-ko.js" />
     <Content Include="Layouts\GradSovetPages\Scripts\moment-datepicker.d.ts" />
     <Content Include="Layouts\GradSovetPages\Scripts\moment-datepicker.js" />

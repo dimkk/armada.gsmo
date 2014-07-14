@@ -3,6 +3,8 @@
 /// <reference path="../SP.Core.debug.js" />
 /// <reference path="../SP.runtime.debug.js" />
 
+var isCancelAddAttach = false;
+
 (function () {
 
     var author, editor, created, modified, assignmentLinkId, resolutionId;
@@ -186,6 +188,9 @@
         renderCore.ifget(prefix + 'Editor', function (e) { e.innerHTML = editor; });
         renderCore.ifget(prefix + 'Modified', function (e) { e.innerHTML = modified; });
 
+		//Если резолюция уже проставлена, то запрещаем добавление материалов
+		isCancelAddAttach = context.ListData.Items[0].AssignmentReportResolutionDecision != '';
+		
         // текст ссылки на поручение заменяем на форматированный текст
         if (context.ControlMode === SPClientTemplates.ClientControlMode.DisplayForm) {
             // в режиме просмотра резолюция, новый срок и комментарий к резолюции доступны всем
@@ -359,3 +364,11 @@
 
     }, 'clienttemplates.js');
 })();
+
+//Настройка интерфейса
+$(function () {
+	if (isCancelAddAttach) {
+		$(".ms-addnew").css("display", "none");
+		$("#idHomePageNewItem").css("display", "none");
+	}
+});
