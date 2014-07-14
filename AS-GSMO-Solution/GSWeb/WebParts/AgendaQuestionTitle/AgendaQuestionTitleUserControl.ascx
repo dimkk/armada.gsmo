@@ -3,20 +3,29 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AgendaQuestionTitleUserControl.ascx.cs" Inherits="GSWeb.WebParts.AgendaQuestionTitle.AgendaQuestionTitleUserControl" %>
 
 <div class="container" id="header">
-    <h4 class="text-center">Рассмотрение вопроса на Градостроительном Совете</h4>
+    <h4 class="text-center"><%= Header %></h4>
     <h5 class="text-center">
       <strong>
-        <span id="labelMeetingAddress" style="color: blue" runat="server"><%= Address %></span>
-        <span id="labelCadastreNumber" runat="server">кад.№ <%= CadastreNumber %></span>
+        <% if (!string.IsNullOrEmpty(Address)) { %>
+        <span id="labelMeetingAddress" style="color: blue"><%= Address %></span>
+        <% } %>
+        <% if (!string.IsNullOrEmpty(CadastreNumber)) { %>
+        <span id="labelCadastreNumber">кад.№ <%= CadastreNumber %></span>
+        <% } %>
       </strong>
     </h5>
     <h5 class="text-center" id="customText"><strong><%= Category %></strong></h5>
     <div class="container" style="margin-bottom: 25px;">
         <div class="col-lg-4 text-left">
-            <a id="meetingLink" href="/_layouts/15/gradsovetpages/pages/meeting.aspx?ID=<%= MeetingId %>&mode=display" target="_blank"><%= MeetingDescription %></a>
+            <a id="meetingLink" href="<%= MeetingUrl %>" target="_blank"><%= MeetingDescription %></a>
         </div>
+        <% if (!string.IsNullOrEmpty(ProtocolUrl)) { %>
         <div class="col-lg-offset-6 col-lg-2 text-right">
-          <asp:HyperLink ID="protocolLink" Text="Протокол заседания" runat="server" />
+            <a id="protocolLink" href="<%= ProtocolUrl %>" target="_blank">Протокол заседания</a>
         </div>
+        <% } %>
     </div>
+    <% if (IsErrors) { %>
+    <span id="lErrors" style="color: red"><%= Errors %></span>
+    <% } %>
 </div>

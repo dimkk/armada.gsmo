@@ -1,75 +1,189 @@
-﻿using System;
-using System.Web.UI;
-using Microsoft.SharePoint;
+﻿using Microsoft.SharePoint;
 using Microsoft.SharePoint.Utilities;
+using System;
+using System.Text;
+using System.Web.UI;
 
 namespace GSWeb.WebParts.AgendaQuestionTitle
 {
     public partial class AgendaQuestionTitleUserControl : UserControl
     {
+        #region Common
+        public string Header { get; set; }
+        #endregion
+
+        #region Question
+        public string QuestionAddressFieldName { get; set; }
+        public string QuestionCadastreNumberFieldName { get; set; }
+        public string QuestionNumberFieldName { get; set; }
+        public string QuestionCategoryLinkFieldName { get; set; }
+        public string QuestionMeetingLinkFieldName { get; set; }
+        #endregion
+
+        #region Meeting
+        public string MeetingListName { get; set; }
+        public string MeetingDateFieldName { get; set; }
+        public string MeetingNumberFieldName { get; set; }
+        #endregion
+
+        #region MeetingAttachment
+        public string MeetingAttachmentsListName { get; set; }
+        public string MeetingAttachmentMeetingLinkFieldName { get; set; }
+        public string MeetingAttachmentExistsFieldName { get; set; }
+        #endregion
+
+        #region Errors
+        private StringBuilder _errors = new StringBuilder();
+        public bool IsErrors = false;
+        public string Errors { get { return _errors.ToString().Replace(Environment.NewLine, "<br/>"); } }
+        protected void AddErrorDescription(Exception ex)
+        {
+            IsErrors = true;
+            _errors.AppendLine(ex.ToString());
+        }
+        #endregion
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            protocolLink.NavigateUrl = ProtocolUrl;
-            if (string.IsNullOrEmpty(protocolLink.NavigateUrl))
-                protocolLink.Visible = false;
+        }
 
-            if (SPContext.Current != null && SPContext.Current.Item != null)
+        private string _address;
+        protected string Address
+        {
+            get
             {
-                labelMeetingAddress.Visible = !string.IsNullOrEmpty(Convert.ToString(SPContext.Current.Item["AgendaQuestionAddress"]));
-                labelCadastreNumber.Visible = !string.IsNullOrEmpty(Convert.ToString(SPContext.Current.Item["CadastreNumber"]));
+                if (_address == null)
+                    _address = ErrorHandler(() =>
+                        {
+                            return GetFieldValue(QuestionAddressFieldName);
+                        });
+                return _address;
             }
         }
 
-        protected string Address
-        {
-            get { return Convert.ToString(SPContext.Current.Item["AgendaQuestionAddress"]); }
-        }
-
+        private string _cadastreNumber;
         protected string CadastreNumber
         {
-            get { return Convert.ToString(SPContext.Current.Item["CadastreNumber"]); }
+            get
+            {
+                if (_cadastreNumber == null)
+                    _cadastreNumber = ErrorHandler(() =>
+                        {
+                            return GetFieldValue(QuestionCadastreNumberFieldName);
+                        });
+                return _cadastreNumber;
+            }
         }
 
+        private string _category;
         protected string Category
         {
-            get { return new SPFieldLookupValue(Convert.ToString(SPContext.Current.Item["QuestionCategoryLink"])).LookupValue; }
-        }
-        
-        protected int MeetingId
-        {
-            get { return new SPFieldLookupValue(Convert.ToString(SPContext.Current.Item["MeetingLink"])).LookupId; }
+            get
+            {
+                if (_category == null)
+                    _category = ErrorHandler(() =>
+                        {
+                            return new SPFieldLookupValue(GetFieldValue(QuestionCategoryLinkFieldName)).LookupValue;
+                        });
+                return _category;
+            }
         }
 
+        private string _meetingId;
+        protected string MeetingId
+        {
+            get
+            {
+                if (_meetingId == null)
+                    _meetingId = ErrorHandler(() =>
+                        {
+                            return new SPFieldLookupValue(GetFieldValue(QuestionMeetingLinkFieldName)).LookupId.ToString();
+                        });
+                return _meetingId;
+            }
+        }
+
+        private string _protocolUrl;
         protected string ProtocolUrl
         {
             get
             {
-                var query = new SPQuery();
-                query.Query = "<Where><And><Eq><FieldRef Name='MeetingLink' LookupId='True' /><Value Type='Integer'>" + MeetingId + "</Value></Eq><Eq><FieldRef Name='AttachmentProtocolScanCopy' /><Value Type='Integer'>1</Value></Eq></And></Where>";
+                if (_protocolUrl == null)
+                    _protocolUrl = ErrorHandler(() =>
+                        {
+                            var query = new SPQuery();
+                            query.Query = string.Format("<Where><And><Eq><FieldRef Name='{0}' LookupId='True' /><Value Type='Integer'>{1}</Value></Eq><Eq><FieldRef Name='{2}' /><Value Type='Integer'>1</Value></Eq></And></Where>",
+                                MeetingAttachmentMeetingLinkFieldName, MeetingId, MeetingAttachmentExistsFieldName);
 
-                var attachments = SPContext.Current.Web.Lists["Вложения заседаний"];
-                var items = attachments.GetItems(query);
+                            SPList attachments = SPContext.Current.Web.GetListByUrl(MeetingAttachmentsListName);
+                            SPListItemCollection items = attachments.GetItems(query);
 
-                return items.Count > 0 && items[0].Attachments.Count > 0
-                    ? SPUrlUtility.CombineUrl(items[0].Attachments.UrlPrefix, items[0].Attachments[0])
-                    : "";
+                            return items.Count > 0 && items[0].Attachments.Count > 0
+                                ? SPUrlUtility.CombineUrl(items[0].Attachments.UrlPrefix, items[0].Attachments[0])
+                                : string.Empty;
+                        });
+                return _protocolUrl;
             }
         }
 
+        private bool _isMeetingListLoaded;
+        private SPList _meetingList;
+        protected SPList MeetingList
+        {
+            get
+            {
+                if (!_isMeetingListLoaded)
+                {
+                    _isMeetingListLoaded = true;
+                    _meetingList = SPContext.Current.Web.GetListByUrl(MeetingListName);
+                }
+                return _meetingList;
+            }
+        }
+
+        private string _meetingUrl;
+        protected string MeetingUrl
+        {
+            get
+            {
+                if (_meetingUrl == null)
+                    _meetingUrl = ErrorHandler(() =>
+                        {
+                            return MeetingList.DefaultDisplayFormUrl.AddUrlParam("ID", MeetingId.ToString());
+                        });
+                return _meetingUrl;
+            }
+        }
+
+        private string _meetingDescription;
         protected string MeetingDescription
         {
             get
             {
-                var query = new SPQuery();
-                query.Query = "<Where><Eq><FieldRef Name='ID'/><Value Type='Integer'>" + MeetingId + "</Value></Eq></Where>";
+                if (_meetingDescription == null)
+                    _meetingDescription = ErrorHandler(() =>
+                        {
+                            var query = new SPQuery();
+                            query.Query = "<Where><Eq><FieldRef Name='ID'/><Value Type='Integer'>" + MeetingId + "</Value></Eq></Where>";
 
-                var meetings = SPContext.Current.Web.Lists["Заседания"];
-                var meeting = meetings.GetItems(query);
+                            SPListItemCollection meeting = MeetingList.GetItems(query);
 
-                return meeting.Count > 0
-                    ? string.Format("Заседание {0} №{1}, п.№{2}", Convert.ToDateTime(meeting[0]["MeetingDate"]).ToShortDateString(), meeting[0]["MeetingNumber"], SPContext.Current.Item["AgendaQuestionNumber"])
-                    : "";
+                            return meeting.Count > 0
+                                ? string.Format("Заседание {0} №{1}, п.№{2}", Convert.ToDateTime(meeting[0][MeetingDateFieldName]).ToShortDateString(), meeting[0][MeetingNumberFieldName], GetFieldValue(QuestionNumberFieldName))
+                                : "";
+                        });
+                return _meetingDescription;
             }
+        }
+
+        protected string ErrorHandler(Func<string> worker)
+        {
+            return worker.ErrorHandler(AddErrorDescription) ?? string.Empty;
+        }
+
+        protected string GetFieldValue(string fieldName)
+        {
+            return SPContext.Current.GetFieldValue(fieldName) ?? string.Empty;
         }
     }
 }

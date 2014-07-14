@@ -11,32 +11,5 @@ namespace GSWeb.WebParts.AgendaQuestionTitle {
     
     
     public partial class AgendaQuestionTitleUserControl {
-        
-        /// <summary>
-        /// labelMeetingAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl labelMeetingAddress;
-        
-        /// <summary>
-        /// labelCadastreNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl labelCadastreNumber;
-        
-        /// <summary>
-        /// protocolLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink protocolLink;
     }
 }

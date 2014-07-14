@@ -100,6 +100,7 @@
     <Compile Include="WebParts\AgendaQuestionTitle\AgendaQuestionTitleUserControl.ascx.designer.cs">
       <DependentUpon>AgendaQuestionTitleUserControl.ascx.cs</DependentUpon>
     </Compile>
+    <Compile Include="WebParts\Extensions.cs" />
     <Compile Include="WebParts\FilterProvider\FilterProvider.cs" />
     <Compile Include="WebParts\IFilterProvider.cs" />
   </ItemGroup>
