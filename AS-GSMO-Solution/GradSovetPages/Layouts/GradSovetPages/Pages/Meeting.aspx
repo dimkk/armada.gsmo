@@ -122,8 +122,14 @@
                                     <th>Инвестор</th>
                                     <th>Описание</th>
                                     <th>Докладчики</th>
+                                    <% if (IsQuestionCommentEnabled) { %>
+                                    <th>Комментарий</th>
+                                    <% } %>
                                     <th></th>
                                     <th></th>
+                                    <% if (IsQuestionCommentEnabled) { %>
+                                    <th></th>
+                                    <% } %>
                                     <!--<th data-bind="style: { display: !editEnabled() ? 'none' : '' }"></th>-->
                                 </tr>
                             </thead>
@@ -134,6 +140,9 @@
                                     <td data-bind="text: AgendaQuestionInvestor"></td>
                                     <td data-bind="text: AgendaQuestionDescription"></td>
                                     <td data-bind="text: calcReporters"></td>
+                                    <% if (IsQuestionCommentEnabled) { %>
+                                    <td data-bind="text: AgendaQuestionComment, css: GetDecisionFieldClass($data)"></td>
+                                    <% } %>
                                     <td>
                                         <button type="button" class="btn btn-default" data-bind="click: showAttachments"><span class="glyphicon glyphicon-paperclip"></span></button>
                                     </td>
@@ -143,6 +152,11 @@
 	                                        <span class="glyphicon glyphicon-edit"></span>
                                         </a>
                                     </td>
+                                    <% if (IsQuestionCommentEnabled) { %>
+                                    <td>
+                                        <button type="button" class="btn btn-default" data-bind="click: editQuestionComment" style="margin:0"><span class="glyphicon glyphicon-pencil"/></button>
+                                    </td>
+                                    <% } %>
                                     <!--
                                     <td data-bind="style: { display: !$parent.editEnabled() ? 'none' : '' }">
                                         <button type="button" class="btn btn-default" data-bind="click: $parent.removeAgendaQuestion, enable: $parent.editEnabled"><span class="glyphicon glyphicon-trash"></span></button>
@@ -955,6 +969,106 @@
                 </div>
                 <!-- /.modal -->
                 <%-- //Модальный диалог поручения--%>
+
+    <% if (IsQuestionCommentEnabled) { %>
+    <div class="modal fade" id="mComment" tabindex="-1" role="dialog" aria-hidden="true">
+        <style type="text/css">
+            .btn-success-gs, .btn-primary-gs, .btn-danger-gs {
+                color: #000;
+                border-color: #ccc;
+                background-color: #fff;
+            }
+        </style>
+        <div class="modal-dialog" style="width: 800px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title">Добавление комментария</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="form-group">
+                            <label class="col-lg-2">Тип решения</label>
+                            <div class="btn-group col-lg-10" data-toggle="buttons" id="rbDecisionType">
+                                <label class="btn btn-success col-lg-4 btn-success-gs" id="rbDecisionType2">
+                                    <input type="radio" name="options" />Утвердить</label>
+                                <label class="btn btn-primary col-lg-4 btn-primary-gs" id="rbDecisionType0">
+                                    <input type="radio" name="options" />Не определено</label>
+                                <label class="btn btn-danger col-lg-4 btn-danger-gs" id="rbDecisionType1">
+                                    <input type="radio" name="options" />Отклонить</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <br />
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2">Комментарий</label>
+                            <div class="col-lg-10">
+                                <textarea type="text" id="tComment" title="Комментарий" rows="5" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="bSaveComment">Сохранить</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#mComment').appendTo("body");
+        function GetDecisionFieldClass(data) {
+            var decisionId = GetDecisionId(data);
+            switch (decisionId) {
+                case "1": return "btn-danger";
+                case "2": return "btn-success";
+                default: return "";
+            }
+        }
+        function GetDecisionId(data) {
+            var decisionId = data.AgendaQuestionDecisionType();
+            return !!decisionId ? decisionId.get_lookupId().toString() : null;
+        }
+        function SetDecisionId(data, newData, decisionTypeId) {
+            var lookup = new SP.FieldLookupValue();
+            lookup.set_lookupId(decisionTypeId);
+            data.AgendaQuestionDecisionType(lookup);
+            newData.AgendaQuestionDecisionTypeId = decisionTypeId;
+        }
+        function ShowCommentWindow(data) {
+            $('#bSaveComment').unbind("click").click(function () {
+                SaveComment(data, $("#rbDecisionType label.active").attr("id").substr(14), $('#tComment').val(), function () { $('#mComment').modal("hide") });
+            });
+            var decisionId = GetDecisionId(data);
+            var labelId = decisionId == "1" | decisionId == "2" ? decisionId : "0";
+            $("#rbDecisionType label").removeClass("active").filter("#rbDecisionType" + labelId).addClass("active");
+            $('#tComment').val(data.AgendaQuestionComment());
+            $('#mComment').modal("show");
+        }
+        function SaveComment(data, decisionTypeId, comment, successCallback) {
+            var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('Вопросы повестки заседания')/items(" + data.Id() + ")";
+            var newData = { __metadata: { 'type': 'SP.Data.AgendaQuestionListListItem' }, AgendaQuestionComment: comment };
+            SetDecisionId(data, newData, decisionTypeId);
+            data.AgendaQuestionComment(comment);
+            $.ajax({
+                url: encodeURI(queryUrl),
+                data: JSON.stringify(newData),
+                headers: {
+                    "accept": "application/json;odata=verbose",
+                    "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+                    "X-HTTP-Method": "MERGE",
+                    "content-type": "application/json;odata=verbose",
+                    "If-Match": "*"
+                },
+                type: "POST",
+                success: successCallback,
+                error: function () { alert("RequestError!"); }
+            });
+        }
+    </script>
+    <% } %>
+
 </asp:Content>
 
 <asp:Content ID="PageTitle" ContentPlaceHolderID="PlaceHolderPageTitle" runat="server">

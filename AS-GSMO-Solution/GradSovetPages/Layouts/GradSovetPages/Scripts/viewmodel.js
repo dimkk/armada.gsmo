@@ -1037,32 +1037,30 @@
 
         // вычислимое поле для списка докладчиков
         this.calcReporters = ko.computed(function () {
-            var str = "";
+            var reporters = [];
             if (this.agendaQuestionReporterFIO) {
-                str += this.agendaQuestionReporterFIO() + ";";
+                reporters.push(this.agendaQuestionReporterFIO().trim());
             } else {
                 if (this.AgendaQuestionReporterFullNameLink()) {
-                    str += this.AgendaQuestionReporterFullNameLink().get_lookupValue() + ";";
+                    reporters.push(this.AgendaQuestionReporterFullNameLink().get_lookupValue().trim());
                 }
             }
 
             // в agendaQuestionSoreporters хранятся детали о всех докладчиках, а в AgendaQuestionSoreporterFullNameLink только о тех, 
             // которые были сохранены на момент загрузки карточки
-            if (this.agendaQuestionSoreporters) {
-                if (this.agendaQuestionSoreporters() == null || this.agendaQuestionSoreporters().length == 0) return str;
-
+            if (this.agendaQuestionSoreporters && this.agendaQuestionSoreporters() != null && this.agendaQuestionSoreporters().length > 0) {
                 $.each(this.agendaQuestionSoreporters(), function () {
-                    str += this.ParticipantFullName() + ";";
+                    reporters.push(this.ParticipantFullName().trim());
                 });
             } else {
-                if (this.AgendaQuestionSoreporterFullNameLink() == null) return str;
-
-                $.each(this.AgendaQuestionSoreporterFullNameLink(), function () {
-                    str += this.get_lookupValue() + ";";
-                });
+                if (this.AgendaQuestionSoreporterFullNameLink() != null) {
+                    $.each(this.AgendaQuestionSoreporterFullNameLink(), function () {
+                        reporters.push(this.get_lookupValue().trim());
+                    });
+                }
             }
 
-            return str;
+            return reporters.join("; ");
         }, this);
 
         // режим отображения диалога с вопросом повестки
@@ -1295,7 +1293,9 @@
         }.bind(this);
             this.selectAgendaQuestionProjectType = function (dataset, dataum) {
             this.editAgendaQuestionProjectType(dataum.label);
-        }.bind(this);
+            }.bind(this);
+
+        this.editQuestionComment = function () { ShowCommentWindow(this); }
     }
 
     // meeting attach
