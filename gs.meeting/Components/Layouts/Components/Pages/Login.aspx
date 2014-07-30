@@ -69,7 +69,7 @@
         <div class="subheader"></div>
         <div id="SignInInfo" style="width:375px;font-size:medium; font-style:italic">
             <div style="position:absolute; top: 25px;">
-                Для получения доступа к системе необходимо обратиться в службу поддержки по адресу gradsovet@armd.ru или по телефону +7(499)372-16-92
+                Для получения доступа к системе необходимо обратиться в службу поддержки по адресу<br/>gradsovet@inform-tb.ru<br/>или по телефону +7(499)372-16-92
             </div>
             <div style="position:absolute; bottom: 25px;">
                 <label>Полезные ссылки:</label>
@@ -114,9 +114,6 @@
         <div class="header">
             <div class="footer-title">
                 Автоматизированная информационная система Градостроительного Совета Московской области
-            </div>
-            <div class="logo">
-                <img class="logo-footer-img" src="../Content/tver-logo.png?rev=23" />
             </div>
         </div>
     </footer>
