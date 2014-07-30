@@ -17,7 +17,7 @@
 		EnableModeration    ="False"
 		SecurityBits        ="11"
 		Sequence            ="1000"
-		Image               ="/_layouts/15/images/ltdl.png"
+		Image               ="/_layouts/15/images/itdl.png"
 		Hidden              ="FALSE"
 		HiddenList          ="FALSE" />
 </Elements>

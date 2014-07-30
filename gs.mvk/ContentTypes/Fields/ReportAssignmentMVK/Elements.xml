@@ -10,7 +10,7 @@
 		Name="ReportAssignmentMVK"
 		Type="Lookup"
 		List="Lists/AssignmentMVKList"
-		ShowField="AsignmentNumberMVK"
+		ShowField="AssignmentNumberMVK"
 		Mult="False"
 		UnlimitedLengthInDocumentLibrary="False"
 		Description="$Resources:ReportAssignmentMVKDescr"
