@@ -26,15 +26,20 @@
             <table class="table table-striped">
                 <tbody data-bind="foreach: MarkRecordList">
                     <tr>
-                        <td><label class="label label-danger font-larger" data-bind="text: CountValue"></label></td>
-                        <td class="line-double" data-bind="html: getFormattedTitle()"></td>
+                        <td>
+                            <% if (string.IsNullOrEmpty(CountMarkBackColor)) { %>
+                            <label class="label label-danger font-larger" data-bind="text: CountValue"/>
+                            <% } else { %>
+                            <label class="label font-larger" data-bind="text: CountValue" style="background-color:<%= CountMarkBackColor %>" />
+                            <% } %>
+                        </td>
+                        <td class="line-double" data-bind="html: getFormattedTitle('<%= TextMarkBackColor %>')"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-
 
 <SharePoint:ScriptLink ID="ScriptLink1" runat="server" Name="Components/Scripts/knockout-2.3.0.js" Localizable="False" OnDemand="False"></SharePoint:ScriptLink>
 <SharePoint:ScriptLink ID="ScriptLink2" runat="server" Name="Components/Scripts/camljs.js" Localizable="False" OnDemand="False"></SharePoint:ScriptLink>

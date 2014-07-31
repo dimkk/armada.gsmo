@@ -27,18 +27,19 @@ namespace gs.meeting.Components
         private const string ASCXPATH = @"/_CONTROLTEMPLATES/15/gs_meeting/MarksListWebPartUserControl.ascx";
         private const string _webpartpropertieshiddenfieldid = "WebPartPropertiesHiddenFieldID";
 
-        private UserControl userControl;
-       
         public MarksListWebPart()
         {
         }
 
         protected override void CreateChildControls()
         {
-            userControl = (UserControl)this.Page.LoadControl(ASCXPATH);
-            var props = new HiddenField() {ID = _webpartpropertieshiddenfieldid};
+            var control = (MarksListWebPartUserControl)this.Page.LoadControl(ASCXPATH);
+            control.CountMarkBackColor = CountMarkBackColor;
+            control.TextMarkBackColor = TextMarkBackColor;
 
-            Controls.Add(userControl);
+            var props = new HiddenField() { ID = _webpartpropertieshiddenfieldid };
+
+            Controls.Add(control);
             Controls.Add(props);
 
             base.CreateChildControls();
@@ -69,6 +70,17 @@ namespace gs.meeting.Components
         [Personalizable(PersonalizationScope.Shared)]
         public string StyledTitle { get; set; }
 
+        [WebBrowsable(true)]
+        [WebDisplayName("Цвет фона показателя")]
+        [WebDescription("Цвет фона показателя работы в веб-формате")]
+        [Personalizable(PersonalizationScope.Shared)]
+        public string CountMarkBackColor { get; set; }
+
+        [WebBrowsable(true)]
+        [WebDisplayName("Цвет фона других показателей")]
+        [WebDescription("Цвет фона показателей работы в описании в веб-формате")]
+        [Personalizable(PersonalizationScope.Shared)]
+        public string TextMarkBackColor { get; set; }
     }
 }
 

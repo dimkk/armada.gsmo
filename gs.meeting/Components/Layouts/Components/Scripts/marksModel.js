@@ -17,12 +17,13 @@ var MarksModule;
         function MarkRecord() {
             _super.apply(this, arguments);
         }
-        MarkRecord.prototype.getFormattedTitle = function () {
+        MarkRecord.prototype.getFormattedTitle = function (backColor) {
             // trying to find curly braces
             var re = new RegExp(/\{([0-9]+)\}/g);
             if (re.test(this.Title)) {
                 var replaceValue = this.MarkSumValue ? this.MarkSumValue.toString() : "нет значения";
-                replaceValue = "<span class='label label-primary font-larger'>" + gsCore.Math.formatThousands(replaceValue, " ") + "</span>";
+                var start = !backColor ? "<span class='label label-primary font-larger'>" : ("<span class='label font-larger' style='background-color:" + backColor + "'>");
+                replaceValue = start + gsCore.Math.formatThousands(replaceValue, " ") + "</span>";
                 return this.Title.replace(/\{([0-9]+)\}/g, replaceValue);
             } else
                 return this.Title;

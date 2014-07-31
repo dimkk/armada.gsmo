@@ -16,6 +16,10 @@ namespace gs.meeting.Components
     {
         private const string _captionStub = "Рассмотрено на ГрадСовете";
 
+        public string CountMarkBackColor { get; set; }
+
+        public string TextMarkBackColor { get; set; }
+
         // TODO: Add code behind
         protected override void CreateChildControls()
         {
