@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Выбор объекта</title>
+    <script src="/_layouts/15/SAMRT.Web/Scripts/selectObjectModel.js?rev=02042014"></script>
+    <script>
+        $('.table').on('click', 'tbody tr', function (event) {
+            $(this).css('background-color', '#D0F2C9').siblings().css('background-color', '#FFFFFF');
+        });
+    </script>
+    <style>
+        tr:hover {
+            cursor: pointer;
+        }
+
+        button {
+            min-width: 0px;
+        }
+
+        .modal-dialog {
+            width: 900px;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Выбор объекта</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <div class="col-lg-10">
+                            <input id="objectSearch" data-bind="value: objectSearch, event: { keypress: onSearchStringKeyPress }, valueUpdate: 'afterkeydown'" placeholder="Введите поисковую строку" class="form-control" />
+                        </div>
+                        <div class="col-lg-2" style="padding: 0px;">
+                            <button type="button" class="btn btn-default" data-bind="event: { click: startSearch }"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div id="dialogError"></div>
+                <div style="height: 500px; overflow: auto">
+                    <table class="table" id="objectSearchResultTable">
+                        <thead>
+                            <tr>
+                                <th>Название</th>
+                                <th>Адрес</th>
+                                <th>Застройщик</th>
+                                <th>Кад. номер</th>
+                                <th>Площадь ЗУ</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: objectSearchResult">
+                            <tr>
+                                <td data-bind="text: objectTitle"></td>
+                                <td>
+                                    <a data-bind="text: objectAddress, attr: { href: 'http://maps.yandex.ru/?text=' +  encodeURI(objectAddress), target: '_blank' }"></a>
+                                </td>
+                                <td data-bind="text: (objectBuilder ? objectBuilder.get_lookupValue() : '')"></td>
+                                <td data-bind="text: objectCadastre"></td>
+                                <td data-bind="text: objectArea"></td>
+                                <td style="text-align: right;"><button type="button" class="btn btn-default" data-bind="event: { click: $parent.onSelectObject }">Выбрать</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" data-bind="event: { click: $root.onClose }" id="btnOK">Ок</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

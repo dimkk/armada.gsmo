@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Выбор зависимого поручения</title>
+    <script src="/_layouts/15/SAMRT.Web/Scripts/camljs.js"></script>
+    <script src="/_layouts/15/SAMRT.Web/Scripts/selectLinkedAssignmentMVKModel.js"></script>
+    <script>
+        /*selectable row*/
+        $('.table').on('click', 'tbody tr', function (event) {
+            $(this).css('background-color', '#D0F2C9').siblings().css('background-color', '#FFFFFF');
+        });
+    </script>
+    <style>
+        tr:hover {
+            cursor: pointer;
+        }
+
+        button
+        {
+            min-width: 0px;
+        }
+
+        .modal-dialog
+        {
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+  <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Выбор зависимого поручения</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-warning" data-bind="style: {display: $root.isWarn() ? 'block' : 'none'}">
+                    Должен быть указан вопрос повестки и заседание в вопросе повестки
+                </div>
+                <div style="height: 300px; overflow: auto">
+                    <table class="table" id="linkedAssignmentTable">
+                        <thead>
+                            <tr>
+                                <th>Поручение</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: assignmentSearchResult">
+                            <tr>
+                                <td data-bind="text: AssignmentContent"></td>
+                                <td style="text-align: right;"><button type="button" class="btn btn-default" data-bind="event: { click: $parent.onSelectAssignment }">Выбрать</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" data-bind="event: { click: $root.onClose }" id="btnLinkedAssignmentOK">Ок</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

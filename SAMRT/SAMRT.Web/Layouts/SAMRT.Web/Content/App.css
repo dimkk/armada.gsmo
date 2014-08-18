@@ -1,0 +1,60 @@
+﻿
+/*Table even odd row colors*/
+table.evenodd tr:nth-child(odd) {color: #000; background: #FFF}
+table.evenodd tr:nth-child(even) {color: #000; background: #F7F7F7}
+   
+/*SP sets this value to 6em!!!*/
+button {
+    min-width: 0px;
+}
+
+/*Bootstrap overrides*/
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+.form-horizontal .topspace {
+    margin-top: 25px;
+}
+
+.topspace {
+    margin-top: 50px;
+}
+
+.modal-dialog .input-group-addon {
+    min-width: 120px;
+    text-align: left;
+}
+
+label.q-detail-info {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+.cell-no-top-border {
+    border-top: none !important;
+}
+
+body .modal-assignment {
+    width: 800px;
+}
+
+/*Fix SP modal dialog close button margin*/
+#dlgTitleBtns {
+    margin-right: 0px;
+}
+
+.modal-backdrop.fade.in:nth-child(2){
+    z-index: 1060 !important;
+}
+
+#request-dialog-form {
+    z-index: 1070;
+}
+
+/*Fix datepicker z-index (otherwise it does not appear in bootstrap modal dialogs)*/
+.datepicker {
+    z-index: 9999 !important;
+}

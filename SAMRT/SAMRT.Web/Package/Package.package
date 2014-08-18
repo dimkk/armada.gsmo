@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="311ff50d-0baf-47c7-861e-c5e5e60805a0" solutionId="311ff50d-0baf-47c7-861e-c5e5e60805a0" resetWebServer="false" sharePointProductVersion="15.0" name="SAMRT.Web" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="7e931d85-1b07-434e-9447-530bbd30c3b5" />
+  </projectItems>
+</package>

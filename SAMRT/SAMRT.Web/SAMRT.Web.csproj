@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAMRT.Web</RootNamespace>
+    <AssemblyName>SAMRT.Web</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
+    <ProjectGuid>{1907F7C8-B5AE-4D3F-A12D-3F339F8A4CDC}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Layouts\SAMRT.Web\Pages\AgendaQuestion.aspx.cs">
+      <DependentUpon>AgendaQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\AgendaQuestion.aspx.designer.cs">
+      <DependentUpon>AgendaQuestion.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\AgendaQuestionAttach.aspx.cs">
+      <DependentUpon>AgendaQuestionAttach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\AgendaQuestionAttach.aspx.designer.cs">
+      <DependentUpon>AgendaQuestionAttach.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\ExecutorSelection.aspx.cs">
+      <DependentUpon>ExecutorSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\ExecutorSelection.aspx.designer.cs">
+      <DependentUpon>ExecutorSelection.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\IssueAttachmentMVK.aspx.cs">
+      <DependentUpon>IssueAttachmentMVK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\IssueAttachmentMVK.aspx.designer.cs">
+      <DependentUpon>IssueAttachmentMVK.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\Meeting.aspx.cs">
+      <DependentUpon>Meeting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\Meeting.aspx.designer.cs">
+      <DependentUpon>Meeting.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\MeetingMVK.aspx.cs">
+      <DependentUpon>MeetingMVK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\MeetingMVK.aspx.designer.cs">
+      <DependentUpon>MeetingMVK.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\ParticipantsSelection.aspx.cs">
+      <DependentUpon>ParticipantsSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\ParticipantsSelection.aspx.designer.cs">
+      <DependentUpon>ParticipantsSelection.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\SearchQuestion.aspx.cs">
+      <DependentUpon>SearchQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SAMRT.Web\Pages\SearchQuestion.aspx.designer.cs">
+      <DependentUpon>SearchQuestion.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+    <None Include="Layouts\SAMRT.Web\Content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Layouts\SAMRT.Web\Content\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Layouts\SAMRT.Web\Content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Layouts\SAMRT.Web\Scripts\bootstrap.min.js.map">
+      <DependentUpon>bootstrap.min.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SAMRT.Web\Scripts\jquery-1.9.1.min.js.map">
+      <DependentUpon>jquery-1.9.1.min.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SAMRT.Web\Scripts\Meeting\viewmodel.min.js.map">
+      <DependentUpon>viewmodel.min.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SAMRT.Web\Scripts\moment-datepicker.min.js.map">
+      <DependentUpon>moment-datepicker.min.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SAMRT.Web\Scripts\moment-with-langs.min.js.map">
+      <DependentUpon>moment-with-langs.min.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SAMRT.Web\Scripts\moment.min.js.map">
+      <DependentUpon>moment.min.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SAMRT.Web\Scripts\spin.min.js.map">
+      <DependentUpon>spin.min.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SAMRT.Web\Scripts\typeahead.min.js.map">
+      <DependentUpon>typeahead.min.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SAMRT.Web\Scripts\viewmodel.min.js.map">
+      <DependentUpon>viewmodel.min.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7e931d85-1b07-434e-9447-530bbd30c3b5}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{311FF50D-0BAF-47C7-861E-C5E5E60805A0}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Layouts\SAMRT.Web\Content\App.css" />
+    <Content Include="Layouts\SAMRT.Web\Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Layouts\SAMRT.Web\Content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Layouts\SAMRT.Web\Content\bootstrap\bootstrap.css" />
+    <Content Include="Layouts\SAMRT.Web\Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Layouts\SAMRT.Web\Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Layouts\SAMRT.Web\Content\moment-datepicker\datepicker.css" />
+    <Content Include="Layouts\SAMRT.Web\Content\participantsDialog.css" />
+    <Content Include="Layouts\SAMRT.Web\Content\typeahead.js-bootstrap.css" />
+    <Content Include="Layouts\SAMRT.Web\Pages\AgendaQuestion.aspx" />
+    <Content Include="Layouts\SAMRT.Web\Pages\AgendaQuestionAttach.aspx" />
+    <Content Include="Layouts\SAMRT.Web\Pages\ExecutorSelection.aspx" />
+    <Content Include="Layouts\SAMRT.Web\Pages\IssueAttachmentMVK.aspx" />
+    <Content Include="Layouts\SAMRT.Web\Pages\Meeting.aspx" />
+    <Content Include="Layouts\SAMRT.Web\Pages\MeetingMVK.aspx" />
+    <Content Include="Layouts\SAMRT.Web\Pages\ParticipantsSelection.aspx" />
+    <Content Include="Layouts\SAMRT.Web\Pages\SearchQuestion.aspx" />
+    <Content Include="Layouts\SAMRT.Web\Pages\selectAgendaQuestion.html" />
+    <Content Include="Layouts\SAMRT.Web\Pages\selectExecutor.html" />
+    <Content Include="Layouts\SAMRT.Web\Pages\selectIssueMVK.html" />
+    <Content Include="Layouts\SAMRT.Web\Pages\selectLinkedAssignment.html" />
+    <Content Include="Layouts\SAMRT.Web\Pages\selectLinkedAssignmentMVK.html" />
+    <Content Include="Layouts\SAMRT.Web\Pages\selectObject.html" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\bootstrap.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\bootstrap.min.js">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SAMRT.Web\Scripts\camljs.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\clienttemplates.debug.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderAgendaQuestion.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderAssignment.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderAssignmentMVK.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderCore.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderIssueMVK.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderIssueObjectObjectMVKField.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderLinkedField.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderMVKReport.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderObjectCharacteristicList.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderObjectDocumentObjectField.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderObjectForm.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderObjectLinkField.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderOrderMVK.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderOrderMVKObjectField.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderParentLink.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderQuestionObjectObjectField.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderQuestionObjectTitleField.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderQuestionSense.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderReport.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderReportAttach.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\executorModel.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\gsUtils.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\init.debug.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\jquery-1.9.1.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\jquery-1.9.1.min.js">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SAMRT.Web\Scripts\jquery.cookie.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\knockout-2.3.0.debug.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\knockout-2.3.0.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\mainmenuAccessDeny.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\Meeting\viewmodel.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\Meeting\viewmodel.min.js">
+      <DependentUpon>viewmodel.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SAMRT.Web\Scripts\moment-datepicker-ko.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\moment-datepicker.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\moment-datepicker.min.js">
+      <DependentUpon>moment-datepicker.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SAMRT.Web\Scripts\moment-with-langs.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\moment-with-langs.min.js">
+      <DependentUpon>moment-with-langs.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SAMRT.Web\Scripts\moment.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\moment.min.js">
+      <DependentUpon>moment.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SAMRT.Web\Scripts\participantModel.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\searchQuestionModel.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\selectAgendaQuestionModel.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\selectIssueMVKModel.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\selectLinkedAssignmentModel.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\selectLinkedAssignmentMVKModel.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\selectObjectModel.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\SolidQ-SPS-JS.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\SP.Core.debug.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\SP.debug.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\SP.RequestExecutor.debug.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\SP.runtime.debug.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\SP.UI.Dialog.debug.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\spin.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\spin.min.js">
+      <DependentUpon>spin.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SAMRT.Web\Scripts\typeahead.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\typeahead.min.js">
+      <DependentUpon>typeahead.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SAMRT.Web\Scripts\viewmodel.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\viewmodel.min.js">
+      <DependentUpon>viewmodel.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Layouts\SAMRT.Web\Scripts\moment-datepicker.d.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Condition="!Exists('$(MSBuildProjectDirectory)\..\SPSF.targets')" Project="$(SolutionDir)\SPSF.targets" />
+  <Import Condition=" Exists('$(MSBuildProjectDirectory)\..\SPSF.targets')" Project="$(MSBuildProjectDirectory)\..\SPSF.targets" />
+  <Target Name="BeforeBuild" DependsOnTargets="$(BeforeBuildDependsOn)" />
+  <Target Name="AfterBuild" DependsOnTargets="$(AfterBuildDependsOn)" />
+</Project>
