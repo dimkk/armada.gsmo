@@ -9,6 +9,7 @@
 <%@ Assembly Name="Microsoft.Web.CommandUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Assembly Name="Microsoft.Office.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AgendaQuestionAttach.aspx.cs" Inherits="GradSovetPages.Layouts.GradSovetPages.Pages.AgendaQuestionAttach" DynamicMasterPageFile="~masterurl/default.master" %>
+<%@ Register TagPrefix="wssuc" TagName="ToolBar" Src="~/_controltemplates/15/ToolBar.ascx" %>
 
 <asp:Content ID="PageHead" ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
 
@@ -50,6 +51,7 @@
             </gs:AgendaQuestionDocumentSetWebPart>
         </ZoneTemplate>
     </WebPartPages:WebPartZone>
+	<SharePoint:GoBackButton ID="GoBackButton" ControlMode="Display" runat="server"/>
 </asp:Content>
 
 <asp:Content ID="PageTitle" ContentPlaceHolderID="PlaceHolderPageTitle" runat="server">

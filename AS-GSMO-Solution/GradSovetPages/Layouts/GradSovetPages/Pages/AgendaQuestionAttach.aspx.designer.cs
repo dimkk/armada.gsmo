@@ -20,5 +20,14 @@ namespace GradSovetPages.Layouts.GradSovetPages.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Microsoft.SharePoint.WebPartPages.WebPartZone MainWPZone;
+        
+        /// <summary>
+        /// GoBackButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Microsoft.SharePoint.WebControls.GoBackButton GoBackButton;
     }
 }

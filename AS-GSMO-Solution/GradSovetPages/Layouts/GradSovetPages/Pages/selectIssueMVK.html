@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>МВК: Выбор вопроса повестки</title>
+    <script src="/_layouts/15/gradsovetpages/Scripts/selectIssueMVKModel.js?rev=16122013"></script>
+    <script>
+        /*selectable row*/
+        $('.table').on('click', 'tbody tr', function (event) {
+            $(this).css('background-color', '#D0F2C9').siblings().css('background-color', '#FFFFFF');
+        });
+    </script>
+    <style>
+        tr:hover {
+            cursor: pointer;
+        }
+
+        button
+        {
+            min-width: 0px;
+        }
+
+        .modal-dialog
+        {
+            width: 750px;
+        }
+    </style>
+</head>
+<body>
+  <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">МВК: Выбор вопроса повестки</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Заседание</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <div class="col-lg-10">
+                                    <input id="meetingSearch" data-bind="value: meetingSearch, event: { keypress: onSearchStringKeyPress }, valueUpdate: 'afterkeydown'"  placeholder="Введите поисковую строку" class="form-control"/>
+                                </div>
+                                <div class="col-lg-2" style="padding: 0px;">
+                                    <button type="button" class="btn btn-default" data-bind="event: { click: startSearch }"><span class="glyphicon glyphicon-search"></span></button>
+                                </div>
+                             </div>
+                        </div>
+                        <div id="aqDialogError"></div>
+                        <div style="height: 150px; overflow: auto">
+                            <table class="table" id="meetingSearchResultTable">
+                                <thead>
+                                    <tr>
+                                        <th>Номер</th>
+                                        <th>Дата проведения</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody data-bind="foreach: meetingSearchResult">
+                                    <tr>
+                                        <td data-bind="text: MeetingNumber"></td>
+                                        <td data-bind="text: MeetingDate"></td>
+                                        <td style="text-align: right;"><button type="button" class="btn btn-default" data-bind="event: { click: $parent.onShowRelatedQuestions }">Выбрать</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Вопросы</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div style="height: 200px; overflow: auto">
+                            <table class="table" id="agendaQuestionSearchResultTable">
+                                <thead>
+                                    <tr>
+                                        <th>Номер</th>
+                                        <th>Адрес</th>
+                                        <th>Описание</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody data-bind="foreach: agendaQuestionSearchResult">
+                                    <tr>
+                                        <td data-bind="text: AgendaQuestionNumber"></td>
+                                        <td data-bind="text: AgendaQuestionAddress"></td>
+                                        <td data-bind="text: AgendaQuestionDescription"></td>
+                                        <td style="text-align: right;"><button type="button" class="btn btn-default" data-bind="event: { click: $parent.onSelectAgendaQuestion }">Выбрать</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" data-bind="event: { click: $root.onClose }" id="btnOK">Ок</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
