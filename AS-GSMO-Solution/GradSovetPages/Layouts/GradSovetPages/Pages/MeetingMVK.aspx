@@ -27,9 +27,10 @@
     <script type="text/javascript">
 
         var modelMetaData = {
-            meeting:            { listName: "MeetingMVKList", fields: [] },
-            meetingAttachment:  { listName: "MeetingAttachmentMVKList", fields: [] },
-            agendaQuestion:     { listName: "IssueMVKList", fields: [] }
+            meeting:                { listName: "MeetingMVKList", fields: [] },
+            meetingAttachment:      { listName: "MeetingAttachmentMVKList", fields: [] },
+            agendaQuestion:         { listName: "IssueMVKList", fields: [] },
+            agendaQuestionObject:   { listName: "IssueObjectMVKList", fields: [] }
         };
 
         $(function () {
@@ -121,9 +122,15 @@
                                     <th>Инвестор</th>
                                     <th>Описание</th>
                                     <th>Докладчики</th>
+                                    <% if (IsQuestionCommentEnabled) { %>
+                                    <th>Комментарий</th>
+                                    <% } %>
+									<th></th>
                                     <th></th>
                                     <th></th>
-                                    <!--<th data-bind="style: { display: !editEnabled() ? 'none' : '' }"></th>-->
+                                    <% if (IsQuestionCommentEnabled) { %>
+                                    <th></th>
+                                    <% } %>
                                 </tr>
                             </thead>
                             <tbody data-bind="foreach: agendaQuestions">
@@ -133,24 +140,29 @@
                                     <td data-bind="text: IssueInvestorMVK"></td>
                                     <td data-bind="text: IssueDescriptionMVK"></td>
                                     <td data-bind="text: calcReporters"></td>
+                                    <% if (IsQuestionCommentEnabled) { %>
+                                    <%--<td data-bind="text: AgendaQuestionComment, css: GetDecisionFieldClass($data)"></td>--%>
+                                    <% } %>
                                     <td>
-                                        <button type="button" class="btn btn-default" data-bind="click: showAttachments"><span class="glyphicon glyphicon-paperclip"></span></button>
+                                        <button type="button" class="btn btn-default" data-bind="click: showObjects" style="margin:0"><span class="glyphicon glyphicon-home"></span></button>
                                     </td>
                                     <td>
-                                        <!--<button type="button" class="btn btn-default" data-bind="click: $parent.editAgendaQuestion"><span class="glyphicon glyphicon-edit"></span></button>-->
+                                        <button type="button" class="btn btn-default" data-bind="click: showAttachments" style="margin:0"><span class="glyphicon glyphicon-paperclip"></span></button>
+                                    </td>
+                                    <td>
                                         <a data-bind="attr: { href: httpLink }" class="btn btn-default" target="_blank" role="button">
 	                                        <span class="glyphicon glyphicon-edit"></span>
                                         </a>
                                     </td>
-                                    <!--
-                                    <td data-bind="style: { display: !$parent.editEnabled() ? 'none' : '' }">
-                                        <button type="button" class="btn btn-default" data-bind="click: $parent.removeAgendaQuestion, enable: $parent.editEnabled"><span class="glyphicon glyphicon-trash"></span></button>
-                                    </td>
-                                    -->
+                                    <% if (IsQuestionCommentEnabled) { %>
+<%--                                    <td>
+                                        <button type="button" class="btn btn-default" data-bind="click: editQuestionComment" style="margin:0"><span class="glyphicon glyphicon-pencil"/></button>
+                                    </td>--%>
+                                    <% } %>
                                 </tr>
                             </tbody>
                         </table>
-                        <button type="button" class="btn btn-primary" data-bind="click: addAgendaQuestion, enable: editEnabled" id="AddAgendaQuestionButton" name="AddAgendaQuestionButton">Добавить</button>
+                        <%--<button type="button" class="btn btn-primary" data-bind="click: addAgendaQuestion, enable: editEnabled" id="AddAgendaQuestionButton" name="AddAgendaQuestionButton">Добавить</button>--%>
                     </div>
                 </div>
                 <%-- Таблица вложений заседания --%>
@@ -192,66 +204,10 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="btn btn-primary" data-bind="click: addAttach, enable: editEnabled">Добавить</button>
+                        <%--<button class="btn btn-primary" data-bind="click: addAttach, enable: editEnabled">Добавить</button>--%>
                     </div>
                 </div>
             </div>
-            <!--<div id="tab-assignment" class="tab-pane fade">
-                <div class="panel-group" id="aq-accordion" data-bind="foreach: agendaQuestions" style="margin-top: 25px; margin-bottom: 25px;">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-lg-1">
-                                    <label data-bind="text: $root.filteredAssignments(editAgendaQuestionNumber()).length, attr: { class: $root.filteredAssignments(editAgendaQuestionNumber()).length == 0 ? 'label label-danger' : 'label label-default' }"></label>
-                                </div>
-                                <div class="col-lg-11">
-                                    <h4 class="panel-title">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#aq-accordion" data-bind="text: editAgendaQuestionNumber() + '. ' + editAgendaQuestionTheme(), attr: { href: '#aq-panel-body-' + editAgendaQuestionNumber() }"></a>
-                                    </h4>
-                                    <label class="q-detail-info" data-bind="text: calcContent"></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-bind="attr: { id: 'aq-panel-body-' + editAgendaQuestionNumber() }" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <table id="assignmentsTable" class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Номер</th>
-                                            <th>Срок исполнения</th>
-                                            <th>Фактическая дата</th>
-                                            <th>Контроль</th>
-                                            <th>Ответственный</th>
-                                            <th>Статус</th>
-                                            <th>Текст поручения</th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody data-bind="foreach: $root.filteredAssignments(editAgendaQuestionNumber())">
-                                        <tr>
-                                            <td data-bind="text: AssignmentNumber"></td>
-                                            <td data-bind="text: AssignmentPlanDate"></td>
-                                            <td data-bind="text: AssignmentFactDate"></td>
-                                            <td data-bind="text: AssignmentInspectState"></td>
-                                            <td data-bind="text: AssignmentExecutorFullNameLinkValue"></td>
-                                            <td data-bind="text: AssignmentStatus"></td>
-                                            <td data-bind="text: AssignmentText"></td>
-                                            <td>
-                                                <button type="button" class="btn btn-default" data-bind="click: $root.editAssignment"><span class="glyphicon glyphicon-edit"></span></button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-default" data-bind="click: $root.removeAssignment, enable: $root.editEnabled"><span class="glyphicon glyphicon-trash"></span></button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-primary" data-bind="click: addAssignment, enable: $root.editEnabled" id="addAssignmentButton" name="addAssignmentButton">Добавить</button>
-            </div>-->
             <div id="tab-additional" class="tab-pane fade">
                 <div class="form-horizontal" role="form">
                     <div class="form-group topspace">
@@ -346,12 +302,7 @@
         </div>
 
         <div class="container">
-            <div class="col-lg-offset-10 col-lg-1">
-                <button class="btn btn-default" data-bind="click: closeForm" id="oCancelButton" name="oCancelButton">Закрыть</button>
-            </div>
-            <div class="col-lg-1">
-                <button class="btn btn-success" data-bind="click: save, enable: $root.editEnabled" id="oSubmitButton" name="oSubmitButton">Сохранить</button>
-            </div>
+            <button class="btn btn-default" data-bind="click: closeForm" id="oCancelButton" name="oCancelButton" style="float:right">Закрыть</button>
         </div>
     </div>
                         <%--Модальный диалог добавления вопроса повестки--%>
@@ -955,6 +906,118 @@
                 </div>
                 <!-- /.modal -->
                 <%-- //Модальный диалог поручения--%>
+
+    <% if (IsQuestionCommentEnabled) { %>
+    <div class="modal fade" id="mComment" tabindex="-1" role="dialog" aria-hidden="true">
+        <style type="text/css">
+            .btn-success-gs, .btn-primary-gs, .btn-danger-gs {
+                color: #000;
+                border-color: #ccc;
+                background-color: #fff;
+            }
+        </style>
+        <div class="modal-dialog" style="width: 800px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title">Добавление комментария</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="form-group">
+                            <label class="col-lg-2">Тип решения</label>
+                            <div class="btn-group col-lg-10" data-toggle="buttons" id="rbDecisionType">
+                                <label class="btn btn-success col-lg-4 btn-success-gs" id="rbDecisionType2">
+                                    <input type="radio" name="options" />Утвердить</label>
+                                <label class="btn btn-primary col-lg-4 btn-primary-gs" id="rbDecisionType0">
+                                    <input type="radio" name="options" />Нет решения</label>
+                                <label class="btn btn-danger col-lg-4 btn-danger-gs" id="rbDecisionType1">
+                                    <input type="radio" name="options" />Отклонить</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <br />
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2">Комментарий</label>
+                            <div class="col-lg-10">
+                                <textarea type="text" id="tComment" title="Комментарий" rows="5" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="bSaveComment">Сохранить</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var IsRequestSended = false;
+        $('#mComment').appendTo("body");
+        function GetDecisionFieldClass(data) {
+            var decisionId = GetDecisionId(data);
+            switch (decisionId) {
+                case "1": return "btn-danger";
+                case "2": return "btn-success";
+                default: return "";
+            }
+        }
+        function GetDecisionId(data) {
+            var decisionId = data.AgendaQuestionDecisionType();
+            return !!decisionId ? decisionId.get_lookupId().toString() : null;
+        }
+        function SetDecisionId(data, decisionTypeId) {
+            var lookup = new SP.FieldLookupValue();
+            lookup.set_lookupId(decisionTypeId);
+            data.AgendaQuestionDecisionType(lookup);
+        }
+        function ShowCommentWindow(data) {
+            if (IsRequestSended)
+                return;
+            $('#bSaveComment').unbind("click").click(function () {
+                IsRequestSended = true;
+                $("#bSaveComment").attr("disabled", "disabled");
+                SaveComment(data, $("#rbDecisionType label.active").attr("id").substr(14), $('#tComment').val());
+                $('#mComment').modal("hide")
+            });
+            var decisionId = GetDecisionId(data);
+            var labelId = decisionId == "1" | decisionId == "2" ? decisionId : "0";
+            $("#rbDecisionType label").removeClass("active").filter("#rbDecisionType" + labelId).addClass("active");
+            $('#tComment').val(data.AgendaQuestionComment());
+            $('#mComment').modal("show");
+        }
+        function SaveComment(data, decisionTypeId, comment) {
+            var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('Вопросы повестки заседания')/items(" + data.Id() + ")";
+            var newData = { __metadata: { 'type': 'SP.Data.AgendaQuestionListListItem' }, AgendaQuestionDecisionTypeId: decisionTypeId, AgendaQuestionComment: comment };
+            SetDecisionId(data, decisionTypeId);
+            data.AgendaQuestionComment(comment);
+            $.ajax({
+                url: encodeURI(queryUrl),
+                data: JSON.stringify(newData),
+                headers: {
+                    "accept": "application/json;odata=verbose",
+                    "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+                    "X-HTTP-Method": "MERGE",
+                    "content-type": "application/json;odata=verbose",
+                    "If-Match": "*"
+                },
+                type: "POST",
+                success: function () {
+                    IsRequestSended = false;
+                    $("#bSaveComment").removeAttr("disabled");
+                },
+                error: function () {
+                    IsRequestSended = false;
+                    $("#bSaveComment").removeAttr("disabled");
+                    alert("RequestError!");
+                }
+            });
+        }
+    </script>
+    <% } %>
+
 </asp:Content>
 
 <asp:Content ID="PageTitle" ContentPlaceHolderID="PlaceHolderPageTitle" runat="server">

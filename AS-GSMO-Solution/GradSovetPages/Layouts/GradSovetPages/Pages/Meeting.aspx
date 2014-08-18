@@ -23,7 +23,7 @@
     <!-- Добавьте свой код JavaScript в следующий файл -->
     <script type="text/javascript" src="<%= SPUtility.MakeBrowserCacheSafeLayoutsUrl("gradsovetpages/Scripts/spin.min.js", false) %>"></script>
     <script type="text/javascript" src="<%= SPUtility.MakeBrowserCacheSafeLayoutsUrl("gradsovetpages/Scripts/camljs.js", false) %>"></script>
-    <script type="text/javascript" src="<%= SPUtility.MakeBrowserCacheSafeLayoutsUrl("gradsovetpages/Scripts/viewmodel.min.js", false) %>"></script>
+    <script type="text/javascript" src="<%= SPUtility.MakeBrowserCacheSafeLayoutsUrl("gradsovetpages/Scripts/viewmodel.js", false) %>"></script>
     <script type="text/javascript">
         
         $(function () {
@@ -125,6 +125,7 @@
                                     <% if (IsQuestionCommentEnabled) { %>
                                     <th>Комментарий</th>
                                     <% } %>
+									<th></th>
                                     <th></th>
                                     <th></th>
                                     <% if (IsQuestionCommentEnabled) { %>
@@ -144,7 +145,10 @@
                                     <td data-bind="text: AgendaQuestionComment, css: GetDecisionFieldClass($data)"></td>
                                     <% } %>
                                     <td>
-                                        <button type="button" class="btn btn-default" data-bind="click: showAttachments"><span class="glyphicon glyphicon-paperclip"></span></button>
+                                        <button type="button" class="btn btn-default" data-bind="click: showObjects, style: { display: agendaQuestionObjects().length == 0 ? 'none' : '' }" style="margin:0"><span class="glyphicon glyphicon-home"></span></button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-default" data-bind="click: showAttachments" style="margin:0"><span class="glyphicon glyphicon-paperclip"></span></button>
                                     </td>
                                     <td>
                                         <!--<button type="button" class="btn btn-default" data-bind="click: $parent.editAgendaQuestion"><span class="glyphicon glyphicon-edit"></span></button>-->
@@ -165,7 +169,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button type="button" class="btn btn-primary" data-bind="click: addAgendaQuestion, enable: editEnabled" id="AddAgendaQuestionButton" name="AddAgendaQuestionButton">Добавить</button>
+                        <!--<button type="button" class="btn btn-primary" data-bind="click: addAgendaQuestion, enable: editEnabled" id="AddAgendaQuestionButton" name="AddAgendaQuestionButton">Добавить</button>-->
                     </div>
                 </div>
                 <%-- Таблица вложений заседания --%>
@@ -207,7 +211,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="btn btn-primary" data-bind="click: addAttach, enable: editEnabled">Добавить</button>
+                        <!--<button class="btn btn-primary" data-bind="click: addAttach, enable: editEnabled">Добавить</button>-->
                     </div>
                 </div>
             </div>
@@ -360,12 +364,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="col-lg-offset-10 col-lg-1">
-                <button class="btn btn-default" data-bind="click: closeForm" id="oCancelButton" name="oCancelButton">Закрыть</button>
-            </div>
-            <div class="col-lg-1">
-                <button class="btn btn-success" data-bind="click: save, enable: $root.editEnabled" id="oSubmitButton" name="oSubmitButton">Сохранить</button>
-            </div>
+			<button class="btn btn-default" data-bind="click: closeForm" id="oCancelButton" name="oCancelButton" style="float:right">Закрыть</button>
         </div>
     </div>
                         <%--Модальный диалог добавления вопроса повестки--%>
@@ -993,7 +992,7 @@
                                 <label class="btn btn-success col-lg-4 btn-success-gs" id="rbDecisionType2">
                                     <input type="radio" name="options" />Утвердить</label>
                                 <label class="btn btn-primary col-lg-4 btn-primary-gs" id="rbDecisionType0">
-                                    <input type="radio" name="options" />Не определено</label>
+                                    <input type="radio" name="options" />Нет решения</label>
                                 <label class="btn btn-danger col-lg-4 btn-danger-gs" id="rbDecisionType1">
                                     <input type="radio" name="options" />Отклонить</label>
                             </div>
@@ -1017,6 +1016,7 @@
         </div>
     </div>
     <script type="text/javascript">
+        var IsRequestSended = false;
         $('#mComment').appendTo("body");
         function GetDecisionFieldClass(data) {
             var decisionId = GetDecisionId(data);
@@ -1030,15 +1030,19 @@
             var decisionId = data.AgendaQuestionDecisionType();
             return !!decisionId ? decisionId.get_lookupId().toString() : null;
         }
-        function SetDecisionId(data, newData, decisionTypeId) {
+        function SetDecisionId(data, decisionTypeId) {
             var lookup = new SP.FieldLookupValue();
             lookup.set_lookupId(decisionTypeId);
             data.AgendaQuestionDecisionType(lookup);
-            newData.AgendaQuestionDecisionTypeId = decisionTypeId;
         }
         function ShowCommentWindow(data) {
+            if (IsRequestSended)
+                return;
             $('#bSaveComment').unbind("click").click(function () {
-                SaveComment(data, $("#rbDecisionType label.active").attr("id").substr(14), $('#tComment').val(), function () { $('#mComment').modal("hide") });
+                IsRequestSended = true;
+                $("#bSaveComment").attr("disabled", "disabled");
+                SaveComment(data, $("#rbDecisionType label.active").attr("id").substr(14), $('#tComment').val());
+                $('#mComment').modal("hide")
             });
             var decisionId = GetDecisionId(data);
             var labelId = decisionId == "1" | decisionId == "2" ? decisionId : "0";
@@ -1046,10 +1050,10 @@
             $('#tComment').val(data.AgendaQuestionComment());
             $('#mComment').modal("show");
         }
-        function SaveComment(data, decisionTypeId, comment, successCallback) {
+        function SaveComment(data, decisionTypeId, comment) {
             var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('Вопросы повестки заседания')/items(" + data.Id() + ")";
-            var newData = { __metadata: { 'type': 'SP.Data.AgendaQuestionListListItem' }, AgendaQuestionComment: comment };
-            SetDecisionId(data, newData, decisionTypeId);
+            var newData = { __metadata: { 'type': 'SP.Data.AgendaQuestionListListItem' }, AgendaQuestionDecisionTypeId: decisionTypeId, AgendaQuestionComment: comment };
+            SetDecisionId(data, decisionTypeId);
             data.AgendaQuestionComment(comment);
             $.ajax({
                 url: encodeURI(queryUrl),
@@ -1062,8 +1066,15 @@
                     "If-Match": "*"
                 },
                 type: "POST",
-                success: successCallback,
-                error: function () { alert("RequestError!"); }
+                success: function () {
+                    IsRequestSended = false;
+                    $("#bSaveComment").removeAttr("disabled");
+                },
+                error: function () {
+                    IsRequestSended = false;
+                    $("#bSaveComment").removeAttr("disabled");
+                    alert("RequestError!");
+                }
             });
         }
     </script>

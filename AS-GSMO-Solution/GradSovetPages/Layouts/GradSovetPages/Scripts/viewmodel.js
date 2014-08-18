@@ -26,7 +26,8 @@
 
     var modelMetaData = {
         meeting: { listName: "Заседания", ctName: "Заседание", ctId: "0x0100EC243C589FF24FEFBF00F3D3FE6ECD36", fields: [] },
-        agendaQuestion: { listName: "Вопросы повестки заседания", ctName: "Вопрос повестки", ctId: "0x01004682F4FBB1874837BA39C57EED443E7C", fields: [] }
+        agendaQuestion: { listName: "Вопросы повестки заседания", ctName: "Вопрос повестки", ctId: "0x01004682F4FBB1874837BA39C57EED443E7C", fields: [] },
+		agendaQuestionObject: { listName: "Объекты вопросов повестки", ctName: "Объект вопроса", ctId: "0x0100801A9BF42D9CF441A8DE498AE7E2F2E2", fields: [] }
         /*,
         assignment: { listName: "Поручения", ctName: "Поручение", ctId: "0x010000C8B3AED4FC4C3EB5102D01BEB49B13", fields: [] },
         assignmentReport: { listName: "Отчеты по поручениям", ctName: "Отчет по поручению", ctId: "0x01002CC4F9BA004F4B7FB6B0391200D2A68B", fields: [] },
@@ -482,6 +483,30 @@
         setCssForModalDialog();
     }
 
+    function openQuestionObjectsDialog(title, data) {
+		if (data.agendaQuestionObjects().length == 0)
+			return;		
+
+		var url = _spPageContextInfo.webAbsoluteUrl;
+		if (data.agendaQuestionObjects().length > 1)
+			url = url + (String).format("/Lists/AgendaQuestionObjectList/AllItems.aspx?FilterField1=_x0412__x043e__x043f__x0440__x041&FilterValue1={0}", data.Id());
+		else
+			url = url + (String).format("/Lists/Object/DispForm.aspx?ID={0}", data.agendaQuestionObjects()[0]._x041e__x0431__x044a__x0435__x04().get_lookupId());
+        var options = {
+            title: title,
+            url: url,
+            width: 1024,
+            height: 768,
+			autoSize: false,
+			allowMaximize: true,
+            dialogReturnValueCallback: function (dialogResult, returnValue) {
+                // ToDo: 
+            }
+        };
+        SP.UI.ModalDialog.showModalDialog(options);
+        setCssForModalDialog();
+    }
+	
     function getNewParticipantLookupValue(id) {
         var result = new SP.FieldLookupValue();
         result.set_lookupId(id);
@@ -522,7 +547,7 @@
                     for (var i = 0; i < modelMetaData[fldItm].fields.get_count() ; i++) {
                         // don't load SPD created fields
                         var fldItmIntName = modelMetaData[fldItm].fields.getItemAtIndex(i).get_internalName();
-                        if ((fldItmIntName.toLowerCase().indexOf('__x') > 0) || (fldItmIntName == 'AgendaQuestionDeclarant')) continue;
+                        //if ((fldItmIntName.toLowerCase().indexOf('__x') > 0) || (fldItmIntName == 'AgendaQuestionDeclarant')) continue;
 
                         fieldsArr.push(modelMetaData[fldItm].fields.getItemAtIndex(i));
                     }
@@ -1080,6 +1105,8 @@
         this.changedReporter = ko.observable("");
         this.changedSoreporters = ko.observable("");
         
+		this.agendaQuestionObjects = ko.observableArray([]);
+		
         this.agendaQuestionMeasures = ko.observableArray([]);
         //this.agendaQuestionMeasures(getMeasureList());
         // ToDo
@@ -1143,6 +1170,12 @@
                 (String).format("Вложения вопроса повестки №{0}", data.AgendaQuestionNumber), data.Id);
         };
 
+        // диалог отображения объектов
+        this.showObjects = function () {
+            openQuestionObjectsDialog(
+                (String).format("Объекты вопроса повестки №{0}", data.AgendaQuestionNumber), this);
+        };
+		
         //select linked question
         this.selectLinkedQuestion = function() {
             var options = {
@@ -1298,6 +1331,28 @@
         this.editQuestionComment = function () { ShowCommentWindow(this); }
     }
 
+    // Объект вопроса повестки
+    function agendaQuestionObject(data) {
+        for (var prop in data) {
+            if (prop == 'New') {
+                this[prop] = data[prop];
+            } else if (prop == 'Id') {
+                this[prop] = ko.observable(data[prop]);
+            } else {
+                // regular property
+                this[prop] = ko.observable(data[prop]);
+                // property fo editing
+                this["edit" + prop] = ko.observable(data[prop]);
+                if (prop == "AgendaLinkedQuestionLink") {
+                    this[prop + "Value"] = ko.observable(data[prop] ? data[prop].get_lookupValue() : null);
+                    this[prop + "Id"] = ko.observable(data[prop] ? data[prop].get_lookupId() : null);
+                    this["edit" + prop + "Value"] = ko.observable(data[prop] ? data[prop].get_lookupValue() : null);
+                    this["edit" + prop + "Id"] = ko.observable(data[prop] ? data[prop].get_lookupId() : null);
+                }
+            }
+        }
+    }
+	
     // meeting attach
     // each attach can hold only one file
     function meetingAttach(data) {
@@ -1423,12 +1478,17 @@
 
         for (var i = 0; i < fields.length; i++) {
             var fieldName = fields[i].get_internalName();
-            
-            if ((fieldName.toLowerCase().indexOf("date") >= 0) && SPEntity.get_item(fieldName)) {
-                entity[fieldName] = formatDate(SPEntity.get_item(fieldName));
+			var ent;
+            try {
+				ent = SPEntity.get_item(fieldName);
+			} catch(e) {
+				console.log("Не удалось обнаружить поле " + fieldName);
+			}
+            if ((fieldName.toLowerCase().indexOf("date") >= 0) && ent) {
+                entity[fieldName] = formatDate(ent);
             }
             else {
-                entity[fieldName] = SPEntity.get_item(fieldName);
+                entity[fieldName] = ent
             }
         }
         entity.Id = SPEntity.get_item("ID");
@@ -1499,6 +1559,7 @@
         self.currentMeetingsNumber = ko.observable();
         self.meeting = ko.observable({});
         self.agendaQuestions = ko.observableArray([]);
+		self.agendaQuestionObjects = ko.observableArray([]);
         /*self.agendaQuestionTypes = ko.observableArray(getAvailableQuestionTypes());
         self.assignmentTypes = ko.observableArray(getAvailableAssignmentTypes());*/
         self.agendaQuestionTypes = ko.observableArray([]);
@@ -1531,6 +1592,7 @@
 
         var meetingList = $.appWebContext.get_web().get_lists().getByTitle("Заседания");
         var agendaQuestionList = $.appWebContext.get_web().get_lists().getByTitle("Вопросы повестки заседания");
+		var questionObjectList = $.appWebContext.get_web().get_lists().getByTitle("Объекты вопросов повестки");
         var attachList = $.appWebContext.get_web().get_lists().getByTitle("Вложения заседаний");
         var assignmentList = $.appWebContext.get_web().get_lists().getByTitle("Поручения");
         var attachDocTypeList = $.appWebContext.get_web().get_lists().getByTitle("Типы документов вложений");
@@ -1658,6 +1720,14 @@
                         self.attachments(attachs);
                         if (scancopyAttach) self.scanAttach(scancopyAttach);
 
+                        var camlQuery = new CamlBuilder().Where().LookupField("_x0412__x043e__x043f__x0440__x04").Id().In($.map(self.agendaQuestions(), function (el) { return el.Id(); }));
+						//var camlQuery = new CamlBuilder().Where().LookupField("_x0412__x043e__x043f__x0440__x04").Id().EqualTo(883);
+                        var spQuery = new SP.CamlQuery();
+                        spQuery.set_viewXml("<View><Query>" + camlQuery.ToString() + "</Query></View>");
+						//spQuery.set_viewXml("<View><Query><Where><Eq><FieldRef Name='_x0412__x043e__x043f__x0440__x04'/><Value Type='Text'>2553</Value></Eq></Where></Query></View>");
+                        var questionObjects = questionObjectList.getItems(spQuery);
+                        $.appWebContext.load(questionObjects);
+						
                         // loading assignments
                         var camlQuery = new CamlBuilder().Where().LookupField("AgendaQuestionLink").Id().In($.map(self.agendaQuestions(), function (el) { return el.Id(); }));
                         var spQuery = new SP.CamlQuery();
@@ -1666,7 +1736,29 @@
                         $.appWebContext.load(assignmentListInst);*/
                     
                         $.appWebContext.executeQueryAsync(function () {
-                            var items = [];
+							var objects = [];
+							var objectsData = [];
+							var enumerator = questionObjects.getEnumerator();
+							while (enumerator.moveNext()) {
+								var od = loadSPEntity(modelMetaData.agendaQuestionObject.fields, enumerator.get_current());
+								var newObject = new agendaQuestionObject(od);
+								objectsData.push(od);
+								objects.push(newObject);
+							}
+							self.agendaQuestionObjects(objects);
+							
+							for (var i = 0; i < questions.length; i++) {
+								var q = questions[i];
+								var fo;
+								for (var j = 0; j < objects.length; j++) {
+									if (objects[j]._x0412__x043e__x043f__x0440__x04().get_lookupId() == q.Id())
+										fo = objects[j];
+								}
+								if (fo)
+									q.agendaQuestionObjects.push(fo);
+							}
+							
+							var items = [];
                             self.assignments(items);
 
                             //load participants for assignments and questions

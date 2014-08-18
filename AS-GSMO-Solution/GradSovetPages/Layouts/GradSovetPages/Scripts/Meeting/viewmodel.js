@@ -476,6 +476,20 @@
         setCssForModalDialog();
     }
 
+    function openQuestionObjectsDialog(title, id) {
+        var options = {
+            title: title,
+            url: _spPageContextInfo.webAbsoluteUrl + (String).format("/Lists/IssueObjectMVKList/AllItems.aspx?FilterField1=IssueObjectIssueIdMVK&FilterValue1={0}", id),
+            width: 800,
+            height: 400,
+            dialogReturnValueCallback: function (dialogResult, returnValue) {
+                // ToDo: 
+            }
+        };
+        SP.UI.ModalDialog.showModalDialog(options);
+        setCssForModalDialog();
+    }
+
     function getNewParticipantLookupValue(id) {
         var result = new SP.FieldLookupValue();
         result.set_lookupId(id);
@@ -1032,32 +1046,30 @@
 
         // вычислимое поле для списка докладчиков
         this.calcReporters = ko.computed(function () {
-            var str = "";
+            var reporters = [];
             if (this.agendaQuestionReporterFIO) {
-                str += this.agendaQuestionReporterFIO() + ";";
+                reporters.push(this.agendaQuestionReporterFIO().trim());
             } else {
                 if (this.IssueReporterMVK()) {
-                    str += this.IssueReporterMVK().get_lookupValue() + ";";
+                    reporters.push(this.IssueReporterMVK().get_lookupValue().trim());
                 }
             }
 
             // в agendaQuestionSoreporters хранятся детали о всех докладчиках, а в AgendaQuestionSoreporterFullNameLink только о тех, 
             // которые были сохранены на момент загрузки карточки
-            if (this.agendaQuestionSoreporters) {
-                if (this.agendaQuestionSoreporters() == null || this.agendaQuestionSoreporters().length == 0) return str;
-
+            if (this.agendaQuestionSoreporters && this.agendaQuestionSoreporters() != null && this.agendaQuestionSoreporters().length > 0) {
                 $.each(this.agendaQuestionSoreporters(), function () {
-                    str += this.ParticipantFullName() + ";";
+                    reporters.push(this.ParticipantFullName().trim());
                 });
             } else {
-                if (this.IssueCoReportersMVK() == null) return str;
-
-                $.each(this.IssueCoReportersMVK(), function () {
-                    str += this.get_lookupValue() + ";";
-                });
+                if (this.IssueCoReportersMVK() != null) {
+                    $.each(this.IssueCoReportersMVK(), function () {
+                        reporters.push(this.get_lookupValue().trim());
+                    });
+                }
             }
 
-            return str;
+            return reporters.join("; ");
         }, this);
 
         // режим отображения диалога с вопросом повестки
@@ -1138,6 +1150,12 @@
         this.showAttachments = function () {
             openQuestionAttachmentsDialog(
                 (String).format("Вложения вопроса повестки №{0}", data.IssueNumberMVK), data.Id);
+        };
+
+        // диалог отображения объектов
+        this.showObjects = function () {
+            openQuestionObjectsDialog(
+                (String).format("Объекты вопроса повестки №{0}", data.IssueNumberTextMVK), data.Id);
         };
 
         //select linked question
@@ -1500,6 +1518,7 @@
         self.currentMeetingsNumber = ko.observable();
         self.meeting = ko.observable({});
         self.agendaQuestions = ko.observableArray([]);
+        self.agendaQuestionObjects = ko.observableArray([]);
         /*self.agendaQuestionTypes = ko.observableArray(getAvailableQuestionTypes());
         self.assignmentTypes = ko.observableArray(getAvailableAssignmentTypes());*/
         self.agendaQuestionTypes = ko.observableArray([]);
