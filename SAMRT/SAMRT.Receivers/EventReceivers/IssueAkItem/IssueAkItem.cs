@@ -1,4 +1,4 @@
-using ITB.SP.Tools;
+п»їusing ITB.SP.Tools;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Security;
 using SAMRT.Common.BL;
@@ -23,7 +23,7 @@ namespace SAMRT.Receivers
             }
             catch (Exception e)
             {
-                Log.Unexpected(e, "При создании или привязке набора документов для вопроса АК (ID = {0}) произошло неожиданное исключение", properties.ListItemId);
+                Log.Unexpected(e, "РџСЂРё СЃРѕР·РґР°РЅРёРё РёР»Рё РїСЂРёРІСЏР·РєРµ РЅР°Р±РѕСЂР° РґРѕРєСѓРјРµРЅС‚РѕРІ РґР»СЏ РІРѕРїСЂРѕСЃР° РђРљ (ID = {0}) РїСЂРѕРёР·РѕС€Р»Рѕ РЅРµРѕР¶РёРґР°РЅРЅРѕРµ РёСЃРєР»СЋС‡РµРЅРёРµ", properties.ListItemId);
             }
         }
     }
