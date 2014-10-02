@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module
+		Name="DocumentSet"
+		List="113"
+		Url="_catalogs/wp">
+		<File
+			Path="DocumentSet\DocumentSet.webpart"
+			Url="DocumentSet.webpart"
+			Type="GhostableInLibrary">
+			<Property
+				Name="Group"
+				Value="SAMRT.Webparts" />
+			<Property
+				Name="QuickAddGroups"
+				Value="SAMRT.QuickAdd.Webparts" />
+		</File>
+	</Module>
+</Elements>

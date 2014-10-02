@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAMRT.Receivers</RootNamespace>
+    <AssemblyName>SAMRT.Receivers</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
+    <ProjectGuid>{ECAA8B64-0B8F-4A6F-B84D-9685638ACF56}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventReceivers\IssueAkItem\IssueAkItem.cs" />
+    <Compile Include="EventReceivers\IssueRgItem\IssueRgItem.cs" />
+    <Compile Include="EventReceivers\MeetingRgItem\MeetingRgItem.cs" />
+    <Compile Include="EventReceivers\MeetingAkItem\MeetingAkItem.cs" />
+    <Compile Include="EventReceivers\OrderRgItem\OrderRgItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EventReceivers\IssueAkItem\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5b2d4592-f090-4096-90fd-e46000d1e3de}</SharePointProjectItemId>
+    </None>
+    <None Include="EventReceivers\IssueRgItem\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{953b8687-25cf-4fa9-9e3f-b010b11e443c}</SharePointProjectItemId>
+    </None>
+    <None Include="EventReceivers\MeetingRgItem\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b57c97f8-6ec2-452c-a2dc-d2d484a301f0}</SharePointProjectItemId>
+    </None>
+    <None Include="EventReceivers\MeetingAkItem\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{75032ba7-5955-4135-a9af-22821963874d}</SharePointProjectItemId>
+    </None>
+    <None Include="EventReceivers\OrderRgItem\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4e4d7c59-c518-45e6-8047-04e853b07512}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\SAMRT.Receivers.MeetingRGItem\SAMRT.Receivers.MeetingRGItem.feature">
+      <FeatureId>{2996e816-64b9-464c-935d-2c29bd3895b8}</FeatureId>
+    </None>
+    <None Include="Features\SAMRT.Receivers.MeetingAKItem\SAMRT.Receivers.MeetingAKItem.feature">
+      <FeatureId>{8eed1207-c80c-4162-92f4-430de5fac5e3}</FeatureId>
+    </None>
+    <None Include="Features\SAMRT.Receivers.OrderRGItem\SAMRT.Receivers.OrderRGItem.feature">
+      <FeatureId>{0e2f6289-741c-4b5d-8975-2da52b0814b2}</FeatureId>
+    </None>
+    <None Include="Features\SAMRT.Receivers.IssueRgItem\SAMRT.Receivers.IssueRgItem.feature">
+      <FeatureId>{43ec972d-833c-4ff0-9726-3907b223ce55}</FeatureId>
+    </None>
+    <None Include="Features\SAMRT.Receivers.IssueAkItem\SAMRT.Receivers.IssueAkItem.feature">
+      <FeatureId>{5fe4aded-f719-4064-82b5-245f543c5bc9}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{65E7A4BA-FEA6-4545-84D1-48E2716934D7}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Template\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d9b38ad7-326d-4673-8e7d-8d18bdf905f2}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EventReceivers\IssueAkItem\Elements.xml" />
+    <Content Include="EventReceivers\IssueRgItem\Elements.xml" />
+    <Content Include="EventReceivers\MeetingRgItem\Elements.xml" />
+    <Content Include="EventReceivers\MeetingAkItem\Elements.xml" />
+    <Content Include="EventReceivers\OrderRgItem\Elements.xml" />
+    <Content Include="Features\SAMRT.Receivers.MeetingRGItem\SAMRT.Receivers.MeetingRGItem.Template.xml">
+      <DependentUpon>SAMRT.Receivers.MeetingRGItem.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SAMRT.Receivers.MeetingAKItem\SAMRT.Receivers.MeetingAKItem.Template.xml">
+      <DependentUpon>SAMRT.Receivers.MeetingAKItem.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SAMRT.Receivers.OrderRGItem\SAMRT.Receivers.OrderRGItem.Template.xml">
+      <DependentUpon>SAMRT.Receivers.OrderRGItem.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SAMRT.Receivers.IssueRgItem\SAMRT.Receivers.IssueRgItem.Template.xml">
+      <DependentUpon>SAMRT.Receivers.IssueRgItem.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SAMRT.Receivers.IssueAkItem\SAMRT.Receivers.IssueAkItem.Template.xml">
+      <DependentUpon>SAMRT.Receivers.IssueAkItem.feature</DependentUpon>
+    </Content>
+    <Content Include="Template\Images\SAMRT\Feature.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITB.SP.Tools\ITB.SP.Tools.csproj">
+      <Project>{a1f84594-12c1-48b7-bb5f-f6fe27a06795}</Project>
+      <Name>ITB.SP.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAMRT.Common\SAMRT.Common.csproj">
+      <Project>{7e30832d-e2b1-47db-8a0b-d6f5881fe7fa}</Project>
+      <Name>SAMRT.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Condition="!Exists('$(MSBuildProjectDirectory)\..\SPSF.targets')" Project="$(SolutionDir)\SPSF.targets" />
+  <Import Condition=" Exists('$(MSBuildProjectDirectory)\..\SPSF.targets')" Project="$(MSBuildProjectDirectory)\..\SPSF.targets" />
+  <Target Name="BeforeBuild" DependsOnTargets="$(BeforeBuildDependsOn)" />
+  <Target Name="AfterBuild" DependsOnTargets="$(AfterBuildDependsOn)" />
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="65e7a4ba-fea6-4545-84d1-48e2716934d7" solutionId="65e7a4ba-fea6-4545-84d1-48e2716934d7" resetWebServer="false" sharePointProductVersion="15.0" name="SAMRT.Receivers" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="2996e816-64b9-464c-935d-2c29bd3895b8" />
+    <featureReference itemId="8eed1207-c80c-4162-92f4-430de5fac5e3" />
+    <featureReference itemId="0e2f6289-741c-4b5d-8975-2da52b0814b2" />
+    <featureReference itemId="43ec972d-833c-4ff0-9726-3907b223ce55" />
+    <featureReference itemId="5fe4aded-f719-4064-82b5-245f543c5bc9" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="d9b38ad7-326d-4673-8e7d-8d18bdf905f2" />
+  </projectItems>
+</package>

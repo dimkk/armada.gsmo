@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<type name="SAMRT.WebParts.DocumentSet, SAMRT.WebParts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3f3087b80f01a99d" />
+			<importErrorMessage>Cannot import DocumentSet Title Web Part.</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">Набор документов</property>
+				<property name="Description" type="string">Веб-часть для работы с наборами документов</property>
+				<property name="CatalogIconImageUrl" type="string">/_layouts/15/images/SAMRT/WebPartIcon_DocumentSet.gif</property>
+				<property name="TitleIconImageUrl" type="string">/_layouts/15/images/SAMRT/WebPartIcon_DocumentSet.gif</property>
+			</properties>
+		</data>
+	</webPart>
+</webParts>

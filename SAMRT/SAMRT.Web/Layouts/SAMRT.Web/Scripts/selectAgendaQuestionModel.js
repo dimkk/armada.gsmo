@@ -40,7 +40,7 @@
             self.selectedMeeting(data);
             self.selectedAgendaQuestion('');
             var ctx = SP.ClientContext.get_current();
-            var agendaQuestionList = ctx.get_web().get_lists().getByTitle("Вопросы повестки заседания");
+            var agendaQuestionList = ctx.get_web().get_lists().getByTitle("Архитектурная комиссия - Вопросы заседания");
             var query = new SP.CamlQuery();
             query.set_viewXml('<View><Query><Where><Eq><FieldRef Name="MeetingLink" LookupId="True" /><Value Type="Integer">' + data.ID + '</Value></Eq></Where></Query></View>');
             var questionListInstance = agendaQuestionList.getItems(query);
@@ -138,7 +138,7 @@
                         logMessage("По искомой фразе не найдено ни одного заседания", true);
                     }
                     else {
-                        var meetingList = ctx.get_web().get_lists().getByTitle("Заседания");
+                        var meetingList = ctx.get_web().get_lists().getByTitle("Архитектурная комиссия - Заседания");
                         var query = new SP.CamlQuery();
                         query.set_viewXml(buildInCAMLQuery(idList));
                         var meetingInstance = meetingList.getItems(query);

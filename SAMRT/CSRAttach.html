@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+    <body>
+        
+        <!-- START -->
+        <span id="part1">
+            <table style="margin-top: 8px;" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <!-- Normal Row -->
+                <tr>
+                    <td width="190px" valign="top">
+                        <h3>
+                            <nobr><sharepoint:fieldlabel ID="Title" runat="server" FieldName="Title" ControlMode="New"></sharepoint:fieldlabel></nobr>
+                        </h3>
+                    </td>
+                    <td width="400px" valign="top">
+                        <sharepoint:formfield runat="server" id="fldTitle" ControlMode="New" FieldName="Title"></sharepoint:formfield>
+                        <sharepoint:fielddescription runat="server" id="desc_Title" FieldName="Title" ControlMode="New"></sharepoint:fielddescription>
+                    </td>
+                </tr>
+                <!--Attachment Row -->
+                <tr id="idAttachmentsRow">
+                    <td nowrap="true" valign="top" width="20%">
+                        <sharepoint:fieldlabel ID="FieldLabel1" ControlMode="New" FieldName="Attachments" runat="server"></sharepoint:fieldlabel>
+                    </td>
+                    <td valign="top" width="80%">
+                        <sharepoint:formfield runat="server" id="AttachmentsField" ControlMode="New" FieldName="Attachments"></sharepoint:formfield>
+                        <script type="text/javascript">
+                            var elm = document.getElementById("idAttachmentsTable");
+                            if (elm == null || elm.rows.length == 0)
+                                document.getElementById("idAttachmentsRow").style.display='none';
+                        </script>
+                    </td>
+                </tr>
+            </table>
+            <!-- SAVE AND CANCEL BUTTON -->
+            <table>
+                <tr>
+                    <td width="99%" nowrap="nowrap"><img src="/_layouts/15/images/blank.gif" width="1" height="18" /></td>
+                    <td nowrap="nowrap">
+                        <sharepoint:savebutton runat="server" ControlMode="New" id="savebutton2"></sharepoint:savebutton>
+                    </td>
+                    <td>&#160;</td>
+                    <td nowrap="nowrap" align="right">
+                        <sharepoint:gobackbutton runat="server" ControlMode="New" id="gobackbutton2"></sharepoint:gobackbutton>
+                    </td>
+                </tr>
+            </table>
+        </span>
+        <!-- ENDE FORM -->
+        <!-- Attachment AREA -->
+        <table style="width: 100%; padding-bottom: 10px;">
+            <tbody>
+                <tr>
+                    <td id="Td1" colspan="2">
+                        <div id="ctl00_PlaceHolderMain_AttachmentUploadPanel">
+                            <input name="attachmentsToBeRemovedFromServer" type="hidden" />
+                            <input name="RectGifUrl" type="hidden" value="/_layouts/15/images/rect.gif?rev=23" />
+                            <span id="partAttachment" style="display: none;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td valign="top" style="padding-bottom: 8px;" colspan="4">
+                                                Use this page to add attachments to an item.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="190" height="50" valign="top">Name&nbsp; </td>
+                                            <td height="15" id="attachmentsOnClient" valign="bottom">
+                                                <span dir="ltr">
+                                                    <input name="fileupload0" title="Name&nbsp; " id="onetidIOFile" type="file" size="56" />
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1" colspan="4">
+                                                <img width="1" height="1" alt="" src="/_layouts/15/images/blank.gif?rev=23" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="10" colspan="4">
+                                                <img width="1" height="1" alt="" src="/_layouts/15/images/blank.gif?rev=23" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <input id="attachOKbutton" onclick="OkAttach();" type="button" value="OK" />
+                                                <span id="idSpace"></span>
+                                                <input name="attachCancelButton" id="attachCancelButton" accesskey="C" onclick="CancelAttach()" type="button" value="Cancel" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <sharepoint:attachmentupload ID="AttachmentUpload1" runat="server" ControlMode="New"></sharepoint:attachmentupload>
+        <sharepoint:itemhiddenversion ID="ItemHiddenVersion1" runat="server" ControlMode="New"></sharepoint:itemhiddenversion>
+
+    </body>
+</html>

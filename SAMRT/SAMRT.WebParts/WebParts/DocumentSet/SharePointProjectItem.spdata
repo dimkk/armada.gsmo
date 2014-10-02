@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.WebPart" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="DocumentSet\" Type="ElementManifest" />
+    <ProjectItemFile Source="DocumentSet.webpart" Target="DocumentSet\" Type="ElementFile" />
+    <ProjectItemFile Source="WebPartIcon_DocumentSet.gif" Target="Images\SAMRT\" Type="TemplateFile" />
+    <ProjectItemFile Source="DocumentSetUserControl.ascx" Target="CONTROLTEMPLATES\SAMRT\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="SAMRT.WebParts" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

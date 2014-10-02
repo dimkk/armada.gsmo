@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAMRT.WebParts</RootNamespace>
+    <AssemblyName>SAMRT.WebParts</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
+    <ProjectGuid>{0BBF24D6-DC0D-49BF-B425-21CDEA1DA448}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONTROLTEMPLATES\SAMRT\CalendarUserControl.ascx.cs">
+      <DependentUpon>CalendarUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\SAMRT\CalendarUserControl.ascx.designer.cs">
+      <DependentUpon>CalendarUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\SAMRT\LastProtocolsUserControl.ascx.cs">
+      <DependentUpon>LastProtocolsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\SAMRT\LastProtocolsUserControl.ascx.designer.cs">
+      <DependentUpon>LastProtocolsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\SAMRT\NextMeetingUserControl.ascx.cs">
+      <DependentUpon>NextMeetingUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\SAMRT\NextMeetingUserControl.ascx.designer.cs">
+      <DependentUpon>NextMeetingUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebParts\DocumentSet\DocumentSet.cs" />
+    <Compile Include="WebParts\DocumentSet\DocumentSetUserControl.ascx.cs">
+      <DependentUpon>DocumentSetUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\DocumentSet\DocumentSetUserControl.ascx.designer.cs">
+      <DependentUpon>DocumentSetUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WebParts\DocumentSet\DocumentSetUserControl.ascx" />
+    <Content Include="WebParts\DocumentSet\WebPartIcon_DocumentSet.gif" />
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a26f15b5-1605-4709-ac4e-9a2e8c316f05}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\SAMRT.WebParts.MeetingCalendar\SAMRT.WebParts.MeetingCalendar.feature">
+      <FeatureId>{c1a87635-a80e-46a9-a169-24f5e88e6411}</FeatureId>
+    </None>
+    <None Include="Features\SAMRT.WebParts.DocumentSet\SAMRT.WebParts.DocumentSet.feature">
+      <FeatureId>{86c531d2-dadb-4a1d-a3b2-03f5db704acb}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{EB594AC8-35E5-4A17-ACD3-9A1E95A4B284}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="SAMRT.WebParts.MeetingCalendar\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{53af247d-a2c5-46b7-9c1d-349c16be61f6}</SharePointProjectItemId>
+    </None>
+    <None Include="Template\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{40e694ca-150d-459a-8d22-353616cba229}</SharePointProjectItemId>
+    </None>
+    <Content Include="WebParts\DocumentSet\DocumentSet.webpart" />
+    <None Include="WebParts\DocumentSet\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{39f90aa7-0ff7-46cd-96c2-cca545148e56}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITB.SP.Tools\ITB.SP.Tools.csproj">
+      <Project>{a1f84594-12c1-48b7-bb5f-f6fe27a06795}</Project>
+      <Name>ITB.SP.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CONTROLTEMPLATES\SAMRT\CalendarUserControl.ascx" />
+    <Content Include="CONTROLTEMPLATES\SAMRT\LastProtocolsUserControl.ascx" />
+    <Content Include="CONTROLTEMPLATES\SAMRT\NextMeetingUserControl.ascx" />
+    <Content Include="Features\SAMRT.WebParts.MeetingCalendar\SAMRT.WebParts.MeetingCalendar.Template.xml">
+      <DependentUpon>SAMRT.WebParts.MeetingCalendar.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SAMRT.WebParts.DocumentSet\SAMRT.WebParts.DocumentSet.Template.xml">
+      <DependentUpon>SAMRT.WebParts.DocumentSet.feature</DependentUpon>
+    </Content>
+    <Content Include="SAMRT.WebParts.MeetingCalendar\Elements.xml" />
+    <Content Include="SAMRT.WebParts.MeetingCalendar\MeetingCalendar.aspx" />
+    <Content Include="Template\Images\SAMRT\Feature.gif" />
+    <Content Include="WebParts\DocumentSet\Elements.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Condition="!Exists('$(MSBuildProjectDirectory)\..\SPSF.targets')" Project="$(SolutionDir)\SPSF.targets" />
+  <Import Condition=" Exists('$(MSBuildProjectDirectory)\..\SPSF.targets')" Project="$(MSBuildProjectDirectory)\..\SPSF.targets" />
+  <Target Name="BeforeBuild" DependsOnTargets="$(BeforeBuildDependsOn)" />
+  <Target Name="AfterBuild" DependsOnTargets="$(AfterBuildDependsOn)" />
+</Project>

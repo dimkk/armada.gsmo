@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="SAMRT.WebParts.MeetingCalendar" Url="SitePages">
+    <File Path="SAMRT.WebParts.MeetingCalendar\MeetingCalendar.aspx" Url="MeetingCalendar.aspx" Type="GhostableInLibrary" ReplaceContent="True" />
+  </Module>
+</Elements>

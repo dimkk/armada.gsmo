@@ -45,21 +45,45 @@
         resultHtml += '<div class="form-horizontal" role="form">';
 
         resultHtml += '<div class="form-group">';
-        resultHtml += renderFieldBlock(context, 'Застройщик', 2, 5, "OrderBuilderMVK");
+        resultHtml += renderFieldBlock(context, 2, 5, "OrderBuilderMVK");
         resultHtml += '</div>';
 
         resultHtml += '<div class="form-group">';
-        resultHtml += renderFieldBlock(context, 'Объект', 2, 5, "OrderObjectMVK");
+        resultHtml += renderFieldBlock(context, 2, 5, "OrderProjectOrgRg");
+        resultHtml += '</div>';
+		
+        resultHtml += '<div class="form-group">';
+        resultHtml += renderFieldBlock(context, 2, 5, "OrderReporterRg");
         resultHtml += '</div>';
 
         resultHtml += '<div class="form-group">';
-        resultHtml += renderFieldBlock(context, 'Автор заявки', 2, 5, "OrderOrgAuthorMVK");
+        resultHtml += renderFieldBlock(context, 2, 5, "OrderTextMVK");
         resultHtml += '</div>';
 
         resultHtml += '<div class="form-group">';
-        resultHtml += renderFieldBlock(context, 'Описание заявки', 2, 5, "OrderTextMVK");
+        resultHtml += renderFieldBlock(context, 2, 5, "QuaestionCategory");
         resultHtml += '</div>';
 
+        resultHtml += '<div class="form-group">';
+        resultHtml += renderFieldBlock(context, 2, 5, "designer");
+        resultHtml += '</div>';
+
+        resultHtml += '<div class="form-group">';
+        resultHtml += renderFieldBlock(context, 2, 5, "municipality");
+        resultHtml += '</div>';
+
+        resultHtml += '<div class="form-group">';
+        resultHtml += renderFieldBlock(context, 2, 5, "settlement");
+        resultHtml += '</div>';
+
+		resultHtml += '<div class="form-group">';
+        resultHtml += renderFieldBlock(context, 2, 5, "adress");
+        resultHtml += '</div>';
+
+		resultHtml += '<div class="form-group">';
+        resultHtml += renderFieldBlock(context, 2, 5, "kadnomber");
+        resultHtml += '</div>';
+		
         author = context.RenderFieldByName(context, "Author");
         exceptList.push("Author");
         created = context.RenderFieldByName(context, "Created");
@@ -87,9 +111,9 @@
         return '<label class="col-lg-' + span + '">' + value + '</label>';
     }
 
-    function renderFieldBlock(context, label, labelSpan, inputSpan, fieldName) {
+    function renderFieldBlock(context, labelSpan, inputSpan, fieldName) {
         var resultHtml = '';
-        resultHtml += createLabelMarkup(label, labelSpan);
+        resultHtml += createLabelMarkup(renderCore.getFieldTitle(fieldName), labelSpan);
         resultHtml += '<div class="col-lg-' + inputSpan + '">';
         resultHtml += renderField(context, fieldName);
         resultHtml += '</div>';
@@ -143,4 +167,4 @@ $(function () {
     $('[type="button"][id$="Button"]').css("margin", 0);
     //Увеличиваем ширину MultipleValueLookup
     $('table[id$="MultiLookup_topTable"]').css("width", "100%").find('select').parent().css("width", "50%").children().css("width", "100%");
-});
+});

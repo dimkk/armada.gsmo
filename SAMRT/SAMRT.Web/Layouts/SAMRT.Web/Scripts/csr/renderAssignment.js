@@ -379,7 +379,7 @@
                 ctx.load(assignmentInst, "Include(AssignmentNumber, AssignmentText)");
             }
             
-            var agendaQuestionList = ctx.get_web().get_lists().getByTitle("Вопросы повестки заседания");
+            var agendaQuestionList = ctx.get_web().get_lists().getByTitle("Архитектурная комиссия - Вопросы заседания");
             var query = new SP.CamlQuery();
             query.set_viewXml("<View><Query><Where><Eq><FieldRef Name='ID'/><Value Type='Text'>" + questionId + "</Value></Eq></Where></Query></View>");
             var questionInstance = agendaQuestionList.getItems(query);
@@ -404,7 +404,7 @@
                 }
 
                 // достанем данные заседания
-                var meetingList = ctx.get_web().get_lists().getByTitle("Заседания");
+                var meetingList = ctx.get_web().get_lists().getByTitle("Архитектурная комиссия - Заседания");
                 var mId = questionInstance.get_data()[0].get_item("MeetingLink").get_lookupId();
 
                 // установим глобальные переменные для страницы

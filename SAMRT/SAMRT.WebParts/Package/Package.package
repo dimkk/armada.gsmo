@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="eb594ac8-35e5-4a17-acd3-9a1e95a4b284" solutionId="eb594ac8-35e5-4a17-acd3-9a1e95a4b284" resetWebServer="false" sharePointProductVersion="15.0" name="SAMRT.WebParts" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="c1a87635-a80e-46a9-a169-24f5e88e6411" />
+    <featureReference itemId="86c531d2-dadb-4a1d-a3b2-03f5db704acb" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="a26f15b5-1605-4709-ac4e-9a2e8c316f05" />
+    <projectItemReference itemId="40e694ca-150d-459a-8d22-353616cba229" />
+  </projectItems>
+</package>

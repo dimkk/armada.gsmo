@@ -23,6 +23,24 @@ var renderCore;
         return res;
     }
 
+	renderCore.getField = function (fieldName) {
+		var fields = $.grep(this.ctx.ListSchema.Field, function (item) { return item.Name == fieldName; });
+		return fields.length == 1 ? fields[0] : null;
+	}
+	
+	renderCore.getControlByFieldName = function (fieldName) {
+		var field = renderCore.getField(fieldName);
+		var fieldType = field.FieldType + 'Field';
+		if (field.FieldType == 'Choice')
+			fieldType = 'DropDownChoice';
+		return renderCore.getControlById(field.Name + '_' + field.Id + '_$' + fieldType);
+	}
+	
+	renderCore.getFieldTitle = function (fieldName) {
+		var field = renderCore.getField(fieldName);
+		return field ? field.Title : '';
+	}
+
     renderCore.renderFieldByName = function (fieldName) {
         return this.ctx.RenderFieldByName(this.ctx, fieldName);
     }
@@ -34,11 +52,22 @@ var renderCore;
         return this.ctx.RenderFieldByName(this.ctx, fieldName);
     }
 
-    renderCore.getLookupFromRenderedHtml = function (html) {
+	renderCore.getControlFromRenderedHtml = function (html, controlType) {
         var htmldoc = $("<div></div>").append(html);
-        var select = htmldoc.find('select')[0];
-        return select;
+        return htmldoc.find(controlType);
+	}
+	
+    renderCore.getLookupFromRenderedHtml = function (html) {
+		return this.getControlFromRenderedHtml(html, 'select');
     }
+	
+	renderCore.getInputFromRenderedHtml = function (html) {
+		return this.getControlFromRenderedHtml(html, 'input');
+	}
+	
+	renderCore.getControlById = function (id) {
+		return $('#' + id.replace(/[!"#$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, "\\$&"));
+	}
 
     renderCore.formatDate = function (date) {
         if (date === undefined) return;
@@ -55,6 +84,22 @@ var renderCore;
         if (element) {
             callback(element);
         }
+    }
+	
+    renderCore.getParentListItemId = function getLinkId(parentUrlContainsList) {
+		if (!document.referrer ||
+			document.referrer.indexOf('?') < 0 ||
+			!parentUrlContainsList.some(function (e) { return ~document.referrer.indexOf(e); }))
+			return null;
+		
+        var params = document.referrer.split('?')[1].split('&');
+        for (var i = 0; i < params.length; i++) {
+            var param = params[i].split('=');
+            if (param[0] !== 'ID')
+				continue;
+            return param[1];
+        }
+        return null;
     }
 
     renderCore.hasParentContext = function (parentListName) {
@@ -78,6 +123,37 @@ var renderCore;
             return param[1];
         }
 
+        return null;
+    }
+	
+	var allLists;
+    renderCore.loadLists = function (callback) {
+		if (!allLists) {
+			this.spctx = SP.ClientContext.get_current();
+			allLists = this.spctx.get_web().get_lists();
+			this.spctx.load(allLists, 'Include(Id,EntityTypeName)');
+			this.spctx.executeQueryAsync(function() {
+				for (var i = 0; i < allLists.get_count() ; i++) {
+					var item = allLists.get_item(i);
+					item.name = item.get_entityTypeName();
+				};
+				callback();
+				}, function (sender, args) {
+                    alert('Request failed. ' + args.get_message() +
+                        '\n' + args.get_stackTrace());
+            });
+		}
+		else
+			callback();
+    }
+	
+	renderCore.getListByUrl = function (listUrl) {
+        for (var i = 0; i < allLists.get_count() ; i++) {
+            var item = allLists.get_item(i);
+            if (item.name.indexOf(listUrl) == 0)
+                return item;
+        }
+		console.log("Не найден список " + listUrl);
         return null;
     }
 

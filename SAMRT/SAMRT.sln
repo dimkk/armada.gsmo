@@ -1,9 +1,48 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAMRT.Web", "SAMRT.Web\SAMRT.Web.csproj", "{1907F7C8-B5AE-4D3F-A12D-3F339F8A4CDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAMRT.Receivers", "SAMRT.Receivers\SAMRT.Receivers.csproj", "{ECAA8B64-0B8F-4A6F-B84D-9685638ACF56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAMRT.Common", "SAMRT.Common\SAMRT.Common.csproj", "{7E30832D-E2B1-47DB-8A0B-D6F5881FE7FA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A1F84594-12C1-48B7-BB5F-F6FE27A06795} = {A1F84594-12C1-48B7-BB5F-F6FE27A06795}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAMRT.Model", "SAMRT.Model\SAMRT.Model.csproj", "{DE45F7AB-5614-4132-B262-70ACCD9A1B4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationConfiguration", "ApplicationConfiguration", "{EA8EA0FA-E625-40A4-8D41-7100856C4589}"
+	ProjectSection(SolutionItems) = preProject
+		Application.config = Application.config
+		FxCop.targets = FxCop.targets
+		FxCopConsoleOutput.xsl = FxCopConsoleOutput.xsl
+		FxCopDictionary.xml = FxCopDictionary.xml
+		Settings.FxCop = Settings.FxCop
+		Settings.spruleset = Settings.spruleset
+		Settings.StyleCop = Settings.StyleCop
+		SharePointConfiguration.xml = SharePointConfiguration.xml
+		SPDisposeChecker.targets = SPDisposeChecker.targets
+		SPSF.targets = SPSF.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deployment", "Deployment\Deployment.csproj", "{22C44D81-D5DE-4924-9635-38CBFC39DA8E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0BBF24D6-DC0D-49BF-B425-21CDEA1DA448} = {0BBF24D6-DC0D-49BF-B425-21CDEA1DA448}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAMRT.Test.Linq", "SAMRT.Test.Linq\SAMRT.Test.Linq.csproj", "{421420CA-02D5-442C-AC76-1A5A8A796F05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAMRT.WebParts", "SAMRT.WebParts\SAMRT.WebParts.csproj", "{0BBF24D6-DC0D-49BF-B425-21CDEA1DA448}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITB.SP.Tools", "ITB.SP.Tools\ITB.SP.Tools.csproj", "{A1F84594-12C1-48B7-BB5F-F6FE27A06795}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8CF6BEB6-7D0A-4DF8-A5DB-859D7461CB54}"
+	ProjectSection(SolutionItems) = preProject
+		WebEssentials-Settings.json = WebEssentials-Settings.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +56,40 @@ Global
 		{1907F7C8-B5AE-4D3F-A12D-3F339F8A4CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1907F7C8-B5AE-4D3F-A12D-3F339F8A4CDC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1907F7C8-B5AE-4D3F-A12D-3F339F8A4CDC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{ECAA8B64-0B8F-4A6F-B84D-9685638ACF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECAA8B64-0B8F-4A6F-B84D-9685638ACF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECAA8B64-0B8F-4A6F-B84D-9685638ACF56}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ECAA8B64-0B8F-4A6F-B84D-9685638ACF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECAA8B64-0B8F-4A6F-B84D-9685638ACF56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECAA8B64-0B8F-4A6F-B84D-9685638ACF56}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7E30832D-E2B1-47DB-8A0B-D6F5881FE7FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E30832D-E2B1-47DB-8A0B-D6F5881FE7FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E30832D-E2B1-47DB-8A0B-D6F5881FE7FA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7E30832D-E2B1-47DB-8A0B-D6F5881FE7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E30832D-E2B1-47DB-8A0B-D6F5881FE7FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E30832D-E2B1-47DB-8A0B-D6F5881FE7FA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DE45F7AB-5614-4132-B262-70ACCD9A1B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE45F7AB-5614-4132-B262-70ACCD9A1B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE45F7AB-5614-4132-B262-70ACCD9A1B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE45F7AB-5614-4132-B262-70ACCD9A1B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C44D81-D5DE-4924-9635-38CBFC39DA8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C44D81-D5DE-4924-9635-38CBFC39DA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C44D81-D5DE-4924-9635-38CBFC39DA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C44D81-D5DE-4924-9635-38CBFC39DA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{421420CA-02D5-442C-AC76-1A5A8A796F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421420CA-02D5-442C-AC76-1A5A8A796F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421420CA-02D5-442C-AC76-1A5A8A796F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{421420CA-02D5-442C-AC76-1A5A8A796F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BBF24D6-DC0D-49BF-B425-21CDEA1DA448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BBF24D6-DC0D-49BF-B425-21CDEA1DA448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BBF24D6-DC0D-49BF-B425-21CDEA1DA448}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0BBF24D6-DC0D-49BF-B425-21CDEA1DA448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BBF24D6-DC0D-49BF-B425-21CDEA1DA448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BBF24D6-DC0D-49BF-B425-21CDEA1DA448}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A1F84594-12C1-48B7-BB5F-F6FE27A06795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F84594-12C1-48B7-BB5F-F6FE27A06795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F84594-12C1-48B7-BB5F-F6FE27A06795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F84594-12C1-48B7-BB5F-F6FE27A06795}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

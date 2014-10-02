@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code initially generated with SharePoint Software Factory, Version 4.1 , spsf.codeplex.com -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Receivers ListUrl="Lists/AgendaQuestionList" Scope="Web">
+		<Receiver>
+			<Name>IssueAkItemAdded</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>100</SequenceNumber>
+			<Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+			<Class>SAMRT.Receivers.IssueAkItem</Class>
+			<Data></Data>
+			<Filter></Filter>
+		</Receiver>
+	</Receivers>
+</Elements>

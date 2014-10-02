@@ -17,6 +17,7 @@
     <SandboxedSolution>False</SandboxedSolution>
     <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
     <ProjectGuid>{1907F7C8-B5AE-4D3F-A12D-3F339F8A4CDC}</ProjectGuid>
+    <TokenReplacementFileExtensions>js;html</TokenReplacementFileExtensions>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,6 +46,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
@@ -83,19 +85,19 @@
     <Compile Include="Layouts\SAMRT.Web\Pages\IssueAttachmentMVK.aspx.designer.cs">
       <DependentUpon>IssueAttachmentMVK.aspx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layouts\SAMRT.Web\Pages\Meeting.aspx.cs">
-      <DependentUpon>Meeting.aspx</DependentUpon>
+    <Compile Include="Layouts\SAMRT.Web\Pages\MeetingAk.aspx.cs">
+      <DependentUpon>MeetingAk.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Layouts\SAMRT.Web\Pages\Meeting.aspx.designer.cs">
-      <DependentUpon>Meeting.aspx.cs</DependentUpon>
+    <Compile Include="Layouts\SAMRT.Web\Pages\MeetingAk.aspx.designer.cs">
+      <DependentUpon>MeetingAk.aspx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layouts\SAMRT.Web\Pages\MeetingMVK.aspx.cs">
-      <DependentUpon>MeetingMVK.aspx</DependentUpon>
+    <Compile Include="Layouts\SAMRT.Web\Pages\MeetingRg.aspx.cs">
+      <DependentUpon>MeetingRg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Layouts\SAMRT.Web\Pages\MeetingMVK.aspx.designer.cs">
-      <DependentUpon>MeetingMVK.aspx.cs</DependentUpon>
+    <Compile Include="Layouts\SAMRT.Web\Pages\MeetingRg.aspx.designer.cs">
+      <DependentUpon>MeetingRg.aspx.cs</DependentUpon>
     </Compile>
     <Compile Include="Layouts\SAMRT.Web\Pages\ParticipantsSelection.aspx.cs">
       <DependentUpon>ParticipantsSelection.aspx</DependentUpon>
@@ -124,8 +126,11 @@
     <None Include="Layouts\SAMRT.Web\Scripts\jquery-1.9.1.min.js.map">
       <DependentUpon>jquery-1.9.1.min.js</DependentUpon>
     </None>
-    <None Include="Layouts\SAMRT.Web\Scripts\Meeting\viewmodel.min.js.map">
-      <DependentUpon>viewmodel.min.js</DependentUpon>
+    <None Include="Layouts\SAMRT.Web\Scripts\Model\MeetingAk.min.js.map">
+      <DependentUpon>MeetingAk.min.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SAMRT.Web\Scripts\Model\MeetingRg.min.js.map">
+      <DependentUpon>MeetingRg.min.js</DependentUpon>
     </None>
     <None Include="Layouts\SAMRT.Web\Scripts\moment-datepicker.min.js.map">
       <DependentUpon>moment-datepicker.min.js</DependentUpon>
@@ -141,9 +146,6 @@
     </None>
     <None Include="Layouts\SAMRT.Web\Scripts\typeahead.min.js.map">
       <DependentUpon>typeahead.min.js</DependentUpon>
-    </None>
-    <None Include="Layouts\SAMRT.Web\Scripts\viewmodel.min.js.map">
-      <DependentUpon>viewmodel.min.js</DependentUpon>
     </None>
     <None Include="Layouts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{7e931d85-1b07-434e-9447-530bbd30c3b5}</SharePointProjectItemId>
@@ -172,8 +174,8 @@
     <Content Include="Layouts\SAMRT.Web\Pages\AgendaQuestionAttach.aspx" />
     <Content Include="Layouts\SAMRT.Web\Pages\ExecutorSelection.aspx" />
     <Content Include="Layouts\SAMRT.Web\Pages\IssueAttachmentMVK.aspx" />
-    <Content Include="Layouts\SAMRT.Web\Pages\Meeting.aspx" />
-    <Content Include="Layouts\SAMRT.Web\Pages\MeetingMVK.aspx" />
+    <Content Include="Layouts\SAMRT.Web\Pages\MeetingAk.aspx" />
+    <Content Include="Layouts\SAMRT.Web\Pages\MeetingRg.aspx" />
     <Content Include="Layouts\SAMRT.Web\Pages\ParticipantsSelection.aspx" />
     <Content Include="Layouts\SAMRT.Web\Pages\SearchQuestion.aspx" />
     <Content Include="Layouts\SAMRT.Web\Pages\selectAgendaQuestion.html" />
@@ -195,6 +197,8 @@
     <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderIssueMVK.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderIssueObjectObjectMVKField.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderLinkedField.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderMeetingAk.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderMeetingRg.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderMVKReport.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderObjectCharacteristicList.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderObjectDocumentObjectField.js" />
@@ -208,6 +212,8 @@
     <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderQuestionSense.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderReport.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\csr\renderReportAttach.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\selectIssueRgDialog.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\csr\selectOrderRgDialog.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\executorModel.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\gsUtils.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\init.debug.js" />
@@ -220,9 +226,12 @@
     <Content Include="Layouts\SAMRT.Web\Scripts\knockout-2.3.0.debug.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\knockout-2.3.0.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\mainmenuAccessDeny.js" />
-    <Content Include="Layouts\SAMRT.Web\Scripts\Meeting\viewmodel.js" />
-    <Content Include="Layouts\SAMRT.Web\Scripts\Meeting\viewmodel.min.js">
-      <DependentUpon>viewmodel.js</DependentUpon>
+    <Content Include="Layouts\SAMRT.Web\Scripts\Model\MeetingAk.min.js">
+      <DependentUpon>MeetingAk.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SAMRT.Web\Scripts\Model\MeetingRg.js" />
+    <Content Include="Layouts\SAMRT.Web\Scripts\Model\MeetingRg.min.js">
+      <DependentUpon>MeetingRg.js</DependentUpon>
     </Content>
     <Content Include="Layouts\SAMRT.Web\Scripts\moment-datepicker-ko.js" />
     <Content Include="Layouts\SAMRT.Web\Scripts\moment-datepicker.js" />
@@ -258,13 +267,20 @@
     <Content Include="Layouts\SAMRT.Web\Scripts\typeahead.min.js">
       <DependentUpon>typeahead.js</DependentUpon>
     </Content>
-    <Content Include="Layouts\SAMRT.Web\Scripts\viewmodel.js" />
-    <Content Include="Layouts\SAMRT.Web\Scripts\viewmodel.min.js">
-      <DependentUpon>viewmodel.js</DependentUpon>
-    </Content>
+    <Content Include="Layouts\SAMRT.Web\Scripts\Model\MeetingAk.js" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Layouts\SAMRT.Web\Scripts\moment-datepicker.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITB.SP.Tools\ITB.SP.Tools.csproj">
+      <Project>{a1f84594-12c1-48b7-bb5f-f6fe27a06795}</Project>
+      <Name>ITB.SP.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAMRT.Common\SAMRT.Common.csproj">
+      <Project>{7e30832d-e2b1-47db-8a0b-d6f5881fe7fa}</Project>
+      <Name>SAMRT.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
